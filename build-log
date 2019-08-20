@@ -1,0 +1,139 @@
+GitHub pull request #933 of commit 09229a19569138213a841d0921cb9d8b6a68bae7, no merge conflicts.
+Setting status of 09229a19569138213a841d0921cb9d8b6a68bae7 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/552/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/933/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/933/merge^{commit} # timeout=10
+Checking out Revision 4f4bc99333bf42d1b060306e9ce34cb3e2b60538 (refs/remotes/origin/pr/933/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4f4bc99333bf42d1b060306e9ce34cb3e2b60538 # timeout=20
+Commit message: "Merge 09229a19569138213a841d0921cb9d8b6a68bae7 into 215c00ab0c3d7cd336b59846781f3fd74a42b394"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-beaker11 in /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 4f4bc99333bf42d1b060306e9ce34cb3e2b60538 (refs/remotes/origin/pr/933/merge)
+Commit message: "Merge 09229a19569138213a841d0921cb9d8b6a68bae7 into 215c00ab0c3d7cd336b59846781f3fd74a42b394"
+ > git rev-parse refs/remotes/origin/pr/933/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/933/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4f4bc99333bf42d1b060306e9ce34cb3e2b60538 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t f9ef591cda00e1dd80c3e0ad39e86b90885d8f90 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  1.026GB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-generic     net-tools     python     python-protobuf     python3-pytest     texinfo     wget     libprotobuf-c-dev     protobuf-c-compiler RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/9 : FROM ubuntu:18.04
+ ---> 16508e5c265d
+Step 2/9 : RUN apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-generic     net-tools     python     python-protobuf     python3-pytest     texinfo     wget     libprotobuf-c-dev     protobuf-c-compiler RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Running in 82e0bf9ccf4c
+Get:1 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
+Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security/universe Sources [196 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [4173 B]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [747 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/universe Sources [11.5 MB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [6222 B]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [612 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/universe Sources [340 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [16.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [921 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [7216 B]
+Get:19 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1274 kB]
+Get:20 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4212 B]
+Get:21 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [2496 B]
+Fetched 29.0 MB in 42s (691 kB/s)
+Reading package lists...
+[91mE: Command line option 'r' [from -r] is not understood in combination with the other options.
+[0mThe command '/bin/sh -c apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-generic     net-tools     python     python-protobuf     python3-pytest     texinfo     wget     libprotobuf-c-dev     protobuf-c-compiler RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy' returned a non-zero code: 100
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Setting status of 09229a19569138213a841d0921cb9d8b6a68bae7 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/552/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 100
+Finished: FAILURE

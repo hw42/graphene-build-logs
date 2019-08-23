@@ -1,0 +1,228 @@
+GitHub pull request #950 of commit 9e3e267b6737c4239d78629df6c8e7ece00b4f11, no merge conflicts.
+Setting status of 9e3e267b6737c4239d78629df6c8e7ece00b4f11 to PENDING with url https://leeroy.cs.unc.edu/job/graphene/1843 and message: 'Build started for merge commit.'
+Using context: Jenkins
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene@script to read ./Jenkinsfiles/Linux
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+ > git rev-parse refs/remotes/origin/pr/950/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/950/merge^{commit} # timeout=10
+Checking out Revision a075d26c81becb7426186e388f8f816def8643af (refs/remotes/origin/pr/950/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a075d26c81becb7426186e388f8f816def8643af # timeout=10
+Commit message: "Merge 9e3e267b6737c4239d78629df6c8e7ece00b4f11 into c85e615fbe177d572adbb005acaccfc14a78ceb3"
+ > git rev-list --no-walk 5128ee7fac6dc82183d15e1ae1d55f7c05254418 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/graphene
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+Checking out Revision a075d26c81becb7426186e388f8f816def8643af (refs/remotes/origin/pr/950/merge)
+Commit message: "Merge 9e3e267b6737c4239d78629df6c8e7ece00b4f11 into c85e615fbe177d572adbb005acaccfc14a78ceb3"
+ > git rev-parse refs/remotes/origin/pr/950/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/950/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a075d26c81becb7426186e388f8f816def8643af # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t a886e6796acaf89d475bfbc0e8e07faaffca6fab -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  978.2MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        build-essential        gawk        bison        gettext        git        libexpat1        libexpat1-dev        libpcre3-dev        libxml2-dev        linux-headers-generic        linux-headers-$(uname -r)        net-tools        python        python-protobuf        python3-minimal        python3-pytest        texinfo        wget        libomp-dev     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> b0ef3016420a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        build-essential        gawk        bison        gettext        git        libexpat1        libexpat1-dev        libpcre3-dev        libxml2-dev        linux-headers-generic        linux-headers-$(uname -r)        net-tools        python        python-protobuf        python3-minimal        python3-pytest        texinfo        wget        libomp-dev     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> a697656d0049
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> e1355b7c4c8e
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> bb39e409b2ae
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 51c774d149b5
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> d5b01b852865
+Successfully built d5b01b852865
+Successfully tagged a886e6796acaf89d475bfbc0e8e07faaffca6fab:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . a886e6796acaf89d475bfbc0e8e07faaffca6fab
+.
+[Pipeline] withDockerContainer
+slave-bobothebear does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/graphene -v /home/jenkins/workspace/graphene:/home/jenkins/workspace/graphene:rw,z -v /home/jenkins/workspace/graphene@tmp:/home/jenkins/workspace/graphene@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** a886e6796acaf89d475bfbc0e8e07faaffca6fab cat
+$ docker top e062301cda7418635582b1733b14129327e13b4c99c0ce8c79b85acb50188024 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ls -la ..
+total 16
+drwxr-xr-x  4 root   root   4096 Aug 23 20:26 .
+drwxr-xr-x  3 root   root   4096 Aug 23 20:26 ..
+drwxrwxr-x 11 leeroy leeroy 4096 Aug 23 20:26 graphene
+drwxrwxr-x 11 leeroy leeroy 4096 Aug 23 20:26 graphene@tmp
++ env
+JENKINS_HOME=/var/lib/jenkins
+ghprbSourceBranch=simon/make-clean
+ghprbTriggerAuthorEmail=
+ghprbPullAuthorEmail=
+HOSTNAME=e062301cda74
+ghprbPullDescription=GitHub pull request #950 of commit 9e3e267b6737c4239d78629df6c8e7ece00b4f11, no merge conflicts.
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/1843/display/redirect?page=changes
+NODE_LABELS=sgx_slave slave-bobothebear
+ghprbActualCommit=9e3e267b6737c4239d78629df6c8e7ece00b4f11
+HUDSON_URL=https://leeroy.cs.unc.edu/
+GIT_COMMIT=a075d26c81becb7426186e388f8f816def8643af
+branch=${sha1}
+HOME=/leeroy
+ghprbTriggerAuthorLoginMention=
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene/1843/
+ghprbPullAuthorLoginMention=@HW42
+ghprbActualCommitAuthor=Simon Gaiser
+JENKINS_SERVER_COOKIE=durable-4dc7bb75f3869ab106e25a7c1dac1a5c
+ghprbGhRepository=oscarlab/graphene
+WORKSPACE=/home/jenkins/workspace/graphene
+ghprbPullLongDescription=<!-- Please fill in the following form before submitting this PR and ensure that your code follows our [coding style guideline](../blob/master/CODESTYLE.md). -->\r\n\r\n## Affected components\r\n\r\n- [x] README and global configuration\r\n- [x] Linux PAL\r\n- [x] SGX PAL\r\n- [ ] FreeBSD PAL\r\n- [x] Common PAL code\r\n- [x] Library OS (i.e., SHIM), including GLIBC\r\n\r\n## Description of the changes <!-- (reasons and measures) -->\r\n\r\nFix make clean. There were a bunch of files which weren't cleaned up. This also adds a test to CI to check for such error in the future.\r\n\r\n## How to test this PR? <!-- (if applicable) -->\r\n\r\nSee included test.\n\n<!-- Reviewable:start -->\n---\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/950)\n<!-- Reviewable:end -->\n
+NODE_NAME=slave-bobothebear
+ghprbCredentialsId=0d7ccd42-8b49-4ca9-ba50-5f2110ea8ab3
+GIT_BRANCH=origin/pr/950/merge
+EXECUTOR_NUMBER=0
+STAGE_NAME=Build
+ghprbTriggerAuthorLogin=
+ghprbPullAuthorLogin=HW42
+BUILD_DISPLAY_NAME=#1843
+HUDSON_HOME=/var/lib/jenkins
+ghprbTriggerAuthor=
+JOB_BASE_NAME=graphene
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=origin/pr/950/merge
+BUILD_ID=1843
+BUILD_TAG=jenkins-graphene-1843
+ghprbCommentBody=null
+JENKINS_URL=https://leeroy.cs.unc.edu/
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene/
+GIT_URL=git@github.com:oscarlab/graphene.git
+random_string=N5WYSSJ07AWN
+ghprbPullTitle=Fix make clean
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/950
+BUILD_NUMBER=1843
+JENKINS_NODE_COOKIE=4a9e7a18-3408-4011-b080-4be8eb879b77
+ghprbAuthorRepoGitUrl=https://github.com/HW42/graphene.git
+build_revision=origin/pr/950/merge
+ghprbActualCommitAuthorEmail=simon@invisiblethingslab.com
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/1843/display/redirect
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene
+PWD=/home/jenkins/workspace/graphene
+ghprbPullId=950
+GIT_PREVIOUS_COMMIT=5128ee7fac6dc82183d15e1ae1d55f7c05254418
++ ./Scripts/clean-check-prepare
+cp: cannot create directory '/home/jenkins/workspace/graphene.clean-check.clean': Permission denied
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 e062301cda7418635582b1733b14129327e13b4c99c0ce8c79b85acb50188024
+$ docker rm -f e062301cda7418635582b1733b14129327e13b4c99c0ce8c79b85acb50188024
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 9e3e267b6737c4239d78629df6c8e7ece00b4f11 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene/1843 and message: 'Build finished. '
+Using context: Jenkins
+ERROR: script returned exit code 1
+Finished: FAILURE

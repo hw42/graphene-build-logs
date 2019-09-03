@@ -1,0 +1,108 @@
+GitHub pull request #956 of commit f5e8045c785a11917e9205e7a0665d2b5ba30c25, has merge conflicts.
+Setting status of f5e8045c785a11917e9205e7a0665d2b5ba30c25 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/1924/ and message: 'Build started for original commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read Jenkinsfiles/Linux-Debug
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse f5e8045c785a11917e9205e7a0665d2b5ba30c25^{commit} # timeout=10
+Checking out Revision f5e8045c785a11917e9205e7a0665d2b5ba30c25 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f5e8045c785a11917e9205e7a0665d2b5ba30c25 # timeout=20
+Commit message: "fixup! fixup! fixup! fixup! fixup! [App] Clean up the Python example"
+ > git rev-list --no-walk bd152d698b7c3c108cf886d94bb523d92b54b902 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘slave-beaker12’ is reserved for jobs with matching label expression; ‘slave-constantine’ is reserved for jobs with matching label expression; ‘slave-crazyharry’ is reserved for jobs with matching label expression; ‘slave-gonzo’ is reserved for jobs with matching label expression
+Running on slave-pepe in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision f5e8045c785a11917e9205e7a0665d2b5ba30c25 (detached)
+Commit message: "fixup! fixup! fixup! fixup! fixup! [App] Clean up the Python example"
+ > git rev-parse f5e8045c785a11917e9205e7a0665d2b5ba30c25^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f5e8045c785a11917e9205e7a0665d2b5ba30c25 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t ef08dc5a138a87433395feb048edd1ad542f06e3 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  974.2MB
+Error response from daemon: Dockerfile parse error line 32: unknown instruction: &&
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Setting status of f5e8045c785a11917e9205e7a0665d2b5ba30c25 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/1924/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+ERROR: script returned exit code 1
+Finished: FAILURE

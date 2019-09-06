@@ -1,0 +1,336 @@
+GitHub pull request #981 of commit 20cc991f308c707d5ebcf7618c8caa50314ffd6b, no merge conflicts.
+Setting status of 20cc991f308c707d5ebcf7618c8caa50314ffd6b to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/1950/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read Jenkinsfiles/Linux-Debug
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/981/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/981/merge^{commit} # timeout=10
+Checking out Revision 4545188181a476770e182a2b2e294a62f1c01695 (refs/remotes/origin/pr/981/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4545188181a476770e182a2b2e294a62f1c01695 # timeout=20
+Commit message: "Merge 20cc991f308c707d5ebcf7618c8caa50314ffd6b into 62ecb4bc79135ccf45953eff2d6a02b40acf75df"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 4545188181a476770e182a2b2e294a62f1c01695 (refs/remotes/origin/pr/981/merge)
+Commit message: "Merge 20cc991f308c707d5ebcf7618c8caa50314ffd6b into 62ecb4bc79135ccf45953eff2d6a02b40acf75df"
+ > git rev-parse refs/remotes/origin/pr/981/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/981/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4545188181a476770e182a2b2e294a62f1c01695 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 5f8aea6c57c5cd1e9337cd70db745b15234a9fa0 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  991.5MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        build-essential        gawk        bison        gettext        git        libexpat1        libexpat1-dev        libpcre3-dev        libxml2-dev        linux-headers-generic        linux-headers-$(uname -r)        net-tools        python        python-protobuf        python3-minimal        python3-pytest        texinfo        wget        libomp-dev     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/7 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/7 : RUN uname -a
+ ---> Running in 78152593c5b3
+Linux 78152593c5b3 4.4.0-161-generic #189-Ubuntu SMP Tue Aug 27 08:10:16 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+Removing intermediate container 78152593c5b3
+ ---> 45f5b4fdac71
+Step 3/7 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        build-essential        gawk        bison        gettext        git        libexpat1        libexpat1-dev        libpcre3-dev        libxml2-dev        linux-headers-generic        linux-headers-$(uname -r)        net-tools        python        python-protobuf        python3-minimal        python3-pytest        texinfo        wget        libomp-dev     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Running in b4f6a4f6f1c1
+Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+Get:6 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [936 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1316 kB]
+Get:11 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
+Get:13 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [581 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [985 kB]
+Get:15 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [6119 B]
+Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [19.1 kB]
+Get:17 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7942 B]
+Get:18 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8807 B]
+Fetched 16.0 MB in 7s (2154 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  automake autotools-dev binutils bzip2 ca-certificates cpp cpp-5 dh-python
+  dpkg-dev fakeroot file g++ g++-5 gcc gcc-5 gettext-base git-man icu-devtools
+  ifupdown iproute2 isc-dhcp-client isc-dhcp-common krb5-locales less
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libapr1 libaprutil1 libasan2 libasn1-8-heimdal libasprintf-dev
+  libasprintf0v5 libatm1 libatomic1 libauthen-sasl-perl libbison-dev libbsd0
+  libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libcroco3 libcurl3-gnutls
+  libdns-export162 libdpkg-perl libedit2 libencode-locale-perl liberror-perl
+  libfakeroot libffi6 libfile-fcntllock-perl libfile-listing-perl
+  libfont-afm-perl libgcc-5-dev libgdbm3 libgettextpo-dev libgettextpo0
+  libglib2.0-0 libglib2.0-data libgmp10 libgnutls30 libgomp1 libgssapi-krb5-2
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhtml-form-perl libhtml-format-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl
+  libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl
+  libhttp-message-perl libhttp-negotiate-perl libhx509-5-heimdal libicu-dev
+  libicu55 libidn11 libio-html-perl libio-socket-ssl-perl libisc-export160
+  libisl15 libitm1 libk5crypto3 libkeyutils1 libkrb5-26-heimdal libkrb5-3
+  libkrb5support0 libldap-2.4-2 liblsan0 liblwp-mediatypes-perl
+  liblwp-protocol-https-perl libmagic1 libmailtools-perl libmnl0 libmpc3
+  libmpdec2 libmpfr4 libmpx0 libnet-http-perl libnet-smtp-ssl-perl
+  libnet-ssleay-perl libnettle6 libomp5 libp11-kit0 libpcre16-3 libpcre32-3
+  libpcrecpp0v5 libperl5.22 libpopt0 libprotobuf9v5 libpython-stdlib
+  libpython2.7-minimal libpython2.7-stdlib libpython3-stdlib
+  libpython3.5-minimal libpython3.5-stdlib libquadmath0 libroken18-heimdal
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libsigsegv2
+  libsqlite3-0 libssl1.0.0 libstdc++-5-dev libtasn1-6 libtext-unidecode-perl
+  libtimedate-perl libtsan0 libubsan0 libunistring0 liburi-perl
+  libwind0-heimdal libwww-perl libwww-robotrules-perl libx11-6 libx11-data
+  libxau6 libxcb1 libxdmcp6 libxext6 libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl
+  libxml-sax-expat-perl libxml-sax-perl libxml2 libxmuu1 libxtables11
+  linux-headers-4.4.0-161 linux-libc-dev m4 make manpages manpages-dev
+  mime-support netbase openssh-client openssl patch perl perl-modules-5.22
+  python-minimal python-pkg-resources python2.7 python2.7-minimal python3
+  python3-pkg-resources python3-py python3.5 python3.5-minimal rename rsync
+  sgml-base shared-mime-info tex-common ucf xauth xdg-user-dirs xml-core
+  xz-utils
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc libtool binutils-doc bison-doc
+  bzip2-doc cpp-doc gcc-5-locales debian-keyring g++-multilib g++-5-multilib
+  gcc-5-doc libstdc++6-5-dbg gawk-doc gcc-multilib flex gdb gcc-doc
+  gcc-5-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg
+  libasan2-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg
+  libmpx0-dbg libquadmath0-dbg gettext-doc autopoint git-daemon-run
+  | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-arch
+  git-cvs git-mediawiki git-svn ppp rdnssd iproute2-doc resolvconf
+  avahi-autoipd isc-dhcp-client-ddns apparmor libdigest-hmac-perl
+  libgssapi-perl glibc-doc gnutls-bin krb5-doc krb5-user libdata-dump-perl
+  icu-doc libcrypt-ssleay-perl libsasl2-modules-otp libsasl2-modules-ldap
+  libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libstdc++-5-doc libauthen-ntlm-perl
+  pkg-config make-doc man-browser ssh-askpass libpam-ssh keychain monkeysphere
+  ed diffutils-doc perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl python-doc python-tk python-setuptools
+  python2.7-doc binfmt-support python3-doc python3-tk python3-venv
+  python3-setuptools subversion python3.5-venv python3.5-doc openssh-server
+  sgml-base-doc debhelper texlive-base texlive-latex-base
+  texlive-generic-recommended texinfo-doc-nonfree
+The following NEW packages will be installed:
+  apache2-utils autoconf automake autotools-dev binutils bison build-essential
+  bzip2 ca-certificates cpp cpp-5 dh-python dpkg-dev fakeroot file g++ g++-5
+  gawk gcc gcc-5 gettext gettext-base git git-man icu-devtools ifupdown
+  iproute2 isc-dhcp-client isc-dhcp-common krb5-locales less
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libapr1 libaprutil1 libasan2 libasn1-8-heimdal libasprintf-dev
+  libasprintf0v5 libatm1 libatomic1 libauthen-sasl-perl libbison-dev libbsd0
+  libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libcroco3 libcurl3-gnutls
+  libdns-export162 libdpkg-perl libedit2 libencode-locale-perl liberror-perl
+  libexpat1 libexpat1-dev libfakeroot libffi6 libfile-fcntllock-perl
+  libfile-listing-perl libfont-afm-perl libgcc-5-dev libgdbm3 libgettextpo-dev
+  libgettextpo0 libglib2.0-0 libglib2.0-data libgmp10 libgnutls30 libgomp1
+  libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhtml-form-perl libhtml-format-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl
+  libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl
+  libhttp-message-perl libhttp-negotiate-perl libhx509-5-heimdal libicu-dev
+  libicu55 libidn11 libio-html-perl libio-socket-ssl-perl libisc-export160
+  libisl15 libitm1 libk5crypto3 libkeyutils1 libkrb5-26-heimdal libkrb5-3
+  libkrb5support0 libldap-2.4-2 liblsan0 liblwp-mediatypes-perl
+  liblwp-protocol-https-perl libmagic1 libmailtools-perl libmnl0 libmpc3
+  libmpdec2 libmpfr4 libmpx0 libnet-http-perl libnet-smtp-ssl-perl
+  libnet-ssleay-perl libnettle6 libomp-dev libomp5 libp11-kit0 libpcre16-3
+  libpcre3-dev libpcre32-3 libpcrecpp0v5 libperl5.22 libpopt0 libprotobuf9v5
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib libpython3-stdlib
+  libpython3.5-minimal libpython3.5-stdlib libquadmath0 libroken18-heimdal
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libsigsegv2
+  libsqlite3-0 libssl1.0.0 libstdc++-5-dev libtasn1-6 libtext-unidecode-perl
+  libtimedate-perl libtsan0 libubsan0 libunistring0 liburi-perl
+  libwind0-heimdal libwww-perl libwww-robotrules-perl libx11-6 libx11-data
+  libxau6 libxcb1 libxdmcp6 libxext6 libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl
+  libxml-sax-expat-perl libxml-sax-perl libxml2 libxml2-dev libxmuu1
+  libxtables11 linux-headers-4.4.0-161 linux-headers-4.4.0-161-generic
+  linux-headers-generic linux-libc-dev m4 make manpages manpages-dev
+  mime-support net-tools netbase openssh-client openssl patch perl
+  perl-modules-5.22 python python-minimal python-pkg-resources python-protobuf
+  python2.7 python2.7-minimal python3 python3-minimal python3-pkg-resources
+  python3-py python3-pytest python3.5 python3.5-minimal rename rsync sgml-base
+  shared-mime-info tex-common texinfo ucf wget xauth xdg-user-dirs xml-core
+  xz-utils
+0 upgraded, 210 newly installed, 0 to remove and 9 not upgraded.
+Need to get 108 MB of archives.
+After this operation, 496 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatm1 amd64 1:2.5.1-1.5 [24.2 kB]
+Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmnl0 amd64 1.0.3-5 [12.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpopt0 amd64 1.16-10 [26.0 kB]
+Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.15 [1084 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-minimal amd64 3.5.2-2ubuntu0~16.04.5 [524 kB]
+Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libexpat1 amd64 2.1.0-7ubuntu0.16.04.4 [71.4 kB]
+Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-minimal amd64 3.5.2-2ubuntu0~16.04.5 [1598 kB]
+Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-minimal amd64 3.5.1-3 [23.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu xenial/main amd64 mime-support all 3.59ubuntu1 [31.0 kB]
+Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpdec2 amd64 2.4.2-1 [82.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1.2 [397 kB]
+Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-stdlib amd64 3.5.2-2ubuntu0~16.04.5 [2134 kB]
+Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5 amd64 3.5.2-2ubuntu0~16.04.5 [165 kB]
+Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython3-stdlib amd64 3.5.1-3 [6818 B]
+Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dh-python all 2.20151103ubuntu1.2 [73.9 kB]
+Get:16 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3 amd64 3.5.1-3 [8710 B]
+Get:17 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgdbm3 amd64 1.8.3-13.1 [16.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-0 amd64 2.48.2-0ubuntu4.4 [1120 kB]
+Get:20 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxau6 amd64 1:1.0.8-1 [8376 B]
+Get:21 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxdmcp6 amd64 1:1.1.2-1.1 [11.0 kB]
+Get:22 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxcb1 amd64 1.11.1-1ubuntu1 [40.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-data all 2:1.6.3-1ubuntu2.1 [113 kB]
+Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-6 amd64 2:1.6.3-1ubuntu2.1 [570 kB]
+Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxext6 amd64 2:1.3.3-1 [29.4 kB]
+Get:26 http://archive.ubuntu.com/ubuntu xenial/main amd64 sgml-base all 1.26+nmu4ubuntu1 [12.5 kB]
+Get:27 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+Get:28 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpfr4 amd64 3.1.4-1 [191 kB]
+Get:29 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsigsegv2 amd64 2.10-4 [14.1 kB]
+Get:30 http://archive.ubuntu.com/ubuntu xenial/main amd64 gawk amd64 1:4.1.3+dfsg-0.1 [398 kB]
+Get:31 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpcrecpp0v5 amd64 2:8.38-3.1 [15.2 kB]
+Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 libunistring0 amd64 0.9.3-5.2ubuntu1 [279 kB]
+Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.6 [2629 kB]
+Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.6 [3405 kB]
+Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.6 [237 kB]
+Get:36 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.4 [339 kB]
+Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.4 [1261 kB]
+Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-minimal amd64 2.7.12-1~16.04 [28.1 kB]
+Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.4 [1880 kB]
+Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.4 [224 kB]
+Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-stdlib amd64 2.7.12-1~16.04 [7768 B]
+Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python amd64 2.7.12-1~16.04 [137 kB]
+Get:43 http://archive.ubuntu.com/ubuntu xenial/main amd64 libmpc3 amd64 1.0.3-1 [39.7 kB]
+Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 bzip2 amd64 1.0.6-8ubuntu0.2 [32.5 kB]
+Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmagic1 amd64 1:5.25-2ubuntu1.2 [216 kB]
+Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 file amd64 1:5.25-2ubuntu1.2 [21.2 kB]
+Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.5 [523 kB]
+Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.4 [54.9 kB]
+Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.15 [153 kB]
+Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.15 [665 kB]
+Get:51 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.10 [224 kB]
+Get:52 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.10 [105 kB]
+Get:53 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 less amd64 481-2.1ubuntu0.2 [110 kB]
+Get:54 http://archive.ubuntu.com/ubuntu xenial/main amd64 libbsd0 amd64 0.8.2-1 [41.7 kB]
+Get:55 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+Get:57 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+Get:58 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+Get:59 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
+Get:60 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.5 [548 kB]
+Get:61 http://archive.ubuntu.com/ubuntu xenial/main amd64 libxtables11 amd64 1.6.0-2ubuntu3 [27.2 kB]
+Get:62 http://archive.ubuntu.com/ubuntu xenial/main amd64 net-tools amd64 1.60-26ubuntu1 [175 kB]
+Get:63 http://archive.ubuntu.com/ubuntu xenial/main amd64 netbase all 5.3 [12.9 kB]
+Get:64 http://archive.ubuntu.com/ubuntu xenial/main amd64 ucf all 3.0036 [52.9 kB]
+Get:65 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.15 [492 kB]
+Get:66 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ca-certificates all 20170717~16.04.2 [167 kB]
+Get:67 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasprintf0v5 amd64 0.19.7-2ubuntu3.1 [6568 B]
+Get:68 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gettext-base amd64 0.19.7-2ubuntu3.1 [48.0 kB]
+Get:69 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 krb5-locales all 1.13.2+dfsg-5ubuntu2.1 [13.6 kB]
+Get:70 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+Get:72 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5support0 amd64 1.13.2+dfsg-5ubuntu2.1 [31.2 kB]
+Get:73 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libk5crypto3 amd64 1.13.2+dfsg-5ubuntu2.1 [81.3 kB]
+Get:74 http://archive.ubuntu.com/ubuntu xenial/main amd64 libkeyutils1 amd64 1.5.9-8ubuntu1 [9904 B]
+Get:75 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-3 amd64 1.13.2+dfsg-5ubuntu2.1 [273 kB]
+Get:76 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi-krb5-2 amd64 1.13.2+dfsg-5ubuntu2.1 [120 kB]
+Get:77 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+Get:78 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+Get:79 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+Get:80 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+Get:81 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+Get:82 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+Get:83 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+Get:84 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14ubuntu0.1 [14.5 kB]
+Get:85 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14ubuntu0.1 [48.6 kB]
+Get:86 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.7 [160 kB]
+Get:87 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d-1ubuntu0.1 [54.4 kB]
+Get:88 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3-gnutls amd64 7.47.0-1ubuntu2.13 [184 kB]
+Get:89 http://archive.ubuntu.com/ubuntu xenial/main amd64 libedit2 amd64 3.1-20150325-1ubuntu2 [76.5 kB]
+Get:90 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-data all 2.48.2-0ubuntu4.4 [131 kB]
+Get:91 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.4 [7646 kB]
+Aborted by Michał Kowalczyk
+Sending interrupt signal to process
+Terminated
+script returned exit code 143
+[Pipeline] }
+Click here to forcibly terminate running steps
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 20cc991f308c707d5ebcf7618c8caa50314ffd6b to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/1950/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+Finished: ABORTED

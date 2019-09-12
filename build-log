@@ -1,0 +1,3091 @@
+GitHub pull request #976 of commit 3d2b1d64ecc687cebb9c3ab75aeea44cdc437994, no merge conflicts.
+Setting status of 3d2b1d64ecc687cebb9c3ab75aeea44cdc437994 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/831/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+Checking out Revision 8a9cf1b06d61d51f1d375a0e504a095df5fac455 (refs/remotes/origin/pr/976/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8a9cf1b06d61d51f1d375a0e504a095df5fac455 # timeout=20
+Commit message: "Merge 3d2b1d64ecc687cebb9c3ab75aeea44cdc437994 into e98be31b00710c053a558828149eb303351d9597"
+ > git rev-list --no-walk df046767f1bdd115349ac32a5666cdd1e91c5e2d # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-beaker11 in /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 8a9cf1b06d61d51f1d375a0e504a095df5fac455 (refs/remotes/origin/pr/976/merge)
+Commit message: "Merge 3d2b1d64ecc687cebb9c3ab75aeea44cdc437994 into e98be31b00710c053a558828149eb303351d9597"
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8a9cf1b06d61d51f1d375a0e504a095df5fac455 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t f7e760e6a3c247117186fcde10d048284fad0c24 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  989.6MB
+Step 1/10 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/10 : RUN apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libelf-dev     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     python     python-protobuf     python3-pytest     texinfo     wget     curl     libprotobuf-c-dev     protobuf-c-compiler
+ ---> Using cache
+ ---> d51f64d2b340
+Step 3/10 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> d9fcecb90fdb
+Step 4/10 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> aa7f355532d4
+Step 5/10 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 0bdffece58fb
+Step 6/10 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 4ca7db5365ff
+Step 7/10 : WORKDIR /leeroy
+ ---> Using cache
+ ---> e3500bf28f1e
+Step 8/10 : USER leeroy
+ ---> Using cache
+ ---> d614944aec22
+Step 9/10 : ENV HOME /leeroy
+ ---> Using cache
+ ---> c1fc2b238d92
+Step 10/10 : CMD ["bash"]
+ ---> Using cache
+ ---> 99afafdfe997
+Successfully built 99afafdfe997
+Successfully tagged f7e760e6a3c247117186fcde10d048284fad0c24:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . f7e760e6a3c247117186fcde10d048284fad0c24
+.
+[Pipeline] withDockerContainer
+slave-beaker11 does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04 -v /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04:/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04@tmp:/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** f7e760e6a3c247117186fcde10d048284fad0c24 cat
+$ docker top 0835fe48218ce17beeaa575f37a14b1392859b86263d6a999c6ac4dfc4404b4a -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus (2 primes)
+......................++++
+...................................................................................++++
+e is 3 (0x03)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/01org/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout sgx_driver_1.9
+Note: checking out 'sgx_driver_1.9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 3abcf82 Merge pull request #31 from avchinch/master
++ make
+make -C /lib/modules/4.4.0-161-generic/build SUBDIRS=/opt/intel/linux-sgx-driver modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-161-generic'
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_main.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_page_cache.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_ioctl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_vma.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_util.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /opt/intel/linux-sgx-driver/isgx.mod.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-161-generic'
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/sgx-driver
++ ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver ISGX_DRIVER_VERSION=1.9 make
+
+*****************************************************************
+Make sure you have downloaded and installed the Intel SGX driver 
+from https://github.com/intel/linux-sgx-driver.git.
+*****************************************************************
+
+
+linux-sgx-driver -> /opt/intel/linux-sgx-driver
+create isgx_version.h
+make -C /lib/modules/4.4.0-161-generic/build M=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver CFLAGS_MODULE="-DDEBUG -g -O0" modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-161-generic'
+  CC [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_6.o
+  CC [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_7.o
+  CC [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_fsgsbase.o
+  CC [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_main.o
+  LD [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.mod.o
+  LD [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-161-generic'
+[Pipeline] sh
++ make -j 8 SGX=1 WERROR=1
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+  [ host/Linux-SGX/.obj/db_streams.o ]
+  [ host/Linux-SGX/.obj/db_memory.o ]
+  [ host/Linux-SGX/.obj/db_threading.o ]
+  [ host/Linux-SGX/.obj/db_mutex.o ]
+  [ host/Linux-SGX/.obj/db_events.o ]
+  [ host/Linux-SGX/.obj/db_process.o ]
+  [ host/Linux-SGX/.obj/db_object.o ]
+  [ host/Linux-SGX/.obj/db_main.o ]
+  [ host/Linux-SGX/.obj/db_misc.o ]
+  [ host/Linux-SGX/.obj/db_ipc.o ]
+  [ host/Linux-SGX/.obj/db_exception.o ]
+  [ host/Linux-SGX/.obj/db_rtld.o ]
+  [ host/Linux-SGX/.obj/slab.o ]
+make -C ../lib target=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/../../Runtime/pal_gdb-Linux-SGX ]
+  [ host/Linux-SGX/.obj/printf.o ]
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/atoi.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strlen.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/wordcopy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcpy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memset.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strchr.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/hton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/inet_pton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/config.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/path.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX'
+--2019-09-12 19:20:28--  https://software.intel.com/sites/default/files/managed/7b/de/RK_PUB.zip
+Resolving software.intel.com (software.intel.com)...   [ generated-offsets.s ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+  [ debugger/sgx_gdb.so ]
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+  [ pal.map ]
+96.17.190.12
+Connecting to software.intel.com (software.intel.com)|96.17.190.12|:443...   [ sgx_enclave.o ]
+connected.
+  [ sgx_framework.o ]
+  [ sgx_platform.o ]
+  [ sgx_main.o ]
+HTTP request sent, awaiting response... 200 OK
+Length: 1498 (1.5K) [application/zip]
+Saving to: 'quote/RK_PUB.zip'
+
+     0K .                                                     100%  279M=0s
+
+2019-09-12 19:20:28 (279 MB/s) - 'quote/RK_PUB.zip' saved [1498/1498]
+
+  [ sgx_rtld.o ]
+  [ sgx_thread.o ]
+  [ sgx_process.o ]
+  [ sgx_exception.o ]
+  [ sgx_graphene.o ]
+  [ quote/aesm.pb-c.o ]
+  [ generated_offsets.py ]
+/bin/sh: 1: unzip: not found
+  [ asm-offsets.h ]
+  [ db_files.o ]
+  [ db_devices.o ]
+  [ db_pipes.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_memory.o ]
+  [ db_threading.o ]
+  [ db_mutex.o ]
+  [ db_events.o ]
+  [ db_process.o ]
+  [ db_object.o ]
+  [ db_main.o ]
+  [ db_rtld.o ]
+  [ db_exception.o ]
+  [ db_misc.o ]
+  [ db_ipc.o ]
+  [ db_spinlock.o ]
+  [ enclave_ocalls.o ]
+  [ enclave_ecalls.o ]
+  [ enclave_framework.o ]
+  [ enclave_platform.o ]
+  [ enclave_pages.o ]
+  [ sgx_entry.o ]
+  [ enclave_entry.o ]
+  [ enclave_untrusted.o ]
+  [ pal-sgx ]
+  [ libpal-Linux-SGX.a ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX'
+  [ host/Linux-SGX/libpal.so ]
+  [ host/Linux-SGX/libpal.a ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/../../Runtime/pal-Linux-SGX ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/../../Runtime/libpal-Linux-SGX.so ]
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+make -C csu
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/csu'
+  [ user_start.o ]
+  [ user_shared_start.o ]
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/csu'
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+make -C LibOS all
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS'
+for MIRROR in https://ftp.gnu.org/gnu/ https://mirrors.kernel.org/gnu/ https://mirrors.ocf.berkeley.edu/gnu/; do \
+	wget --timeout=10 ${MIRROR}glibc/glibc-2.27.tar.gz \
+	&& break; \
+done
+--2019-09-12 19:20:30--  https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30468265 (29M) [application/x-gzip]
+Saving to: 'glibc-2.27.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  0%  518K 57s
+    50K .......... .......... .......... .......... ..........  0%  767K 48s
+   100K .......... .......... .......... .......... ..........  0% 31.6M 32s
+   150K .......... .......... .......... .......... ..........  0%  789K 34s
+   200K .......... .......... .......... .......... ..........  0% 21.8M 27s
+   250K .......... .......... .......... .......... ..........  1%  781K 29s
+   300K .......... .......... .......... .......... ..........  1% 17.6M 25s
+   350K .......... .......... .......... .......... ..........  1%  802K 26s
+   400K .......... .......... .......... .......... ..........  1% 9.56M 24s
+   450K .......... .......... .......... .......... ..........  1%  835K 25s
+   500K .......... .......... .......... .......... ..........  1% 13.5M 23s
+   550K .......... .......... .......... .......... ..........  2%  864K 24s
+   600K .......... .......... .......... .......... ..........  2% 9.13M 22s
+   650K .......... .......... .......... .......... ..........  2% 1.03M 22s
+   700K .......... .......... .......... .......... ..........  2% 11.4M 21s
+   750K .......... .......... .......... .......... ..........  2% 1.21M 21s
+   800K .......... .......... .......... .......... ..........  2% 1.23M 21s
+   850K .......... .......... .......... .......... ..........  3% 8.94M 20s
+   900K .......... .......... .......... .......... ..........  3% 1.33M 20s
+   950K .......... .......... .......... .......... ..........  3% 7.52M 19s
+  1000K .......... .......... .......... .......... ..........  3% 1.35M 19s
+  1050K .......... .......... .......... .......... ..........  3% 6.03M 19s
+  1100K .......... .......... .......... .......... ..........  3% 1.57M 19s
+  1150K .......... .......... .......... .......... ..........  4% 5.97M 18s
+  1200K .......... .......... .......... .......... ..........  4% 1.57M 18s
+  1250K .......... .......... .......... .......... ..........  4% 4.83M 17s
+  1300K .......... .......... .......... .......... ..........  4% 1.70M 17s
+  1350K .......... .......... .......... .......... ..........  4% 5.21M 17s
+  1400K .......... .......... .......... .......... ..........  4% 1.79M 17s
+  1450K .......... .......... .......... .......... ..........  5% 3.29M 16s
+  1500K .......... .......... .......... .......... ..........  5% 2.00M 16s
+  1550K .......... .......... .......... .......... ..........  5% 2.88M 16s
+  1600K .......... .......... .......... .......... ..........  5% 1.45M 16s
+  1650K .......... .......... .......... .......... ..........  5% 2.89M 16s
+  1700K .......... .......... .......... .......... ..........  5% 1.50M 16s
+  1750K .......... .......... .......... .......... ..........  6% 2.78M 16s
+  1800K .......... .......... .......... .......... ..........  6% 1.91M 16s
+  1850K .......... .......... .......... .......... ..........  6% 2.50M 16s
+  1900K .......... .......... .......... .......... ..........  6% 2.40M 15s
+  1950K .......... .......... .......... .......... ..........  6% 3.48M 15s
+  2000K .......... .......... .......... .......... ..........  6% 2.59M 15s
+  2050K .......... .......... .......... .......... ..........  7% 3.76M 15s
+  2100K .......... .......... .......... .......... ..........  7% 2.83M 15s
+  2150K .......... .......... .......... .......... ..........  7% 3.79M 15s
+  2200K .......... .......... .......... .......... ..........  7% 2.77M 14s
+  2250K .......... .......... .......... .......... ..........  7% 3.66M 14s
+  2300K .......... .......... .......... .......... ..........  7% 2.90M 14s
+  2350K .......... .......... .......... .......... ..........  8% 3.67M 14s
+  2400K .......... .......... .......... .......... ..........  8% 2.73M 14s
+  2450K .......... .......... .......... .......... ..........  8% 2.91M 14s
+  2500K .......... .......... .......... .......... ..........  8% 3.44M 14s
+  2550K .......... .......... .......... .......... ..........  8% 2.29M 13s
+  2600K .......... .......... .......... .......... ..........  8% 2.79M 13s
+  2650K .......... .......... .......... .......... ..........  9% 2.31M 13s
+  2700K .......... .......... .......... .......... ..........  9% 3.04M 13s
+  2750K .......... .......... .......... .......... ..........  9% 2.76M 13s
+  2800K .......... .......... .......... .......... ..........  9% 3.10M 13s
+  2850K .......... .......... .......... .......... ..........  9% 3.12M 13s
+  2900K .......... .......... .......... .......... ..........  9% 3.14M 13s
+  2950K .......... .......... .......... .......... .......... 10% 3.34M 13s
+  3000K .......... .......... .......... .......... .......... 10% 3.26M 13s
+  3050K .......... .......... .......... .......... .......... 10% 3.25M 13s
+  3100K .......... .......... .......... .......... .......... 10% 3.30M 12s
+  3150K .......... .......... .......... .......... .......... 10% 4.02M 12s
+  3200K .......... .......... .......... .......... .......... 10% 2.42M 12s
+  3250K .......... .......... .......... .......... .......... 11% 3.24M 12s
+  3300K .......... .......... .......... .......... .......... 11% 3.31M 12s
+  3350K .......... .......... .......... .......... .......... 11% 3.43M 12s
+  3400K .......... .......... .......... .......... .......... 11% 3.09M 12s
+  3450K .......... .......... .......... .......... .......... 11% 4.30M 12s
+  3500K .......... .......... .......... .......... .......... 11% 2.63M 12s
+  3550K .......... .......... .......... .......... .......... 12% 3.97M 12s
+  3600K .......... .......... .......... .......... .......... 12% 2.46M 12s
+  3650K .......... .......... .......... .......... .......... 12% 2.84M 12s
+  3700K .......... .......... .......... .......... .......... 12% 3.80M 11s
+  3750K .......... .......... .......... .......... .......... 12% 4.63M 11s
+  3800K .......... .......... .......... .......... .......... 12% 2.66M 11s
+  3850K .......... .......... .......... .......... .......... 13% 3.91M 11s
+  3900K .......... .......... .......... .......... .......... 13% 5.15M 11s
+  3950K .......... .......... .......... .......... .......... 13% 2.58M 11s
+  4000K .......... .......... .......... .......... .......... 13% 2.10M 11s
+  4050K .......... .......... .......... .......... .......... 13% 5.62M 11s
+  4100K .......... .......... .......... .......... .......... 13% 2.66M 11s
+  4150K .......... .......... .......... .......... .......... 14% 3.78M 11s
+  4200K .......... .......... .......... .......... .......... 14% 4.38M 11s
+  4250K .......... .......... .......... .......... .......... 14% 2.31M 11s
+  4300K .......... .......... .......... .......... .......... 14% 5.15M 11s
+  4350K .......... .......... .......... .......... .......... 14% 4.06M 11s
+  4400K .......... .......... .......... .......... .......... 14% 2.52M 11s
+  4450K .......... .......... .......... .......... .......... 15% 2.45M 11s
+  4500K .......... .......... .......... .......... .......... 15% 5.60M 10s
+  4550K .......... .......... .......... .......... .......... 15% 2.66M 10s
+  4600K .......... .......... .......... .......... .......... 15% 3.93M 10s
+  4650K .......... .......... .......... .......... .......... 15% 2.60M 10s
+  4700K .......... .......... .......... .......... .......... 15% 4.45M 10s
+  4750K .......... .......... .......... .......... .......... 16% 2.54M 10s
+  4800K .......... .......... .......... .......... .......... 16% 3.61M 10s
+  4850K .......... .......... .......... .......... .......... 16% 2.71M 10s
+  4900K .......... .......... .......... .......... .......... 16% 4.18M 10s
+  4950K .......... .......... .......... .......... .......... 16% 2.68M 10s
+  5000K .......... .......... .......... .......... .......... 16% 4.11M 10s
+  5050K .......... .......... .......... .......... .......... 17% 2.63M 10s
+  5100K .......... .......... .......... .......... .......... 17% 9.41M 10s
+  5150K .......... .......... .......... .......... .......... 17% 1.98M 10s
+  5200K .......... .......... .......... .......... .......... 17% 2.69M 10s
+  5250K .......... .......... .......... .......... .......... 17% 3.94M 10s
+  5300K .......... .......... .......... .......... .......... 17% 2.91M 10s
+  5350K .......... .......... .......... .......... .......... 18% 17.6M 10s
+  5400K .......... .......... .......... .......... .......... 18% 3.41M 10s
+  5450K .......... .......... .......... .......... .......... 18% 3.23M 10s
+  5500K .......... .......... .......... .......... .......... 18% 3.33M 10s
+  5550K .......... .......... .......... .......... .......... 18% 3.19M 9s
+  5600K .......... .......... .......... .......... .......... 18% 3.25M 9s
+  5650K .......... .......... .......... .......... .......... 19% 3.22M 9s
+  5700K .......... .......... .......... .......... .......... 19% 2.89M 9s
+  5750K .......... .......... .......... .......... .......... 19% 3.71M 9s
+  5800K .......... .......... .......... .......... .......... 19% 2.83M 9s
+  5850K .......... .......... .......... .......... .......... 19% 3.83M 9s
+  5900K .......... .......... .......... .......... .......... 19% 2.94M 9s
+  5950K .......... .......... .......... .......... .......... 20% 3.36M 9s
+  6000K .......... .......... .......... .......... .......... 20% 2.81M 9s
+  6050K .......... .......... .......... .......... .......... 20% 3.35M 9s
+  6100K .......... .......... .......... .......... .......... 20% 3.13M 9s
+  6150K .......... .......... .......... .......... .......... 20% 2.91M 9s
+  6200K .......... .......... .......... .......... .......... 21% 3.67M 9s
+  6250K .......... .......... .......... .......... .......... 21% 3.10M 9s
+  6300K .......... .......... .......... .......... .......... 21% 15.6M 9s
+  6350K .......... .......... .......... .......... .......... 21% 3.19M 9s
+  6400K .......... .......... .......... .......... .......... 21% 2.10M 9s
+  6450K .......... .......... .......... .......... .......... 21% 5.91M 9s
+  6500K .......... .......... .......... .......... .......... 22% 3.60M 9s
+  6550K .......... .......... .......... .......... .......... 22% 3.03M 9s
+  6600K .......... .......... .......... .......... .......... 22% 3.28M 9s
+  6650K .......... .......... .......... .......... .......... 22% 3.13M 9s
+  6700K .......... .......... .......... .......... .......... 22% 3.50M 9s
+  6750K .......... .......... .......... .......... .......... 22% 3.41M 9s
+  6800K .......... .......... .......... .......... .......... 23% 2.90M 9s
+  6850K .......... .......... .......... .......... .......... 23% 3.55M 9s
+  6900K .......... .......... .......... .......... .......... 23% 3.22M 9s
+  6950K .......... .......... .......... .......... .......... 23% 3.17M 8s
+  7000K .......... .......... .......... .......... .......... 23% 3.25M 8s
+  7050K .......... .......... .......... .......... .......... 23% 11.1M 8s
+  7100K .......... .......... .......... .......... .......... 24% 3.22M 8s
+  7150K .......... .......... .......... .......... .......... 24% 3.24M 8s
+  7200K .......... .......... .......... .......... .......... 24% 1.93M 8s
+  7250K .......... .......... .......... .......... .......... 24% 8.98M 8s
+  7300K .......... .......... .......... .......... .......... 24% 3.22M 8s
+  7350K .......... .......... .......... .......... .......... 24% 3.39M 8s
+  7400K .......... .......... .......... .......... .......... 25% 3.55M 8s
+  7450K .......... .......... .......... .......... .......... 25% 3.18M 8s
+  7500K .......... .......... .......... .......... .......... 25% 3.81M 8s
+  7550K .......... .......... .......... .......... .......... 25% 3.22M 8s
+  7600K .......... .......... .......... .......... .......... 25% 3.27M 8s
+  7650K .......... .......... .......... .......... .......... 25% 3.16M 8s
+  7700K .......... .......... .......... .......... .......... 26% 3.53M 8s
+  7750K .......... .......... .......... .......... .......... 26% 3.32M 8s
+  7800K .......... .......... .......... .......... .......... 26% 9.51M 8s
+  7850K .......... .......... .......... .......... .......... 26% 3.15M 8s
+  7900K .......... .......... .......... .......... .......... 26% 3.34M 8s
+  7950K .......... .......... .......... .......... .......... 26% 3.49M 8s
+  8000K .......... .......... .......... .......... .......... 27% 2.71M 8s
+  8050K .......... .......... .......... .......... .......... 27% 3.68M 8s
+  8100K .......... .......... .......... .......... .......... 27% 3.78M 8s
+  8150K .......... .......... .......... .......... .......... 27% 3.75M 8s
+  8200K .......... .......... .......... .......... .......... 27% 2.99M 8s
+  8250K .......... .......... .......... .......... .......... 27% 5.01M 8s
+  8300K .......... .......... .......... .......... .......... 28% 2.55M 8s
+  8350K .......... .......... .......... .......... .......... 28% 8.02M 8s
+  8400K .......... .......... .......... .......... .......... 28% 2.00M 8s
+  8450K .......... .......... .......... .......... .......... 28% 9.51M 8s
+  8500K .......... .......... .......... .......... .......... 28% 3.51M 8s
+  8550K .......... .......... .......... .......... .......... 28% 3.50M 8s
+  8600K .......... .......... .......... .......... .......... 29% 3.27M 7s
+  8650K .......... .......... .......... .......... .......... 29% 3.28M 7s
+  8700K .......... .......... .......... .......... .......... 29% 3.80M 7s
+  8750K .......... .......... .......... .......... .......... 29% 3.05M 7s
+  8800K .......... .......... .......... .......... .......... 29% 3.48M 7s
+  8850K .......... .......... .......... .......... .......... 29% 3.07M 7s
+  8900K .......... .......... .......... .......... .......... 30% 6.09M 7s
+  8950K .......... .......... .......... .......... .......... 30% 4.51M 7s
+  9000K .......... .......... .......... .......... .......... 30% 3.58M 7s
+  9050K .......... .......... .......... .......... .......... 30% 3.23M 7s
+  9100K .......... .......... .......... .......... .......... 30% 3.40M 7s
+  9150K .......... .......... .......... .......... .......... 30% 3.90M 7s
+  9200K .......... .......... .......... .......... .......... 31% 2.93M 7s
+  9250K .......... .......... .......... .......... .......... 31% 3.69M 7s
+  9300K .......... .......... .......... .......... .......... 31% 3.18M 7s
+  9350K .......... .......... .......... .......... .......... 31% 8.72M 7s
+  9400K .......... .......... .......... .......... .......... 31% 3.20M 7s
+  9450K .......... .......... .......... .......... .......... 31% 4.07M 7s
+  9500K .......... .......... .......... .......... .......... 32% 3.08M 7s
+  9550K .......... .......... .......... .......... .......... 32% 4.00M 7s
+  9600K .......... .......... .......... .......... .......... 32% 2.76M 7s
+  9650K .......... .......... .......... .......... .......... 32% 3.84M 7s
+  9700K .......... .......... .......... .......... .......... 32% 5.12M 7s
+  9750K .......... .......... .......... .......... .......... 32% 4.40M 7s
+  9800K .......... .......... .......... .......... .......... 33% 4.17M 7s
+  9850K .......... .......... .......... .......... .......... 33% 3.08M 7s
+  9900K .......... .......... .......... .......... .......... 33% 3.64M 7s
+  9950K .......... .......... .......... .......... .......... 33% 3.74M 7s
+ 10000K .......... .......... .......... .......... .......... 33% 2.94M 7s
+ 10050K .......... .......... .......... .......... .......... 33% 5.65M 7s
+ 10100K .......... .......... .......... .......... .......... 34% 4.22M 7s
+ 10150K .......... .......... .......... .......... .......... 34% 4.02M 7s
+ 10200K .......... .......... .......... .......... .......... 34% 3.29M 7s
+ 10250K .......... .......... .......... .......... .......... 34% 3.52M 7s
+ 10300K .......... .......... .......... .......... .......... 34% 3.53M 7s
+ 10350K .......... .......... .......... .......... .......... 34% 3.58M 7s
+ 10400K .......... .......... .......... .......... .......... 35% 5.13M 7s
+ 10450K .......... .......... .......... .......... .......... 35% 3.91M 7s
+ 10500K .......... .......... .......... .......... .......... 35% 4.07M 6s
+ 10550K .......... .......... .......... .......... .......... 35% 3.59M 6s
+ 10600K .......... .......... .......... .......... .......... 35% 3.47M 6s
+ 10650K .......... .......... .......... .......... .......... 35% 6.36M 6s
+ 10700K .......... .......... .......... .......... .......... 36% 3.82M 6s
+ 10750K .......... .......... .......... .......... .......... 36% 4.04M 6s
+ 10800K .......... .......... .......... .......... .......... 36% 2.71M 6s
+ 10850K .......... .......... .......... .......... .......... 36% 3.84M 6s
+ 10900K .......... .......... .......... .......... .......... 36% 4.11M 6s
+ 10950K .......... .......... .......... .......... .......... 36% 3.10M 6s
+ 11000K .......... .......... .......... .......... .......... 37% 14.6M 6s
+ 11050K .......... .......... .......... .......... .......... 37% 3.25M 6s
+ 11100K .......... .......... .......... .......... .......... 37% 3.90M 6s
+ 11150K .......... .......... .......... .......... .......... 37% 3.45M 6s
+ 11200K .......... .......... .......... .......... .......... 37% 3.18M 6s
+ 11250K .......... .......... .......... .......... .......... 37% 12.0M 6s
+ 11300K .......... .......... .......... .......... .......... 38% 2.99M 6s
+ 11350K .......... .......... .......... .......... .......... 38% 3.86M 6s
+ 11400K .......... .......... .......... .......... .......... 38% 3.95M 6s
+ 11450K .......... .......... .......... .......... .......... 38% 3.20M 6s
+ 11500K .......... .......... .......... .......... .......... 38% 13.7M 6s
+ 11550K .......... .......... .......... .......... .......... 38% 3.57M 6s
+ 11600K .......... .......... .......... .......... .......... 39% 3.04M 6s
+ 11650K .......... .......... .......... .......... .......... 39% 4.17M 6s
+ 11700K .......... .......... .......... .......... .......... 39% 3.18M 6s
+ 11750K .......... .......... .......... .......... .......... 39% 12.6M 6s
+ 11800K .......... .......... .......... .......... .......... 39% 3.10M 6s
+ 11850K .......... .......... .......... .......... .......... 39% 4.42M 6s
+ 11900K .......... .......... .......... .......... .......... 40% 3.38M 6s
+ 11950K .......... .......... .......... .......... .......... 40% 7.56M 6s
+ 12000K .......... .......... .......... .......... .......... 40% 3.78M 6s
+ 12050K .......... .......... .......... .......... .......... 40% 3.17M 6s
+ 12100K .......... .......... .......... .......... .......... 40% 4.34M 6s
+ 12150K .......... .......... .......... .......... .......... 41% 3.51M 6s
+ 12200K .......... .......... .......... .......... .......... 41% 6.87M 6s
+ 12250K .......... .......... .......... .......... .......... 41% 4.13M 6s
+ 12300K .......... .......... .......... .......... .......... 41% 4.06M 6s
+ 12350K .......... .......... .......... .......... .......... 41% 3.45M 6s
+ 12400K .......... .......... .......... .......... .......... 41% 3.21M 6s
+ 12450K .......... .......... .......... .......... .......... 42% 8.68M 6s
+ 12500K .......... .......... .......... .......... .......... 42% 3.64M 6s
+ 12550K .......... .......... .......... .......... .......... 42% 4.07M 6s
+ 12600K .......... .......... .......... .......... .......... 42% 3.51M 6s
+ 12650K .......... .......... .......... .......... .......... 42% 7.39M 5s
+ 12700K .......... .......... .......... .......... .......... 42% 4.09M 5s
+ 12750K .......... .......... .......... .......... .......... 43% 3.84M 5s
+ 12800K .......... .......... .......... .......... .......... 43% 3.45M 5s
+ 12850K .......... .......... .......... .......... .......... 43% 6.42M 5s
+ 12900K .......... .......... .......... .......... .......... 43% 3.93M 5s
+ 12950K .......... .......... .......... .......... .......... 43% 4.05M 5s
+ 13000K .......... .......... .......... .......... .......... 43% 3.72M 5s
+ 13050K .......... .......... .......... .......... .......... 44% 7.35M 5s
+ 13100K .......... .......... .......... .......... .......... 44% 4.42M 5s
+ 13150K .......... .......... .......... .......... .......... 44% 3.67M 5s
+ 13200K .......... .......... .......... .......... .......... 44% 3.32M 5s
+ 13250K .......... .......... .......... .......... .......... 44% 7.92M 5s
+ 13300K .......... .......... .......... .......... .......... 44% 3.75M 5s
+ 13350K .......... .......... .......... .......... .......... 45% 3.76M 5s
+ 13400K .......... .......... .......... .......... .......... 45% 3.78M 5s
+ 13450K .......... .......... .......... .......... .......... 45% 7.72M 5s
+ 13500K .......... .......... .......... .......... .......... 45% 4.23M 5s
+ 13550K .......... .......... .......... .......... .......... 45% 3.92M 5s
+ 13600K .......... .......... .......... .......... .......... 45% 3.37M 5s
+ 13650K .......... .......... .......... .......... .......... 46% 7.37M 5s
+ 13700K .......... .......... .......... .......... .......... 46% 4.57M 5s
+ 13750K .......... .......... .......... .......... .......... 46% 3.86M 5s
+ 13800K .......... .......... .......... .......... .......... 46% 5.58M 5s
+ 13850K .......... .......... .......... .......... .......... 46% 4.54M 5s
+ 13900K .......... .......... .......... .......... .......... 46% 3.24M 5s
+ 13950K .......... .......... .......... .......... .......... 47% 8.19M 5s
+ 14000K .......... .......... .......... .......... .......... 47% 4.53M 5s
+ 14050K .......... .......... .......... .......... .......... 47% 3.30M 5s
+ 14100K .......... .......... .......... .......... .......... 47% 4.06M 5s
+ 14150K .......... .......... .......... .......... .......... 47% 14.2M 5s
+ 14200K .......... .......... .......... .......... .......... 47% 3.12M 5s
+ 14250K .......... .......... .......... .......... .......... 48% 4.31M 5s
+ 14300K .......... .......... .......... .......... .......... 48% 10.7M 5s
+ 14350K .......... .......... .......... .......... .......... 48% 3.14M 5s
+ 14400K .......... .......... .......... .......... .......... 48% 3.94M 5s
+ 14450K .......... .......... .......... .......... .......... 48% 3.80M 5s
+ 14500K .......... .......... .......... .......... .......... 48% 7.37M 5s
+ 14550K .......... .......... .......... .......... .......... 49% 4.30M 5s
+ 14600K .......... .......... .......... .......... .......... 49% 4.01M 5s
+ 14650K .......... .......... .......... .......... .......... 49% 7.16M 5s
+ 14700K .......... .......... .......... .......... .......... 49% 3.65M 5s
+ 14750K .......... .......... .......... .......... .......... 49% 4.69M 5s
+ 14800K .......... .......... .......... .......... .......... 49% 3.27M 5s
+ 14850K .......... .......... .......... .......... .......... 50% 8.05M 5s
+ 14900K .......... .......... .......... .......... .......... 50% 3.73M 5s
+ 14950K .......... .......... .......... .......... .......... 50% 4.08M 5s
+ 15000K .......... .......... .......... .......... .......... 50% 5.88M 4s
+ 15050K .......... .......... .......... .......... .......... 50% 4.66M 4s
+ 15100K .......... .......... .......... .......... .......... 50% 4.12M 4s
+ 15150K .......... .......... .......... .......... .......... 51% 6.56M 4s
+ 15200K .......... .......... .......... .......... .......... 51% 4.30M 4s
+ 15250K .......... .......... .......... .......... .......... 51% 3.01M 4s
+ 15300K .......... .......... .......... .......... .......... 51% 12.0M 4s
+ 15350K .......... .......... .......... .......... .......... 51% 4.72M 4s
+ 15400K .......... .......... .......... .......... .......... 51% 3.34M 4s
+ 15450K .......... .......... .......... .......... .......... 52% 9.04M 4s
+ 15500K .......... .......... .......... .......... .......... 52% 4.69M 4s
+ 15550K .......... .......... .......... .......... .......... 52% 4.30M 4s
+ 15600K .......... .......... .......... .......... .......... 52% 5.03M 4s
+ 15650K .......... .......... .......... .......... .......... 52% 4.56M 4s
+ 15700K .......... .......... .......... .......... .......... 52% 3.20M 4s
+ 15750K .......... .......... .......... .......... .......... 53% 13.0M 4s
+ 15800K .......... .......... .......... .......... .......... 53% 4.39M 4s
+ 15850K .......... .......... .......... .......... .......... 53% 4.51M 4s
+ 15900K .......... .......... .......... .......... .......... 53% 5.28M 4s
+ 15950K .......... .......... .......... .......... .......... 53% 4.59M 4s
+ 16000K .......... .......... .......... .......... .......... 53% 3.01M 4s
+ 16050K .......... .......... .......... .......... .......... 54% 12.6M 4s
+ 16100K .......... .......... .......... .......... .......... 54% 4.86M 4s
+ 16150K .......... .......... .......... .......... .......... 54% 4.20M 4s
+ 16200K .......... .......... .......... .......... .......... 54% 5.74M 4s
+ 16250K .......... .......... .......... .......... .......... 54% 8.48M 4s
+ 16300K .......... .......... .......... .......... .......... 54% 5.55M 4s
+ 16350K .......... .......... .......... .......... .......... 55% 3.40M 4s
+ 16400K .......... .......... .......... .......... .......... 55% 5.83M 4s
+ 16450K .......... .......... .......... .......... .......... 55% 5.41M 4s
+ 16500K .......... .......... .......... .......... .......... 55% 3.81M 4s
+ 16550K .......... .......... .......... .......... .......... 55% 9.13M 4s
+ 16600K .......... .......... .......... .......... .......... 55% 3.94M 4s
+ 16650K .......... .......... .......... .......... .......... 56% 3.92M 4s
+ 16700K .......... .......... .......... .......... .......... 56% 11.4M 4s
+ 16750K .......... .......... .......... .......... .......... 56% 4.66M 4s
+ 16800K .......... .......... .......... .......... .......... 56% 3.07M 4s
+ 16850K .......... .......... .......... .......... .......... 56% 16.5M 4s
+ 16900K .......... .......... .......... .......... .......... 56% 4.51M 4s
+ 16950K .......... .......... .......... .......... .......... 57% 4.56M 4s
+ 17000K .......... .......... .......... .......... .......... 57% 6.04M 4s
+ 17050K .......... .......... .......... .......... .......... 57% 7.70M 4s
+ 17100K .......... .......... .......... .......... .......... 57% 4.74M 4s
+ 17150K .......... .......... .......... .......... .......... 57% 4.38M 4s
+ 17200K .......... .......... .......... .......... .......... 57% 5.45M 4s
+ 17250K .......... .......... .......... .......... .......... 58% 5.32M 4s
+ 17300K .......... .......... .......... .......... .......... 58% 3.58M 4s
+ 17350K .......... .......... .......... .......... .......... 58% 16.2M 4s
+ 17400K .......... .......... .......... .......... .......... 58% 4.96M 4s
+ 17450K .......... .......... .......... .......... .......... 58% 3.16M 4s
+ 17500K .......... .......... .......... .......... .......... 58% 15.8M 4s
+ 17550K .......... .......... .......... .......... .......... 59% 5.53M 4s
+ 17600K .......... .......... .......... .......... .......... 59% 2.70M 4s
+ 17650K .......... .......... .......... .......... .......... 59% 14.9M 3s
+ 17700K .......... .......... .......... .......... .......... 59% 5.77M 3s
+ 17750K .......... .......... .......... .......... .......... 59% 6.42M 3s
+ 17800K .......... .......... .......... .......... .......... 59% 3.47M 3s
+ 17850K .......... .......... .......... .......... .......... 60% 26.2M 3s
+ 17900K .......... .......... .......... .......... .......... 60% 4.26M 3s
+ 17950K .......... .......... .......... .......... .......... 60% 3.55M 3s
+ 18000K .......... .......... .......... .......... .......... 60% 11.1M 3s
+ 18050K .......... .......... .......... .......... .......... 60% 4.24M 3s
+ 18100K .......... .......... .......... .......... .......... 60% 6.88M 3s
+ 18150K .......... .......... .......... .......... .......... 61% 4.36M 3s
+ 18200K .......... .......... .......... .......... .......... 61% 23.8M 3s
+ 18250K .......... .......... .......... .......... .......... 61% 4.54M 3s
+ 18300K .......... .......... .......... .......... .......... 61% 2.87M 3s
+ 18350K .......... .......... .......... .......... .......... 61% 31.0M 3s
+ 18400K .......... .......... .......... .......... .......... 62% 4.12M 3s
+ 18450K .......... .......... .......... .......... .......... 62% 3.78M 3s
+ 18500K .......... .......... .......... .......... .......... 62% 9.08M 3s
+ 18550K .......... .......... .......... .......... .......... 62% 6.24M 3s
+ 18600K .......... .......... .......... .......... .......... 62% 6.88M 3s
+ 18650K .......... .......... .......... .......... .......... 62% 3.57M 3s
+ 18700K .......... .......... .......... .......... .......... 63% 12.9M 3s
+ 18750K .......... .......... .......... .......... .......... 63% 4.86M 3s
+ 18800K .......... .......... .......... .......... .......... 63% 3.04M 3s
+ 18850K .......... .......... .......... .......... .......... 63% 21.0M 3s
+ 18900K .......... .......... .......... .......... .......... 63% 6.79M 3s
+ 18950K .......... .......... .......... .......... .......... 63% 7.10M 3s
+ 19000K .......... .......... .......... .......... .......... 64% 3.41M 3s
+ 19050K .......... .......... .......... .......... .......... 64% 10.6M 3s
+ 19100K .......... .......... .......... .......... .......... 64% 4.64M 3s
+ 19150K .......... .......... .......... .......... .......... 64% 13.0M 3s
+ 19200K .......... .......... .......... .......... .......... 64% 3.38M 3s
+ 19250K .......... .......... .......... .......... .......... 64% 6.14M 3s
+ 19300K .......... .......... .......... .......... .......... 65% 9.18M 3s
+ 19350K .......... .......... .......... .......... .......... 65% 3.39M 3s
+ 19400K .......... .......... .......... .......... .......... 65% 10.7M 3s
+ 19450K .......... .......... .......... .......... .......... 65% 4.98M 3s
+ 19500K .......... .......... .......... .......... .......... 65% 20.9M 3s
+ 19550K .......... .......... .......... .......... .......... 65% 3.54M 3s
+ 19600K .......... .......... .......... .......... .......... 66% 10.5M 3s
+ 19650K .......... .......... .......... .......... .......... 66% 4.54M 3s
+ 19700K .......... .......... .......... .......... .......... 66% 3.49M 3s
+ 19750K .......... .......... .......... .......... .......... 66% 15.1M 3s
+ 19800K .......... .......... .......... .......... .......... 66% 6.37M 3s
+ 19850K .......... .......... .......... .......... .......... 66% 7.80M 3s
+ 19900K .......... .......... .......... .......... .......... 67% 3.61M 3s
+ 19950K .......... .......... .......... .......... .......... 67% 10.4M 3s
+ 20000K .......... .......... .......... .......... .......... 67% 4.41M 3s
+ 20050K .......... .......... .......... .......... .......... 67% 4.84M 3s
+ 20100K .......... .......... .......... .......... .......... 67% 7.60M 3s
+ 20150K .......... .......... .......... .......... .......... 67% 14.6M 3s
+ 20200K .......... .......... .......... .......... .......... 68% 4.35M 3s
+ 20250K .......... .......... .......... .......... .......... 68% 5.17M 3s
+ 20300K .......... .......... .......... .......... .......... 68% 6.95M 3s
+ 20350K .......... .......... .......... .......... .......... 68% 18.8M 3s
+ 20400K .......... .......... .......... .......... .......... 68% 4.25M 3s
+ 20450K .......... .......... .......... .......... .......... 68% 3.81M 3s
+ 20500K .......... .......... .......... .......... .......... 69% 10.7M 3s
+ 20550K .......... .......... .......... .......... .......... 69% 8.06M 2s
+ 20600K .......... .......... .......... .......... .......... 69% 6.82M 2s
+ 20650K .......... .......... .......... .......... .......... 69% 3.82M 2s
+ 20700K .......... .......... .......... .......... .......... 69% 11.8M 2s
+ 20750K .......... .......... .......... .......... .......... 69% 7.53M 2s
+ 20800K .......... .......... .......... .......... .......... 70% 3.32M 2s
+ 20850K .......... .......... .......... .......... .......... 70% 7.98M 2s
+ 20900K .......... .......... .......... .......... .......... 70% 13.5M 2s
+ 20950K .......... .......... .......... .......... .......... 70% 4.78M 2s
+ 21000K .......... .......... .......... .......... .......... 70% 4.64M 2s
+ 21050K .......... .......... .......... .......... .......... 70% 7.57M 2s
+ 21100K .......... .......... .......... .......... .......... 71% 14.4M 2s
+ 21150K .......... .......... .......... .......... .......... 71% 4.62M 2s
+ 21200K .......... .......... .......... .......... .......... 71% 3.70M 2s
+ 21250K .......... .......... .......... .......... .......... 71% 11.4M 2s
+ 21300K .......... .......... .......... .......... .......... 71% 8.28M 2s
+ 21350K .......... .......... .......... .......... .......... 71% 5.90M 2s
+ 21400K .......... .......... .......... .......... .......... 72% 3.97M 2s
+ 21450K .......... .......... .......... .......... .......... 72% 13.3M 2s
+ 21500K .......... .......... .......... .......... .......... 72% 18.1M 2s
+ 21550K .......... .......... .......... .......... .......... 72% 4.29M 2s
+ 21600K .......... .......... .......... .......... .......... 72% 3.87M 2s
+ 21650K .......... .......... .......... .......... .......... 72% 11.5M 2s
+ 21700K .......... .......... .......... .......... .......... 73% 8.68M 2s
+ 21750K .......... .......... .......... .......... .......... 73% 5.88M 2s
+ 21800K .......... .......... .......... .......... .......... 73% 4.18M 2s
+ 21850K .......... .......... .......... .......... .......... 73% 11.0M 2s
+ 21900K .......... .......... .......... .......... .......... 73% 9.24M 2s
+ 21950K .......... .......... .......... .......... .......... 73% 5.63M 2s
+ 22000K .......... .......... .......... .......... .......... 74% 3.91M 2s
+ 22050K .......... .......... .......... .......... .......... 74% 11.5M 2s
+ 22100K .......... .......... .......... .......... .......... 74% 9.71M 2s
+ 22150K .......... .......... .......... .......... .......... 74% 5.53M 2s
+ 22200K .......... .......... .......... .......... .......... 74% 4.11M 2s
+ 22250K .......... .......... .......... .......... .......... 74% 11.8M 2s
+ 22300K .......... .......... .......... .......... .......... 75% 24.7M 2s
+ 22350K .......... .......... .......... .......... .......... 75% 3.90M 2s
+ 22400K .......... .......... .......... .......... .......... 75% 4.42M 2s
+ 22450K .......... .......... .......... .......... .......... 75% 10.8M 2s
+ 22500K .......... .......... .......... .......... .......... 75% 8.91M 2s
+ 22550K .......... .......... .......... .......... .......... 75% 5.67M 2s
+ 22600K .......... .......... .......... .......... .......... 76% 4.20M 2s
+ 22650K .......... .......... .......... .......... .......... 76% 11.4M 2s
+ 22700K .......... .......... .......... .......... .......... 76% 14.8M 2s
+ 22750K .......... .......... .......... .......... .......... 76% 4.58M 2s
+ 22800K .......... .......... .......... .......... .......... 76% 4.04M 2s
+ 22850K .......... .......... .......... .......... .......... 76% 12.4M 2s
+ 22900K .......... .......... .......... .......... .......... 77% 14.0M 2s
+ 22950K .......... .......... .......... .......... .......... 77% 4.76M 2s
+ 23000K .......... .......... .......... .......... .......... 77% 5.78M 2s
+ 23050K .......... .......... .......... .......... .......... 77% 9.25M 2s
+ 23100K .......... .......... .......... .......... .......... 77% 7.52M 2s
+ 23150K .......... .......... .......... .......... .......... 77% 13.4M 2s
+ 23200K .......... .......... .......... .......... .......... 78% 3.34M 2s
+ 23250K .......... .......... .......... .......... .......... 78% 9.58M 2s
+ 23300K .......... .......... .......... .......... .......... 78% 6.83M 2s
+ 23350K .......... .......... .......... .......... .......... 78% 16.8M 2s
+ 23400K .......... .......... .......... .......... .......... 78% 5.62M 2s
+ 23450K .......... .......... .......... .......... .......... 78% 4.11M 2s
+ 23500K .......... .......... .......... .......... .......... 79% 14.9M 2s
+ 23550K .......... .......... .......... .......... .......... 79% 12.9M 2s
+ 23600K .......... .......... .......... .......... .......... 79% 4.56M 2s
+ 23650K .......... .......... .......... .......... .......... 79% 3.97M 2s
+ 23700K .......... .......... .......... .......... .......... 79% 21.4M 2s
+ 23750K .......... .......... .......... .......... .......... 79% 8.73M 2s
+ 23800K .......... .......... .......... .......... .......... 80% 4.86M 2s
+ 23850K .......... .......... .......... .......... .......... 80% 6.27M 1s
+ 23900K .......... .......... .......... .......... .......... 80% 8.53M 1s
+ 23950K .......... .......... .......... .......... .......... 80% 7.36M 1s
+ 24000K .......... .......... .......... .......... .......... 80% 4.97M 1s
+ 24050K .......... .......... .......... .......... .......... 80% 20.3M 1s
+ 24100K .......... .......... .......... .......... .......... 81% 4.32M 1s
+ 24150K .......... .......... .......... .......... .......... 81% 23.6M 1s
+ 24200K .......... .......... .......... .......... .......... 81% 9.11M 1s
+ 24250K .......... .......... .......... .......... .......... 81% 5.04M 1s
+ 24300K .......... .......... .......... .......... .......... 81% 6.20M 1s
+ 24350K .......... .......... .......... .......... .......... 82% 9.03M 1s
+ 24400K .......... .......... .......... .......... .......... 82% 6.90M 1s
+ 24450K .......... .......... .......... .......... .......... 82% 5.05M 1s
+ 24500K .......... .......... .......... .......... .......... 82% 7.11M 1s
+ 24550K .......... .......... .......... .......... .......... 82% 7.32M 1s
+ 24600K .......... .......... .......... .......... .......... 82% 9.48M 1s
+ 24650K .......... .......... .......... .......... .......... 83% 8.89M 1s
+ 24700K .......... .......... .......... .......... .......... 83% 7.18M 1s
+ 24750K .......... .......... .......... .......... .......... 83% 4.36M 1s
+ 24800K .......... .......... .......... .......... .......... 83% 11.8M 1s
+ 24850K .......... .......... .......... .......... .......... 83% 11.7M 1s
+ 24900K .......... .......... .......... .......... .......... 83% 4.93M 1s
+ 24950K .......... .......... .......... .......... .......... 84% 7.25M 1s
+ 25000K .......... .......... .......... .......... .......... 84% 7.33M 1s
+ 25050K .......... .......... .......... .......... .......... 84% 9.12M 1s
+ 25100K .......... .......... .......... .......... .......... 84% 22.3M 1s
+ 25150K .......... .......... .......... .......... .......... 84% 4.84M 1s
+ 25200K .......... .......... .......... .......... .......... 84% 4.08M 1s
+ 25250K .......... .......... .......... .......... .......... 85% 16.9M 1s
+ 25300K .......... .......... .......... .......... .......... 85% 11.0M 1s
+ 25350K .......... .......... .......... .......... .......... 85% 5.63M 1s
+ 25400K .......... .......... .......... .......... .......... 85% 5.79M 1s
+ 25450K .......... .......... .......... .......... .......... 85% 7.83M 1s
+ 25500K .......... .......... .......... .......... .......... 85% 15.9M 1s
+ 25550K .......... .......... .......... .......... .......... 86% 11.9M 1s
+ 25600K .......... .......... .......... .......... .......... 86% 4.67M 1s
+ 25650K .......... .......... .......... .......... .......... 86% 4.95M 1s
+ 25700K .......... .......... .......... .......... .......... 86% 9.95M 1s
+ 25750K .......... .......... .......... .......... .......... 86% 12.8M 1s
+ 25800K .......... .......... .......... .......... .......... 86% 9.73M 1s
+ 25850K .......... .......... .......... .......... .......... 87% 6.99M 1s
+ 25900K .......... .......... .......... .......... .......... 87% 4.11M 1s
+ 25950K .......... .......... .......... .......... .......... 87% 16.1M 1s
+ 26000K .......... .......... .......... .......... .......... 87% 11.3M 1s
+ 26050K .......... .......... .......... .......... .......... 87% 4.88M 1s
+ 26100K .......... .......... .......... .......... .......... 87% 7.13M 1s
+ 26150K .......... .......... .......... .......... .......... 88% 7.00M 1s
+ 26200K .......... .......... .......... .......... .......... 88% 10.3M 1s
+ 26250K .......... .......... .......... .......... .......... 88% 24.3M 1s
+ 26300K .......... .......... .......... .......... .......... 88% 4.80M 1s
+ 26350K .......... .......... .......... .......... .......... 88% 6.73M 1s
+ 26400K .......... .......... .......... .......... .......... 88% 6.11M 1s
+ 26450K .......... .......... .......... .......... .......... 89% 12.8M 1s
+ 26500K .......... .......... .......... .......... .......... 89% 12.2M 1s
+ 26550K .......... .......... .......... .......... .......... 89% 6.59M 1s
+ 26600K .......... .......... .......... .......... .......... 89% 4.10M 1s
+ 26650K .......... .......... .......... .......... .......... 89% 15.4M 1s
+ 26700K .......... .......... .......... .......... .......... 89% 11.7M 1s
+ 26750K .......... .......... .......... .......... .......... 90% 12.7M 1s
+ 26800K .......... .......... .......... .......... .......... 90% 6.47M 1s
+ 26850K .......... .......... .......... .......... .......... 90% 4.09M 1s
+ 26900K .......... .......... .......... .......... .......... 90% 15.6M 1s
+ 26950K .......... .......... .......... .......... .......... 90% 13.2M 1s
+ 27000K .......... .......... .......... .......... .......... 90% 4.39M 1s
+ 27050K .......... .......... .......... .......... .......... 91% 45.1M 1s
+ 27100K .......... .......... .......... .......... .......... 91% 4.21M 1s
+ 27150K .......... .......... .......... .......... .......... 91% 15.5M 1s
+ 27200K .......... .......... .......... .......... .......... 91% 12.8M 1s
+ 27250K .......... .......... .......... .......... .......... 91% 4.53M 1s
+ 27300K .......... .......... .......... .......... .......... 91% 8.01M 1s
+ 27350K .......... .......... .......... .......... .......... 92% 6.94M 1s
+ 27400K .......... .......... .......... .......... .......... 92% 19.7M 1s
+ 27450K .......... .......... .......... .......... .......... 92% 13.5M 1s
+ 27500K .......... .......... .......... .......... .......... 92% 4.37M 1s
+ 27550K .......... .......... .......... .......... .......... 92% 7.65M 1s
+ 27600K .......... .......... .......... .......... .......... 92% 7.39M 1s
+ 27650K .......... .......... .......... .......... .......... 93% 14.0M 0s
+ 27700K .......... .......... .......... .......... .......... 93% 14.4M 0s
+ 27750K .......... .......... .......... .......... .......... 93% 4.65M 0s
+ 27800K .......... .......... .......... .......... .......... 93% 7.88M 0s
+ 27850K .......... .......... .......... .......... .......... 93% 6.77M 0s
+ 27900K .......... .......... .......... .......... .......... 93% 19.2M 0s
+ 27950K .......... .......... .......... .......... .......... 94% 13.5M 0s
+ 28000K .......... .......... .......... .......... .......... 94% 4.32M 0s
+ 28050K .......... .......... .......... .......... .......... 94% 8.23M 0s
+ 28100K .......... .......... .......... .......... .......... 94% 6.94M 0s
+ 28150K .......... .......... .......... .......... .......... 94% 19.0M 0s
+ 28200K .......... .......... .......... .......... .......... 94% 14.8M 0s
+ 28250K .......... .......... .......... .......... .......... 95% 4.47M 0s
+ 28300K .......... .......... .......... .......... .......... 95% 9.34M 0s
+ 28350K .......... .......... .......... .......... .......... 95% 6.10M 0s
+ 28400K .......... .......... .......... .......... .......... 95% 18.0M 0s
+ 28450K .......... .......... .......... .......... .......... 95% 12.5M 0s
+ 28500K .......... .......... .......... .......... .......... 95% 4.76M 0s
+ 28550K .......... .......... .......... .......... .......... 96% 9.57M 0s
+ 28600K .......... .......... .......... .......... .......... 96% 5.82M 0s
+ 28650K .......... .......... .......... .......... .......... 96% 17.0M 0s
+ 28700K .......... .......... .......... .......... .......... 96% 17.9M 0s
+ 28750K .......... .......... .......... .......... .......... 96% 4.63M 0s
+ 28800K .......... .......... .......... .......... .......... 96% 8.16M 0s
+ 28850K .......... .......... .......... .......... .......... 97% 6.13M 0s
+ 28900K .......... .......... .......... .......... .......... 97% 15.6M 0s
+ 28950K .......... .......... .......... .......... .......... 97% 20.3M 0s
+ 29000K .......... .......... .......... .......... .......... 97% 4.62M 0s
+ 29050K .......... .......... .......... .......... .......... 97% 33.8M 0s
+ 29100K .......... .......... .......... .......... .......... 97% 7.30M 0s
+ 29150K .......... .......... .......... .......... .......... 98% 7.01M 0s
+ 29200K .......... .......... .......... .......... .......... 98% 11.6M 0s
+ 29250K .......... .......... .......... .......... .......... 98% 7.56M 0s
+ 29300K .......... .......... .......... .......... .......... 98% 8.29M 0s
+ 29350K .......... .......... .......... .......... .......... 98% 8.14M 0s
+ 29400K .......... .......... .......... .......... .......... 98% 6.66M 0s
+ 29450K .......... .......... .......... .......... .......... 99% 20.8M 0s
+ 29500K .......... .......... .......... .......... .......... 99% 17.0M 0s
+ 29550K .......... .......... .......... .......... .......... 99% 4.75M 0s
+ 29600K .......... .......... .......... .......... .......... 99% 6.88M 0s
+ 29650K .......... .......... .......... .......... .......... 99% 6.72M 0s
+ 29700K .......... .......... .......... .......... .......... 99% 15.8M 0s
+ 29750K ....                                                  100% 24.8M=6.9s
+
+2019-09-12 19:20:37 (4.24 MB/s) - 'glibc-2.27.tar.gz' saved [30468265/30468265]
+
+[ "`sha256sum glibc-2.27.tar.gz`" = "881ca905e6b5eec724de7948f14d66a07d97bdee8013e1b2a7d021ff5d540522  glibc-2.27.tar.gz" ] || \
+	(echo "*** glibc-2.27.tar.gz has a wrong checksum ***"; exit 255)
+rm -rf glibc-2.27
+tar -xzf glibc-2.27.tar.gz
+cd glibc-2.27 && \
+for p in glibc-patches/glibc-2.27.patch glibc-patches/syscalldb-api.patch glibc-patches/liblibos.patch glibc-patches/malloc-arena-size.patch glibc-patches/liblibos-2.23+.patch glibc-patches/hp-timing-2.23+.patch; do \
+	echo applying $p; \
+	patch -p1 < ../$p || exit 255; \
+done
+applying glibc-patches/glibc-2.27.patch
+patching file elf/dl-load.c
+patching file elf/Makefile
+patching file elf/rtld.c
+patching file elf/Versions
+patching file Makeconfig
+patching file Makefile
+patching file sysdeps/unix/sysv/linux/_exit.c
+patching file sysdeps/unix/sysv/linux/x86_64/cancellation.S
+patching file sysdeps/unix/sysv/linux/x86_64/clone.S
+patching file sysdeps/unix/sysv/linux/x86_64/getcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/____longjmp_chk.S
+patching file sysdeps/unix/sysv/linux/x86_64/lowlevellock.S
+patching file sysdeps/unix/sysv/linux/x86_64/setcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/sigaction.c
+patching file sysdeps/unix/sysv/linux/x86_64/swapcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/syscall.S
+patching file sysdeps/unix/sysv/linux/x86_64/sysdep.h
+patching file sysdeps/unix/sysv/linux/x86_64/vfork.S
+patching file sysdeps/x86_64/dl-machine.h
+patching file sysdeps/x86_64/nptl/tls.h
+applying glibc-patches/syscalldb-api.patch
+patching symbolic link elf/syscallas.S
+patching symbolic link elf/syscalldb.c
+patching file syscallas.S
+patching file syscalldb.c
+patching file syscalldb.h
+patching symbolic link sysdeps/unix/sysv/linux/x86_64/syscalldb.h
+applying glibc-patches/liblibos.patch
+patching file Makeconfig
+Hunk #1 succeeded at 1206 with fuzz 1 (offset 106 lines).
+patching file libos/Makefile
+patching file libos/Versions
+patching file libos/wrapper.c
+applying glibc-patches/malloc-arena-size.patch
+patching file malloc/arena.c
+Hunk #1 succeeded at 26 (offset 5 lines).
+Hunk #2 succeeded at 492 (offset -85 lines).
+Hunk #3 succeeded at 502 (offset -85 lines).
+applying glibc-patches/liblibos-2.23+.patch
+patching file shlib-versions
+Hunk #1 succeeded at 29 (offset -35 lines).
+applying glibc-patches/hp-timing-2.23+.patch
+patching file sysdeps/x86_64/hp-timing.h
+touch glibc-2.27/configure
+./buildglibc.py --src glibc-2.27 --quiet
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc tile x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... no
+checking sysdep dirs... sysdeps/unix/sysv/linux/x86_64/64 sysdeps/unix/sysv/linux/x86_64 sysdeps/unix/sysv/linux/x86 sysdeps/x86/nptl sysdeps/unix/sysv/linux/wordsize-64 sysdeps/x86_64/nptl sysdeps/unix/sysv/linux sysdeps/nptl sysdeps/pthread sysdeps/gnu sysdeps/unix/inet sysdeps/unix/sysv sysdeps/unix/x86_64 sysdeps/unix sysdeps/posix sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether as is GNU as... yes
+checking whether ld is GNU ld... yes
+checking for as... as
+checking version of as... 2.30, ok
+checking for ld... ld
+checking version of ld... 2.30, ok
+checking for gnumake... no
+checking for gmake... no
+checking for make... make
+checking version of make... 4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... msgfmt
+checking version of msgfmt... 0.19.8.1, ok
+checking for makeinfo... makeinfo
+checking version of makeinfo... 6.5, ok
+checking for sed... sed
+checking version of sed... 4.4, ok
+checking for gawk... gawk
+checking version of gawk... 4.1.4, ok
+checking for bison... bison
+checking version of bison... 3.0.4, ok
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+checking LD_LIBRARY_PATH variable... ok
+checking for bash... /bin/bash
+checking for perl... /usr/bin/perl
+checking for install-info... no
+checking for .set assembler directive... yes
+checking linker support for protected data symbol... yes
+checking linker support for INSERT in linker script... yes
+checking for broken __attribute__((alias()))... no
+checking whether to put _rtld_local into .sdata section... no
+checking whether to use .ctors/.dtors header and trailer... no
+checking for libunwind-support in compiler... no
+checking whether --noexecstack is desirable for .S files... yes
+checking for -z combreloc... yes
+checking for linker that supports -z execstack... yes
+checking for linker that supports --no-dynamic-linker... yes
+checking for -static-pie... no
+checking for -fpie... yes
+checking for --hash-style option... yes
+checking for sufficient default -shared layout... no
+checking for GLOB_DAT reloc... yes
+checking linker output format... elf64-x86-64
+checking for -fno-toplevel-reorder -fno-section-anchors... yes
+checking for -mtls-dialect=gnu2... yes
+checking whether cc puts quotes around section names... no
+checking for __builtin_memset... yes
+checking for redirection of built-in functions... yes
+checking for compiler option to disable generation of FMA instructions... -ffp-contract=off
+checking if gcc accepts -fno-tree-loop-distribute-patterns with __attribute__ ((__optimize__))... yes
+checking for libgd... no
+checking for _FORTIFY_SOURCE predefine... no
+checking whether the linker provides working __ehdr_start... yes
+checking for __builtin_trap with no external dependencies... yes
+checking whether the C++ compiler supports thread_local... yes
+running configure fragment for sysdeps/unix/sysv/linux/x86_64/64
+running configure fragment for sysdeps/unix/sysv/linux/x86_64
+running configure fragment for sysdeps/unix/sysv/linux
+checking installed Linux kernel header files... 3.2.0 or later
+checking for kernel header at least 3.2.0... ok
+checking for symlinks in /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Runtime/include... ok
+running configure fragment for sysdeps/gnu
+running configure fragment for sysdeps/unix/inet
+running configure fragment for sysdeps/x86_64
+checking for AVX512DQ support in assembler... yes
+checking for AVX512 support... yes
+checking for Intel MPX support... yes
+checking whether -fPIC is default... yes
+checking whether -fPIE is default... yes
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing default commands
+building in /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS: glibc-2.27
+using build dir: /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/glibc-build
+using install dir: /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Runtime
+CFLAGS=" -O2 -U_FORTIFY_SOURCE -fno-stack-protector -Wno-unused-value"  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/glibc-2.27/configure --prefix=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Runtime --with-tls --without-selinux --disable-test --disable-nscd | tee configure.out
+Building glibc, may take a while to finish. Warning messages may show up. If this process terminates with failures, see "glibc-build/build.log" for more information.
+(make -C glibc-build 2>&1 >> build.log) && touch glibc-build/Build.success
+*** errlist.c count 134 inflated to GLIBC_2.12 count 135 (old errno.h?)
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/crt1.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/crti.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/crtn.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libdl.so.2 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libc.so ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/ld-linux-x86-64.so.2 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libm.so.6 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libutil.so.1 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libc.so.6 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/liblibos.so.1 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libnss_dns.so.2 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libthread_db.so.1 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libresolv.so.2 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/libpthread.so.0 ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/../Runtime/librt.so.1 ]
+make -C shim all
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim'
+make -C src
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src'
+  [ bookkeep/shim_handle.o ]
+  [ bookkeep/shim_vma.o ]
+  [ bookkeep/shim_thread.o ]
+  [ utils/printf.o ]
+  [ bookkeep/shim_signal.o ]
+  [ utils/strobjs.o ]
+  [ utils/md5.o ]
+  [ fs/shim_dcache.o ]
+  [ fs/shim_namei.o ]
+  [ fs/shim_fs_hash.o ]
+  [ fs/shim_fs.o ]
+  [ fs/chroot/fs.o ]
+  [ fs/str/fs.o ]
+  [ fs/pipe/fs.o ]
+  [ fs/socket/fs.o ]
+  [ fs/proc/info.o ]
+  [ fs/proc/ipc-thread.o ]
+  [ fs/proc/thread.o ]
+  [ fs/dev/fs.o ]
+  [ fs/proc/fs.o ]
+  [ ipc/shim_ipc.o ]
+  [ ipc/shim_ipc_helper.o ]
+  [ ipc/shim_ipc_pid.o ]
+  [ ipc/shim_ipc_child.o ]
+  [ ipc/shim_ipc_sysv.o ]
+  [ elf/shim_rtld.o ]
+  [ shim_init.o ]
+  [ shim_table.o ]
+  [ shim_syscalls.o ]
+  [ generated-offsets.s ]
+  [ shim_malloc.o ]
+  [ shim_async.o ]
+  [ shim_parser.o ]
+  [ shim_debug.o ]
+  [ shim_object.o ]
+  [ start.o ]
+  [ sys/shim_ioctl.o ]
+  [ sys/shim_socket.o ]
+  [ sys/shim_time.o ]
+  [ sys/shim_alarm.o ]
+  [ sys/shim_msgget.o ]
+  [ sys/shim_migrate.o ]
+  [ sys/shim_benchmark.o ]
+  [ sys/shim_exec.o ]
+  [ sys/shim_brk.o ]
+  [ sys/shim_fork.o ]
+  [ sys/shim_access.o ]
+  [ sys/shim_sleep.o ]
+  [ sys/shim_vfork.o ]
+  [ sys/shim_stat.o ]
+  [ sys/shim_wait.o ]
+  [ sys/shim_fs.o ]
+  [ sys/shim_open.o ]
+  [ sys/shim_exit.o ]
+  [ sys/shim_semget.o ]
+  [ sys/shim_dup.o ]
+  [ sys/shim_sched.o ]
+  [ sys/shim_poll.o ]
+  [ sys/shim_uname.o ]
+  [ sys/shim_fcntl.o ]
+  [ sys/shim_futex.o ]
+  [ sys/shim_getrlimit.o ]
+  [ sys/shim_pipe.o ]
+  [ sys/shim_epoll.o ]
+  [ sys/shim_sigaction.o ]
+  [ sys/shim_getcwd.o ]
+  [ sys/shim_mmap.o ]
+  [ sys/shim_clone.o ]
+  [ sys/shim_wrappers.o ]
+  [ sys/shim_getpid.o ]
+  [ vdso/vdso.o ]
+  [ vdso/vdso-note.o ]
+make -C ../../../Pal/lib target=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/
+make[4]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ asm-offsets.h ]
+  [ shim_checkpoint.o ]
+  [ syscallas.o ]
+  [ vdso/.vdso-linked-for-reloc-check.so ]
+  [ check_no_reloc vdso/.vdso-linked-for-reloc-check.so ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/atoi.o ]
+  [ vdso/vdso.so.dbg ]
+  [ vdso/vdso.so ]
+  [ vdso/vdso-data.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/strlen.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/memcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/wordcopy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/memcpy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/memset.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/string/strchr.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/network/hton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/network/inet_pton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/graphene/config.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/graphene/path.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ libsysdb.a ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/../../../Runtime/libsysdb.a ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/.lib/graphene-lib.a ]
+make[4]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ libsysdb.so ]
+  [ libsysdb_debug.so ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/../../../Runtime/libsysdb.so ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src/../../../Runtime/libsysdb_debug.so ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim/src'
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS/shim'
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/LibOS'
+make -C Runtime all
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Runtime'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Runtime'
++ make -j 8 SGX=1 WERROR=1 test
+make -C Pal test
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+make -C src test
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+make -C host/Linux-SGX test
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX'
+make[3]: Nothing to be done for 'test'.
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX'
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+make -C csu test
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/csu'
+make[2]: Nothing to be done for 'test'.
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/csu'
+make -C test
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test'
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Broadcast.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Cpuid.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Event.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Exception.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Failure.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: File.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Fork.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: HandleSend.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: HelloWorld.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Ipc.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Memory.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Pie.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Pipe.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Process.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Segment.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Select.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Server.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Sleep.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Tcp.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Thread.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Udp.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Wait.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Yield.manifest.sgx.d: No such file or directory
+  [ manifest ]
+  [ Yield.manifest.sgx.d ]
+  [ Wait.manifest.sgx.d ]
+  [ Udp.manifest.sgx.d ]
+  [ Thread.manifest.sgx.d ]
+  [ Tcp.manifest.sgx.d ]
+  [ Server.manifest.sgx.d ]
+  [ Select.manifest.sgx.d ]
+  [ Sleep.manifest.sgx.d ]
+  [ Segment.manifest.sgx.d ]
+  [ Process.manifest.sgx.d ]
+  [ Pipe.manifest.sgx.d ]
+  [ Ipc.manifest.sgx.d ]
+  [ Memory.manifest.sgx.d ]
+  [ Pie.manifest.sgx.d ]
+  [ HelloWorld.manifest.sgx.d ]
+  [ HandleSend.manifest.sgx.d ]
+  [ Fork.manifest.sgx.d ]
+  [ File.manifest.sgx.d ]
+  [ Failure.manifest.sgx.d ]
+  [ Exception.manifest.sgx.d ]
+  [ Event.manifest.sgx.d ]
+  [ Cpuid.manifest.sgx.d ]
+  [ Broadcast.manifest.sgx.d ]
+ln -sf ../../Runtime/pal_loader
+make -C ../lib target=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/atoi.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/strlen.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/memcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/wordcopy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/memcpy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/memset.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/string/strchr.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/network/hton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/network/inet_pton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/graphene/config.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/graphene/path.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ HelloWorld ]
+  [ File ]
+  [ Failure ]
+  [ Fork ]
+  [ Process ]
+  [ Event ]
+  [ Exception ]
+  [ Thread ]
+  [ Memory ]
+  [ Pipe ]
+  [ Tcp ]
+  [ Udp ]
+  [ Yield ]
+  [ Ipc ]
+  [ Broadcast ]
+  [ Server ]
+  [ Segment ]
+  [ Wait ]
+  [ HandleSend ]
+  [ Select ]
+  [ Sleep ]
+  [ Pie ]
+  [ Cpuid ]
+  [ Broadcast.{sig, manifest.sgx} ]
+  [ Exception.{sig, manifest.sgx} ]
+  [ Event.{sig, manifest.sgx} ]
+  [ File.{sig, manifest.sgx} ]
+  [ Failure.{sig, manifest.sgx} ]
+  [ Fork.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    5ced0326f29e87e6bb6c7f83d0aa03bd9cea48902ebca0ed7cd7e57c888d4590 Exception
+Trusted children:
+    7c882cf56408f64eb98154a91bb994de6971d9af6ceffe10e209dcb3fdba099e Broadcast
+Trusted children:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    bfae44735de2a95a094b75650dafd649c707a7d06cd304807d02a3a59801cda6 Event
+Trusted children:
+  [ HandleSend.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    8ead1b8c241d956ca7c5591b53a0018405892010b12325ba095c0a93f1614093 File
+Trusted children:
+  [ HelloWorld.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    51ce9b56bb15550bb5f4d945bfe1e7ecd7aa56d8e98eb75ace70ab363be555c2 Failure
+Trusted children:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    542be3f9e43d315bb5d7d511d7896cdb94fbce84b3315574da4564882cb25efc Fork
+Trusted children:
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    6b3f45819bb38a0c58f4658ad9c53ce2ef6146dc2551a3f715729071c4bc7ed5 HelloWorld
+Trusted children:
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    43b2963784fec7ca109872bc16cc4893a2d2e3e8213317f73211acbbe5a2233e HandleSend
+Trusted children:
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    930171c7d007af16fd86bca415be385ce7e39fb3f8a57df9ffabe37b705d573e
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    b1cdba43379d70817f8248bb9c0d607c270c3502b43f97565e0db7088ff3ffb9
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    ef3f03a7d520465664e1481226d6101826cb510d9f70cd655afa82bb23da660e
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    a77bed61276833d264bfe7eeef49b408341ed0eca163b961128552091fe7461d
+  [ Ipc.{sig, manifest.sgx} ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+  [ Memory.{sig, manifest.sgx} ]
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    fca1fd6cbac7450a79832f432e1a1448e4095c42b18190eaa89e68d1ed927b75
+  [ Pie.{sig, manifest.sgx} ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    ab44f68310203949a26f057a11701f46516183d709ca6e5938894a02e2c92169
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+  [ Pipe.{sig, manifest.sgx} ]
+  [ Process.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    a2aaf04b802c991d9e2db097459a041aa46cb14df21691a2cfb24a04b6e95ad5
+    ea73217e728fd09922f28dafb87a45ecef137fc80c32ae9b47706161e2dba040 Ipc
+Trusted children:
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    7db3aa3df957b7dd587fe75aa25a9ab01e87b631fdb185e489850608e36c7607
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    ccfdfc2e6463acbb1d141087b490c7c568e07c6d32f71c5e861bad82ef5c500a Memory
+Trusted children:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    3dd50cd15ec4049775e4473c4fcadcc330a876992dc6da0e532f702a64def98d Pie
+Trusted children:
+  [ Segment.{sig, manifest.sgx} ]
+  [ Select.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    0a4088f672a84d41c5fbd5974c8d4a8b45ace8e9e25a1ccf1da143cdc29fe922 Pipe
+Trusted children:
+  [ Server.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    a62f6b37d3303be6c22fd3d9bdfbd9c33779fa7427f6b49ca06839f6337736f6 Process
+Trusted children:
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    a4059e5162c96f08c848a49f7e87dda4084cf90b668953b0589dc82f5b6063b3 Segment
+Trusted children:
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    cc4e49888fd416dea1f4080a6a1207bf45dc4a19c92fd9e06cfe074b84fef87b Select
+Trusted children:
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    334c390bf671a64bb0af493554ab2e586ccbbe737e4c06d375073bcbe0a79777 Server
+Trusted children:
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+    000000000baad000 [REG:RWX] (code) measured
+    000000000bcad000-000000000bcaf000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    7fca07c0a6ba707e2f66870322de12aab4d0b1c5ddfc3b98bad320bb31b8a7fc
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+  [ Sleep.{sig, manifest.sgx} ]
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    eff6afa720616ba4a98d8cbd4d3e4a1b088ccfa03cb2a7af3aec2d52b1062da5
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    ac062dc475a8229d630e42438f7dee05847d8c34488f4a6a3424ae5d19f6fe7f Sleep
+Trusted children:
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    13ef2b322c6791880d658437970a897ee535e698933342b0a79e3a49dc90a426
+  [ Tcp.{sig, manifest.sgx} ]
+  [ Thread.{sig, manifest.sgx} ]
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    32faf57d0990cef2f459f6869e5953d882544aba26d00451e9f2faec61ca4ccc Tcp
+Trusted children:
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    a543f339d7fe92840ae72a04196b3e6986546db2a80033c628a066e0808139ad Thread
+Trusted children:
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    0000000000000000-000000000baad000 [REG:RWX] (free)
+Measurement:
+    770c1866310182c93c46afbe83510549446be864aa6560693e816934246cec1e
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    8a8672e5e43c6fd7e4e7ae864a1e8e883187441d114f1ca31781245c927ca627
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    aa9e24e5c5499d39d9af26d2e397050ed61a44a1475fc2d4fb2af119c89ab110
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+  [ Udp.{sig, manifest.sgx} ]
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+  [ Wait.{sig, manifest.sgx} ]
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+  [ Yield.{sig, manifest.sgx} ]
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    7743dd1fa6385676cb8fea1d8dfccab5d7a36fecb074208aea5b26d2589bb91e Udp
+Trusted children:
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    c0102b2fc3f5f307e3c2cb45641993111dfd6b8d5b711c5cb60eb0acdf239501
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    c2dc91f904e76960b2b3cbd71e2ea5c87fa417dd4a09f924e63d4d8dd515bab1 Wait
+Trusted children:
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    e78bf4104d931cbb635c887deb18fe2341b14da75e96910cbb02742f56d372fe Yield
+Trusted children:
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+  [ Cpuid.{sig, manifest.sgx} ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    3ef35c854cbb5fd6ccf6bfd1840d16301ee59326d28462824543ca895dc1357e
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    4dc91f46a8e45aaa8d4bc62cb946743b19ff2a8a2aa3dd9b7ff44cbb97b5c376 Cpuid
+Trusted children:
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+  [ Token: Broadcast ]
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Attributes:
+    mrenclave: ef3f03a7d520465664e1481226d6101826cb510d9f70cd655afa82bb23da660e
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 84c9f5177e55e82bfebf1066ff37dc6e...
+  [ Token: Event ]
+Attributes:
+    mrenclave: fca1fd6cbac7450a79832f432e1a1448e4095c42b18190eaa89e68d1ed927b75
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: f105d46481e07bcf69c2b02fefb311d8...
+  [ Token: Exception ]
+Attributes:
+    mrenclave: ab44f68310203949a26f057a11701f46516183d709ca6e5938894a02e2c92169
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 98c6aaa330c6c106dc0497214766e070...
+  [ Token: Failure ]
+Attributes:
+    mrenclave: b1cdba43379d70817f8248bb9c0d607c270c3502b43f97565e0db7088ff3ffb9
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: fa7360a858e67e612079499993a14ddf...
+  [ Token: File ]
+Attributes:
+    mrenclave: 930171c7d007af16fd86bca415be385ce7e39fb3f8a57df9ffabe37b705d573e
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: d338b279cae74f2e24accd546ef9ed65...
+  [ Token: Fork ]
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000-0000000000402000 [REG:RWX] (code) measured
+    0000000000601000-0000000000603000 [REG:RW-] (data) measured
+Attributes:
+    mrenclave: a77bed61276833d264bfe7eeef49b408341ed0eca163b961128552091fe7461d
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 3dfc824020da5d3bb8f919aa87806393...
+  [ Token: HandleSend ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    c90a58a72fdce8314db070b386935a1ac6af6cdf9fcc076fc42e6af9b2f60c51
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+  [ Token: HelloWorld ]
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    0606723ecfab9aca94a0d10e8e06df25da01cdda0f6106bd0ab7c90cd14a64e8
+  [ Token: Ipc ]
+    0000000000603000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    2ac6889a019a6558964e9d815f20678a51a796ffe2e61843de243c8151893fd0
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+  [ Token: Memory ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    0f05c5f48a78c6cfad7a724375e83c5549f4011d0d356d9af33e2ec0afcb70d0
+  [ Token: Pie ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    aef4265ce22d2f4ecb0ec44ec21cbb0a77675ec8bb3da18c558655b66dc9a6f4
+Attributes:
+    mrenclave: 7db3aa3df957b7dd587fe75aa25a9ab01e87b631fdb185e489850608e36c7607
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: c8b81457fc973dc417cccc9252fa2020...
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    caf8d0e373d4d60c3cf8eea835bbc49b34dbc2a8441f17a05721be3d736d56c0
+  [ Token: Pipe ]
+Attributes:
+    mrenclave: a2aaf04b802c991d9e2db097459a041aa46cb14df21691a2cfb24a04b6e95ad5
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: fbd36079288049c239e41ca28a1b01cc...
+  [ Token: Process ]
+  [ Token: Segment ]
+  [ Token: Select ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+Attributes:
+    mrenclave: c0102b2fc3f5f307e3c2cb45641993111dfd6b8d5b711c5cb60eb0acdf239501
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 1759784db140b60bd097d64d6797e75b...
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    dac38ac8eff33efa9c511e76cf4b06b1ad6e953b1a0987b551697145b3766546
+  [ Token: Server ]
+  [ Token: Sleep ]
+Attributes:
+    mrenclave: 7fca07c0a6ba707e2f66870322de12aab4d0b1c5ddfc3b98bad320bb31b8a7fc
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 857919d631bdd8fa3ac4a1d27a520c76...
+  [ Token: Tcp ]
+Attributes:
+    mrenclave: 770c1866310182c93c46afbe83510549446be864aa6560693e816934246cec1e
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: f8c982bbb020ec5ef074650b48505b30...
+  [ Token: Thread ]
+Attributes:
+    mrenclave: 13ef2b322c6791880d658437970a897ee535e698933342b0a79e3a49dc90a426
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 8e21b4bbef603398cea1f3868fe6cb40...
+  [ Token: Udp ]
+Attributes:
+    mrenclave: eff6afa720616ba4a98d8cbd4d3e4a1b088ccfa03cb2a7af3aec2d52b1062da5
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 42bcb58c9d063554a9f9460224d34fc6...
+Attributes:
+    mrenclave: aa9e24e5c5499d39d9af26d2e397050ed61a44a1475fc2d4fb2af119c89ab110
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 3b7d6a7bc7889613d1297fd807913121...
+Attributes:
+    mrenclave: 3ef35c854cbb5fd6ccf6bfd1840d16301ee59326d28462824543ca895dc1357e
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: d15af9010721b00db1391c442a6e263a...
+  [ Token: Wait ]
+  [ Token: Cpuid ]
+  [ Token: Yield ]
+Attributes:
+    mrenclave: 8a8672e5e43c6fd7e4e7ae864a1e8e883187441d114f1ca31781245c927ca627
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: ada7fc8b58be952adc3c9eaee572f979...
+Attributes:
+    mrenclave: c90a58a72fdce8314db070b386935a1ac6af6cdf9fcc076fc42e6af9b2f60c51
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: cc5a1c9e430511fec4f80b3cb41189e8...
+Attributes:
+    mrenclave: 2ac6889a019a6558964e9d815f20678a51a796ffe2e61843de243c8151893fd0
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 2b9022292345619ecdf567314819e42d...
+Attributes:
+    mrenclave: 0f05c5f48a78c6cfad7a724375e83c5549f4011d0d356d9af33e2ec0afcb70d0
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 7711aec758c01ba6c09cd810b2f3a7f5...
+Attributes:
+    mrenclave: 0606723ecfab9aca94a0d10e8e06df25da01cdda0f6106bd0ab7c90cd14a64e8
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 6505257a94edeb03b77023be144b2fef...
+Attributes:
+    mrenclave: dac38ac8eff33efa9c511e76cf4b06b1ad6e953b1a0987b551697145b3766546
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: d68a8917e09f96ba7ab899fff3ee10ab...
+Attributes:
+    mrenclave: aef4265ce22d2f4ecb0ec44ec21cbb0a77675ec8bb3da18c558655b66dc9a6f4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: ecda548158a5797ca9dc80a8b51ceaf2...
+Attributes:
+    mrenclave: caf8d0e373d4d60c3cf8eea835bbc49b34dbc2a8441f17a05721be3d736d56c0
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+    miscmask:  00000000
+    modulus:   ade93f832941b20751c59ad860c8b612...
+    exponent:  3
+    signature: 6fe66c325c73ac425fd2cc7cfe0f3043...
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/test'
+make -C regression
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression'
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: ..Bootstrap.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: AtomicMath.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Attestation.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: AvxDisable.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap2.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap3.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap4.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap5.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap6.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Bootstrap7.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Directory.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Event.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Exception.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Exit.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: File.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Hex.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Ipc.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Memory.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Misc.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Pipe.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Process.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Process2.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Process3.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Semaphore.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: SendHandle.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Socket.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Symbols.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Thread.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: Thread2.manifest.sgx.d: No such file or directory
+../..//Pal/src/host/Linux-SGX/Makefile.manifest:42: normalize_path.manifest.sgx.d: No such file or directory
+  [ manifest ]
+  [ Thread2.manifest ]
+  [ SendHandle.manifest ]
+  [ Process3.manifest ]
+  [ Process2.manifest ]
+  [ Process.manifest ]
+  [ Pipe.manifest.sgx.d ]
+  [ Misc.manifest.sgx.d ]
+  [ Ipc.manifest.sgx.d ]
+  [ Memory.manifest.sgx.d ]
+  [ Hex.manifest.sgx.d ]
+  [ File.manifest ]
+  [ Exit.manifest.sgx.d ]
+  [ Event.manifest.sgx.d ]
+  [ Exception.manifest.sgx.d ]
+  [ Directory.manifest.sgx.d ]
+  [ Bootstrap7.manifest ]
+  [ Bootstrap6.manifest ]
+  [ Bootstrap4.manifest ]
+  [ Bootstrap5.manifest ]
+  [ Bootstrap3.manifest ]
+  [ Bootstrap2.manifest ]
+  [ Bootstrap.manifest.sgx.d ]
+  [ AvxDisable.manifest ]
+  [ Attestation.manifest ]
+  [ AtomicMath.manifest.sgx.d ]
+  [ ..Bootstrap.manifest.sgx.d ]
+  [ Thread.manifest.sgx.d ]
+  [ Socket.manifest.sgx.d ]
+  [ normalize_path.manifest.sgx.d ]
+  [ Symbols.manifest.sgx.d ]
+  [ Thread2.manifest.sgx.d ]
+  [ SendHandle.manifest.sgx.d ]
+  [ Semaphore.manifest.sgx.d ]
+  [ Process3.manifest.sgx.d ]
+  [ Process2.manifest.sgx.d ]
+  [ Process.manifest.sgx.d ]
+  [ File.manifest.sgx.d ]
+  [ Bootstrap7.manifest.sgx.d ]
+  [ Bootstrap6.manifest.sgx.d ]
+  [ Bootstrap5.manifest.sgx.d ]
+  [ Bootstrap3.manifest.sgx.d ]
+  [ Bootstrap2.manifest.sgx.d ]
+  [ Bootstrap4.manifest.sgx.d ]
+  [ AvxDisable.manifest.sgx.d ]
+  [ Attestation.manifest.sgx.d ]
+make -C ../lib target=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/atoi.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/strlen.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/memcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/wordcopy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/memcpy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/memset.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/string/strchr.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/network/hton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/network/inet_pton.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/graphene/config.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/graphene/path.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+  [ Preload1.so ]
+  [ Preload2.so ]
+  [ ..Bootstrap ]
+  [ Attestation ]
+  [ AtomicMath ]
+  [ AvxDisable ]
+  [ Bootstrap7 ]
+  [ Bootstrap3 ]
+  [ Bootstrap ]
+  [ Bootstrap2 ]
+  [ Directory ]
+  [ Event ]
+  [ Exception ]
+  [ Exit ]
+  [ File ]
+  [ Hex ]
+  [ Memory ]
+  [ Pipe ]
+  [ Ipc ]
+  [ Misc ]
+  [ Process ]
+  [ Process2 ]
+  [ Process3 ]
+  [ Semaphore ]
+  [ SendHandle ]
+  [ Socket ]
+  [ Thread ]
+  [ Symbols ]
+  [ Thread2 ]
+  [ normalize_path ]
+  [ ..Bootstrap.{sig, manifest.sgx} ]
+  [ AtomicMath.{sig, manifest.sgx} ]
+  [ Attestation.{sig, manifest.sgx} ]
+  [ Bootstrap.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    4ce38da702aa292160e313aa95d2e35c4f062148e8d17d2eebf6c2c6b9b06750 ..Bootstrap
+Trusted children:
+  [ Bootstrap2.{sig, manifest.sgx} ]
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    1bf695f1f15c4fed7c26d20927a1ec86c30c18a0990fff0ed3a27dd36082d0f4 Attestation
+Trusted children:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    2168a7b762f21c02bc0bd77f2d825c074062db88027187b2827a335707815f18 AtomicMath
+Trusted children:
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    ca83965ba72fd2fc9665b6824126efdc4a4fa09400495569cf08fb62a07b20fe Bootstrap
+Trusted children:
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    80676cf53c3822890853e44e56343f4c353d30cc1f974462620dad5020c0ea9d Bootstrap2
+Trusted children:
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+  [ Bootstrap4.{sig, manifest.sgx} ]
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+  [ Bootstrap3.{sig, manifest.sgx} ]
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+  [ Bootstrap5.{sig, manifest.sgx} ]
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    ca83965ba72fd2fc9665b6824126efdc4a4fa09400495569cf08fb62a07b20fe Bootstrap
+Trusted children:
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    609ad053f2ad0cda3d4185acb06d3cbaad5d9cde00032c4689b98cb82978e0b7 file:Preload2.so
+    ee668b4d2f302687ba1517727403c744b58361ed4bb0e1b097a6d4962bf57350 file:Preload1.so
+    5b509c3e1593c3252bad1cb0ef8ee342ae6a3b8dbe99bcaa129fd5a6690c409e Bootstrap3
+Trusted children:
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    609ad053f2ad0cda3d4185acb06d3cbaad5d9cde00032c4689b98cb82978e0b7 file:Preload2.so
+    ee668b4d2f302687ba1517727403c744b58361ed4bb0e1b097a6d4962bf57350 file:Preload1.so
+Trusted children:
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    7279ea5140b7cd16333819054c1c76031e965d8a7e8be2fa9f2c16366c72e461
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    2d56e09fdcccdf43d95a3c38ab41d2a984c24bc651f3971d5cf61b2f81498bd9
+  [ Bootstrap6.{sig, manifest.sgx} ]
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    92172151c35f6c32650757b2c0d67d5eed0f202e6b12220fe259267e6d7396fc
+  [ Bootstrap7.{sig, manifest.sgx} ]
+Attributes:
+    size:      8589934592
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    609ad053f2ad0cda3d4185acb06d3cbaad5d9cde00032c4689b98cb82978e0b7 file:Preload2.so
+    ee668b4d2f302687ba1517727403c744b58361ed4bb0e1b097a6d4962bf57350 file:Preload1.so
+    ca83965ba72fd2fc9665b6824126efdc4a4fa09400495569cf08fb62a07b20fe ./Bootstrap
+Trusted children:
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    eaaa3edb0a6af4837c92f81ac71b5395d4bb685d67cd47b2f13230e6ccbffd70
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    0160dc9532987e1fd7c5c63d04fd6e7b87dc72b24eff431211272df08446d448
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    71f1f32b5d9ec3f91c857258bcfe3afad21071391c5bd53020e8cfbba1a4e970 Bootstrap7
+Trusted children:
+  [ Directory.{sig, manifest.sgx} ]
+    0000000000000000-000000000bcaf000 [REG:RWX] (free)
+Measurement:
+    502e0982f791565ea506fe3f4f35ca2e6195a894bd07ae3dd497564c5d47aa4d
+Memory:
+    00000001fffff000 [REG:R--] (manifest) measured
+    00000001ffff6000-00000001ffffe000 [REG:RW-] (ssa) measured
+    00000001ffff1000-00000001ffff5000 [TCS:---] (tcs) measured
+    00000001fffec000-00000001ffff0000 [REG:RW-] (tls) measured
+    00000001fffab000-00000001fffeb000 [REG:RW-] (stack) measured
+    00000001fff6a000-00000001fffaa000 [REG:RW-] (stack) measured
+  [ Event.{sig, manifest.sgx} ]
+    00000001fff29000-00000001fff69000 [REG:RW-] (stack) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    75c344dbe3f9891ae1180a4f08e5e8afd5e8a4a61ec94447e20f3d19ba330baa
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+  [ Exception.{sig, manifest.sgx} ]
+    3f678a2be0132548442f1add32ff3ad201b1b67d2ba36f13af3654e770c7e11e Directory
+Trusted children:
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    00000001ffee8000-00000001fff28000 [REG:RW-] (stack) measured
+  [ Exit.{sig, manifest.sgx} ]
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    9a678672fb093eb3a0383c2954a1182284421a8d3af71978475285871c568113
+    00000001fbcb0000-00000001fbce2000 [REG:R-X] (code) measured
+    00000001fbee1000-00000001ffee7000 [REG:RW-] (data) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    50ace3e9be394c931bc1e36ec1a1b054d0179af8abf9c457856b0b79b5346cd1 Event
+Trusted children:
+gcc -Wall -std=c11 -O2 -Werror -fno-builtin -nostdlib -I../include/pal -I../lib -I../src    ../regression/File.c   -o ../regression/File
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    11e9fab4bc0ba4cd2891eec40a66301e27d8fbada15b4fd4ac57486db6c811ad Exception
+Trusted children:
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+Memory:
+    000000000fffa000-0000000010000000 [REG:R--] (manifest) measured
+    000000000fff1000-000000000fff9000 [REG:RW-] (ssa) measured
+    000000000ffec000-000000000fff0000 [TCS:---] (tcs) measured
+    000000000ffe7000-000000000ffeb000 [REG:RW-] (tls) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ffa6000-000000000ffe6000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000ff65000-000000000ffa5000 [REG:RW-] (stack) measured
+    000000000ff24000-000000000ff64000 [REG:RW-] (stack) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    a3a90279ac3360bfef874d8598467cc80ebe60aa84dfeeace24ac460fecc1c77 Exit
+Trusted children:
+    000000000fee3000-000000000ff23000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+  [ Hex.{sig, manifest.sgx} ]
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bcab000-000000000bcdd000 [REG:R-X] (code) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000bedc000-000000000fee2000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+Attributes:
+    size:      268435456
+    threadnum: 4
+    isvprodid: 0
+    isvsvn:    0
+    flags:     0600000000000000
+    xfrms:     0700000000000000
+    miscs:     00000000
+Attestation:
+    *** Client info is not specified. Graphene will not perform remote attestation before execution. Please provide sgx.ra_client_spid and sgx.ra_client_key in the manifest. ***
+Trusted files:
+    8788f058262def3831ea0ad02a6597ece0a1514d3e93a0138a01ef8bec023287 Hex
+Trusted children:
+/usr/bin/ld: warning: cannot find entry symbol _start; defaulting to 00000000000004d0
+/tmp/ccuhPlyw.o: In function `print_hex.constprop.0':
+File.c:(.text+0x66): undefined reference to `pal_printf'
+/tmp/ccuhPlyw.o: In function `main':
+File.c:(.text.startup+0x23): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x48): undefined reference to `pal_printf'
+File.c:(.text.startup+0x60): undefined reference to `DkStreamRead'
+File.c:(.text.startup+0x80): undefined reference to `DkStreamRead'
+File.c:(.text.startup+0xa8): undefined reference to `DkStreamRead'
+File.c:(.text.startup+0xc3): undefined reference to `DkStreamAttributesQueryByHandle'
+File.c:(.text.startup+0xe2): undefined reference to `DkStreamMap'
+File.c:(.text.startup+0xfe): undefined reference to `memcpy'
+File.c:(.text.startup+0x121): undefined reference to `memcpy'
+File.c:(.text.startup+0x13d): undefined reference to `DkStreamUnmap'
+File.c:(.text.startup+0x157): undefined reference to `DkStreamMap'
+File.c:(.text.startup+0x174): undefined reference to `memcpy'
+File.c:(.text.startup+0x198): undefined reference to `memcpy'
+File.c:(.text.startup+0x1b4): undefined reference to `DkStreamUnmap'
+File.c:(.text.startup+0x1bc): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x1d4): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x1ea): undefined reference to `pal_printf'
+File.c:(.text.startup+0x1f2): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x20a): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x220): undefined reference to `pal_printf'
+File.c:(.text.startup+0x228): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x237): undefined reference to `DkStreamAttributesQuery'
+File.c:(.text.startup+0x25d): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x273): undefined reference to `pal_printf'
+File.c:(.text.startup+0x291): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x2a2): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x2c0): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x2d6): undefined reference to `pal_printf'
+File.c:(.text.startup+0x2de): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x2fb): undefined reference to `DkStreamWrite'
+File.c:(.text.startup+0x30b): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x320): undefined reference to `DkStreamOpen'
+File.c:(.text.startup+0x332): undefined reference to `DkStreamDelete'
+File.c:(.text.startup+0x33a): undefined reference to `DkObjectClose'
+File.c:(.text.startup+0x3b2): undefined reference to `DkStreamWrite'
+File.c:(.text.startup+0x3d2): undefined reference to `DkStreamWrite'
+File.c:(.text.startup+0x3df): undefined reference to `pal_control_addr'
+File.c:(.text.startup+0x3ee): undefined reference to `DkStreamSetLength'
+File.c:(.text.startup+0x410): undefined reference to `pal_printf'
+File.c:(.text.startup+0x423): undefined reference to `pal_printf'
+File.c:(.text.startup+0x445): undefined reference to `pal_printf'
+File.c:(.text.startup+0x458): undefined reference to `pal_printf'
+collect2: error: ld returned 1 exit status
+<builtin>: recipe for target '../regression/File' failed
+make[2]: *** [../regression/File] Error 1
+make[2]: *** Waiting for unfinished jobs....
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+Memory:
+    000000000ffff000 [REG:R--] (manifest) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000fff6000-000000000fffe000 [REG:RW-] (ssa) measured
+    000000000fff1000-000000000fff5000 [TCS:---] (tcs) measured
+    000000000ffec000-000000000fff0000 [REG:RW-] (tls) measured
+    000000000ffab000-000000000ffeb000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000ff6a000-000000000ffaa000 [REG:RW-] (stack) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    000000000ff29000-000000000ff69000 [REG:RW-] (stack) measured
+    000000000fee8000-000000000ff28000 [REG:RW-] (stack) measured
+    000000000bcb0000-000000000bce2000 [REG:R-X] (code) measured
+    000000000bee1000-000000000fee7000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    cca0dadd47b449c84d1191a7741bbad72a82a60845bc1be3e7192493f9c6fc1f
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    d0f8c24b81e831fc900daaf804b186681c3ca48bbbab30ec87fe190280f4f748
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    ad6241b547bafa881676b024a4cfb6caea55838a2e5325a49c4a4c5c77061b6d
+    0000000000400000 [REG:RWX] (code) measured
+    0000000000600000-0000000000602000 [REG:RW-] (data) measured
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    938762ef64b3ad305e60875ac4f1061ac6a3f0496300d831851527344c016d90
+    0000000000602000-000000000bcaa000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    8a847f1f9413a5d9f4390f2681e16df55c7c221310a44b665871e49423660b9e
+    0000000000602000-000000000bcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    20216336aecc84b690ab9cdc2f52a378c3366297ccac37dfabe49c9165e5d8ea
+    0000000000602000-00000001fbcaf000 [REG:RWX] (free)
+    0000000000010000-0000000000400000 [REG:RWX] (free)
+Measurement:
+    5b022ad27c061c79fd62aa2231f5b9bf1f4e2d7a298a7ab9e0e3064d71016c5e
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/regression'
+Makefile:19: recipe for target 'test' failed
+make[1]: *** [test] Error 2
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+Makefile:7: recipe for target 'test' failed
+make: *** [test] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 0835fe48218ce17beeaa575f37a14b1392859b86263d6a999c6ac4dfc4404b4a
+$ docker rm -f 0835fe48218ce17beeaa575f37a14b1392859b86263d6a999c6ac4dfc4404b4a
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 3d2b1d64ecc687cebb9c3ab75aeea44cdc437994 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/831/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

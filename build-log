@@ -1,0 +1,267 @@
+GitHub pull request #1024 of commit 0ccbac5fddccf313b4fb7bd8d1a92e569c72e7ba, no merge conflicts.
+Setting status of 0ccbac5fddccf313b4fb7bd8d1a92e569c72e7ba to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/943 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1024/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1024/merge^{commit} # timeout=10
+Checking out Revision b94d2115fe149afe182257cb7f14024497e51082 (refs/remotes/origin/pr/1024/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b94d2115fe149afe182257cb7f14024497e51082 # timeout=10
+Commit message: "Merge 0ccbac5fddccf313b4fb7bd8d1a92e569c72e7ba into 9cd6b34747c2fb82a1417006cdc30a0e586c3b15"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+Checking out Revision b94d2115fe149afe182257cb7f14024497e51082 (refs/remotes/origin/pr/1024/merge)
+Commit message: "Merge 0ccbac5fddccf313b4fb7bd8d1a92e569c72e7ba into 9cd6b34747c2fb82a1417006cdc30a0e586c3b15"
+ > git rev-parse refs/remotes/origin/pr/1024/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1024/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b94d2115fe149afe182257cb7f14024497e51082 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 3025e741b802664ac8d43bdaa63c20acc97c7816 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  947.9MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libelf-dev     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     python     python3-pip     python3-protobuf     python3-pytest     python3-breathe     texinfo     wget     curl     libprotobuf-c-dev     protobuf-c-compiler
+ ---> Using cache
+ ---> b11ea18cab26
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> cc22e8c7e715
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 725ecd8e6c53
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> c8fd3dc8f3ef
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> d00df2d748a6
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 5e6c26fc1252
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 54f7de298b42
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> b080e2863b85
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 48475cd1503d
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> f431c1223a1c
+Successfully built f431c1223a1c
+Successfully tagged 3025e741b802664ac8d43bdaa63c20acc97c7816:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . 3025e741b802664ac8d43bdaa63c20acc97c7816
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 3025e741b802664ac8d43bdaa63c20acc97c7816 cat
+$ docker top 5ff90b078cfd02f8bf5df98324be01342093d7ea51d3f26483ee0450e6b20c72 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ make -j 8 WERROR=1
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/db_mutex.o ]
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_ipc.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/slab.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.lib/host_endian.h ]
+  [ user_start.o ]
+  [ user_shared_start.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib'
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib'
+make[3]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux'
+  [ db_files.o ]
+  [ db_devices.o ]
+  [ db_pipes.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_memory.o ]
+  [ db_threading.o ]
+  [ db_mutex.o ]
+  [ db_events.o ]
+  [ db_process.o ]
+  [ db_object.o ]
+  [ db_main.o ]
+  [ db_rtld.o ]
+  [ db_misc.o ]
+db_main.c: In function 'pal_linux_main':
+db_main.c:238:27: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     PAL_TCB_LINUX * tcb = alt_stack + ALT_STACK_SIZE - sizeof(PAL_TCB_LINUX);
+                           ^~~~~~~~~
+  [ db_ipc.o ]
+  [ db_exception.o ]
+  [ clone-x86_64.o ]
+  [ gettimeofday-x86_64.o ]
+  [ pal.map ]
+cc1: all warnings being treated as errors
+Makefile:36: recipe for target 'db_main.o' failed
+make[3]: *** [db_main.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux'
+Makefile:97: recipe for target 'host_lib_recurse' failed
+make[2]: *** [host_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal'
+Makefile:8: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 5ff90b078cfd02f8bf5df98324be01342093d7ea51d3f26483ee0450e6b20c72
+$ docker rm -f 5ff90b078cfd02f8bf5df98324be01342093d7ea51d3f26483ee0450e6b20c72
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 0ccbac5fddccf313b4fb7bd8d1a92e569c72e7ba to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/943 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

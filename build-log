@@ -1,0 +1,41 @@
+Started by user David Cowhig
+Replayed #2252
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-leeroy in /home/jenkins/workspace/graphene-sgx
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+[Pipeline] }
+ > git rev-parse refs/remotes/origin/pr/961/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/961/merge^{commit} # timeout=10
+ > git rev-parse origin/pr/961/merge^{commit} # timeout=10
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE

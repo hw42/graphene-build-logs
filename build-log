@@ -1,0 +1,698 @@
+GitHub pull request #1043 of commit 3fddff09c303ca6dc3a982a2255750428209c75c, has merge conflicts.
+Setting status of 3fddff09c303ca6dc3a982a2255750428209c75c to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx/2337/ and message: 'Build started for original commit.'
+Using context: Jenkins-SGX
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx@script to read Jenkinsfiles/Linux-SGX
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse 3fddff09c303ca6dc3a982a2255750428209c75c^{commit} # timeout=10
+Checking out Revision 3fddff09c303ca6dc3a982a2255750428209c75c (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3fddff09c303ca6dc3a982a2255750428209c75c # timeout=20
+Commit message: "fixup! [Pal/Linux-SGX] Rework SGX types to be identical to the SGX SDK ones"
+ > git rev-list --no-walk d1ffb3ca3c975cbc3650a5d70072a03a8324800c # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-leeroy in /home/jenkins/workspace/graphene-sgx
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 3fddff09c303ca6dc3a982a2255750428209c75c (detached)
+Commit message: "fixup! [Pal/Linux-SGX] Rework SGX types to be identical to the SGX SDK ones"
+ > git rev-parse 3fddff09c303ca6dc3a982a2255750428209c75c^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3fddff09c303ca6dc3a982a2255750428209c75c # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 2fa196501fc23c594ce71004be7afecbcb768c23 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  968.2MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-minimal        python3-pip        python3-pytest        texinfo        wget     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 7e87e2b3bf7a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-minimal        python3-pip        python3-pytest        texinfo        wget     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 185e7a6b0af3
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> caad673fbbbd
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> 60695a8f0052
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 7caeaac8d84a
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> 9372f7cc18f4
+Successfully built 9372f7cc18f4
+Successfully tagged 2fa196501fc23c594ce71004be7afecbcb768c23:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . 2fa196501fc23c594ce71004be7afecbcb768c23
+.
+[Pipeline] withDockerContainer
+slave-leeroy does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/workspace/graphene-sgx -v /home/jenkins/workspace/graphene-sgx:/home/jenkins/workspace/graphene-sgx:rw,z -v /home/jenkins/workspace/graphene-sgx@tmp:/home/jenkins/workspace/graphene-sgx@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 2fa196501fc23c594ce71004be7afecbcb768c23 cat
+$ docker top 952eafd880a4316ff46a7f445a45da732f1822c58745caca2bfbe92a1a1d5a64 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus
+.................................................++
+...............................................................................................................................++
+e is 3 (0x3)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/01org/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout sgx_driver_1.9
+Note: checking out 'sgx_driver_1.9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 3abcf82... Merge pull request #31 from avchinch/master
++ make
+make -C /lib/modules/4.4.0-164-generic/build SUBDIRS=/opt/intel/linux-sgx-driver modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-164-generic'
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_main.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_page_cache.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_ioctl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_vma.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_util.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /opt/intel/linux-sgx-driver/isgx.mod.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-164-generic'
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/sgx-driver
++ ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver ISGX_DRIVER_VERSION=1.9 make
+
+*****************************************************************
+Make sure you have downloaded and installed the Intel SGX driver 
+from https://github.com/intel/linux-sgx-driver.git.
+*****************************************************************
+
+
+linux-sgx-driver -> /opt/intel/linux-sgx-driver
+create isgx_version.h
+make -C /lib/modules/4.4.0-164-generic/build M=/home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver CFLAGS_MODULE="-DDEBUG -g -O0" modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-164-generic'
+  CC [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_6.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_7.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/gsgx_fsgsbase.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/gsgx_main.o
+  LD [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.mod.o
+  LD [M]  /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-164-generic'
+[Pipeline] sh
++ make -j 8 SGX=1 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-sgx/Pal/src'
+  [ host/Linux-SGX/.obj/db_streams.o ]
+  [ host/Linux-SGX/.obj/db_memory.o ]
+  [ host/Linux-SGX/.obj/db_threading.o ]
+  [ host/Linux-SGX/.obj/db_mutex.o ]
+  [ host/Linux-SGX/.obj/db_events.o ]
+  [ host/Linux-SGX/.obj/db_process.o ]
+  [ host/Linux-SGX/.obj/db_object.o ]
+  [ host/Linux-SGX/.obj/db_main.o ]
+  [ host/Linux-SGX/.obj/db_ipc.o ]
+  [ host/Linux-SGX/.obj/db_rtld.o ]
+  [ host/Linux-SGX/.obj/db_exception.o ]
+  [ host/Linux-SGX/.obj/db_misc.o ]
+  [ host/Linux-SGX/.obj/slab.o ]
+  [ host/Linux-SGX/.obj/printf.o ]
+  [ host/Linux-SGX/.lib/host_endian.h ]
+  [ user_start.o ]
+  [ user_shared_start.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/../../Runtime/pal_gdb-Linux-SGX ]
+make -C ../lib target=/home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx/Pal/lib'
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/oid.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/dhm.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cipher.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/rsa.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/md_wrap.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/asn1parse.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/cmac.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/sha256.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/md.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/base64.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/aes.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/bignum.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/aesni.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-sgx/Pal/lib'
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX'
+--2019-10-01 14:00:51--  https://certificates.trustedservices.intel.com/Intel_SGX_Attestation_RootCA.pem
+Resolving certificates.trustedservices.intel.com (certificates.trustedservices.intel.com)...   [ generated-offsets.s ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+[ host/Linux-SGX/debugger/sgx_gdb.so ]
+gcc -MD -MP -Wall -fPIC -O2 -std=c11 -c debugger/sgx_gdb.c -o debugger/sgx_gdb.o
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+  [ pal.map ]
+  [ sgx_enclave.o ]
+  [ sgx_framework.o ]
+  [ sgx_platform.o ]
+  [ sgx_rtld.o ]
+In file included from generated-offsets.c:12:0:
+generated-offsets.c: In function 'dummy':
+generated-offsets.c:26:38: error: 'sgx_arch_key_t' undeclared (first use in this function)
+     DEFINE(SGX_ARCH_KEY_SIZE, sizeof(sgx_arch_key_t));
+                                      ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:26:38: note: each undeclared identifier is reported only once for each function it appears in
+     DEFINE(SGX_ARCH_KEY_SIZE, sizeof(sgx_arch_key_t));
+                                      ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:32:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RAX, sgx_arch_gpr_t, rax);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:32:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RAX, sgx_arch_gpr_t, rax);
+     ^
+generated-offsets.c:33:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RCX, sgx_arch_gpr_t, rcx);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:33:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RCX, sgx_arch_gpr_t, rcx);
+     ^
+generated-offsets.c:34:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RDX, sgx_arch_gpr_t, rdx);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:34:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RDX, sgx_arch_gpr_t, rdx);
+     ^
+generated-offsets.c:35:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RBX, sgx_arch_gpr_t, rbx);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:35:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RBX, sgx_arch_gpr_t, rbx);
+     ^
+generated-offsets.c:36:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RSP, sgx_arch_gpr_t, rsp);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:36:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RSP, sgx_arch_gpr_t, rsp);
+     ^
+generated-offsets.c:37:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RBP, sgx_arch_gpr_t, rbp);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:37:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RBP, sgx_arch_gpr_t, rbp);
+     ^
+generated-offsets.c:38:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RSI, sgx_arch_gpr_t, rsi);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:38:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RSI, sgx_arch_gpr_t, rsi);
+     ^
+generated-offsets.c:39:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RDI, sgx_arch_gpr_t, rdi);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:39:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RDI, sgx_arch_gpr_t, rdi);
+     ^
+generated-offsets.c:40:26: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R8, sgx_arch_gpr_t, r8);
+                          ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:40:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R8, sgx_arch_gpr_t, r8);
+     ^
+generated-offsets.c:41:26: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R9, sgx_arch_gpr_t, r9);
+                          ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:41:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R9, sgx_arch_gpr_t, r9);
+     ^
+generated-offsets.c:42:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R10, sgx_arch_gpr_t, r10);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:42:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R10, sgx_arch_gpr_t, r10);
+     ^
+generated-offsets.c:43:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R11, sgx_arch_gpr_t, r11);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:43:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R11, sgx_arch_gpr_t, r11);
+     ^
+generated-offsets.c:44:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R12, sgx_arch_gpr_t, r12);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:44:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R12, sgx_arch_gpr_t, r12);
+     ^
+generated-offsets.c:45:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R13, sgx_arch_gpr_t, r13);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:45:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R13, sgx_arch_gpr_t, r13);
+     ^
+generated-offsets.c:46:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R14, sgx_arch_gpr_t, r14);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:46:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R14, sgx_arch_gpr_t, r14);
+     ^
+generated-offsets.c:47:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_R15, sgx_arch_gpr_t, r15);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:47:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_R15, sgx_arch_gpr_t, r15);
+     ^
+generated-offsets.c:48:30: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RFLAGS, sgx_arch_gpr_t, rflags);
+                              ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:48:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RFLAGS, sgx_arch_gpr_t, rflags);
+     ^
+generated-offsets.c:49:27: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_RIP, sgx_arch_gpr_t, rip);
+                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:49:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_RIP, sgx_arch_gpr_t, rip);
+     ^
+generated-offsets.c:50:32: error: unknown type name 'sgx_arch_gpr_t'
+     OFFSET_T(SGX_GPR_EXITINFO, sgx_arch_gpr_t, exitinfo);
+                                ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:50:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_GPR_EXITINFO, sgx_arch_gpr_t, exitinfo);
+     ^
+generated-offsets.c:51:33: error: 'sgx_arch_gpr_t' undeclared (first use in this function)
+     DEFINE(SGX_GPR_SIZE, sizeof(sgx_arch_gpr_t));
+                                 ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+../../generated-offsets-build.h:8:52: error: 'sgx_arch_tcs_t {aka struct <anonymous>}' has no member named 'ogsbasgx'
+ #define OFFSET_T(name, str_t, member) DEFINE(name, offsetof(str_t, member))
+                                                    ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:101:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(TCS_OGSBASGX, sgx_arch_tcs_t, ogsbasgx);
+     ^
+../../generated-offsets-build.h:8:52: error: 'sgx_arch_tcs_t {aka struct <anonymous>}' has no member named 'fslimit'
+ #define OFFSET_T(name, str_t, member) DEFINE(name, offsetof(str_t, member))
+                                                    ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:102:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(TCS_FSLIMIT, sgx_arch_tcs_t, fslimit);
+     ^
+../../generated-offsets-build.h:8:52: error: 'sgx_arch_tcs_t {aka struct <anonymous>}' has no member named 'gslimit'
+ #define OFFSET_T(name, str_t, member) DEFINE(name, offsetof(str_t, member))
+                                                    ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:103:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(TCS_GSLIMIT, sgx_arch_tcs_t, gslimit);
+     ^
+generated-offsets.c:110:41: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_HEADER, sgx_arch_sigstruct_t, header);
+                                         ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:110:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_HEADER, sgx_arch_sigstruct_t, header);
+     ^
+generated-offsets.c:111:41: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_VENDOR, sgx_arch_sigstruct_t, vendor);
+                                         ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:111:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_VENDOR, sgx_arch_sigstruct_t, vendor);
+     ^
+generated-offsets.c:112:39: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_DATE, sgx_arch_sigstruct_t, date);
+                                       ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:112:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_DATE, sgx_arch_sigstruct_t, date);
+     ^
+generated-offsets.c:113:42: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_HEADER2, sgx_arch_sigstruct_t, header2);
+                                          ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:113:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_HEADER2, sgx_arch_sigstruct_t, header2);
+     ^
+generated-offsets.c:114:44: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_SWDEFINED, sgx_arch_sigstruct_t, swdefined);
+                                            ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:114:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_SWDEFINED, sgx_arch_sigstruct_t, swdefined);
+     ^
+generated-offsets.c:115:42: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MODULUS, sgx_arch_sigstruct_t, modulus);
+                                          ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:115:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MODULUS, sgx_arch_sigstruct_t, modulus);
+     ^
+generated-offsets.c:116:43: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_EXPONENT, sgx_arch_sigstruct_t, exponent);
+                                           ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:116:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_EXPONENT, sgx_arch_sigstruct_t, exponent);
+     ^
+generated-offsets.c:117:44: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_SIGNATURE, sgx_arch_sigstruct_t, signature);
+                                            ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:117:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_SIGNATURE, sgx_arch_sigstruct_t, signature);
+     ^
+generated-offsets.c:118:45: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MISCSELECT, sgx_arch_sigstruct_t, miscselect);
+                                             ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:118:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MISCSELECT, sgx_arch_sigstruct_t, miscselect);
+     ^
+generated-offsets.c:119:50: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MISCSELECT_MASK, sgx_arch_sigstruct_t, miscselect_mask);
+                                                  ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:119:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_MISCSELECT_MASK, sgx_arch_sigstruct_t, miscselect_mask);
+     ^
+generated-offsets.c:120:45: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ATTRIBUTES, sgx_arch_sigstruct_t, attributes);
+                                             ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:120:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ATTRIBUTES, sgx_arch_sigstruct_t, attributes);
+     ^
+generated-offsets.c:121:50: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ATTRIBUTES_MASK, sgx_arch_sigstruct_t, attribute_mask);
+                                                  ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:121:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ATTRIBUTES_MASK, sgx_arch_sigstruct_t, attribute_mask);
+     ^
+generated-offsets.c:122:47: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ENCLAVE_HASH, sgx_arch_sigstruct_t, enclave_hash);
+                                               ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:122:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ENCLAVE_HASH, sgx_arch_sigstruct_t, enclave_hash);
+     ^
+generated-offsets.c:123:44: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ISVPRODID, sgx_arch_sigstruct_t, isvprodid);
+                                            ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:123:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ISVPRODID, sgx_arch_sigstruct_t, isvprodid);
+     ^
+generated-offsets.c:124:41: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ISVSVN, sgx_arch_sigstruct_t, isvsvn);
+                                         ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:124:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_ISVSVN, sgx_arch_sigstruct_t, isvsvn);
+     ^
+generated-offsets.c:125:37: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_Q1, sgx_arch_sigstruct_t, q1);
+                                     ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:125:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_Q1, sgx_arch_sigstruct_t, q1);
+     ^
+generated-offsets.c:126:37: error: unknown type name 'sgx_arch_sigstruct_t'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_Q2, sgx_arch_sigstruct_t, q2);
+                                     ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+generated-offsets.c:126:5: note: in expansion of macro 'OFFSET_T'
+     OFFSET_T(SGX_ARCH_SIGSTRUCT_Q2, sgx_arch_sigstruct_t, q2);
+     ^
+generated-offsets.c:127:44: error: 'sgx_arch_sigstruct_t' undeclared (first use in this function)
+     DEFINE(SGX_ARCH_SIGSTRUCT_SIZE, sizeof(sgx_arch_sigstruct_t));
+                                            ^
+../../generated-offsets-build.h:5:76: note: in definition of macro 'DEFINE'
+     __asm__ volatile(".ascii \"GENERATED_INTEGER " #name " %p0 \"\n" ::"i"(value))
+                                                                            ^
+../../../../Makefile.rules:39: recipe for target 'generated-offsets.s' failed
+make[3]: *** [generated-offsets.s] Error 1
+make[3]: *** Waiting for unfinished jobs....
+  [ sgx_main.o ]
+99.84.104.12, 99.84.104.84, 99.84.104.86, ...
+Connecting to certificates.trustedservices.intel.com (certificates.trustedservices.intel.com)|99.84.104.12|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1895 (1.9K) [binary/octet-stream]
+Saving to: 'quote/Intel_SGX_Attestation_RootCA.pem'
+
+     0K .                                                     100%  558M=0s
+
+2019-10-01 14:00:51 (558 MB/s) - 'quote/Intel_SGX_Attestation_RootCA.pem' saved [1895/1895]
+
+ld -shared debugger/sgx_gdb.o -o debugger/sgx_gdb.so -lc
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-sgx/Pal/src/host/Linux-SGX'
+Makefile:97: recipe for target 'host_lib_recurse' failed
+make[2]: *** [host_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-sgx/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx/Pal'
+Makefile:14: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 952eafd880a4316ff46a7f445a45da732f1822c58745caca2bfbe92a1a1d5a64
+$ docker rm -f 952eafd880a4316ff46a7f445a45da732f1822c58745caca2bfbe92a1a1d5a64
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 3fddff09c303ca6dc3a982a2255750428209c75c to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx/2337/ and message: 'Build finished. '
+Using context: Jenkins-SGX
+ERROR: script returned exit code 2
+Finished: FAILURE

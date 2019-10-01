@@ -1,0 +1,253 @@
+GitHub pull request #1048 of commit 3ef473e10c900aa57be3aab243d03f97ff1b9af7, no merge conflicts.
+Setting status of 3ef473e10c900aa57be3aab243d03f97ff1b9af7 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/1040 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1048/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1048/merge^{commit} # timeout=10
+Checking out Revision a8eea85c05ab5255915a09dc2b2ee261143e68b6 (refs/remotes/origin/pr/1048/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a8eea85c05ab5255915a09dc2b2ee261143e68b6 # timeout=10
+Commit message: "Merge 3ef473e10c900aa57be3aab243d03f97ff1b9af7 into 0674d1e9bcce03a467d4d0fcee4749ffea972d02"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* --depth=1 # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* --depth=1 # timeout=10
+Checking out Revision a8eea85c05ab5255915a09dc2b2ee261143e68b6 (refs/remotes/origin/pr/1048/merge)
+Commit message: "Merge 3ef473e10c900aa57be3aab243d03f97ff1b9af7 into 0674d1e9bcce03a467d4d0fcee4749ffea972d02"
+ > git rev-parse refs/remotes/origin/pr/1048/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1048/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a8eea85c05ab5255915a09dc2b2ee261143e68b6 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 91a40c6cc53cbe269cefead75b26946435b7ecaf -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  925.6MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     python     python3-breathe     python3-pip     python3-protobuf     python3-pytest     texinfo     wget
+ ---> Using cache
+ ---> 326cd9a3a456
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 20cb382d3bde
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 112c7f0951b5
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 3a10a386b633
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> f250e92d61f2
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 214680e7f38c
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 9e5c994fba0d
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> e42af8aa41fa
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> c6a5d72cb1d9
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 6542d653ebf9
+Successfully built 6542d653ebf9
+Successfully tagged 91a40c6cc53cbe269cefead75b26946435b7ecaf:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . 91a40c6cc53cbe269cefead75b26946435b7ecaf
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 91a40c6cc53cbe269cefead75b26946435b7ecaf cat
+$ docker top 87538dd49e94acc23a48ddbc71f8cc06f5117f243bd618dff351b8584c602f50 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ make -j 8 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+  [ host/Linux/.obj/db_streams.o ]
+In file included from ../lib/api.h:20:0,
+                 from db_streams.c:24:
+../lib/assert.h:16:0: error: "static_assert" redefined [-Werror]
+ #define static_assert(x,msg) _Static_assert(x, msg)
+ 
+../lib/assert.h:15:0: note: this is the location of the previous definition
+ #define static_assert(x)     _Static_assert(x, #x)
+ 
+  [ host/Linux/.obj/db_memory.o ]
+In file included from ../lib/api.h:20:0,
+                 from db_memory.c:23:
+../lib/assert.h:16:0: error: "static_assert" redefined [-Werror]
+ #define static_assert(x,msg) _Static_assert(x, msg)
+ 
+../lib/assert.h:15:0: note: this is the location of the previous definition
+ #define static_assert(x)     _Static_assert(x, #x)
+ 
+  [ host/Linux/.obj/db_threading.o ]
+In file included from ../lib/api.h:20:0,
+                 from db_threading.c:23:
+../lib/assert.h:16:0: error: "static_assert" redefined [-Werror]
+ #define static_assert(x,msg) _Static_assert(x, msg)
+ 
+../lib/assert.h:15:0: note: this is the location of the previous definition
+ #define static_assert(x)     _Static_assert(x, #x)
+ 
+  [ host/Linux/.obj/db_mutex.o ]
+In file included from ../lib/api.h:20:0,
+                 from db_mutex.c:23:
+../lib/assert.h:16:0: error: "static_assert" redefined [-Werror]
+ #define static_assert(x,msg) _Static_assert(x, msg)
+ 
+../lib/assert.h:15:0: note: this is the location of the previous definition
+ #define static_assert(x)     _Static_assert(x, #x)
+ 
+cc1: all warnings being treated as errors
+Makefile:141: recipe for target 'host/Linux/.obj/db_memory.o' failed
+make[2]: *** [host/Linux/.obj/db_memory.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+cc1: all warnings being treated as errors
+  [ host/Linux/.obj/db_events.o ]
+Makefile:141: recipe for target 'host/Linux/.obj/db_threading.o' failed
+make[2]: *** [host/Linux/.obj/db_threading.o] Error 1
+In file included from ../lib/api.h:20:0,
+                 from db_events.c:23:
+../lib/assert.h:16:0: error: "static_assert" redefined [-Werror]
+ #define static_assert(x,msg) _Static_assert(x, msg)
+ 
+../lib/assert.h:15:0: note: this is the location of the previous definition
+ #define static_assert(x)     _Static_assert(x, #x)
+ 
+cc1: all warnings being treated as errors
+Makefile:141: recipe for target 'host/Linux/.obj/db_mutex.o' failed
+make[2]: *** [host/Linux/.obj/db_mutex.o] Error 1
+cc1: all warnings being treated as errors
+Makefile:141: recipe for target 'host/Linux/.obj/db_events.o' failed
+make[2]: *** [host/Linux/.obj/db_events.o] Error 1
+db_streams.c: In function '_DkStreamGetName':
+db_streams.c:484:13: error: potential null pointer dereference [-Werror=null-dereference]
+     if (!ops->getname)
+          ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Makefile:141: recipe for target 'host/Linux/.obj/db_streams.o' failed
+make[2]: *** [host/Linux/.obj/db_streams.o] Error 1
+make[2]: *** wait: No child processes.  Stop.
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal'
+Makefile:14: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 87538dd49e94acc23a48ddbc71f8cc06f5117f243bd618dff351b8584c602f50
+$ docker rm -f 87538dd49e94acc23a48ddbc71f8cc06f5117f243bd618dff351b8584c602f50
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 3ef473e10c900aa57be3aab243d03f97ff1b9af7 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/1040 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

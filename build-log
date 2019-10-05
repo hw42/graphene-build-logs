@@ -1,0 +1,169 @@
+GitHub pull request #1057 of commit 3aa73912f762beecaa6e954d75eb4816edc22a75, has merge conflicts.
+Setting status of 3aa73912f762beecaa6e954d75eb4816edc22a75 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1059/ and message: 'Build started for original commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse 3aa73912f762beecaa6e954d75eb4816edc22a75^{commit} # timeout=10
+Checking out Revision 3aa73912f762beecaa6e954d75eb4816edc22a75 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3aa73912f762beecaa6e954d75eb4816edc22a75 # timeout=20
+Commit message: "[PAL] Clean up lib/common.cmake"
+ > git rev-list --no-walk 3d5a9d5c54a482f970bdcf6e175d26e9594510b2 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-statler in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 3aa73912f762beecaa6e954d75eb4816edc22a75 (detached)
+Commit message: "[PAL] Clean up lib/common.cmake"
+ > git rev-parse 3aa73912f762beecaa6e954d75eb4816edc22a75^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3aa73912f762beecaa6e954d75eb4816edc22a75 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 5912854b4c13ae690d0c4ee691695c147c1c9bc9 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  989.9MB
+Step 1/10 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/10 : RUN apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libelf-dev     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     python     python-protobuf     python3-pytest     texinfo     wget     curl     libprotobuf-c-dev     protobuf-c-compiler
+ ---> Using cache
+ ---> 0fa163f3dfc7
+Step 3/10 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> ff37e96cf5ca
+Step 4/10 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 4fbc1d0bd6a7
+Step 5/10 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 46858086e86b
+Step 6/10 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 0a05d525afc2
+Step 7/10 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 5a720900ca49
+Step 8/10 : USER leeroy
+ ---> Using cache
+ ---> 4c70a47203e7
+Step 9/10 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 10c16d900d75
+Step 10/10 : CMD ["bash"]
+ ---> Using cache
+ ---> a2138e08d85e
+Successfully built a2138e08d85e
+Successfully tagged 5912854b4c13ae690d0c4ee691695c147c1c9bc9:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] sh
++ docker inspect -f . 5912854b4c13ae690d0c4ee691695c147c1c9bc9
+.
+[Pipeline] withDockerContainer
+slave-statler does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 5912854b4c13ae690d0c4ee691695c147c1c9bc9 cat
+$ docker top 9329981f70af7fc2df1b3582ba9b13cc63f7bfbe11efe695a35bd4deb1b1ffd0 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ make -j 8 DEBUG=1 WERROR=1
+cd Pal && cmake . -DSGX= && make install
+/bin/sh: 1: cmake: not found
+Makefile:8: recipe for target 'all' failed
+make: *** [all] Error 127
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 9329981f70af7fc2df1b3582ba9b13cc63f7bfbe11efe695a35bd4deb1b1ffd0
+$ docker rm -f 9329981f70af7fc2df1b3582ba9b13cc63f7bfbe11efe695a35bd4deb1b1ffd0
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 3aa73912f762beecaa6e954d75eb4816edc22a75 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1059/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

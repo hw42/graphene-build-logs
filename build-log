@@ -1,0 +1,1110 @@
+GitHub pull request #1088 of commit 7596492984ecdb035619f6643be06d34ad7636c2, no merge conflicts.
+Setting status of 7596492984ecdb035619f6643be06d34ad7636c2 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1199/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1088/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1088/merge^{commit} # timeout=10
+Checking out Revision d608a6fd62933a16520bedd6398b58c6416ffd7e (refs/remotes/origin/pr/1088/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d608a6fd62933a16520bedd6398b58c6416ffd7e # timeout=20
+Commit message: "Merge 7596492984ecdb035619f6643be06d34ad7636c2 into aac7a830371813db871958ff06c9d609fde3dce8"
+ > git rev-list --no-walk a7654e06028fb07f9ffba672fd9d5a31ac669490 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision d608a6fd62933a16520bedd6398b58c6416ffd7e (refs/remotes/origin/pr/1088/merge)
+Commit message: "Merge 7596492984ecdb035619f6643be06d34ad7636c2 into aac7a830371813db871958ff06c9d609fde3dce8"
+ > git rev-parse refs/remotes/origin/pr/1088/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1088/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d608a6fd62933a16520bedd6398b58c6416ffd7e # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 5bd95333ac35da4bc377e9a3d04390f7d2153968 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  962.7MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     python     python3-breathe     python3-pip     python3-protobuf     python3-pytest     pylint3     shellcheck     texinfo     wget
+ ---> Using cache
+ ---> 06a663006415
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> a91fc217366c
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 7d0c86b34d79
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 82d37e717dd5
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 24463b7a5c57
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 7da306886851
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> c88dea13b3e5
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> c3fd65b27255
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 2461846eb8f9
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> c861902e138d
+Successfully built c861902e138d
+Successfully tagged 5bd95333ac35da4bc377e9a3d04390f7d2153968:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 5bd95333ac35da4bc377e9a3d04390f7d2153968
+.
+[Pipeline] withDockerContainer
+slave-bobothebear does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 5bd95333ac35da4bc377e9a3d04390f7d2153968 cat
+$ docker top 4fa4b4c84b226ae28f616218e7f5544eeec90f7baea4cbf55bf26e155690351d -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+************* Module pal-gdb
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+R:  9, 4: Method could be a function (no-self-use)
+R:  5, 0: Too few public methods (1/2) (too-few-public-methods)
+W:  3, 0: Unused import os (unused-import)
+W:  3, 0: Unused import sys (unused-import)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module link-intel-driver
+E: 12, 0: Missing parentheses in call to 'print'. Did you mean print("\n" + \)? (<string>, line 12) (syntax-error)
+************* Module aesm_pb2
+C:  5, 0: Exactly one space required around assignment
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+  ^ (bad-whitespace)
+C:  5, 0: Exactly one space required around comparison
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                      ^ (bad-whitespace)
+C:  5, 0: Exactly one space required after :
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                                      ^ (bad-whitespace)
+C:  5, 0: Exactly one space required after :
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                                                      ^ (bad-whitespace)
+C: 22, 0: Line too long (460/100) (line-too-long)
+C:187, 0: Line too long (102/100) (line-too-long)
+C:188, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENREQRAW,
+             ^ (bad-whitespace)
+C:189, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:195, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENREQ,
+             ^ (bad-whitespace)
+C:196, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:201, 0: Line too long (102/100) (line-too-long)
+C:202, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENRETRAW,
+             ^ (bad-whitespace)
+C:203, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:209, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENRET,
+             ^ (bad-whitespace)
+C:210, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+R:  5, 0: Consider using ternary (lambda x: x if sys.version_info[0] < 3 else lambda x: x.encode('latin1')) (consider-using-ternary)
+C:  5, 0: Constant name "_b" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  6, 0: Import "from google.protobuf import descriptor as _descriptor" should be placed at the top of the module (wrong-import-position)
+C:  7, 0: Import "from google.protobuf import message as _message" should be placed at the top of the module (wrong-import-position)
+C:  8, 0: Import "from google.protobuf import reflection as _reflection" should be placed at the top of the module (wrong-import-position)
+C:  9, 0: Import "from google.protobuf import symbol_database as _symbol_database" should be placed at the top of the module (wrong-import-position)
+C: 10, 0: Import "from google.protobuf import descriptor_pb2" should be placed at the top of the module (wrong-import-position)
+C: 13, 0: Constant name "_sym_db" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:187, 0: Constant name "GetTokenReqRaw" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:194, 0: Constant name "GetTokenReq" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:201, 0: Constant name "GetTokenRetRaw" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:208, 0: Constant name "GetTokenRet" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 10, 0: Unused descriptor_pb2 imported from google.protobuf (unused-import)
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+C: 11, 4: Constant name "ans" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 8: Constant name "gdbfile" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module test_pal
+W:541, 0: XXX Should really be running these tests as part of CI (fixme)
+W:634, 0: Unnecessary semicolon (unnecessary-semicolon)
+C: 28, 0: Class name "TC_00_Basic" doesn't conform to PascalCase naming style (invalid-name)
+W: 30, 8: Unused variable 'stdout' (unused-variable)
+W: 37, 8: Unused variable 'stdout' (unused-variable)
+C: 41, 0: Class name "TC_01_Bootstrap" doesn't conform to PascalCase naming style (invalid-name)
+C: 67, 4: Method name "test_101_basic_boostrapping_five_arguments" doesn't conform to snake_case naming style (invalid-name)
+W: 68, 8: Unused variable 'stdout' (unused-variable)
+W: 86, 8: Unused variable 'stdout' (unused-variable)
+W: 98, 8: Unused variable 'stdout' (unused-variable)
+C:101, 4: Method name "test_104_manifest_as_executable_name" doesn't conform to snake_case naming style (invalid-name)
+W:103, 8: Unused variable 'stdout' (unused-variable)
+W:109, 8: Unused variable 'stdout' (unused-variable)
+W:115, 8: Unused variable 'stdout' (unused-variable)
+W:121, 8: Unused variable 'stdout' (unused-variable)
+W:129, 8: Unused variable 'stdout' (unused-variable)
+W:136, 8: Unused variable 'stdout' (unused-variable)
+C:140, 4: Method name "test_130_large_number_of_items_in_manifest" doesn't conform to snake_case naming style (invalid-name)
+W:141, 8: Unused variable 'stdout' (unused-variable)
+C:146, 4: Method name "test_140_missing_executable_and_manifest" doesn't conform to snake_case naming style (invalid-name)
+C:151, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:148,12: Unused variable 'stdout' (unused-variable)
+C:154, 0: Class name "TC_02_Symbols" doesn't conform to PascalCase naming style (invalid-name)
+C:207,15: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+C:208,12: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+W:203, 8: Unused variable 'stdout' (unused-variable)
+C:211, 0: Class name "TC_10_Exception" doesn't conform to PascalCase naming style (invalid-name)
+W:213, 8: Unused variable 'stdout' (unused-variable)
+C:231, 0: Class name "TC_20_SingleProcess" doesn't conform to PascalCase naming style (invalid-name)
+W:246, 8: Unused variable 'stdout' (unused-variable)
+C:316,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:333,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+W:320, 8: Unused variable 'stdout' (unused-variable)
+W:346, 8: Unused variable 'stdout' (unused-variable)
+W:351, 8: Unused variable 'stdout' (unused-variable)
+W:362, 8: Unused variable 'stdout' (unused-variable)
+W:381, 8: Unused variable 'stdout' (unused-variable)
+W:395, 8: Unused variable 'stdout' (unused-variable)
+W:413, 8: Unused variable 'stdout' (unused-variable)
+W:446, 8: Unused variable 'stdout' (unused-variable)
+W:463, 8: Unused variable 'stdout' (unused-variable)
+W:476, 8: Unused variable 'stdout' (unused-variable)
+W:490, 8: Unused variable 'stdout' (unused-variable)
+C:495, 0: Class name "TC_21_ProcessCreation" doesn't conform to PascalCase naming style (invalid-name)
+W:497, 8: Unused variable 'stdout' (unused-variable)
+W:513, 8: Unused variable 'stdout' (unused-variable)
+W:527, 8: Unused variable 'stdout' (unused-variable)
+W:533, 8: Unused variable 'stdout' (unused-variable)
+C:539, 0: Class name "TC_22_GIPC" doesn't conform to PascalCase naming style (invalid-name)
+W:550, 8: Unused variable 'stdout' (unused-variable)
+C:590, 0: Class name "TC_23_SendHandle" doesn't conform to PascalCase naming style (invalid-name)
+W:592, 8: Unused variable 'stdout' (unused-variable)
+C:609, 0: Class name "TC_40_AVXDisable" doesn't conform to PascalCase naming style (invalid-name)
+W:614, 8: Unused variable 'stdout' (unused-variable)
+C:617, 0: Class name "TC_50_Attestation" doesn't conform to PascalCase naming style (invalid-name)
+W:620, 8: Unused variable 'stdout' (unused-variable)
+************* Module conf
+W: 28, 0: Redefining built-in 'copyright' (redefined-builtin)
+C: 27, 0: Constant name "project" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 28, 0: Constant name "copyright" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 29, 0: Constant name "author" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 32, 0: Constant name "version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 34, 0: Constant name "release" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 46, 0: Constant name "extensions" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 55, 0: Constant name "templates_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 58, 0: Constant name "source_suffix" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 65, 0: Constant name "master_doc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 72, 0: Constant name "language" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 77, 0: Constant name "exclude_patterns" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 80, 0: Constant name "pygments_style" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 82, 0: Constant name "rst_prolog" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 87, 0: Constant name "breathe_default_project" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 88, 0: Constant name "breathe_projects" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 90,21: Unused argument 'app' (unused-argument)
+C: 95, 0: Constant name "todo_include_todos" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:102, 0: Constant name "html_theme" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:113, 0: Constant name "html_static_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:130, 0: Constant name "man_pages" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 23, 0: Unused import recommonmark.parser (unused-import)
+************* Module regression
+C: 10, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 19, 4: Method could be a function (no-self-use)
+C: 58, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module buildglibc
+C:  9, 0: No space allowed before :
+def prependText(filename, text) :
+                                ^ (bad-whitespace)
+C: 17, 0: No space allowed before :
+def appendText(filename, text) :
+                               ^ (bad-whitespace)
+C: 53, 0: No space allowed before :
+        if not iput == 'y' and not iput == '' :
+                                              ^ (bad-whitespace)
+C: 61, 0: No space allowed before :
+    if os.path.isdir(glibc) :
+                            ^ (bad-whitespace)
+C: 63, 0: Exactly one space required after comma
+        glibcParent,glibcDir = os.path.split(glibc)
+                   ^ (bad-whitespace)
+C: 67, 0: Line too long (102/100) (line-too-long)
+C: 74, 0: No space allowed before :
+    if os.path.isdir(buildDir) :
+                               ^ (bad-whitespace)
+C: 76, 0: Line too long (104/100) (line-too-long)
+C: 83, 0: No space allowed before :
+        else :
+             ^ (bad-whitespace)
+C: 86, 0: No space allowed before :
+    else :
+         ^ (bad-whitespace)
+C: 90, 0: Line too long (106/100) (line-too-long)
+C:108, 0: No space allowed after bracket
+    disabled_features = { 'nscd' }
+                        ^ (bad-whitespace)
+C:108, 0: No space allowed before bracket
+    disabled_features = { 'nscd' }
+                                 ^ (bad-whitespace)
+C:109, 0: Line too long (131/100) (line-too-long)
+C:115, 0: Line too long (146/100) (line-too-long)
+C:  9, 0: Function name "prependText" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 0: Function name "appendText" doesn't conform to snake_case naming style (invalid-name)
+C: 22, 0: Constant name "home" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 23, 0: Constant name "glibc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 24, 0: Constant name "glibcParent" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 25, 0: Constant name "glibcDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 26, 0: Constant name "buildDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 27, 0: Constant name "installDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 28, 0: Constant name "commandStr" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 29, 0: Constant name "commandOutput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 30, 0: Constant name "quiet" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 31, 0: Constant name "debug_flags" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 33, 0: Constant name "index" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 43, 0: Constant name "version" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 45, 0: Using a conditional statement with a constant value (using-constant-test)
+C: 52, 8: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 54,12: Constant name "glibc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 57, 8: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 59,12: Constant name "glibc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 62, 8: Constant name "glibc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 63, 8: Constant name "glibcParent" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 63,20: Constant name "glibcDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 67, 8: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 69,12: Constant name "buildDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 71, 4: Constant name "buildDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 76,12: Constant name "clean" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 78,12: Constant name "clean" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 90, 8: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 92,12: Constant name "installDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 94, 4: Constant name "installDir" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 98, 0: Using a conditional statement with a constant value (using-constant-test)
+C:106, 4: Constant name "cflags" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:107, 4: Constant name "extra_defs" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:108, 4: Constant name "disabled_features" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:109, 4: Constant name "extra_flags" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:115, 4: Constant name "commandStr" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:117, 4: Constant name "commandOutput" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module test_libos
+C: 64, 0: Line too long (104/100) (line-too-long)
+C: 65, 0: Line too long (108/100) (line-too-long)
+C: 66, 0: Line too long (108/100) (line-too-long)
+C: 67, 0: Line too long (108/100) (line-too-long)
+C: 68, 0: Line too long (108/100) (line-too-long)
+C: 69, 0: Line too long (108/100) (line-too-long)
+C: 70, 0: Line too long (108/100) (line-too-long)
+C: 71, 0: Line too long (108/100) (line-too-long)
+C: 72, 0: Line too long (108/100) (line-too-long)
+C: 73, 0: Line too long (108/100) (line-too-long)
+C: 74, 0: Line too long (108/100) (line-too-long)
+C: 75, 0: Line too long (108/100) (line-too-long)
+C: 76, 0: Line too long (108/100) (line-too-long)
+C: 77, 0: Line too long (108/100) (line-too-long)
+C: 78, 0: Line too long (108/100) (line-too-long)
+C: 79, 0: Line too long (109/100) (line-too-long)
+C: 15, 0: Class name "TC_00_Bootstrap" doesn't conform to PascalCase naming style (invalid-name)
+W: 17,16: Unused variable 'stderr' (unused-variable)
+C: 27, 4: Method name "test_101_basic_bootstrapping_five_arguments" doesn't conform to snake_case naming style (invalid-name)
+W: 29,16: Unused variable 'stderr' (unused-variable)
+C: 39, 4: Method name "test_102_basic_bootstrapping_static" doesn't conform to snake_case naming style (invalid-name)
+W: 43,16: Unused variable 'stderr' (unused-variable)
+C: 46, 4: Method name "test_103_basic_bootstrapping_pie" doesn't conform to snake_case naming style (invalid-name)
+W: 48,16: Unused variable 'stderr' (unused-variable)
+C: 53, 4: Method name "test_110_basic_bootstrapping_cxx" doesn't conform to snake_case naming style (invalid-name)
+W: 54,16: Unused variable 'stderr' (unused-variable)
+W: 60,16: Unused variable 'stderr' (unused-variable)
+W: 83,16: Unused variable 'stderr' (unused-variable)
+W: 90,16: Unused variable 'stderr' (unused-variable)
+W: 97,16: Unused variable 'stderr' (unused-variable)
+W:112,16: Unused variable 'stderr' (unused-variable)
+C:126, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:127,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:137, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:141,16: Unused variable 'stderr' (unused-variable)
+C:146, 0: Class name "TC_01_OpenMP" doesn't conform to PascalCase naming style (invalid-name)
+W:152,16: Unused variable 'stderr' (unused-variable)
+C:157, 0: Class name "TC_30_Syscall" doesn't conform to PascalCase naming style (invalid-name)
+W:159,16: Unused variable 'stderr' (unused-variable)
+W:166,16: Unused variable 'stderr' (unused-variable)
+W:175,16: Unused variable 'stderr' (unused-variable)
+W:184,16: Unused variable 'stderr' (unused-variable)
+W:202,16: Unused variable 'stderr' (unused-variable)
+W:209,16: Unused variable 'stderr' (unused-variable)
+W:215,16: Unused variable 'stderr' (unused-variable)
+W:221,16: Unused variable 'stderr' (unused-variable)
+W:227,16: Unused variable 'stderr' (unused-variable)
+W:243,16: Unused variable 'stderr' (unused-variable)
+W:250,16: Unused variable 'stderr' (unused-variable)
+W:261,16: Unused variable 'stderr' (unused-variable)
+C:278, 0: Class name "TC_31_SyscallSGX" doesn't conform to PascalCase naming style (invalid-name)
+W:284,16: Unused variable 'stderr' (unused-variable)
+C:289, 0: Class name "TC_40_FileSystem" doesn't conform to PascalCase naming style (invalid-name)
+W:291,16: Unused variable 'stderr' (unused-variable)
+W:307,16: Unused variable 'stderr' (unused-variable)
+W:313,16: Unused variable 'stderr' (unused-variable)
+W:319,16: Unused variable 'stderr' (unused-variable)
+C:322, 0: Class name "TC_80_Socket" doesn't conform to PascalCase naming style (invalid-name)
+W:324,16: Unused variable 'stderr' (unused-variable)
+W:328,16: Unused variable 'stderr' (unused-variable)
+W:335,16: Unused variable 'stderr' (unused-variable)
+W:348,16: Unused variable 'stderr' (unused-variable)
+W:  3, 0: Unused import mmap (unused-import)
+W:  5, 0: Unused import sys (unused-import)
+W:  9, 0: Unused expectedFailureIf imported from regression (unused-import)
+************* Module fetch
+E: 33, 0: invalid syntax (<string>, line 33) (syntax-error)
+************* Module benchrun
+E: 88, 0: Missing parentheses in call to 'print'. Did you mean print("=" * 78)? (<string>, line 88) (syntax-error)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+C: 24, 0: Class name "S" doesn't conform to PascalCase naming style (invalid-name)
+C: 30, 4: Method name "do_GET" doesn't conform to snake_case naming style (invalid-name)
+C: 34, 4: Method name "do_HEAD" doesn't conform to snake_case naming style (invalid-name)
+C: 37, 4: Method name "do_POST" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module fibonacci
+E:  7, 0: Unable to import 'benchrun' (import-error)
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+E: 18,13: Undefined variable 'xrange' (undefined-variable)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+R: 22, 0: Too few public methods (1/2) (too-few-public-methods)
+************* Module sympybench
+C: 23, 0: Exactly one space required after comma
+        a = 3*x + 2*x*y - module.Rational(1,2)*z + 2
+                                           ^ (bad-whitespace)
+C: 24, 0: Exactly one space required after comma
+        b = 2*x + module.Rational(3,2)*x*y + 4*z - 2
+                                   ^ (bad-whitespace)
+E:  7, 0: Unable to import 'benchrun' (import-error)
+E:  9, 0: Unable to import 'sympycore' (import-error)
+E: 10, 0: Unable to import 'sympy' (import-error)
+R: 12, 0: Too few public methods (0/2) (too-few-public-methods)
+C: 22, 8: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+C: 22,11: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+C: 22,14: Variable name "z" doesn't conform to snake_case naming style (invalid-name)
+C: 23, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 24, 8: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 25, 8: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 25,12: Variable name "N" doesn't conform to snake_case naming style (invalid-name)
+C: 26, 8: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+W: 28,12: Statement seems to have no effect (pointless-statement)
+C: 29,12: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 30, 8: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 20, 4: Method could be a function (no-self-use)
+R: 17, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 37, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 41, 8: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+C: 41,11: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+C: 41,14: Variable name "z" doesn't conform to snake_case naming style (invalid-name)
+C: 42, 8: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C: 44, 8: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+W: 43, 8: Unused variable 'e' (unused-variable)
+R: 37, 4: Method could be a function (no-self-use)
+R: 33, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 51, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 53, 8: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+C: 56, 8: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 56,11: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 57, 8: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+R: 58,12: Redefining argument with the local name 'n' (redefined-argument-from-local)
+C: 59,12: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 59,15: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 60, 8: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 51, 4: Method could be a function (no-self-use)
+R: 47, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 63, 0: Constant name "all_benchmarks" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:  9, 0: Unused import sympycore (unused-import)
+W: 10, 0: Unused import sympy (unused-import)
+************* Module test-http
+C:  1, 0: Exactly one space required after comma
+import sys,urllib2
+          ^ (bad-whitespace)
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  1, 0: Multiple imports on one line (sys, urllib2) (multiple-imports)
+E:  1, 0: Unable to import 'urllib2' (import-error)
+C:  3, 0: Constant name "request" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  4, 0: Constant name "opener" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  5, 0: Constant name "response" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 4: Constant name "data" doesn't conform to UPPER_CASE naming style (invalid-name)
+R:  1, 0: Similar lines in 2 files
+==test_libos:8
+==test_pal:14
+from regression import (
+    HAS_SGX,
+    RegressionTestCase,
+    expectedFailureIf,
+)
+ (duplicate-code)
+
+
+Report
+======
+939 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |14     |NC         |NC         |21.43       |28.57    |
++---------+-------+-----------+-----------+------------+---------+
+|class    |25     |NC         |NC         |20.00       |68.00    |
++---------+-------+-----------+-----------+------------+---------+
+|method   |89     |NC         |NC         |4.49        |12.36    |
++---------+-------+-----------+-----------+------------+---------+
+|function |11     |NC         |NC         |9.09        |27.27    |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pkg_resources (buildglibc)
+    recommonmark 
+      \-parser (conf)
+    regression (test_libos,test_pal)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |1181   |62.42 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |146    |7.72  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |217    |11.47 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |348    |18.39 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |6     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.322 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |207    |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |15     |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |87     |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |11     |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++------------------+------+--------+---------+-----------+
+|module            |error |warning |refactor |convention |
++==================+======+========+=========+===========+
+|sympybench        |27.27 |4.60    |53.33    |13.53      |
++------------------+------+--------+---------+-----------+
+|fibonacci         |18.18 |1.15    |13.33    |6.76       |
++------------------+------+--------+---------+-----------+
+|test-http         |9.09  |0.00    |6.67     |3.38       |
++------------------+------+--------+---------+-----------+
+|pal-gdb           |9.09  |0.00    |0.00     |2.42       |
++------------------+------+--------+---------+-----------+
+|link-intel-driver |9.09  |0.00    |0.00     |0.00       |
++------------------+------+--------+---------+-----------+
+|fetch             |9.09  |0.00    |0.00     |0.00       |
++------------------+------+--------+---------+-----------+
+|benchrun          |9.09  |0.00    |0.00     |0.00       |
++------------------+------+--------+---------+-----------+
+|test_pal          |0.00  |42.53   |0.00     |9.18       |
++------------------+------+--------+---------+-----------+
+|test_libos        |0.00  |41.38   |0.00     |14.01      |
++------------------+------+--------+---------+-----------+
+|conf              |0.00  |3.45    |0.00     |9.18       |
++------------------+------+--------+---------+-----------+
+|buildglibc        |0.00  |2.30    |0.00     |24.15      |
++------------------+------+--------+---------+-----------+
+|aesm_pb2          |0.00  |1.15    |6.67     |12.56      |
++------------------+------+--------+---------+-----------+
+|dummy-web-server  |0.00  |1.15    |0.00     |2.42       |
++------------------+------+--------+---------+-----------+
+|regression        |0.00  |0.00    |6.67     |0.97       |
++------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|invalid-name                  |145         |
++------------------------------+------------+
+|unused-variable               |70          |
++------------------------------+------------+
+|bad-whitespace                |25          |
++------------------------------+------------+
+|line-too-long                 |24          |
++------------------------------+------------+
+|unused-import                 |10          |
++------------------------------+------------+
+|import-error                  |7           |
++------------------------------+------------+
+|too-few-public-methods        |6           |
++------------------------------+------------+
+|no-self-use                   |6           |
++------------------------------+------------+
+|wrong-import-position         |5           |
++------------------------------+------------+
+|syntax-error                  |3           |
++------------------------------+------------+
+|multiple-imports              |3           |
++------------------------------+------------+
+|using-constant-test           |2           |
++------------------------------+------------+
+|ungrouped-imports             |2           |
++------------------------------+------------+
+|multiple-statements           |2           |
++------------------------------+------------+
+|unused-argument               |1           |
++------------------------------+------------+
+|unnecessary-semicolon         |1           |
++------------------------------+------------+
+|undefined-variable            |1           |
++------------------------------+------------+
+|redefined-builtin             |1           |
++------------------------------+------------+
+|redefined-argument-from-local |1           |
++------------------------------+------------+
+|pointless-statement           |1           |
++------------------------------+------------+
+|misplaced-comparison-constant |1           |
++------------------------------+------------+
+|fixme                         |1           |
++------------------------------+------------+
+|duplicate-code                |1           |
++------------------------------+------------+
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+|consider-using-ternary        |1           |
++------------------------------+------------+
+
+
+
++ :
++ ./.ci/run-pylint -f json
++ ./.ci/prfilter
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
++ ./.ci/run-shellcheck
+
+In LibOS/shim/test/apps/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected test to end here (don't wrap commands in []/[[]]). Fix any mentioned problems and try again.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 16:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 19:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 25:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY http://$DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 36:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 41:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 42:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 43:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/python/web-test.sh line 6:
+echo "\n\nRun a HTTP server in the background on port " + $PORT
+      ^-- SC2028: echo won't expand escape sequences. Consider printf.
+
+
+In LibOS/shim/test/apps/python/web-test.sh line 9:
+echo "\n\nRun test-http.py:"
+      ^-- SC2028: echo won't expand escape sequences. Consider printf.
+
+
+In LibOS/shim/test/apps/python/web-test.sh line 13:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Pal/ipc/linux/install.sh line 3:
+SCRIPT=`readlink -f "${BASH_SOURCE[0]}"`
+       ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Pal/ipc/linux/install.sh line 4:
+DIR=`dirname $SCRIPT`
+    ^-- SC2006: Use $(..) instead of legacy `..`.
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/ipc/linux/install.sh line 10:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/ipc/linux/install.sh line 16:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/ipc/linux/install.sh line 22:
+dkms add $DIR || exit $?
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/ipc/linux/install.sh line 25:
+if [ $? -ne 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/ipc/linux/install.sh line 32:
+if [ $? -ne 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/ipc/linux/load.sh line 6:
+(/sbin/lsmod | grep -q $MODNAME) && \
+                                 ^-- SC2015: Note that A && B || C is not if-then-else. C may run when A is true.
+
+
+In Pal/ipc/linux/load.sh line 7:
+((echo "unloading $MODNAME..."; /sbin/rmmod $MODNAME) || exit 1) || continue
+^-- SC1105: Shells disambiguate (( differently or not at all. For subshell, add spaces around ( . For ((, fix parsing errors.
+                                                                    ^-- SC2105: continue is only valid in loops.
+
+
+In Pal/ipc/linux/load.sh line 12:
+/sbin/insmod ./$MOD.ko $* || exit 1
+                       ^-- SC2048: Use "$@" (with quotes) to prevent whitespace problems.
+                       ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/ipc/linux/uninstall.sh line 3:
+DIR=`readlink -f "${BASH_SOURCE[0]}"`
+^-- SC2034: DIR appears unused. Verify it or export it.
+    ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Pal/ipc/linux/uninstall.sh line 9:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/ipc/linux/uninstall.sh line 14:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 7:
+if [ ! -f $PALGDBINIT ] || [ $PAL -nt $PALGDBINIT ]; then
+          ^-- SC2086: Double quote to prevent globbing and word splitting.
+                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 8:
+	echo "symbol-file" > $PALGDBINIT
+                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 9:
+	readelf -WS $PAL | (
+                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 14:
+		echo ${line:5} | awk '{if ($3 ~ /^0/) { v = sprintf("%d", "0x" $3); if (v != 0) printf("section %s 0x%x\n", $1, sprintf("%d", "'$BASE'") + v) }}' >> $PALGDBINIT
+                     ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                                                                                                                                     ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 15:
+		TEXT+=$(echo ${line:5} | awk '{if ($1 == ".text") { v = sprintf("%d", "0x" $3); printf("0x%x", sprintf("%d", "'$BASE'") + v) }}')
+                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 16:
+		SECTIONS+=$(echo ${line:5} | awk '{if ($1 != ".text" && $3 ~ /^0/) { v = sprintf("%d", "0x" $3); if (v != 0) printf(" -s %s 0x%x", $1, sprintf("%d", "'$BASE'") + v) }}')
+                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 18:
+	echo add-symbol-file $PAL $TEXT $SECTIONS >> $PALGDBINIT)
+                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                  ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                     ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/FreeBSD/pal-gdb.template line 21:
+exec gdb -q -ex "source $PALGDBINIT" -ex "source $(PAL_DIR)/pal.gdb" --args $PAL "$@"
+                                                                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 20:
+RUNTIME_DIR=$(/usr/bin/dirname $(readlink -f ${BASH_SOURCE[0]}))
+                               ^-- SC2046: Quote this to prevent word splitting.
+                                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 21:
+PAL_HOST=$(/usr/bin/make --no-print-directory --quiet -f $RUNTIME_DIR/../Pal/src/Makefile.Host print_host 2>&1)
+                                                         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 29:
+	if [ ! -f $GDB ]; then
+                  ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 65:
+exec $PREFIX $PAL_CMD $MANIFEST "$@"
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 20:
+read SELECT_PGIDS
+^-- SC2162: read without -r will mangle backslashes.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
+
+In .ci/run-pylint line 3:
+cd "$(git rev-parse --show-toplevel)"
+^-- SC2164: Use 'cd ... || exit' or 'cd ... || return' in case cd fails.
+
+
+In .ci/run-shellcheck line 3:
+cd "$(git rev-parse --show-toplevel)"
+^-- SC2164: Use 'cd ... || exit' or 'cd ... || return' in case cd fails.
+
++ :
++ ./.ci/run-shellcheck -f json
++ ./.ci/prfilter
+MESSAGES AFFECTING THIS PR:
+.ci/run-shellcheck +3:1: 2164: Use 'cd ... || exit' or 'cd ... || return' in case cd fails.
+.ci/run-pylint +3:1: 2164: Use 'cd ... || exit' or 'cd ... || return' in case cd fails.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 4fa4b4c84b226ae28f616218e7f5544eeec90f7baea4cbf55bf26e155690351d
+$ docker rm -f 4fa4b4c84b226ae28f616218e7f5544eeec90f7baea4cbf55bf26e155690351d
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 7596492984ecdb035619f6643be06d34ad7636c2 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1199/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

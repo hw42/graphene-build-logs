@@ -1,0 +1,180 @@
+GitHub pull request #1145 of commit b8dec0f6e05543ef926f380bd0ff92e5c93ed51f, no merge conflicts.
+Setting status of b8dec0f6e05543ef926f380bd0ff92e5c93ed51f to PENDING with url https://leeroy.cs.unc.edu/job/graphene/2680 and message: 'Build started for merge commit.'
+Using context: Jenkins
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene@script to read ./Jenkinsfiles/Linux
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1145/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1145/merge^{commit} # timeout=10
+Checking out Revision 4147d9a8991b0b95cfa3ef01b507e317092af436 (refs/remotes/origin/pr/1145/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4147d9a8991b0b95cfa3ef01b507e317092af436 # timeout=10
+Commit message: "Merge b8dec0f6e05543ef926f380bd0ff92e5c93ed51f into ffbe62254e99249ec952e4f1d6d0f6e81ac654db"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/graphene
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 4147d9a8991b0b95cfa3ef01b507e317092af436 (refs/remotes/origin/pr/1145/merge)
+Commit message: "Merge b8dec0f6e05543ef926f380bd0ff92e5c93ed51f into ffbe62254e99249ec952e4f1d6d0f6e81ac654db"
+ > git rev-parse refs/remotes/origin/pr/1145/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1145/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4147d9a8991b0b95cfa3ef01b507e317092af436 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 68fc3b037a0390737a4e896582ba400ddcab1f07 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon    796MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-minimal        python3-lxml        python3-pip        python3-pytest        texinfo        wget     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-minimal        python3-lxml        python3-pip        python3-pytest        texinfo        wget     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 18e45b7efcac
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> f13912d95b10
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> eb2e8a8dd55d
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 7c69b1db0ea3
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> 0e906699897b
+Successfully built 0e906699897b
+Successfully tagged 68fc3b037a0390737a4e896582ba400ddcab1f07:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 68fc3b037a0390737a4e896582ba400ddcab1f07
+.
+[Pipeline] withDockerContainer
+slave-bobothebear does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/graphene -v /home/jenkins/workspace/graphene:/home/jenkins/workspace/graphene:rw,z -v /home/jenkins/workspace/graphene@tmp:/home/jenkins/workspace/graphene@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 68fc3b037a0390737a4e896582ba400ddcab1f07 cat
+$ docker top f0b15a35c1875f7d0bde3dea94ecfe12965aba415cd4677c57572e11238224be -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
++ cd LibOS
++ make -j 8 glibc-build/Build.success GLIBC_VERSION=2.19
+for MIRROR in https://ftp.gnu.org/gnu/ https://mirrors.kernel.org/gnu/ https://mirrors.ocf.berkeley.edu/gnu/; do \
+	wget --timeout=10 ${MIRROR}glibc/glibc-2.19.tar.gz \
+	&& break; \
+done
+--2019-11-14 18:47:52--  https://ftp.gnu.org/gnu/glibc/glibc-2.19.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... failed: Connection timed out.
+wget: unable to resolve host address 'ftp.gnu.org'
+--2019-11-14 18:48:02--  https://mirrors.kernel.org/gnu/glibc/glibc-2.19.tar.gz
+Resolving mirrors.kernel.org (mirrors.kernel.org)... failed: Connection timed out.
+wget: unable to resolve host address 'mirrors.kernel.org'
+--2019-11-14 18:48:12--  https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.19.tar.gz
+Resolving mirrors.ocf.berkeley.edu (mirrors.ocf.berkeley.edu)... failed: Connection timed out.
+wget: unable to resolve host address 'mirrors.ocf.berkeley.edu'
+Makefile:118: recipe for target 'glibc-2.19.tar.gz' failed
+make: *** [glibc-2.19.tar.gz] Error 4
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 f0b15a35c1875f7d0bde3dea94ecfe12965aba415cd4677c57572e11238224be
+$ docker rm -f f0b15a35c1875f7d0bde3dea94ecfe12965aba415cd4677c57572e11238224be
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of b8dec0f6e05543ef926f380bd0ff92e5c93ed51f to FAILURE with url https://leeroy.cs.unc.edu/job/graphene/2680 and message: 'Build finished. '
+Using context: Jenkins
+ERROR: script returned exit code 2
+Finished: FAILURE

@@ -1,0 +1,157 @@
+GitHub pull request #956 of commit f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80, has merge conflicts.
+Setting status of f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1432/ and message: 'Build started for original commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80^{commit} # timeout=10
+Checking out Revision f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 # timeout=20
+Commit message: "fixup! fixup! fixup! fixup! fixup! [App] Clean up the Python example"
+ > git rev-list --no-walk 703968a2c1cfbdc27e1ebf578e0527a94b027465 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 (detached)
+Commit message: "fixup! fixup! fixup! fixup! fixup! [App] Clean up the Python example"
+ > git rev-parse f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t d9a471f174a952995f7822f7a4081d7fa36fafe1 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  976.9MB
+Step 1/10 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/10 : RUN apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-generic     net-tools     python     python-protobuf     python3-apt     python3-pytest     texinfo     wget     python-numpy     python-scipy
+ ---> Running in 39908be53749
+Err:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://archive.ubuntu.com/ubuntu bionic InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists...
+[91mW: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/bionic-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+Package texinfo is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+Package libpcre3-dev is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+[91mE: Unable to locate package apache2-utils
+E: Unable to locate package autoconf
+E: Unable to locate package build-essential
+E: Unable to locate package gawk
+E: Unable to locate package bison
+E: Unable to locate package gettext
+E: Unable to locate package git
+E: Unable to locate package libexpat1
+E: Unable to locate package libexpat1-dev
+E: Unable to locate package libomp-dev
+E: Package 'libpcre3-dev' has no installation candidate
+E: Unable to locate package libxml2-dev
+E: Unable to locate package linux-headers-generic
+E: Unable to locate package net-tools
+E: Unable to locate package python
+E: Unable to locate package python-protobuf
+E: Unable to locate package python3-apt
+E: [0m[91mUnable to locate package python3-pytest
+E: Package 'texinfo' has no installation candidate
+E: Unable to locate package wget
+E: Unable to locate package python-numpy
+E: Unable to locate package python-scipy
+[0mThe command '/bin/sh -c apt-get update && apt-get install -y     apache2-utils     autoconf     build-essential     gawk     bison     gettext     git     libexpat1     libexpat1-dev     libomp-dev     libpcre3-dev     libxml2-dev     linux-headers-generic     net-tools     python     python-protobuf     python3-apt     python3-pytest     texinfo     wget     python-numpy     python-scipy' returned a non-zero code: 100
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Setting status of f4f3e9c5d71906cc59791c9a6ad7368d2c9cdd80 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1432/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 100
+Finished: FAILURE

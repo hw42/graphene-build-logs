@@ -1,0 +1,309 @@
+GitHub pull request #1206 of commit 8566ae67238d3809d6e7b4517ab989ea3a1e7f45, no merge conflicts.
+Setting status of 8566ae67238d3809d6e7b4517ab989ea3a1e7f45 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/1615 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1206/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1206/merge^{commit} # timeout=10
+Checking out Revision b798aef27d1cd5a0242ef1910a915246bcf220ec (refs/remotes/origin/pr/1206/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b798aef27d1cd5a0242ef1910a915246bcf220ec # timeout=10
+Commit message: "Merge 8566ae67238d3809d6e7b4517ab989ea3a1e7f45 into f3a583a5e5d46b48c9ed3b6d8e76136988721254"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision b798aef27d1cd5a0242ef1910a915246bcf220ec (refs/remotes/origin/pr/1206/merge)
+Commit message: "Merge 8566ae67238d3809d6e7b4517ab989ea3a1e7f45 into f3a583a5e5d46b48c9ed3b6d8e76136988721254"
+ > git rev-parse refs/remotes/origin/pr/1206/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1206/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b798aef27d1cd5a0242ef1910a915246bcf220ec # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 13be225d127851f290ca624b05c705424997eadb -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon    749MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> adaf2aeafd30
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> b37abb6f10bc
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> b57a5dd9bdc9
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 6731bdd5aaa1
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> b9457bb7c190
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 0ef6462b1afa
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 307ff6acc136
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 5e682e0c0a41
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> b7fc633b518f
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 119e0d000170
+Successfully built 119e0d000170
+Successfully tagged 13be225d127851f290ca624b05c705424997eadb:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 13be225d127851f290ca624b05c705424997eadb
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 13be225d127851f290ca624b05c705424997eadb cat
+$ docker top c99932bf280b42ba31756ea6d674d1ba2a784a6a37138521fa0c598eb04005b3 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ make -j 8 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/db_mutex.o ]
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_ipc.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/slab.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.obj/pal_error.o ]
+  [ host/Linux/.lib/host_endian.h ]
+  [ user_start.o ]
+  [ user_shared_start.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib'
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene/path.o ]
+wget -O crypto/mbedtls-2.16.3.tar.gz https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+--2019-12-06 23:19:19--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz
+Resolving github.com (github.com)... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o ]
+HTTP request sent, awaiting response... In file included from crypto/adapters/mbedtls_adapter.c:23:0:
+./pal_crypto.h:36:10: fatal error: crypto/mbedtls/include/mbedtls/cmac.h: No such file or directory
+ #include "crypto/mbedtls/include/mbedtls/cmac.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Makefile:81: recipe for target '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o' failed
+make[3]: *** [/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o ]
+In file included from crypto/adapters/mbedtls_dh.c:25:0:
+./pal_crypto.h:36:10: fatal error: crypto/mbedtls/include/mbedtls/cmac.h: No such file or directory
+ #include "crypto/mbedtls/include/mbedtls/cmac.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Makefile:81: recipe for target '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o' failed
+make[3]: *** [/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o] Error 1
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3 [following]
+--2019-12-06 23:19:19--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3
+Resolving codeload.github.com (codeload.github.com)... 192.30.253.120
+Connecting to codeload.github.com (codeload.github.com)|192.30.253.120|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2459563 (2.3M) [application/x-gzip]
+Saving to: 'crypto/mbedtls-2.16.3.tar.gz'
+
+     0K .......... .......... .......... .......... ..........  2% 1.72M 1s
+    50K .......... .......... .......... .......... ..........  4% 3.42M 1s
+   100K .......... .......... .......... .......... ..........  6% 25.8M 1s
+   150K .......... .......... .......... .......... ..........  8% 4.06M 1s
+   200K .......... .......... .......... .......... .......... 10% 25.5M 1s
+   250K .......... .......... .......... .......... .......... 12% 27.2M 0s
+   300K .......... .......... .......... .......... .......... 14% 3.88M 0s
+   350K .......... .......... .......... .......... .......... 16% 25.9M 0s
+   400K .......... .......... .......... .......... .......... 18% 28.5M 0s
+   450K .......... .......... .......... .......... .......... 20% 28.2M 0s
+   500K .......... .......... .......... .......... .......... 22% 34.5M 0s
+   550K .......... .......... .......... .......... .......... 24% 51.8M 0s
+   600K .......... .......... .......... .......... .......... 27% 9.61M 0s
+   650K .......... .......... .......... .......... .......... 29% 47.7M 0s
+   700K .......... .......... .......... .......... .......... 31% 45.8M 0s
+   750K .......... .......... .......... .......... .......... 33% 44.4M 0s
+   800K .......... .......... .......... .......... .......... 35% 55.7M 0s
+   850K .......... .......... .......... .......... .......... 37% 5.04M 0s
+   900K .......... .......... .......... .......... .......... 39% 53.1M 0s
+   950K .......... .......... .......... .......... .......... 41% 46.7M 0s
+  1000K .......... .......... .......... .......... .......... 43% 50.4M 0s
+  1050K .......... .......... .......... .......... .......... 45% 50.2M 0s
+  1100K .......... .......... .......... .......... .......... 47% 49.4M 0s
+  1150K .......... .......... .......... .......... .......... 49% 39.8M 0s
+  1200K .......... .......... .......... .......... .......... 52% 49.9M 0s
+  1250K .......... .......... .......... .......... .......... 54% 53.7M 0s
+  1300K .......... .......... .......... .......... .......... 56% 54.7M 0s
+  1350K .......... .......... .......... .......... .......... 58% 52.0M 0s
+  1400K .......... .......... .......... .......... .......... 60% 55.7M 0s
+  1450K .......... .......... .......... .......... .......... 62% 55.5M 0s
+  1500K .......... .......... .......... .......... .......... 64% 54.2M 0s
+  1550K .......... .......... .......... .......... .......... 66% 44.1M 0s
+  1600K .......... .......... .......... .......... .......... 68% 54.2M 0s
+  1650K .......... .......... .......... .......... .......... 70% 53.4M 0s
+  1700K .......... .......... .......... .......... .......... 72% 51.5M 0s
+  1750K .......... .......... .......... .......... .......... 74% 50.5M 0s
+  1800K .......... .......... .......... .......... .......... 77% 52.3M 0s
+  1850K .......... .......... .......... .......... .......... 79% 52.9M 0s
+  1900K .......... .......... .......... .......... .......... 81% 54.8M 0s
+  1950K .......... .......... .......... .......... .......... 83% 44.4M 0s
+  2000K .......... .......... .......... .......... .......... 85% 55.4M 0s
+  2050K .......... .......... .......... .......... .......... 87% 55.6M 0s
+  2100K .......... .......... .......... .......... .......... 89% 55.7M 0s
+  2150K .......... .......... .......... .......... .......... 91% 51.1M 0s
+  2200K .......... .......... .......... .......... .......... 93% 55.8M 0s
+  2250K .......... .......... .......... .......... .......... 95% 55.4M 0s
+  2300K .......... .......... .......... .......... .......... 97% 55.6M 0s
+  2350K .......... .......... .......... .......... .......... 99% 49.7M 0s
+  2400K .                                                     100% 3656G=0.1s
+
+2019-12-06 23:19:20 (18.3 MB/s) - 'crypto/mbedtls-2.16.3.tar.gz' saved [2459563/2459563]
+
+make[3]: *** wait: No child processes.  Stop.
+Makefile:91: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal'
+Makefile:14: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 c99932bf280b42ba31756ea6d674d1ba2a784a6a37138521fa0c598eb04005b3
+$ docker rm -f c99932bf280b42ba31756ea6d674d1ba2a784a6a37138521fa0c598eb04005b3
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 8566ae67238d3809d6e7b4517ab989ea3a1e7f45 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/1615 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

@@ -1,0 +1,1149 @@
+GitHub pull request #1220 of commit a0a28724a75fc6a459dbfc330445af531a3e0ddb, no merge conflicts.
+Setting status of a0a28724a75fc6a459dbfc330445af531a3e0ddb to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1649/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1220/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1220/merge^{commit} # timeout=10
+Checking out Revision 7cbfe15f7a0d4ca83938f4493676c23118df837c (refs/remotes/origin/pr/1220/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7cbfe15f7a0d4ca83938f4493676c23118df837c # timeout=20
+Commit message: "Merge a0a28724a75fc6a459dbfc330445af531a3e0ddb into ec416115eb5bf11e35fc0b2155d0b0c30999b7a6"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-statler in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 7cbfe15f7a0d4ca83938f4493676c23118df837c (refs/remotes/origin/pr/1220/merge)
+Commit message: "Merge a0a28724a75fc6a459dbfc330445af531a3e0ddb into ec416115eb5bf11e35fc0b2155d0b0c30999b7a6"
+ > git rev-parse refs/remotes/origin/pr/1220/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1220/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7cbfe15f7a0d4ca83938f4493676c23118df837c # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 93dfa3dc26618887309dfd27ec113fdba927aba7 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  792.8MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> bb4f35370b0e
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> cc1062385ecf
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 79cb5c9111f8
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 8ec4cb39b024
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 5603fe86882a
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 76af5d5865ab
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 3d741a293396
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> d1732e0d1969
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> a5daff6e1b2e
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> c3d0002c1bc4
+Successfully built c3d0002c1bc4
+Successfully tagged 93dfa3dc26618887309dfd27ec113fdba927aba7:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 93dfa3dc26618887309dfd27ec113fdba927aba7
+.
+[Pipeline] withDockerContainer
+slave-statler does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 93dfa3dc26618887309dfd27ec113fdba927aba7 cat
+$ docker top befb4a2f832aa483c53195b010383551cb2bee839bba21cc5151f09c13082cd2 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 11, 0: Constant name "t" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 0: Constant name "t" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+C: 53,12: Variable name "t" doesn't conform to snake_case naming style (invalid-name)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module conf_lint
+C: 27, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+C: 24, 0: Class name "S" doesn't conform to PascalCase naming style (invalid-name)
+C: 30, 4: Method name "do_GET" doesn't conform to snake_case naming style (invalid-name)
+C: 34, 4: Method name "do_HEAD" doesn't conform to snake_case naming style (invalid-name)
+C: 37, 4: Method name "do_POST" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module conf_remove_must_pass
+C: 26, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module conf_merge
+C: 28, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 22, 0: Unused import sys (unused-import)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module gen_manifest
+W: 18, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 19, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 20, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 21, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 22, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 23, 0: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
+W: 24, 0: Bad indentation. Found 6 spaces, expected 12 (bad-indentation)
+W: 25, 0: Bad indentation. Found 8 spaces, expected 16 (bad-indentation)
+W: 29, 0: Bad indentation. Found 8 spaces, expected 16 (bad-indentation)
+W: 30, 0: Bad indentation. Found 10 spaces, expected 20 (bad-indentation)
+W: 32, 0: Bad indentation. Found 8 spaces, expected 16 (bad-indentation)
+W: 33, 0: Bad indentation. Found 10 spaces, expected 20 (bad-indentation)
+W: 35, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 39, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 40, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 41, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 45, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 46, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 48, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 49, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 51, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 52, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 55, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 56, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 57, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C: 58, 0: Line too long (125/100) (line-too-long)
+W: 58, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 60, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 61, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 62, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 64, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 68, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 71, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 75, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 79, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 83, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 87, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 91, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 96, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:106, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:107, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:108, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:109, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:110, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:111, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:113, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:117, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:118, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:119, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:120, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:122, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:123, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:124, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:126, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C:  7, 0: Constant name "runtime_libs" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 44,17: Redefining name 'app_name' from outer scope (line 122) (redefined-outer-name)
+W: 44,27: Redefining name 'bin_name' from outer scope (line 123) (redefined-outer-name)
+W: 44,37: Redefining name 'g_path' from outer scope (line 124) (redefined-outer-name)
+C: 48, 2: Variable name "mf" doesn't conform to snake_case naming style (invalid-name)
+C:122, 2: Constant name "app_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:123, 2: Constant name "bin_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:124, 2: Constant name "g_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module pal-gdb
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+R:  9, 4: Method could be a function (no-self-use)
+R:  5, 0: Too few public methods (1/2) (too-few-public-methods)
+W:  3, 0: Unused import os (unused-import)
+W:  3, 0: Unused import sys (unused-import)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module conf_missing
+C: 24, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 40,43: More than one statement on a single line (multiple-statements)
+W: 22, 0: Unused import sys (unused-import)
+************* Module gsce
+C:  2, 0: Exactly one space required after comma
+import sys,os
+          ^ (bad-whitespace)
+C:  6, 0: No space allowed after bracket
+def gen_dockerfile( image_name, app_name, bin_name, proj_dir):
+                  ^ (bad-whitespace)
+W:  7, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:  8, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:  9, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C:  9, 0: Exactly one space required after assignment
+  df =open(proj_dir + '/Tools/build/Dockerfile' + '.' + app_name, 'w')
+     ^ (bad-whitespace)
+W: 10, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 12, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 14, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 15, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 18, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 19, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 22, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 23, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 24, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 25, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 26, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C: 28, 0: Line too long (123/100) (line-too-long)
+W: 28, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 29, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C: 30, 0: Line too long (116/100) (line-too-long)
+W: 30, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 31, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C: 32, 0: Line too long (107/100) (line-too-long)
+W: 32, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 35, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 36, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 37, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 38, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 39, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 42, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 43, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 44, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 45, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 48, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 49, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 50, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 53, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 54, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 57, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 58, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 64, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 67, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 68, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 71, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 72, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 73, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 76, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 77, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 79, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 80, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 81, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 83, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 84, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 85, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 86, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 88, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 89, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 91, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 94, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 95, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 96, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W: 98, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W: 99, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:100, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:101, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:104, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:106, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:107, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:110, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:111, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:113, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:114, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:115, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:116, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:117, 0: Bad indentation. Found 4 spaces, expected 8 (bad-indentation)
+W:120, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:123, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:126, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:129, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:132, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C:133, 0: Line too long (103/100) (line-too-long)
+W:133, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+W:136, 0: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+C:  2, 0: Multiple imports on one line (sys, os) (multiple-imports)
+W:  6,20: Redefining name 'image_name' from outer scope (line 98) (redefined-outer-name)
+W:  6,32: Redefining name 'app_name' from outer scope (line 101) (redefined-outer-name)
+W:  6,42: Redefining name 'bin_name' from outer scope (line 114) (redefined-outer-name)
+W:  6,52: Redefining name 'proj_dir' from outer scope (line 123) (redefined-outer-name)
+C:  9, 2: Variable name "df" doesn't conform to snake_case naming style (invalid-name)
+W: 75,21: Redefining name 'app_name' from outer scope (line 101) (redefined-outer-name)
+W: 75,31: Redefining name 'bin_cmd' from outer scope (line 115) (redefined-outer-name)
+W: 75,40: Redefining name 'proj_dir' from outer scope (line 123) (redefined-outer-name)
+C: 80, 2: Variable name "ef" doesn't conform to snake_case naming style (invalid-name)
+C: 98, 2: Constant name "image_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 99, 2: Constant name "image_match" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:101, 4: Constant name "app_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:104, 2: Constant name "app_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:106, 2: Constant name "inspect_cmd" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:107, 2: Constant name "res" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:111, 4: Constant name "res" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:113, 2: Constant name "match" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:114, 2: Constant name "bin_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:115, 2: Constant name "bin_cmd" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:117, 4: Constant name "bin_cmd" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:120, 2: Constant name "docker_str" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:123, 2: Constant name "proj_dir" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+C: 11, 4: Constant name "ans" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 8: Constant name "gdbfile" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module conf
+W: 28, 0: Redefining built-in 'copyright' (redefined-builtin)
+C: 27, 0: Constant name "project" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 28, 0: Constant name "copyright" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 29, 0: Constant name "author" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 32, 0: Constant name "version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 34, 0: Constant name "release" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 46, 0: Constant name "extensions" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 55, 0: Constant name "templates_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 58, 0: Constant name "source_suffix" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 65, 0: Constant name "master_doc" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 72, 0: Constant name "language" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 77, 0: Constant name "exclude_patterns" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 80, 0: Constant name "pygments_style" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 82, 0: Constant name "rst_prolog" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 87, 0: Constant name "breathe_default_project" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 88, 0: Constant name "breathe_projects" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 90,21: Unused argument 'app' (unused-argument)
+C: 95, 0: Constant name "todo_include_todos" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:102, 0: Constant name "html_theme" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:113, 0: Constant name "html_static_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:130, 0: Constant name "man_pages" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 23, 0: Unused import recommonmark.parser (unused-import)
+************* Module regression
+C: 10, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 19, 4: Method could be a function (no-self-use)
+C: 58, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 19, 0: Constant name "t" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module aesm_pb2
+C:  5, 0: Exactly one space required around assignment
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+  ^ (bad-whitespace)
+C:  5, 0: Exactly one space required around comparison
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                      ^ (bad-whitespace)
+C:  5, 0: Exactly one space required after :
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                                      ^ (bad-whitespace)
+C:  5, 0: Exactly one space required after :
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+                                                      ^ (bad-whitespace)
+C: 22, 0: Line too long (460/100) (line-too-long)
+C:187, 0: Line too long (102/100) (line-too-long)
+C:188, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENREQRAW,
+             ^ (bad-whitespace)
+C:189, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:195, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENREQ,
+             ^ (bad-whitespace)
+C:196, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:201, 0: Line too long (102/100) (line-too-long)
+C:202, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENRETRAW,
+             ^ (bad-whitespace)
+C:203, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+C:209, 0: No space allowed around keyword argument assignment
+  DESCRIPTOR = _GETTOKENRET,
+             ^ (bad-whitespace)
+C:210, 0: No space allowed around keyword argument assignment
+  __module__ = 'aesm_pb2'
+             ^ (bad-whitespace)
+R:  5, 0: Consider using ternary (lambda x: x if sys.version_info[0] < 3 else lambda x: x.encode('latin1')) (consider-using-ternary)
+C:  5, 0: Constant name "_b" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  6, 0: Import "from google.protobuf import descriptor as _descriptor" should be placed at the top of the module (wrong-import-position)
+C:  7, 0: Import "from google.protobuf import message as _message" should be placed at the top of the module (wrong-import-position)
+C:  8, 0: Import "from google.protobuf import reflection as _reflection" should be placed at the top of the module (wrong-import-position)
+C:  9, 0: Import "from google.protobuf import symbol_database as _symbol_database" should be placed at the top of the module (wrong-import-position)
+C: 10, 0: Import "from google.protobuf import descriptor_pb2" should be placed at the top of the module (wrong-import-position)
+C: 13, 0: Constant name "_sym_db" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:187, 0: Constant name "GetTokenReqRaw" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:194, 0: Constant name "GetTokenReq" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:201, 0: Constant name "GetTokenRetRaw" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:208, 0: Constant name "GetTokenRet" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 10, 0: Unused descriptor_pb2 imported from google.protobuf (unused-import)
+************* Module link-intel-driver
+C:  5, 0: Exactly one space required before assignment
+isgx_repo    = 'https://github.com/intel/linux-sgx-driver.git'
+             ^ (bad-whitespace)
+C:  6, 0: Exactly one space required before assignment
+isgx_path    = os.getenv("ISGX_DRIVER_PATH")
+             ^ (bad-whitespace)
+C: 22, 0: Line too long (120/100) (line-too-long)
+C: 27, 0: Line too long (111/100) (line-too-long)
+C: 29, 0: Line too long (103/100) (line-too-long)
+C: 67, 0: Line too long (112/100) (line-too-long)
+W: 46, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, re, subprocess) (multiple-imports)
+C:  5, 0: Constant name "isgx_repo" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  6, 0: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 69, 0: No exception type(s) specified (bare-except)
+C: 21,12: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 26,16: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 36, 8: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 41,12: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 43,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 44,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 46, 8: Constant name "m" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 48,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 49,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 52, 8: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 55, 4: Constant name "isgx_link" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module pal-sgx-get-token
+C: 31, 0: Exactly one space required before assignment
+    xfrms    = int.from_bytes(attr['xfrms'], byteorder='little')
+             ^ (bad-whitespace)
+C:  1, 0: Module name "pal-sgx-get-token" doesn't conform to snake_case naming style (invalid-name)
+E: 12, 0: Unable to import 'generated_offsets' (import-error)
+W: 12, 0: Wildcard import generated_offsets (wildcard-import)
+C: 12, 0: Import "from generated_offsets import *" should be placed at the top of the module (wrong-import-position)
+E: 17, 8: Undefined variable 'SGX_XFRM_AVX' (undefined-variable)
+E: 18, 8: Undefined variable 'SGX_XFRM_AVX512' (undefined-variable)
+E: 19, 8: Undefined variable 'SGX_XFRM_MPX' (undefined-variable)
+C: 23,39: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+E: 52,17: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_DATE' (undefined-variable)
+E: 53,20: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MODULUS' (undefined-variable)
+E: 54,21: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_EXPONENT' (undefined-variable)
+E: 55,22: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_SIGNATURE' (undefined-variable)
+E: 57,24: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_SELECT' (undefined-variable)
+E: 58,22: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_MASK' (undefined-variable)
+E: 59,23: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ATTRIBUTES' (undefined-variable)
+E: 60,27: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ATTRIBUTE_MASK' (undefined-variable)
+E: 61,25: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ENCLAVE_HASH' (undefined-variable)
+E: 62,24: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ISV_PROD_ID' (undefined-variable)
+E: 63,20: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ISV_SVN' (undefined-variable)
+E: 80, 4: Instance of 'GetTokenReq' has no 'req' member (no-member)
+E: 81, 4: Instance of 'GetTokenReq' has no 'req' member (no-member)
+E: 82, 4: Instance of 'GetTokenReq' has no 'req' member (no-member)
+E: 83, 4: Instance of 'GetTokenReq' has no 'req' member (no-member)
+E:112, 7: Instance of 'GetTokenRet' has no 'ret' member (no-member)
+E:113,55: Instance of 'GetTokenRet' has no 'ret' member (no-member)
+E:115,11: Instance of 'GetTokenRet' has no 'ret' member (no-member)
+C:118, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module pal-sgx-sign
+C:  1, 0: Module name "pal-sgx-sign" doesn't conform to snake_case naming style (invalid-name)
+E: 12, 0: Unable to import 'generated_offsets' (import-error)
+W: 12, 0: Wildcard import generated_offsets (wildcard-import)
+C: 12, 0: Import "from generated_offsets import *" should be placed at the top of the module (wrong-import-position)
+E: 19,15: Undefined variable 'PAGESIZE' (undefined-variable)
+C: 23, 0: Constant name "enclave_heap_min" doesn't conform to UPPER_CASE naming style (invalid-name)
+E: 23,19: Undefined variable 'DEFAULT_HEAP_MIN' (undefined-variable)
+E: 28,18: Undefined variable 'PAGESIZE' (undefined-variable)
+E: 32,23: Undefined variable 'PAGESIZE' (undefined-variable)
+E: 34,23: Undefined variable 'PAGESIZE' (undefined-variable)
+E: 39,25: Undefined variable 'PAGESIZE' (undefined-variable)
+C: 42, 0: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
+C: 60,32: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C:117,32: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+E:147,40: Undefined variable 'SGX_FLAGS_DEBUG' (undefined-variable)
+E:148,44: Undefined variable 'SGX_FLAGS_MODE64BIT' (undefined-variable)
+E:152,41: Undefined variable 'SGX_XFRM_LEGACY' (undefined-variable)
+E:153,38: Undefined variable 'SGX_XFRM_AVX' (undefined-variable)
+E:154,41: Undefined variable 'SGX_XFRM_AVX512' (undefined-variable)
+E:155,38: Undefined variable 'SGX_XFRM_MPX' (undefined-variable)
+E:159,41: Undefined variable 'SGX_MISCSELECT_EXINFO' (undefined-variable)
+C:222,29: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+E:272,16: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ENCLAVE_HASH' (undefined-variable)
+E:273,16: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ENCLAVE_HASH' (undefined-variable)
+E:273,52: Undefined variable 'SGX_HASH_SIZE' (undefined-variable)
+C:291, 4: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:307,12: Variable name "t" doesn't conform to snake_case naming style (invalid-name)
+R:326, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+R:327, 4: Too many arguments (8/5) (too-many-arguments)
+R:326, 0: Too few public methods (0/2) (too-few-public-methods)
+E:366,60: Undefined variable 'SSAFRAMENUM' (undefined-variable)
+E:368,61: Undefined variable 'TCS_SIZE' (undefined-variable)
+E:370,61: Undefined variable 'PAGESIZE' (undefined-variable)
+E:374,46: Undefined variable 'ENCLAVE_STACK_SIZE' (undefined-variable)
+E:416,15: Undefined variable 'ENCLAVE_HIGH_ADDRESS' (undefined-variable)
+R:420, 0: Too many local variables (18/15) (too-many-locals)
+C:431, 4: Argument name "t" doesn't conform to snake_case naming style (invalid-name)
+E:432,49: Undefined variable 'TCS_SIZE' (undefined-variable)
+C:436, 4: Argument name "t" doesn't conform to snake_case naming style (invalid-name)
+E:437,45: Undefined variable 'PAGESIZE' (undefined-variable)
+E:439,39: Undefined variable 'MEMORY_GAP' (undefined-variable)
+C:452, 8: Variable name "t" doesn't conform to snake_case naming style (invalid-name)
+E:453,52: Undefined variable 'SSAFRAMENUM' (undefined-variable)
+E:455,25: Undefined variable 'TCS_OSSA' (undefined-variable)
+E:456,25: Undefined variable 'TCS_NSSA' (undefined-variable)
+E:456,41: Undefined variable 'SSAFRAMENUM' (undefined-variable)
+E:457,25: Undefined variable 'TCS_OENTRY' (undefined-variable)
+E:459,25: Undefined variable 'TCS_OGS_BASE' (undefined-variable)
+E:459,61: Undefined variable 'PAGESIZE' (undefined-variable)
+E:460,25: Undefined variable 'TCS_OFS_LIMIT' (undefined-variable)
+E:461,25: Undefined variable 'TCS_OGS_LIMIT' (undefined-variable)
+E:463,25: Undefined variable 'SGX_COMMON_SELF' (undefined-variable)
+E:464,38: Undefined variable 'PAGESIZE' (undefined-variable)
+E:465,25: Undefined variable 'SGX_ENCLAVE_SIZE' (undefined-variable)
+E:466,25: Undefined variable 'SGX_TCS_OFFSET' (undefined-variable)
+E:466,57: Undefined variable 'TCS_SIZE' (undefined-variable)
+E:467,25: Undefined variable 'SGX_INITIAL_STACK_OFFSET' (undefined-variable)
+E:469,25: Undefined variable 'SGX_SSA' (undefined-variable)
+E:470,25: Undefined variable 'SGX_GPR' (undefined-variable)
+E:470,55: Undefined variable 'SGX_GPR_SIZE' (undefined-variable)
+E:471,25: Undefined variable 'SGX_MANIFEST_SIZE' (undefined-variable)
+E:473,25: Undefined variable 'SGX_HEAP_MIN' (undefined-variable)
+E:474,25: Undefined variable 'SGX_HEAP_MAX' (undefined-variable)
+E:476,29: Undefined variable 'SGX_EXEC_ADDR' (undefined-variable)
+E:477,29: Undefined variable 'SGX_EXEC_SIZE' (undefined-variable)
+E:493,37: Undefined variable 'MEMORY_GAP' (undefined-variable)
+E:497,35: Undefined variable 'MEMORY_GAP' (undefined-variable)
+E:498,43: Undefined variable 'MEMORY_GAP' (undefined-variable)
+E:503,41: Undefined variable 'MEMORY_GAP' (undefined-variable)
+R:517, 0: Too many local variables (25/15) (too-many-locals)
+E:520,67: Undefined variable 'PAGESIZE' (undefined-variable)
+E:537,27: Undefined variable 'PAGESIZE' (undefined-variable)
+E:542,30: Undefined variable 'PAGESIZE' (undefined-variable)
+E:566,19: Undefined variable 'PAGESIZE' (undefined-variable)
+C:572, 4: Argument name "f" doesn't conform to snake_case naming style (invalid-name)
+R:572, 4: Too many arguments (8/5) (too-many-arguments)
+R:572, 4: Too many local variables (17/15) (too-many-locals)
+C:579,12: Variable name "pg" doesn't conform to snake_case naming style (invalid-name)
+E:579,49: Undefined variable 'PAGESIZE' (undefined-variable)
+E:581,26: Undefined variable 'PAGESIZE' (undefined-variable)
+E:584,37: Undefined variable 'PAGESIZE' (undefined-variable)
+E:590,46: Undefined variable 'PAGESIZE' (undefined-variable)
+E:601,52: Undefined variable 'PAGESIZE' (undefined-variable)
+C:608,42: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C:638,16: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+E:638,61: Undefined variable 'PAGESIZE' (undefined-variable)
+E:642,34: Undefined variable 'PAGESIZE' (undefined-variable)
+R:517, 0: Too many branches (16/12) (too-many-branches)
+R:517, 0: Too many statements (60/50) (too-many-statements)
+R:653, 0: Too many local variables (19/15) (too-many-locals)
+E:657,19: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_HEADER' (undefined-variable)
+E:659,26: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MODULE_VENDOR' (undefined-variable)
+E:660,17: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_DATE' (undefined-variable)
+E:661,20: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_HEADER2' (undefined-variable)
+E:663,23: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_HW_VERSION' (undefined-variable)
+E:664,24: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_SELECT' (undefined-variable)
+E:665,22: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_MASK' (undefined-variable)
+E:666,23: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ATTRIBUTES' (undefined-variable)
+E:667,27: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ATTRIBUTE_MASK' (undefined-variable)
+E:669,25: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ENCLAVE_HASH' (undefined-variable)
+E:670,24: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ISV_PROD_ID' (undefined-variable)
+E:671,20: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_ISV_SVN' (undefined-variable)
+E:677,23: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_SELECT' (undefined-variable)
+E:679,40: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MISC_SELECT' (undefined-variable)
+C:684, 4: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+E:688,44: Undefined variable 'SE_KEY_SIZE' (undefined-variable)
+C:691, 4: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:705, 4: Variable name "q1" doesn't conform to snake_case naming style (invalid-name)
+C:706, 4: Variable name "q2" doesn't conform to snake_case naming style (invalid-name)
+E:709,20: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_MODULUS' (undefined-variable)
+E:710,21: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_EXPONENT' (undefined-variable)
+E:711,22: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_SIGNATURE' (undefined-variable)
+E:713,15: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_Q1' (undefined-variable)
+E:714,15: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_Q2' (undefined-variable)
+E:717,23: Undefined variable 'SGX_ARCH_ENCLAVE_CSS_SIZE' (undefined-variable)
+C:727, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+R:774, 0: Too many local variables (16/15) (too-many-locals)
+C:783, 4: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
+C:851,12: Constant name "enclave_heap_min" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:851,12: Using the global statement (global-statement)
+R:774, 0: Too many branches (14/12) (too-many-branches)
+R:774, 0: Too many statements (55/50) (too-many-statements)
+C:895,30: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+************* Module test_fs
+C: 19, 0: Line too long (127/100) (line-too-long)
+C: 19, 0: Exactly one space required before assignment
+        c.FILE_SIZES   = [0, 1, 2, 15, 16, 17, 255, 256, 257, 1023, 1024, 1025, 65535, 65536, 65537, 1048575, 1048576, 1048577]
+                       ^ (bad-whitespace)
+C: 20, 0: Exactly one space required before assignment
+        c.TEST_DIR     = 'tmp'
+                       ^ (bad-whitespace)
+C: 21, 0: Exactly one space required before assignment
+        c.INDEXES      = range(len(c.FILE_SIZES))
+                       ^ (bad-whitespace)
+C: 22, 0: Exactly one space required before assignment
+        c.INPUT_DIR    = os.path.join(c.TEST_DIR, 'input')
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required before assignment
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required after comma
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                                                  ^ (bad-whitespace)
+C: 24, 0: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'output')
+                       ^ (bad-whitespace)
+C:135, 0: Line too long (108/100) (line-too-long)
+C:149, 0: Line too long (112/100) (line-too-long)
+C: 16, 0: Class name "TC_00_FileSystem" doesn't conform to PascalCase naming style (invalid-name)
+C: 18, 4: Class method setUpClass should have 'cls' as first argument (bad-classmethod-argument)
+C: 35, 4: Class method tearDownClass should have 'cls' as first argument (bad-classmethod-argument)
+W: 44,25: Redefining built-in 'input' (redefined-builtin)
+R: 44, 4: Method could be a function (no-self-use)
+R: 94, 4: Too many arguments (7/5) (too-many-arguments)
+R:171, 4: Too many arguments (6/5) (too-many-arguments)
+W:202, 8: Redefining built-in 'input' (redefined-builtin)
+W:230,34: Redefining built-in 'input' (redefined-builtin)
+W:233,53: Redefining built-in 'exec' (redefined-builtin)
+W:264,27: Redefining built-in 'exec' (redefined-builtin)
+W:290, 8: Redefining built-in 'exec' (redefined-builtin)
+R: 16, 0: Too many public methods (25/20) (too-many-public-methods)
+W:  6, 0: Unused import sys (unused-import)
+W:  7, 0: Unused import unittest (unused-import)
+************* Module test_libos
+C: 70, 0: Line too long (104/100) (line-too-long)
+C: 71, 0: Line too long (108/100) (line-too-long)
+C: 72, 0: Line too long (108/100) (line-too-long)
+C: 73, 0: Line too long (108/100) (line-too-long)
+C: 74, 0: Line too long (108/100) (line-too-long)
+C: 75, 0: Line too long (108/100) (line-too-long)
+C: 76, 0: Line too long (108/100) (line-too-long)
+C: 77, 0: Line too long (108/100) (line-too-long)
+C: 78, 0: Line too long (108/100) (line-too-long)
+C: 79, 0: Line too long (108/100) (line-too-long)
+C: 80, 0: Line too long (108/100) (line-too-long)
+C: 81, 0: Line too long (108/100) (line-too-long)
+C: 82, 0: Line too long (108/100) (line-too-long)
+C: 83, 0: Line too long (108/100) (line-too-long)
+C: 84, 0: Line too long (108/100) (line-too-long)
+C: 85, 0: Line too long (109/100) (line-too-long)
+C:195, 0: Line too long (124/100) (line-too-long)
+C:202, 0: Line too long (127/100) (line-too-long)
+C: 15, 0: Class name "TC_00_Unittests" doesn't conform to PascalCase naming style (invalid-name)
+W: 17,16: Unused variable 'stderr' (unused-variable)
+C: 21, 0: Class name "TC_01_Bootstrap" doesn't conform to PascalCase naming style (invalid-name)
+W: 23,16: Unused variable 'stderr' (unused-variable)
+C: 33, 4: Method name "test_101_basic_bootstrapping_five_arguments" doesn't conform to snake_case naming style (invalid-name)
+W: 35,16: Unused variable 'stderr' (unused-variable)
+C: 45, 4: Method name "test_102_basic_bootstrapping_static" doesn't conform to snake_case naming style (invalid-name)
+W: 49,16: Unused variable 'stderr' (unused-variable)
+C: 52, 4: Method name "test_103_basic_bootstrapping_pie" doesn't conform to snake_case naming style (invalid-name)
+W: 54,16: Unused variable 'stderr' (unused-variable)
+C: 59, 4: Method name "test_110_basic_bootstrapping_cxx" doesn't conform to snake_case naming style (invalid-name)
+W: 60,16: Unused variable 'stderr' (unused-variable)
+W: 66,16: Unused variable 'stderr' (unused-variable)
+W: 89,16: Unused variable 'stderr' (unused-variable)
+W: 93,16: Unused variable 'stderr' (unused-variable)
+W:100,16: Unused variable 'stderr' (unused-variable)
+W:107,16: Unused variable 'stderr' (unused-variable)
+W:122,16: Unused variable 'stderr' (unused-variable)
+C:134, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:135,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:153, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:157,16: Unused variable 'stderr' (unused-variable)
+C:162, 0: Class name "TC_02_OpenMP" doesn't conform to PascalCase naming style (invalid-name)
+W:168,16: Unused variable 'stderr' (unused-variable)
+C:173, 0: Class name "TC_03_FileCheckPolicy" doesn't conform to PascalCase naming style (invalid-name)
+W:179,16: Unused variable 'stderr' (unused-variable)
+C:188, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:186,12: Unused variable 'stdout' (unused-variable)
+W:186,20: Unused variable 'stderr' (unused-variable)
+C:191, 4: Method name "test_002_allow_all_but_log_success" doesn't conform to snake_case naming style (invalid-name)
+C:205, 0: Class name "TC_30_Syscall" doesn't conform to PascalCase naming style (invalid-name)
+W:207,16: Unused variable 'stderr' (unused-variable)
+W:214,16: Unused variable 'stderr' (unused-variable)
+W:223,16: Unused variable 'stderr' (unused-variable)
+W:232,16: Unused variable 'stderr' (unused-variable)
+W:250,16: Unused variable 'stderr' (unused-variable)
+W:261,16: Unused variable 'stderr' (unused-variable)
+W:267,16: Unused variable 'stderr' (unused-variable)
+W:273,16: Unused variable 'stderr' (unused-variable)
+W:279,16: Unused variable 'stderr' (unused-variable)
+W:295,16: Unused variable 'stderr' (unused-variable)
+W:302,16: Unused variable 'stderr' (unused-variable)
+W:313,16: Unused variable 'stderr' (unused-variable)
+W:331,16: Unused variable 'stderr' (unused-variable)
+W:339,16: Unused variable 'stderr' (unused-variable)
+C:344, 0: Class name "TC_31_SyscallSGX" doesn't conform to PascalCase naming style (invalid-name)
+W:350,16: Unused variable 'stderr' (unused-variable)
+C:355, 0: Class name "TC_40_FileSystem" doesn't conform to PascalCase naming style (invalid-name)
+W:357,16: Unused variable 'stderr' (unused-variable)
+W:373,16: Unused variable 'stderr' (unused-variable)
+W:379,16: Unused variable 'stderr' (unused-variable)
+W:385,16: Unused variable 'stderr' (unused-variable)
+C:388, 0: Class name "TC_80_Socket" doesn't conform to PascalCase naming style (invalid-name)
+W:390,16: Unused variable 'stderr' (unused-variable)
+W:394,16: Unused variable 'stderr' (unused-variable)
+W:401,16: Unused variable 'stderr' (unused-variable)
+W:414,16: Unused variable 'stderr' (unused-variable)
+W:  3, 0: Unused import mmap (unused-import)
+W:  5, 0: Unused import sys (unused-import)
+W:  9, 0: Unused expectedFailureIf imported from regression (unused-import)
+************* Module runltp_xml
+E:260, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 36, 4: Constant name "fspath" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 39, 4: Class name "fspath" doesn't conform to PascalCase naming style (invalid-name)
+C: 44, 0: Constant name "argparser" doesn't conform to UPPER_CASE naming style (invalid-name)
+R:118, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:158,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:169,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:171,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:174,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:176,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:195, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:206, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:217, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:335, 4: Too many statements (53/50) (too-many-statements)
+R:442, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+I:471,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:533,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+************* Module test_pal
+W:596, 0: Unnecessary semicolon (unnecessary-semicolon)
+C: 28, 0: Class name "TC_00_Basic" doesn't conform to PascalCase naming style (invalid-name)
+W: 30, 8: Unused variable 'stdout' (unused-variable)
+W: 37, 8: Unused variable 'stdout' (unused-variable)
+C: 41, 0: Class name "TC_01_Bootstrap" doesn't conform to PascalCase naming style (invalid-name)
+C: 64, 4: Method name "test_101_basic_boostrapping_five_arguments" doesn't conform to snake_case naming style (invalid-name)
+W: 65, 8: Unused variable 'stdout' (unused-variable)
+W: 83, 8: Unused variable 'stdout' (unused-variable)
+W: 95, 8: Unused variable 'stdout' (unused-variable)
+C: 98, 4: Method name "test_104_manifest_as_executable_name" doesn't conform to snake_case naming style (invalid-name)
+W:100, 8: Unused variable 'stdout' (unused-variable)
+W:106, 8: Unused variable 'stdout' (unused-variable)
+W:112, 8: Unused variable 'stdout' (unused-variable)
+C:118, 4: Method name "test_107_manifest_with_nonelf_binary" doesn't conform to snake_case naming style (invalid-name)
+W:125, 8: Unused variable 'stdout' (unused-variable)
+W:133, 8: Unused variable 'stdout' (unused-variable)
+W:140, 8: Unused variable 'stdout' (unused-variable)
+C:144, 4: Method name "test_130_large_number_of_items_in_manifest" doesn't conform to snake_case naming style (invalid-name)
+W:145, 8: Unused variable 'stdout' (unused-variable)
+C:150, 4: Method name "test_140_missing_executable_and_manifest" doesn't conform to snake_case naming style (invalid-name)
+C:155, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:152,12: Unused variable 'stdout' (unused-variable)
+C:158, 0: Class name "TC_02_Symbols" doesn't conform to PascalCase naming style (invalid-name)
+C:208,15: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+C:209,12: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+W:204, 8: Unused variable 'stdout' (unused-variable)
+C:212, 0: Class name "TC_10_Exception" doesn't conform to PascalCase naming style (invalid-name)
+W:214, 8: Unused variable 'stdout' (unused-variable)
+C:232, 0: Class name "TC_20_SingleProcess" doesn't conform to PascalCase naming style (invalid-name)
+W:247, 8: Unused variable 'stdout' (unused-variable)
+W:311, 8: Unused variable 'stdout' (unused-variable)
+C:330,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:347,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+W:334, 8: Unused variable 'stdout' (unused-variable)
+W:360, 8: Unused variable 'stdout' (unused-variable)
+W:365, 8: Unused variable 'stdout' (unused-variable)
+W:376, 8: Unused variable 'stdout' (unused-variable)
+W:395, 8: Unused variable 'stdout' (unused-variable)
+W:409, 8: Unused variable 'stdout' (unused-variable)
+W:427, 8: Unused variable 'stdout' (unused-variable)
+W:460, 8: Unused variable 'stdout' (unused-variable)
+W:477, 8: Unused variable 'stdout' (unused-variable)
+W:490, 8: Unused variable 'stdout' (unused-variable)
+W:504, 8: Unused variable 'stdout' (unused-variable)
+C:509, 0: Class name "TC_21_ProcessCreation" doesn't conform to PascalCase naming style (invalid-name)
+W:511, 8: Unused variable 'stdout' (unused-variable)
+W:527, 8: Unused variable 'stdout' (unused-variable)
+W:541, 8: Unused variable 'stdout' (unused-variable)
+W:547, 8: Unused variable 'stdout' (unused-variable)
+C:552, 0: Class name "TC_22_SendHandle" doesn't conform to PascalCase naming style (invalid-name)
+W:554, 8: Unused variable 'stdout' (unused-variable)
+C:571, 0: Class name "TC_40_AVXDisable" doesn't conform to PascalCase naming style (invalid-name)
+W:576, 8: Unused variable 'stdout' (unused-variable)
+C:579, 0: Class name "TC_50_Attestation" doesn't conform to PascalCase naming style (invalid-name)
+W:582, 8: Unused variable 'stdout' (unused-variable)
+
+
+Report
+======
+2401 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |26     |NC         |NC         |15.38       |34.62    |
++---------+-------+-----------+-----------+------------+---------+
+|class    |32     |NC         |NC         |25.00       |62.50    |
++---------+-------+-----------+-----------+------------+---------+
+|method   |155    |NC         |NC         |23.23       |8.39     |
++---------+-------+-----------+-----------+------------+---------+
+|function |66     |NC         |NC         |12.12       |1.52     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    aesm_pb2 (pal-sgx-get-token)
+    benchrun (fibonacci)
+    lxml 
+      \-etree (runltp_xml)
+    numpy (test-numpy)
+    recommonmark 
+      \-parser (conf)
+    regression (test_pal)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |2875   |64.39 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |380    |8.51  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |397    |8.89  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |813    |18.21 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |258    |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |25     |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |248    |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |113    |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++----------------------+------+--------+---------+-----------+
+|module                |error |warning |refactor |convention |
++======================+======+========+=========+===========+
+|pal-sgx-sign          |74.34 |0.81    |52.00    |9.30       |
++----------------------+------+--------+---------+-----------+
+|pal-sgx-get-token     |19.47 |0.40    |0.00     |1.94       |
++----------------------+------+--------+---------+-----------+
+|benchrun              |3.54  |2.02    |0.00     |4.26       |
++----------------------+------+--------+---------+-----------+
+|runltp_xml            |0.88  |0.00    |12.00    |1.16       |
++----------------------+------+--------+---------+-----------+
+|pal-gdb               |0.88  |0.00    |0.00     |1.94       |
++----------------------+------+--------+---------+-----------+
+|gsce                  |0.00  |33.87   |0.00     |8.91       |
++----------------------+------+--------+---------+-----------+
+|gen_manifest          |0.00  |22.58   |0.00     |2.33       |
++----------------------+------+--------+---------+-----------+
+|test_libos            |0.00  |17.34   |0.00     |13.57      |
++----------------------+------+--------+---------+-----------+
+|test_pal              |0.00  |14.52   |0.00     |7.36       |
++----------------------+------+--------+---------+-----------+
+|test_fs               |0.00  |3.23    |16.00    |5.04       |
++----------------------+------+--------+---------+-----------+
+|conf                  |0.00  |1.21    |0.00     |7.36       |
++----------------------+------+--------+---------+-----------+
+|link-intel-driver     |0.00  |0.81    |0.00     |8.53       |
++----------------------+------+--------+---------+-----------+
+|aesm_pb2              |0.00  |0.40    |4.00     |10.08      |
++----------------------+------+--------+---------+-----------+
+|fibonacci             |0.00  Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+|0.40    |4.00     |5.43       |
++----------------------+------+--------+---------+-----------+
+|test-numpy            |0.00  |0.40    |0.00     |3.10       |
++----------------------+------+--------+---------+-----------+
+|dummy-web-server      |0.00  |0.40    |0.00     |1.94       |
++----------------------+------+--------+---------+-----------+
+|conf_missing          |0.00  |0.40    |0.00     |0.78       |
++----------------------+------+--------+---------+-----------+
+|conf_merge            |0.00  |0.40    |0.00     |0.39       |
++----------------------+------+--------+---------+-----------+
+|regression            |0.00  |0.00    |4.00     |0.78       |
++----------------------+------+--------+---------+-----------+
+|test-scipy            |0.00  |0.00    |0.00     |1.94       |
++----------------------+------+--------+---------+-----------+
+|test-http             |0.00  |0.00    |0.00     |1.94       |
++----------------------+------+--------+---------+-----------+
+|conf_remove_must_pass |0.00  |0.00    |0.00     |0.39       |
++----------------------+------+--------+---------+-----------+
+|conf_lint             |0.00  |0.00    |0.00     |0.39       |
++----------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|invalid-name                  |171         |
++------------------------------+------------+
+|bad-indentation               |130         |
++------------------------------+------------+
+|undefined-variable            |97          |
++------------------------------+------------+
+|unused-variable               |78          |
++------------------------------+------------+
+|line-too-long                 |33          |
++------------------------------+------------+
+|bad-whitespace                |30          |
++------------------------------+------------+
+|unused-import                 |15          |
++------------------------------+------------+
+|redefined-outer-name          |11          |
++------------------------------+------------+
+|c-extension-no-member         |10          |
++------------------------------+------------+
+|no-member                     |9           |
++------------------------------+------------+
+|wrong-import-position         |7           |
++------------------------------+------------+
+|redefined-builtin             |7           |
++------------------------------+------------+
+|too-many-locals               |5           |
++------------------------------+------------+
+|too-many-arguments            |4           |
++------------------------------+------------+
+|no-self-use                   |4           |
++------------------------------+------------+
+|multiple-imports              |4           |
++------------------------------+------------+
+|import-error                  |4           |
++------------------------------+------------+
+|too-many-statements           |3           |
++------------------------------+------------+
+|too-many-instance-attributes  |3           |
++------------------------------+------------+
+|multiple-statements           |3           |
++------------------------------+------------+
+|wrong-import-order            |2           |
++------------------------------+------------+
+|wildcard-import               |2           |
++------------------------------+------------+
+|unsubscriptable-object        |2           |
++------------------------------+------------+
+|ungrouped-imports             |2           |
++------------------------------+------------+
+|too-many-branches             |2           |
++------------------------------+------------+
+|too-few-public-methods        |2           |
++------------------------------+------------+
+|singleton-comparison          |2           |
++------------------------------+------------+
+|bad-classmethod-argument      |2           |
++------------------------------+------------+
+|unused-argument               |1           |
++------------------------------+------------+
+|unnecessary-semicolon         |1           |
++------------------------------+------------+
+|trailing-whitespace           |1           |
++------------------------------+------------+
+|too-many-public-methods       |1           |
++------------------------------+------------+
+|misplaced-comparison-constant |1           |
++------------------------------+------------+
+|global-statement              |1           |
++------------------------------+------------+
+|consider-using-ternary        |1           |
++------------------------------+------------+
+|bare-except                   |1           |
++------------------------------+------------+
+|bad-option-value              |1           |
++------------------------------+------------+
+|anomalous-backslash-in-string |1           |
++------------------------------+------------+
+
+
+
++ :
++ + ./.ci/prfilter./.ci/run-pylint
+ -f json
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+MESSAGES AFFECTING THIS PR:
+Pal/regression/test_pal.py +552:0: invalid-name: Class name "TC_22_SendHandle" doesn't conform to PascalCase naming style
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 befb4a2f832aa483c53195b010383551cb2bee839bba21cc5151f09c13082cd2
+$ docker rm -f befb4a2f832aa483c53195b010383551cb2bee839bba21cc5151f09c13082cd2
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of a0a28724a75fc6a459dbfc330445af531a3e0ddb to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/1649/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 1
+Finished: FAILURE

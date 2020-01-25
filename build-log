@@ -1,0 +1,1086 @@
+GitHub pull request #1229 of commit b98f852889daf57c3c7d9cdb6e78f1e04ee7d946, has merge conflicts.
+Setting status of b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/1808/ and message: 'Build started for original commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse b98f852889daf57c3c7d9cdb6e78f1e04ee7d946^{commit} # timeout=10
+Checking out Revision b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 # timeout=20
+Commit message: "[Pal/Linux-SGX] Simplify check for uint32_t overflow of size/len"
+ > git rev-list --no-walk b6e0598e63a5ebe6f4aec34f51e08e0ee74e39e6 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘sgx_slave’
+Running on slave-leeroy in /home/jenkins/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 (detached)
+Commit message: "[Pal/Linux-SGX] Simplify check for uint32_t overflow of size/len"
+ > git rev-parse b98f852889daf57c3c7d9cdb6e78f1e04ee7d946^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t dc35ebc8172013737c851c58558f63335a1be621 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  792.8MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 4c108a37151f
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> b299a5a494ba
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> a191130e024a
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 799263a08e68
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 8d56b0104553
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 1d3984e6488a
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 923ae7115bbd
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 3c9abdd0e302
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> af647fdd8190
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 471c1817513a
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 82b72a306868
+Successfully built 82b72a306868
+Successfully tagged dc35ebc8172013737c851c58558f63335a1be621:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . dc35ebc8172013737c851c58558f63335a1be621
+.
+[Pipeline] withDockerContainer
+slave-leeroy does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/workspace/graphene-sgx-18.04 -v /home/jenkins/workspace/graphene-sgx-18.04:/home/jenkins/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04@tmp:/home/jenkins/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** dc35ebc8172013737c851c58558f63335a1be621 cat
+$ docker top a2095b9c9b8cae46ae1815634cfa8980061a0f9e4301f9c98dd919aec3fa1637 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
+************* Module pal-gdb
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+C: 11, 4: Constant name "ans" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 8: Constant name "gdbfile" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module link-intel-driver
+W: 46, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+C:  5, 0: Exactly one space required before assignment
+isgx_repo    = 'https://github.com/intel/linux-sgx-driver.git'
+             ^ (bad-whitespace)
+C:  6, 0: Exactly one space required before assignment
+isgx_path    = os.getenv("ISGX_DRIVER_PATH")
+             ^ (bad-whitespace)
+C: 22, 0: Line too long (120/100) (line-too-long)
+C: 27, 0: Line too long (111/100) (line-too-long)
+C: 29, 0: Line too long (103/100) (line-too-long)
+C: 67, 0: Line too long (112/100) (line-too-long)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, re, subprocess) (multiple-imports)
+C:  5, 0: Constant name "isgx_repo" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  6, 0: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 69, 0: No exception type(s) specified (bare-except)
+C: 21,12: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 26,16: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 36, 8: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 41,12: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 43,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 44,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 46, 8: Constant name "m" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 48,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 49,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 52, 8: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 55, 4: Constant name "isgx_link" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module conf_missing
+C: 40,43: More than one statement on a single line (multiple-statements)
+W: 22, 0: Unused import sys (unused-import)
+************* Module conf_merge
+W: 22, 0: Unused import sys (unused-import)
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module test_libos
+C: 70, 0: Line too long (104/100) (line-too-long)
+C: 71, 0: Line too long (108/100) (line-too-long)
+C: 72, 0: Line too long (108/100) (line-too-long)
+C: 73, 0: Line too long (108/100) (line-too-long)
+C: 74, 0: Line too long (108/100) (line-too-long)
+C: 75, 0: Line too long (108/100) (line-too-long)
+C: 76, 0: Line too long (108/100) (line-too-long)
+C: 77, 0: Line too long (108/100) (line-too-long)
+C: 78, 0: Line too long (108/100) (line-too-long)
+C: 79, 0: Line too long (108/100) (line-too-long)
+C: 80, 0: Line too long (108/100) (line-too-long)
+C: 81, 0: Line too long (108/100) (line-too-long)
+C: 82, 0: Line too long (108/100) (line-too-long)
+C: 83, 0: Line too long (108/100) (line-too-long)
+C: 84, 0: Line too long (108/100) (line-too-long)
+C: 85, 0: Line too long (109/100) (line-too-long)
+C:195, 0: Line too long (124/100) (line-too-long)
+C:202, 0: Line too long (127/100) (line-too-long)
+W: 17,16: Unused variable 'stderr' (unused-variable)
+W: 23,16: Unused variable 'stderr' (unused-variable)
+W: 35,16: Unused variable 'stderr' (unused-variable)
+W: 49,16: Unused variable 'stderr' (unused-variable)
+W: 54,16: Unused variable 'stderr' (unused-variable)
+W: 60,16: Unused variable 'stderr' (unused-variable)
+W: 66,16: Unused variable 'stderr' (unused-variable)
+W: 89,16: Unused variable 'stderr' (unused-variable)
+W: 93,16: Unused variable 'stderr' (unused-variable)
+W:100,16: Unused variable 'stderr' (unused-variable)
+W:107,16: Unused variable 'stderr' (unused-variable)
+W:122,16: Unused variable 'stderr' (unused-variable)
+C:134, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:135,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:153, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:157,16: Unused variable 'stderr' (unused-variable)
+W:168,16: Unused variable 'stderr' (unused-variable)
+W:179,16: Unused variable 'stderr' (unused-variable)
+C:188, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:186,12: Unused variable 'stdout' (unused-variable)
+W:186,20: Unused variable 'stderr' (unused-variable)
+W:207,16: Unused variable 'stderr' (unused-variable)
+W:214,16: Unused variable 'stderr' (unused-variable)
+W:223,16: Unused variable 'stderr' (unused-variable)
+W:232,16: Unused variable 'stderr' (unused-variable)
+W:250,16: Unused variable 'stderr' (unused-variable)
+W:261,16: Unused variable 'stderr' (unused-variable)
+W:297,16: Unused variable 'stderr' (unused-variable)
+W:313,16: Unused variable 'stderr' (unused-variable)
+W:320,16: Unused variable 'stderr' (unused-variable)
+W:331,16: Unused variable 'stderr' (unused-variable)
+W:349,16: Unused variable 'stderr' (unused-variable)
+W:357,16: Unused variable 'stderr' (unused-variable)
+W:368,16: Unused variable 'stderr' (unused-variable)
+W:375,16: Unused variable 'stderr' (unused-variable)
+W:391,16: Unused variable 'stderr' (unused-variable)
+W:397,16: Unused variable 'stderr' (unused-variable)
+W:403,16: Unused variable 'stderr' (unused-variable)
+W:412,16: Unused variable 'stderr' (unused-variable)
+W:416,16: Unused variable 'stderr' (unused-variable)
+W:443,16: Unused variable 'stderr' (unused-variable)
+W:456,16: Unused variable 'stderr' (unused-variable)
+W:  3, 0: Unused import mmap (unused-import)
+W:  5, 0: Unused import sys (unused-import)
+W:  9, 0: Unused expectedFailureIf imported from regression (unused-import)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module regression
+C: 10, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 19, 4: Method could be a function (no-self-use)
+C: 58, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module runltp_xml
+E:260, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 36, 4: Constant name "fspath" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 39, 4: Class name "fspath" doesn't conform to '[A-Z_][A-Za-z0-9]*|TC_\\d\\d_.*' pattern (invalid-name)
+R:118, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:158,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:169,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:171,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:174,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:176,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:195, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:206, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:217, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:335, 4: Too many statements (53/50) (too-many-statements)
+R:442, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+I:471,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:533,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+************* Module test_fs
+C: 19, 0: Line too long (127/100) (line-too-long)
+C: 19, 0: Exactly one space required before assignment
+        c.FILE_SIZES   = [0, 1, 2, 15, 16, 17, 255, 256, 257, 1023, 1024, 1025, 65535, 65536, 65537, 1048575, 1048576, 1048577]
+                       ^ (bad-whitespace)
+C: 20, 0: Exactly one space required before assignment
+        c.TEST_DIR     = 'tmp'
+                       ^ (bad-whitespace)
+C: 21, 0: Exactly one space required before assignment
+        c.INDEXES      = range(len(c.FILE_SIZES))
+                       ^ (bad-whitespace)
+C: 22, 0: Exactly one space required before assignment
+        c.INPUT_DIR    = os.path.join(c.TEST_DIR, 'input')
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required before assignment
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required after comma
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                                                  ^ (bad-whitespace)
+C: 24, 0: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'output')
+                       ^ (bad-whitespace)
+C:135, 0: Line too long (108/100) (line-too-long)
+C:149, 0: Line too long (112/100) (line-too-long)
+C: 18, 4: Class method setUpClass should have 'cls' as first argument (bad-classmethod-argument)
+C: 35, 4: Class method tearDownClass should have 'cls' as first argument (bad-classmethod-argument)
+W: 44,25: Redefining built-in 'input' (redefined-builtin)
+R: 44, 4: Method could be a function (no-self-use)
+R: 94, 4: Too many arguments (7/5) (too-many-arguments)
+R:171, 4: Too many arguments (6/5) (too-many-arguments)
+W:202, 8: Redefining built-in 'input' (redefined-builtin)
+W:230,34: Redefining built-in 'input' (redefined-builtin)
+W:233,53: Redefining built-in 'exec' (redefined-builtin)
+W:264,27: Redefining built-in 'exec' (redefined-builtin)
+W:290, 8: Redefining built-in 'exec' (redefined-builtin)
+R: 16, 0: Too many public methods (25/20) (too-many-public-methods)
+W:  6, 0: Unused import sys (unused-import)
+W:  7, 0: Unused import unittest (unused-import)
+************* Module test_pal
+W:597, 0: Unnecessary semicolon (unnecessary-semicolon)
+W: 30, 8: Unused variable 'stdout' (unused-variable)
+W: 37, 8: Unused variable 'stdout' (unused-variable)
+W: 65, 8: Unused variable 'stdout' (unused-variable)
+W: 83, 8: Unused variable 'stdout' (unused-variable)
+W: 95, 8: Unused variable 'stdout' (unused-variable)
+W:100, 8: Unused variable 'stdout' (unused-variable)
+W:106, 8: Unused variable 'stdout' (unused-variable)
+W:112, 8: Unused variable 'stdout' (unused-variable)
+W:125, 8: Unused variable 'stdout' (unused-variable)
+W:133, 8: Unused variable 'stdout' (unused-variable)
+W:140, 8: Unused variable 'stdout' (unused-variable)
+W:145, 8: Unused variable 'stdout' (unused-variable)
+C:155, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:152,12: Unused variable 'stdout' (unused-variable)
+C:209,15: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+C:210,12: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+W:205, 8: Unused variable 'stdout' (unused-variable)
+W:215, 8: Unused variable 'stdout' (unused-variable)
+W:248, 8: Unused variable 'stdout' (unused-variable)
+W:312, 8: Unused variable 'stdout' (unused-variable)
+C:331,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:348,12: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+W:335, 8: Unused variable 'stdout' (unused-variable)
+W:361, 8: Unused variable 'stdout' (unused-variable)
+W:366, 8: Unused variable 'stdout' (unused-variable)
+W:377, 8: Unused variable 'stdout' (unused-variable)
+W:396, 8: Unused variable 'stdout' (unused-variable)
+W:410, 8: Unused variable 'stdout' (unused-variable)
+W:428, 8: Unused variable 'stdout' (unused-variable)
+W:461, 8: Unused variable 'stdout' (unused-variable)
+W:478, 8: Unused variable 'stdout' (unused-variable)
+W:491, 8: Unused variable 'stdout' (unused-variable)
+W:505, 8: Unused variable 'stdout' (unused-variable)
+W:512, 8: Unused variable 'stdout' (unused-variable)
+W:528, 8: Unused variable 'stdout' (unused-variable)
+W:542, 8: Unused variable 'stdout' (unused-variable)
+W:548, 8: Unused variable 'stdout' (unused-variable)
+W:555, 8: Unused variable 'stdout' (unused-variable)
+W:577, 8: Unused variable 'stdout' (unused-variable)
+W:583, 8: Unused variable 'stdout' (unused-variable)
++ :
++ ./.ci/run-pylint -f json
++ ./.ci/prfilter
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
++ ./.ci/run-shellcheck
+
+In LibOS/shim/test/apps/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected test to end here (don't wrap commands in []/[[]]). Fix any mentioned problems and try again.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 16:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 19:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 25:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY http://$DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 36:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 41:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 42:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 43:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 6:
+echo -e "\n\nRunning helloworld.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 12:
+echo -e "\n\nRunning fibonacci.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 18:
+echo -e "\n\nRunning HTTP server dummy-web-server.py in the background:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 22:
+echo -e "\n\nRunning HTTP client test-http.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 27:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In LibOS/shim/test/native/script1.sh line 1:
+#!/script2.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In LibOS/shim/test/native/script2.sh line 1:
+#!/script3.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In LibOS/shim/test/native/script3.sh line 1:
+#!/helloworld
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 20:
+RUNTIME_DIR=$(/usr/bin/dirname $(readlink -f ${BASH_SOURCE[0]}))
+                               ^-- SC2046: Quote this to prevent word splitting.
+                                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 21:
+if [ -z $PAL_HOST ]; then
+        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 24:
+        libpal="$(echo -n $libpal)"
+                          ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 40:
+        PAL_HOST=$(/usr/bin/make --no-print-directory --quiet -f $RUNTIME_DIR/../Pal/src/Makefile.Host print_host 2>&1)
+                                                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 50:
+	if [ ! -f $GDB ]; then
+                  ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 86:
+exec $PREFIX $PAL_CMD $MANIFEST "$@"
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 20:
+read SELECT_PGIDS
+^-- SC2162: read without -r will mangle backslashes.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
++ :
++ + ./.ci/run-shellcheck./.ci/prfilter -f
+ json
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus (2 primes)
+...........++++
+.....................................++++
+e is 3 (0x03)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/01org/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout sgx_driver_1.9
+Note: checking out 'sgx_driver_1.9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 3abcf82 Merge pull request #31 from avchinch/master
++ make
+make -C /lib/modules/4.4.0-171-generic/build SUBDIRS=/opt/intel/linux-sgx-driver modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-171-generic'
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_main.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_page_cache.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_ioctl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_vma.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_util.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /opt/intel/linux-sgx-driver/isgx.mod.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-171-generic'
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/sgx-driver
++ ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver ISGX_DRIVER_VERSION=1.9 make
+
+*****************************************************************"
+Make sure you have downloaded and installed the Intel SGX driver"
+from https://github.com/intel/linux-sgx-driver.git."
+*****************************************************************
+
+
+linux-sgx-driver -> /opt/intel/linux-sgx-driver
+create isgx_version.h
+make -C /lib/modules/4.4.0-171-generic/build M=/home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver CFLAGS_MODULE="-DDEBUG -g -O0" modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-171-generic'
+  CC [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_6.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_ioctl_1_7.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_fsgsbase.o
+  CC [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx_main.o
+  LD [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.mod.o
+  LD [M]  /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/graphene-sgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-171-generic'
+[Pipeline] sh
++ make -j 8 SGX=1 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/src'
+  [ host/Linux-SGX/.obj/db_streams.o ]
+  [ host/Linux-SGX/.obj/db_memory.o ]
+  [ host/Linux-SGX/.obj/db_threading.o ]
+  [ host/Linux-SGX/.obj/db_mutex.o ]
+  [ host/Linux-SGX/.obj/db_events.o ]
+  [ host/Linux-SGX/.obj/db_process.o ]
+  [ host/Linux-SGX/.obj/db_object.o ]
+  [ host/Linux-SGX/.obj/db_main.o ]
+  [ host/Linux-SGX/.obj/db_misc.o ]
+  [ host/Linux-SGX/.obj/db_exception.o ]
+  [ host/Linux-SGX/.obj/db_rtld.o ]
+  [ host/Linux-SGX/.obj/slab.o ]
+  [ host/Linux-SGX/.obj/printf.o ]
+  [ host/Linux-SGX/.obj/pal_error.o ]
+  [ host/Linux-SGX/.lib/host_endian.h ]
+  [ user_start.o ]
+  [ user_shared_start.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/../../Runtime/pal_gdb-Linux-SGX ]
+make -C ../lib target=/home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib'
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/path.o ]
+wget --timeout=10 https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz -O tmp
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/udivmodti4.o ]
+--2020-01-25 02:38:02--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz
+Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3 [following]
+--2020-01-25 02:38:02--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3
+Resolving codeload.github.com (codeload.github.com)... 140.82.113.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2459563 (2.3M) [application/x-gzip]
+Saving to: 'tmp'
+
+     0K .......... .......... .......... .......... ..........  2% 2.27M 1s
+    50K .......... .......... .......... .......... ..........  4% 4.55M 1s
+   100K .......... .......... .......... .......... ..........  6% 42.0M 1s
+   150K .......... .......... .......... .......... ..........  8% 5.20M 0s
+   200K .......... .......... .......... .......... .......... 10% 27.7M 0s
+   250K .......... .......... .......... .......... .......... 12% 39.6M 0s
+   300K .......... .......... .......... .......... .......... 14% 40.1M 0s
+   350K .......... .......... .......... .......... .......... 16% 7.13M 0s
+   400K .......... .......... .......... .......... .......... 18% 30.8M 0s
+   450K .......... .......... .......... .......... .......... 20% 36.2M 0s
+   500K .......... .......... .......... .......... .......... 22% 43.2M 0s
+   550K .......... .......... .......... .......... .......... 24% 58.9M 0s
+   600K .......... .......... .......... .......... .......... 27%  215M 0s
+   650K .......... .......... .......... .......... .......... 29%  421M 0s
+   700K .......... .......... .......... .......... .......... 31% 10.1M 0s
+   750K .......... .......... .......... .......... .......... 33% 98.3M 0s
+   800K .......... .......... .......... .......... .......... 35%  113M 0s
+   850K .......... .......... .......... .......... .......... 37%  136M 0s
+   900K .......... .......... .......... .......... .......... 39% 75.1M 0s
+   950K .......... .......... .......... .......... .......... 41% 70.4M 0s
+  1000K .......... .......... .......... .......... .......... 43% 95.8M 0s
+  1050K .......... .......... .......... .......... .......... 45% 93.2M 0s
+  1100K .......... .......... .......... .......... .......... 47%  115M 0s
+  1150K .......... .......... .......... .......... .......... 49%  128M 0s
+  1200K .......... .......... .......... .......... .......... 52%  115M 0s
+  1250K .......... .......... .......... .......... .......... 54%  114M 0s
+  1300K .......... .......... .......... .......... .......... 56% 58.9M 0s
+  1350K .......... .......... .......... .......... .......... 58% 91.4M 0s
+  1400K .......... .......... .......... .......... .......... 60% 11.7M 0s
+  1450K .......... .......... .......... .......... .......... 62% 60.7M 0s
+  1500K .......... .......... .......... .......... .......... 64% 69.4M 0s
+  1550K .......... .......... .......... .......... .......... 66% 58.2M 0s
+  1600K .......... .......... .......... .......... .......... 68% 65.4M 0s
+  1650K .......... .......... .......... .......... .......... 70% 62.3M 0s
+  1700K .......... .......... .......... .......... .......... 72% 70.7M 0s
+  1750K .......... .......... .......... .......... .......... 74% 55.6M 0s
+  1800K .......... .......... .......... .......... .......... 77% 69.7M 0s
+  1850K .......... .......... .......... .......... .......... 79% 67.6M 0s
+  1900K .......... .......... .......... .......... .......... 81% 67.7M 0s
+  1950K .......... .......... .......... .......... .......... 83% 72.0M 0s
+  2000K .......... .......... .......... .......... .......... 85%  108M 0s
+  2050K .......... .......... .......... .......... .......... 87%  109M 0s
+  2100K .......... .......... .......... .......... .......... 89%  110M 0s
+  2150K .......... .......... .......... .......... .......... 91% 92.3M 0s
+  2200K .......... .......... .......... .......... .......... 93%  110M 0s
+  2250K .......... .......... .......... .......... .......... 95%  105M 0s
+  2300K .......... .......... .......... .......... .......... 97%  109M 0s
+  2350K .......... .......... .......... .......... .......... 99% 93.8M 0s
+  2400K .                                                     100% 3656G=0.09s
+
+2020-01-25 02:38:02 (27.0 MB/s) - 'tmp' saved [2459563/2459563]
+
+mv -f tmp crypto/mbedtls-2.16.3.tar.gz
+cd crypto && tar -mxzf mbedtls-2.16.3.tar.gz
+mv crypto/mbedtls-mbedtls-2.16.3 crypto/mbedtls
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && ./scripts/config.pl set MBEDTLS_CMAC_C && make DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls'
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library'
+  CC    aes.c
+  CC    aesni.c
+  CC    arc4.c
+  CC    aria.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    base64.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    camellia.c
+  CC    ccm.c
+  CC    chacha20.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    cmac.c
+  CC    ctr_drbg.c
+  CC    des.c
+  CC    dhm.c
+  CC    ecdh.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    error.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md4.c
+  CC    md5.c
+  CC    md_wrap.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    platform_util.c
+  CC    poly1305.c
+  CC    ripemd160.c
+  CC    rsa_internal.c
+  CC    rsa.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    version.c
+  CC    version_features.c
+  CC    xtea.c
+  AR    libmbedcrypto.a
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  AR    libmbedx509.a
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    ssl_srv.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  AR    libmbedtls.a
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/hello.c
+  CC    hash/generic_sum.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify_pss.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/ssl_client1.c
+  CC    ssl/ssl_client2.c
+  CC    ssl/ssl_server.c
+  CC    ssl/ssl_server2.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_mail_client.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_havege.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    test/query_compile_time_config.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/crl_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/req_app.c
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls'
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/asn1parse.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/md.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/md_wrap.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_encoding.o ]
+crypto/adapters/mbedtls_adapter.c: In function 'mbedtls_hardware_poll':
+crypto/adapters/mbedtls_adapter.c:329:51: error: comparison between pointer and integer [-Werror]
+         size_t over = output + i + sizeof(rand64) < len ? 0 : output + i + sizeof(rand64) - len;
+                                                   ^
+crypto/adapters/mbedtls_adapter.c:329:23: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+         size_t over = output + i + sizeof(rand64) < len ? 0 : output + i + sizeof(rand64) - len;
+                       ^~~~~~
+cc1: all warnings being treated as errors
+Makefile:102: recipe for target '/home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o' failed
+make[3]: *** [/home/jenkins/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/lib'
+Makefile:91: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-18.04/Pal'
+Makefile:14: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 a2095b9c9b8cae46ae1815634cfa8980061a0f9e4301f9c98dd919aec3fa1637
+$ docker rm -f a2095b9c9b8cae46ae1815634cfa8980061a0f9e4301f9c98dd919aec3fa1637
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of b98f852889daf57c3c7d9cdb6e78f1e04ee7d946 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/1808/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

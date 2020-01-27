@@ -1,0 +1,285 @@
+GitHub pull request #976 of commit c7c78c99a88d17a160f1bde1f8b404f7dd3e6019, no merge conflicts.
+Setting status of c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/1874 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+Checking out Revision 8df66e7bf0ccd9e488818e22f0214b2a99a07914 (refs/remotes/origin/pr/976/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8df66e7bf0ccd9e488818e22f0214b2a99a07914 # timeout=10
+Commit message: "Merge c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 into 2e4d929c5b0a4b5bef90e6e4adfec0dea8d6a8fd"
+ > git rev-list --no-walk 33577d8c1aeb1b6a9908b9947cd0608214e3cffa # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+ERROR: Checkout failed
+hudson.plugins.git.GitException: Command "git submodule update --init --recursive LibOS/shim/test/apps" returned status code 1:
+stdout: 
+stderr: Cloning into '/var/lib/jenkins/workspace/graphene-18.04@script/LibOS/shim/test/apps'...
+error: Server does not allow request for unadvertised object 66ddfa0c97a9151f681381b48d8d4ee116035c41
+Fetched in submodule path 'LibOS/shim/test/apps', but it did not contain 66ddfa0c97a9151f681381b48d8d4ee116035c41. Direct fetching of that commit failed.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2372)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1985)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$500(CliGitAPIImpl.java:80)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.lambda$execute$0(CliGitAPIImpl.java:1409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at java.util.concurrent.ExecutorCompletionService.submit(ExecutorCompletionService.java:181)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.submitRemainingCommand(GitCommandsExecutor.java:75)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:69)
+Caused: hudson.plugins.git.GitException
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.checkResult(GitCommandsExecutor.java:87)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:68)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:47)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.execute(CliGitAPIImpl.java:1412)
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:149)
+Caused: java.io.IOException: Could not perform submodule update
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:154)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1223)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:155)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:69)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:299)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Retrying after 10 seconds
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+Checking out Revision 8df66e7bf0ccd9e488818e22f0214b2a99a07914 (refs/remotes/origin/pr/976/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8df66e7bf0ccd9e488818e22f0214b2a99a07914 # timeout=10
+Commit message: "Merge c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 into 2e4d929c5b0a4b5bef90e6e4adfec0dea8d6a8fd"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+ERROR: Checkout failed
+hudson.plugins.git.GitException: Command "git submodule update --init --recursive LibOS/shim/test/apps" returned status code 1:
+stdout: 
+stderr: Cloning into '/var/lib/jenkins/workspace/graphene-18.04@script/LibOS/shim/test/apps'...
+error: Server does not allow request for unadvertised object 66ddfa0c97a9151f681381b48d8d4ee116035c41
+Fetched in submodule path 'LibOS/shim/test/apps', but it did not contain 66ddfa0c97a9151f681381b48d8d4ee116035c41. Direct fetching of that commit failed.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2372)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1985)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$500(CliGitAPIImpl.java:80)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.lambda$execute$0(CliGitAPIImpl.java:1409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at java.util.concurrent.ExecutorCompletionService.submit(ExecutorCompletionService.java:181)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.submitRemainingCommand(GitCommandsExecutor.java:75)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:69)
+Caused: hudson.plugins.git.GitException
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.checkResult(GitCommandsExecutor.java:87)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:68)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:47)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.execute(CliGitAPIImpl.java:1412)
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:149)
+Caused: java.io.IOException: Could not perform submodule update
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:154)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1223)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:155)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:69)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:299)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Retrying after 10 seconds
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+Checking out Revision 8df66e7bf0ccd9e488818e22f0214b2a99a07914 (refs/remotes/origin/pr/976/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8df66e7bf0ccd9e488818e22f0214b2a99a07914 # timeout=10
+Commit message: "Merge c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 into 2e4d929c5b0a4b5bef90e6e4adfec0dea8d6a8fd"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+ERROR: Checkout failed
+hudson.plugins.git.GitException: Command "git submodule update --init --recursive LibOS/shim/test/apps" returned status code 1:
+stdout: 
+stderr: Cloning into '/var/lib/jenkins/workspace/graphene-18.04@script/LibOS/shim/test/apps'...
+error: Server does not allow request for unadvertised object 66ddfa0c97a9151f681381b48d8d4ee116035c41
+Fetched in submodule path 'LibOS/shim/test/apps', but it did not contain 66ddfa0c97a9151f681381b48d8d4ee116035c41. Direct fetching of that commit failed.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2372)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1985)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$500(CliGitAPIImpl.java:80)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.lambda$execute$0(CliGitAPIImpl.java:1409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at java.util.concurrent.ExecutorCompletionService.submit(ExecutorCompletionService.java:181)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.submitRemainingCommand(GitCommandsExecutor.java:75)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:69)
+Caused: hudson.plugins.git.GitException
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.checkResult(GitCommandsExecutor.java:87)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:68)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:47)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.execute(CliGitAPIImpl.java:1412)
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:149)
+Caused: java.io.IOException: Could not perform submodule update
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:154)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1223)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:155)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:69)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:299)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Retrying after 10 seconds
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/976/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/976/merge^{commit} # timeout=10
+Checking out Revision 8df66e7bf0ccd9e488818e22f0214b2a99a07914 (refs/remotes/origin/pr/976/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8df66e7bf0ccd9e488818e22f0214b2a99a07914 # timeout=10
+Commit message: "Merge c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 into 2e4d929c5b0a4b5bef90e6e4adfec0dea8d6a8fd"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+ERROR: Checkout failed
+hudson.plugins.git.GitException: Command "git submodule update --init --recursive LibOS/shim/test/apps" returned status code 1:
+stdout: 
+stderr: Cloning into '/var/lib/jenkins/workspace/graphene-18.04@script/LibOS/shim/test/apps'...
+error: Server does not allow request for unadvertised object 66ddfa0c97a9151f681381b48d8d4ee116035c41
+Fetched in submodule path 'LibOS/shim/test/apps', but it did not contain 66ddfa0c97a9151f681381b48d8d4ee116035c41. Direct fetching of that commit failed.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2372)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1985)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$500(CliGitAPIImpl.java:80)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.lambda$execute$0(CliGitAPIImpl.java:1409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at java.util.concurrent.ExecutorCompletionService.submit(ExecutorCompletionService.java:181)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.submitRemainingCommand(GitCommandsExecutor.java:75)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:69)
+Caused: hudson.plugins.git.GitException
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.checkResult(GitCommandsExecutor.java:87)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:68)
+	at org.jenkinsci.plugins.gitclient.cgit.GitCommandsExecutor.invokeAll(GitCommandsExecutor.java:47)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$7.execute(CliGitAPIImpl.java:1412)
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:149)
+Caused: java.io.IOException: Could not perform submodule update
+	at hudson.plugins.git.extensions.impl.SubmoduleOption.onCheckoutCompleted(SubmoduleOption.java:154)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1223)
+	at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:155)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:69)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:299)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Setting status of c7c78c99a88d17a160f1bde1f8b404f7dd3e6019 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/1874 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: Maximum checkout retry attempts reached, aborting
+Finished: FAILURE

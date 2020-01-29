@@ -1,0 +1,571 @@
+GitHub pull request #1281 of commit 43bd5674410297bc5567c1df31edee7ded5a1ef4, no merge conflicts.
+Setting status of 43bd5674410297bc5567c1df31edee7ded5a1ef4 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/3093/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read Jenkinsfiles/Linux-Debug
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1281/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1281/merge^{commit} # timeout=10
+Checking out Revision b8f5c2ed2068cdab54a9d41085fc4819f3e0d255 (refs/remotes/origin/pr/1281/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b8f5c2ed2068cdab54a9d41085fc4819f3e0d255 # timeout=20
+Commit message: "Merge 43bd5674410297bc5567c1df31edee7ded5a1ef4 into a256338634afd6e9599a623d78ddd2382eeaba2b"
+ > git rev-list --no-walk b808d2f8f2a200131aea5fbaaf614cb91461c80f # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-waldorf in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision b8f5c2ed2068cdab54a9d41085fc4819f3e0d255 (refs/remotes/origin/pr/1281/merge)
+Commit message: "Merge 43bd5674410297bc5567c1df31edee7ded5a1ef4 into a256338634afd6e9599a623d78ddd2382eeaba2b"
+ > git rev-parse refs/remotes/origin/pr/1281/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1281/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b8f5c2ed2068cdab54a9d41085fc4819f3e0d255 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 53a236e7fd366f67912a6b35354224d63912a37c -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  792.9MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libnss-mdns        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libexpat1        libexpat1-dev        libnss-mdns        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libxml2-dev        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> d0bfc028580d
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> b663ff578618
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> 6b04bc148cdb
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> e9e46ce264e4
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> f93e02982d2d
+Successfully built f93e02982d2d
+Successfully tagged 53a236e7fd366f67912a6b35354224d63912a37c:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 53a236e7fd366f67912a6b35354224d63912a37c
+.
+[Pipeline] withDockerContainer
+slave-waldorf does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug -v /home/jenkins/workspace/graphene-debug:/home/jenkins/workspace/graphene-debug:rw,z -v /home/jenkins/workspace/graphene-debug@tmp:/home/jenkins/workspace/graphene-debug@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 53a236e7fd366f67912a6b35354224d63912a37c cat
+$ docker top f1614bbea57e56185b0ba775a2302449508347097cff499056bd8a8e7d64dd8a -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-shellcheck
+
+In LibOS/shim/test/apps/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected "]". Fix any mentioned problems and try again.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 16:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 19:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 25:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY http://$DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 36:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 41:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 42:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/common_tools/benchmark-http.sh line 43:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 6:
+echo -e "\n\nRunning helloworld.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 12:
+echo -e "\n\nRunning fibonacci.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 18:
+echo -e "\n\nRunning HTTP server dummy-web-server.py in the background:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 22:
+echo -e "\n\nRunning HTTP client test-http.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In LibOS/shim/test/apps/python-simple/run-tests.sh line 27:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In LibOS/shim/test/native/script1.sh line 1:
+#!/script2.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script1.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script2.sh line 1:
+#!/script3.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script2.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script3.sh line 1:
+#!/helloworld
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script3.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 20:
+RUNTIME_DIR=$(/usr/bin/dirname $(readlink -f ${BASH_SOURCE[0]}))
+                               ^-- SC2046: Quote this to prevent word splitting.
+                                             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 21:
+if [ -z $PAL_HOST ]; then
+        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 24:
+        libpal="$(echo -n $libpal)"
+                          ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 40:
+        PAL_HOST=$(/usr/bin/make --no-print-directory --quiet -f $RUNTIME_DIR/../Pal/src/Makefile.Host print_host 2>&1)
+                                                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 50:
+	if [ ! -f $GDB ]; then
+                  ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Runtime/pal_loader line 86:
+exec $PREFIX $PAL_CMD $MANIFEST "$@"
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 22:
+    for a; do cmd+="'${a//"'"/"'\\''"}' "; done
+                             ^-- SC2140: The double quotes around this do nothing. Remove or escape them.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
++ :
++ ./.ci/run-shellcheck -f json
++ ./.ci/prfilter
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
++ make -j 8 DEBUG=1 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/db_mutex.o ]
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/slab.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.obj/pal_error.o ]
+  [ host/Linux/.lib/host_endian.h ]
+  [ user_start.o ]
+  [ user_shared_start.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+wget --timeout=10 https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz -O tmp
+--2020-01-29 23:13:49--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.16.3.tar.gz
+Resolving github.com (github.com)... cp crypto/config.h crypto/mbedtls/include/mbedtls
+cp: cannot create regular file 'crypto/mbedtls/include/mbedtls': No such file or directory
+Makefile:70: recipe for target 'crypto/mbedtls/include/mbedtls/config.h' failed
+make[3]: *** [crypto/mbedtls/include/mbedtls/config.h] Error 1
+make[3]: *** Waiting for unfinished jobs....
+140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3 [following]
+--2020-01-29 23:13:49--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.16.3
+Resolving codeload.github.com (codeload.github.com)... 140.82.113.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.9|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: 'tmp'
+
+     0K .......... .......... .......... .......... .......... 1.16M
+    50K .......... .......... .......... .......... .......... 2.41M
+   100K .......... .......... .......... .......... .......... 43.1M
+   150K .......... .......... .......... .......... .......... 2.43M
+   200K .......... .......... .......... .......... .......... 30.8M
+   250K .......... .......... .......... .......... .......... 38.0M
+   300K .......... .......... .......... .......... .......... 47.0M
+   350K .......... .......... .......... .......... .......... 2.86M
+   400K .......... .......... .......... .......... .......... 33.4M
+   450K .......... .......... .......... .......... .......... 45.0M
+   500K .......... .......... .......... .......... .......... 41.2M
+   550K .......... .......... .......... .......... .......... 36.2M
+   600K .......... .......... .......... .......... .......... 51.2M
+   650K .......... .......... .......... .......... .......... 4.31M
+   700K .......... .......... .......... .......... .......... 5.61M
+   750K .......... .......... .......... .......... .......... 4.55M
+   800K .......... .......... .......... .......... .......... 5.87M
+   850K .......... .......... .......... .......... .......... 6.35M
+   900K .......... .......... .......... .......... .......... 12.0M
+   950K .......... .......... .......... .......... .......... 11.5M
+  1000K .......... .......... .......... .......... .......... 3.85M
+  1050K .......... .......... .......... .......... .......... 19.8M
+  1100K .......... .......... .......... .......... .......... 24.1M
+  1150K .......... .......... .......... .......... .......... 12.3M
+  1200K .......... .......... .......... .......... .......... 10.5M
+  1250K .......... .......... .......... .......... .......... 5.05M
+  1300K .......... .......... .......... .......... .......... 6.99M
+  1350K .......... .......... .......... .......... .......... 4.70M
+  1400K .......... .......... .......... .......... .......... 6.92M
+  1450K .......... .......... .......... .......... .......... 6.22M
+  1500K .......... .......... .......... .......... .......... 33.8M
+  1550K .......... .......... .......... .......... .......... 4.91M
+  1600K .......... .......... .......... .......... .......... 9.64M
+  1650K .......... .......... .......... .......... .......... 8.78M
+  1700K .......... .......... .......... .......... .......... 10.7M
+  1750K .......... .......... .......... .......... .......... 11.3M
+  1800K .......... .......... .......... .......... .......... 8.24M
+  1850K .......... .......... .......... .......... .......... 11.8M
+  1900K .......... .......... .......... .......... .......... 11.7M
+  1950K .......... .......... .......... .......... .......... 10.9M
+  2000K .......... .......... .......... .......... .......... 10.1M
+  2050K .......... .......... .......... .......... .......... 11.0M
+  2100K .......... .......... .......... .......... .......... 8.60M
+  2150K .......... .......... .......... .......... .......... 8.08M
+  2200K .......... .......... .......... .......... .......... 7.93M
+  2250K .......... .......... .......... .......... .......... 9.60M
+  2300K .......... .......... .......... .......... .......... 5.56M
+  2350K .......... .......... .......... .......... .......... 6.20M
+  2400K .                                                      26.5M=0.3s
+
+2020-01-29 23:13:50 (7.07 MB/s) - 'tmp' saved [2459563]
+
+mv -f tmp crypto/mbedtls-2.16.3.tar.gz
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+Makefile:91: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal'
+Makefile:14: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 f1614bbea57e56185b0ba775a2302449508347097cff499056bd8a8e7d64dd8a
+$ docker rm -f f1614bbea57e56185b0ba775a2302449508347097cff499056bd8a8e7d64dd8a
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 43bd5674410297bc5567c1df31edee7ded5a1ef4 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/3093/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+ERROR: script returned exit code 2
+Finished: FAILURE

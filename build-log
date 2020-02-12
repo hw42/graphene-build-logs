@@ -1,0 +1,457 @@
+GitHub pull request #1325 of commit 45d130b4381e65bfd6a8f076b0fb16f97390cf4b, no merge conflicts.
+Setting status of 45d130b4381e65bfd6a8f076b0fb16f97390cf4b to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/2075/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1325/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1325/merge^{commit} # timeout=10
+Checking out Revision d23653b32e7d98a9ffd909badea11a14e60858b6 (refs/remotes/origin/pr/1325/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d23653b32e7d98a9ffd909badea11a14e60858b6 # timeout=20
+Commit message: "Merge 45d130b4381e65bfd6a8f076b0fb16f97390cf4b into 4bcf3a62874b1920516768cbc95a50bdb3a2c64f"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘slave-beaker12’ is reserved for jobs with matching label expression; ‘slave-constantine’ is reserved for jobs with matching label expression; ‘slave-gonzo’ is reserved for jobs with matching label expression; ‘slave-uncledeadly’ is reserved for jobs with matching label expression
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision d23653b32e7d98a9ffd909badea11a14e60858b6 (refs/remotes/origin/pr/1325/merge)
+Commit message: "Merge 45d130b4381e65bfd6a8f076b0fb16f97390cf4b into 4bcf3a62874b1920516768cbc95a50bdb3a2c64f"
+ > git rev-parse refs/remotes/origin/pr/1325/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1325/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d23653b32e7d98a9ffd909badea11a14e60858b6 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 09527ae08c59bde33d124e3146dfe639dbf1fa74 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  793.8MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 775349758637
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxml2-dev     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 3779d4d9aea8
+Step 3/11 : RUN pip3 install 'Sphinx>=1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 5911922e37ab
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 8baffd8a6c30
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 393b5c02a131
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> bcbaf407ca0a
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 7c4040e04f70
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> d20106b2463c
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 560000069172
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> bd3dc979e222
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 5e796338e347
+Successfully built 5e796338e347
+Successfully tagged 09527ae08c59bde33d124e3146dfe639dbf1fa74:latest
+[Pipeline] dockerFingerprintFrom
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 09527ae08c59bde33d124e3146dfe639dbf1fa74
+.
+[Pipeline] withDockerContainer
+slave-bobothebear does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 09527ae08c59bde33d124e3146dfe639dbf1fa74 cat
+$ docker top 056f2aac5b94c28db5efeff0d6750580b57e1941b76aa565d1c7732b421e4a46 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+************* Module pal-gdb
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+C: 11, 4: Constant name "ans" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 8: Constant name "gdbfile" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module link-intel-driver
+C:  5, 0: Exactly one space required before assignment
+isgx_repo    = 'https://github.com/intel/linux-sgx-driver.git'
+             ^ (bad-whitespace)
+C:  6, 0: Exactly one space required before assignment
+isgx_path    = os.getenv("ISGX_DRIVER_PATH")
+             ^ (bad-whitespace)
+C: 22, 0: Line too long (120/100) (line-too-long)
+C: 27, 0: Line too long (111/100) (line-too-long)
+C: 29, 0: Line too long (103/100) (line-too-long)
+C: 67, 0: Line too long (112/100) (line-too-long)
+W: 46, 0: Anomalous backslash in string: '\.'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, re, subprocess) (multiple-imports)
+C:  5, 0: Constant name "isgx_repo" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  6, 0: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+W: 69, 0: No exception type(s) specified (bare-except)
+C: 21,12: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 26,16: Constant name "iput" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 36, 8: Constant name "isgx_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 41,12: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 43,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 44,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 46, 8: Constant name "m" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 48,12: Constant name "isgx_version_major" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 49,12: Constant name "isgx_version_minor" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 52, 8: Constant name "isgx_version" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 55, 4: Constant name "isgx_link" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module regression
+C: 10, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 19, 4: Method could be a function (no-self-use)
+C: 78, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module conf_merge
+W: 22, 0: Unused import sys (unused-import)
+************* Module conf_missing
+C: 40,43: More than one statement on a single line (multiple-statements)
+W: 22, 0: Unused import sys (unused-import)
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module test_pf
+W:111, 0: TODO: port these to the new file format (fixme)
+W:147, 0: TODO: port these to the new file format (fixme)
+C: 27, 0: Line too long (123/100) (line-too-long)
+C: 34, 0: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'pf_output')
+                       ^ (bad-whitespace)
+C: 39, 0: Line too long (128/100) (line-too-long)
+C: 71, 0: Line too long (110/100) (line-too-long)
+C: 73, 0: Line too long (101/100) (line-too-long)
+C: 93, 0: Line too long (108/100) (line-too-long)
+C:123, 0: Line too long (102/100) (line-too-long)
+C:138, 0: Line too long (103/100) (line-too-long)
+C:151, 0: Line too long (148/100) (line-too-long)
+C:163, 0: Exactly one space required before assignment
+            output  = os.path.join(self.OUTPUT_DIR, name)
+                    ^ (bad-whitespace)
+C:164, 0: Exactly one space required before assignment
+            input   = os.path.join(INVALID_DIR, os.path.basename(original_input))
+                    ^ (bad-whitespace)
+C:170, 0: Line too long (114/100) (line-too-long)
+C: 22, 4: Class method setUpClass should have 'cls' as first argument (bad-classmethod-argument)
+W: 47,25: Redefining built-in 'input' (redefined-builtin)
+W: 50,27: Redefining built-in 'input' (redefined-builtin)
+W: 55,27: Redefining built-in 'input' (redefined-builtin)
+W: 63,16: Unused variable 'stderr' (unused-variable)
+C: 73,12: Variable name "dp" doesn't conform to snake_case naming style (invalid-name)
+W: 71,12: Unused variable 'stdout' (unused-variable)
+W: 71,20: Unused variable 'stderr' (unused-variable)
+C:107, 8: Variable name "dp" doesn't conform to snake_case naming style (invalid-name)
+W:116,34: Redefining built-in 'input' (redefined-builtin)
+C:117, 8: Variable name "dp" doesn't conform to snake_case naming style (invalid-name)
+W:122,27: Redefining built-in 'exec' (redefined-builtin)
+W:137, 8: Redefining built-in 'exec' (redefined-builtin)
+W:141,27: Redefining built-in 'input' (redefined-builtin)
+W:164,12: Redefining built-in 'input' (redefined-builtin)
+C:149, 8: Variable name "INVALID_DIR" doesn't conform to snake_case naming style (invalid-name)
+C:151, 8: Variable name "SHOULD_PASS" doesn't conform to snake_case naming style (invalid-name)
+C:171,12: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+W:  7, 0: Unused import sys (unused-import)
+************* Module test_fs
+C: 19, 0: Line too long (127/100) (line-too-long)
+C: 19, 0: Exactly one space required before assignment
+        c.FILE_SIZES   = [0, 1, 2, 15, 16, 17, 255, 256, 257, 1023, 1024, 1025, 65535, 65536, 65537, 1048575, 1048576, 1048577]
+                       ^ (bad-whitespace)
+C: 20, 0: Exactly one space required before assignment
+        c.TEST_DIR     = 'tmp'
+                       ^ (bad-whitespace)
+C: 21, 0: Exactly one space required before assignment
+        c.INDEXES      = range(len(c.FILE_SIZES))
+                       ^ (bad-whitespace)
+C: 22, 0: Exactly one space required before assignment
+        c.INPUT_DIR    = os.path.join(c.TEST_DIR, 'input')
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required before assignment
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required after comma
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                                                  ^ (bad-whitespace)
+C: 24, 0: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'output')
+                       ^ (bad-whitespace)
+C:139, 0: Line too long (108/100) (line-too-long)
+C:153, 0: Line too long (112/100) (line-too-long)
+C: 18, 4: Class method setUpClass should have 'cls' as first argument (bad-classmethod-argument)
+C: 35, 4: Class method tearDownClass should have 'cls' as first argument (bad-classmethod-argument)
+W: 44,25: Redefining built-in 'input' (redefined-builtin)
+R: 44, 4: Method could be a function (no-self-use)
+R: 94, 4: Too many arguments (7/5) (too-many-arguments)
+R:175, 4: Too many arguments (6/5) (too-many-arguments)
+W:206, 8: Redefining built-in 'input' (redefined-builtin)
+W:234,34: Redefining built-in 'input' (redefined-builtin)
+W:237,53: Redefining built-in 'exec' (redefined-builtin)
+W:268,27: Redefining built-in 'exec' (redefined-builtin)
+W:294, 8: Redefining built-in 'exec' (redefined-builtin)
+R: 16, 0: Too many public methods (25/20) (too-many-public-methods)
+W:  6, 0: Unused import sys (unused-import)
+W:  7, 0: Unused import unittest (unused-import)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module test_libos
+C: 66, 0: Line too long (104/100) (line-too-long)
+C: 67, 0: Line too long (108/100) (line-too-long)
+C: 68, 0: Line too long (108/100) (line-too-long)
+C: 69, 0: Line too long (108/100) (line-too-long)
+C: 70, 0: Line too long (108/100) (line-too-long)
+C: 71, 0: Line too long (108/100) (line-too-long)
+C: 72, 0: Line too long (108/100) (line-too-long)
+C: 73, 0: Line too long (108/100) (line-too-long)
+C: 74, 0: Line too long (108/100) (line-too-long)
+C: 75, 0: Line too long (108/100) (line-too-long)
+C: 76, 0: Line too long (108/100) (line-too-long)
+C: 77, 0: Line too long (108/100) (line-too-long)
+C: 78, 0: Line too long (108/100) (line-too-long)
+C: 79, 0: Line too long (108/100) (line-too-long)
+C: 80, 0: Line too long (108/100) (line-too-long)
+C: 81, 0: Line too long (109/100) (line-too-long)
+C:188, 0: Line too long (124/100) (line-too-long)
+C:195, 0: Line too long (127/100) (line-too-long)
+C:130, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:131,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:149, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module test_pal
+C:155, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module runltp_xml
+E:260, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 36, 4: Constant name "fspath" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 39, 4: Class name "fspath" doesn't conform to '[A-Z_][A-Za-z0-9]*|TC_\\d\\d_.*' pattern (invalid-name)
+R:118, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:158,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:169,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:171,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:174,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:176,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:195, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:206, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:217, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:335, 4: Too many statements (53/50) (too-many-statements)
+R:442, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+I:471,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:533,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
++ :
++ ./.ci/run-pylint -f json
++ ./.ci/prfilter
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+MESSAGES AFFECTING THIS PR:
+LibOS/shim/test/fs/test_pf.py +111:0: fixme: TODO: port these to the new file format
+LibOS/shim/test/fs/test_pf.py +147:0: fixme: TODO: port these to the new file format
+LibOS/shim/test/fs/test_pf.py +27:0: line-too-long: Line too long (123/100)
+LibOS/shim/test/fs/test_pf.py +34:0: bad-whitespace: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'pf_output')
+                       ^
+LibOS/shim/test/fs/test_pf.py +39:0: line-too-long: Line too long (128/100)
+LibOS/shim/test/fs/test_pf.py +71:0: line-too-long: Line too long (110/100)
+LibOS/shim/test/fs/test_pf.py +73:0: line-too-long: Line too long (101/100)
+LibOS/shim/test/fs/test_pf.py +93:0: line-too-long: Line too long (108/100)
+LibOS/shim/test/fs/test_pf.py +123:0: line-too-long: Line too long (102/100)
+LibOS/shim/test/fs/test_pf.py +138:0: line-too-long: Line too long (103/100)
+LibOS/shim/test/fs/test_pf.py +151:0: line-too-long: Line too long (148/100)
+LibOS/shim/test/fs/test_pf.py +163:0: bad-whitespace: Exactly one space required before assignment
+            output  = os.path.join(self.OUTPUT_DIR, name)
+                    ^
+LibOS/shim/test/fs/test_pf.py +164:0: bad-whitespace: Exactly one space required before assignment
+            input   = os.path.join(INVALID_DIR, os.path.basename(original_input))
+                    ^
+LibOS/shim/test/fs/test_pf.py +170:0: line-too-long: Line too long (114/100)
+LibOS/shim/test/fs/test_pf.py +22:4: bad-classmethod-argument: Class method setUpClass should have 'cls' as first argument
+LibOS/shim/test/fs/test_pf.py +47:25: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +50:27: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +55:27: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +63:16: unused-variable: Unused variable 'stderr'
+LibOS/shim/test/fs/test_pf.py +73:12: invalid-name: Variable name "dp" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +71:12: unused-variable: Unused variable 'stdout'
+LibOS/shim/test/fs/test_pf.py +71:20: unused-variable: Unused variable 'stderr'
+LibOS/shim/test/fs/test_pf.py +107:8: invalid-name: Variable name "dp" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +116:34: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +117:8: invalid-name: Variable name "dp" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +122:27: redefined-builtin: Redefining built-in 'exec'
+LibOS/shim/test/fs/test_pf.py +137:8: redefined-builtin: Redefining built-in 'exec'
+LibOS/shim/test/fs/test_pf.py +141:27: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +164:12: redefined-builtin: Redefining built-in 'input'
+LibOS/shim/test/fs/test_pf.py +149:8: invalid-name: Variable name "INVALID_DIR" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +151:8: invalid-name: Variable name "SHOULD_PASS" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +171:12: invalid-name: Variable name "e" doesn't conform to snake_case naming style
+LibOS/shim/test/fs/test_pf.py +7:0: unused-import: Unused import sys
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 056f2aac5b94c28db5efeff0d6750580b57e1941b76aa565d1c7732b421e4a46
+$ docker rm -f 056f2aac5b94c28db5efeff0d6750580b57e1941b76aa565d1c7732b421e4a46
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 45d130b4381e65bfd6a8f076b0fb16f97390cf4b to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/2075/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 33
+Finished: FAILURE

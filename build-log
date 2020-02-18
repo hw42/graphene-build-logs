@@ -1,0 +1,43 @@
+GitHub pull request #1322 of commit 4570e70b6d7d154b4286a9cb548ccbf89bb3eb62, no merge conflicts.
+Setting status of 4570e70b6d7d154b4286a9cb548ccbf89bb3eb62 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx26/356/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-2.6
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx26@script to read Jenkinsfiles/Linux-SGX26
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx26@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1322/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1322/merge^{commit} # timeout=10
+Checking out Revision b1af5976d83f4b85c58f67863d1068bef2bf6ae6 (refs/remotes/origin/pr/1322/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b1af5976d83f4b85c58f67863d1068bef2bf6ae6 # timeout=20
+Commit message: "Merge 4570e70b6d7d154b4286a9cb548ccbf89bb3eb62 into bcf8a963b13c1cf4d310084f92cfcfe660bd0a78"
+ > git rev-list --no-walk 7a2a67d59993f94c28cc44a6cd8c9b6d825a0ed2 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/apps.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/apps.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/apps # timeout=10
+Setting status of 4570e70b6d7d154b4286a9cb548ccbf89bb3eb62 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx26/356/ and message: 'Build finished. '
+Using context: Jenkins-SGX-2.6
+ERROR: /var/lib/jenkins/workspace/graphene-sgx26@script/Jenkinsfiles/Linux-SGX26 not found
+Finished: FAILURE

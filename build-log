@@ -1,0 +1,6 @@
+GitHub pull request #1386 of commit eccf34c9e7e3f767a16ac85004fefd4be994cb85, no merge conflicts.
+Setting status of eccf34c9e7e3f767a16ac85004fefd4be994cb85 to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/1442 and message: 'Build started for merge commit.'
+Using context: Docs-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/docs-18.04@script to read ./Jenkinsfiles/Docs-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.

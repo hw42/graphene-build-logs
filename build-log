@@ -1,0 +1,22 @@
+Started by user David Cowhig
+Replayed #765
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘sgx_slave’
+Ready to run at Sun Mar 29 17:46:55 EDT 2020
+Resuming build at Sun Mar 29 17:46:55 EDT 2020 after Jenkins restart
+Running on slave-rowlf in /home/jenkins/workspace/graphene-sgx-apps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: ABORTED

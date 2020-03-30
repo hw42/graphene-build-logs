@@ -1,0 +1,48 @@
+Started by user David Cowhig
+Replayed #771
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-sgx-18.04-apps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+java.lang.OutOfMemoryError: Java heap space
+Caused: java.io.IOException: Unexpected reader termination
+Also:   hudson.remoting.Channel$CallSiteStackTrace: Remote call to slave-bobothebear
+		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1788)
+		at hudson.remoting.Request.call(Request.java:202)
+		at hudson.remoting.Channel.call(Channel.java:997)
+		at hudson.FilePath.act(FilePath.java:1069)
+		at hudson.FilePath.act(FilePath.java:1058)
+		at hudson.FilePath.deleteContents(FilePath.java:1280)
+		at hudson.plugins.git.extensions.impl.WipeWorkspace.beforeCheckout(WipeWorkspace.java:30)
+		at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1164)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:124)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:93)
+		at org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:80)
+		at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+Caused: hudson.remoting.RequestAbortedException
+	at hudson.remoting.Request.abort(Request.java:340)
+	at hudson.remoting.Channel.terminate(Channel.java:1081)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:101)
+Finished: FAILURE

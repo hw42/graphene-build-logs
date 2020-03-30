@@ -1,0 +1,13 @@
+Started by user David Cowhig
+Replayed #771
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+java.lang.OutOfMemoryError: Java heap space
+Finished: FAILURE

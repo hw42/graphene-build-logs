@@ -1,0 +1,109 @@
+GitHub pull request #1407 of commit 9f292497dab6469c8cc43943001433b8345e35ab, no merge conflicts.
+Unable to query GitHub for status of PullRequestjava.io.InterruptedIOException
+	at org.kohsuke.github.RateLimitHandler$1.onError(RateLimitHandler.java:43)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.handleLimitingErrors(GitHubHttpUrlConnectionClient.java:81)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:371)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:312)
+	at org.kohsuke.github.Requester.fetch(Requester.java:71)
+	at org.kohsuke.github.GHRepository.getPullRequest(GHRepository.java:1303)
+	at org.jenkinsci.plugins.ghprb.GhprbRepository.getActualPullRequest(GhprbRepository.java:337)
+	at org.jenkinsci.plugins.ghprb.GhprbPullRequest.getPullRequest(GhprbPullRequest.java:827)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:112)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: org.kohsuke.github.HttpException: Rate limit violation
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.handleLimitingErrors(GitHubHttpUrlConnectionClient.java:80)
+	... 12 more
+Setting status of 9f292497dab6469c8cc43943001433b8345e35ab to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/1517 and message: 'Build started for merge commit.'
+Using context: Docs-18.04
+FileNotFoundException means that the credentials Jenkins is using is probably wrong. Or the user account does not have write access to the repo.
+org.kohsuke.github.GHFileNotFoundException: https://api.github.com/repos/oscarlab/graphene/statuses/9f292497dab6469c8cc43943001433b8345e35ab {"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/statuses/#create-a-status"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:437)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:368)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:312)
+	at org.kohsuke.github.Requester.fetch(Requester.java:71)
+	at org.kohsuke.github.GHRepository.createCommitStatus(GHRepository.java:1872)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.createCommitStatus(GhprbSimpleStatus.java:283)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.onBuildStart(GhprbSimpleStatus.java:195)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:144)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.FileNotFoundException: https://api.github.com/repos/oscarlab/graphene/statuses/9f292497dab6469c8cc43943001433b8345e35ab
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor79.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1964)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1963)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1531)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1515)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:313)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:80)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:71)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:406)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:360)
+	... 11 more
+Caused by: java.io.FileNotFoundException: https://api.github.com/repos/oscarlab/graphene/statuses/9f292497dab6469c8cc43943001433b8345e35ab
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1915)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1515)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:348)
+	... 11 more
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/docs-18.04@script to read ./Jenkinsfiles/Docs-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1407/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1407/merge^{commit} # timeout=10
+Checking out Revision 9e69078242eb346c3d0302353596472ad3fb3690 (refs/remotes/origin/pr/1407/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9e69078242eb346c3d0302353596472ad3fb3690 # timeout=10
+Commit message: "Merge 480ffeb9b709bbf05b2cb9665f617a02e1c887e1 into ee594256cd30e7d6158245daf1a34918e31eb2fa"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-bobothebear in /home/jenkins/workspace/docs-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Aborted by David Cowhig

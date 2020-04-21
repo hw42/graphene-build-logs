@@ -1,0 +1,875 @@
+GitHub pull request #1431 of commit a954b616bbd9bb69c34046137f512c77a70b9a90, no merge conflicts.
+Setting status of a954b616bbd9bb69c34046137f512c77a70b9a90 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/2577 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1431/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1431/merge^{commit} # timeout=10
+Checking out Revision a4693f15524873fc5841f300783ec21a94a1d1a7 (refs/remotes/origin/pr/1431/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4693f15524873fc5841f300783ec21a94a1d1a7 # timeout=10
+Commit message: "Merge a954b616bbd9bb69c34046137f512c77a70b9a90 into db2c093746fa90fddfa201870a58f610a303934d"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-statler in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision a4693f15524873fc5841f300783ec21a94a1d1a7 (refs/remotes/origin/pr/1431/merge)
+Commit message: "Merge a954b616bbd9bb69c34046137f512c77a70b9a90 into db2c093746fa90fddfa201870a58f610a303934d"
+ > git rev-parse refs/remotes/origin/pr/1431/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1431/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a4693f15524873fc5841f300783ec21a94a1d1a7 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t ca6c5e7ea3807984d0cd328f9d8f26a7ee73429e -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  487.4MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 92b00eced0f0
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 505b3d78c075
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 616b9d36018b
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> aa741e134068
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 0b0d49877309
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> bf8519effa40
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> b252161af577
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 8d50b1abee85
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 692469e87295
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> d33a400feb80
+Successfully built d33a400feb80
+Successfully tagged ca6c5e7ea3807984d0cd328f9d8f26a7ee73429e:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . ca6c5e7ea3807984d0cd328f9d8f26a7ee73429e
+.
+[Pipeline] withDockerContainer
+slave-statler does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** ca6c5e7ea3807984d0cd328f9d8f26a7ee73429e cat
+$ docker top 52a983e3cbba69f6ce9663a7ff157ca130d77a26ede68b45b6d1f430f34962dd -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module conf_merge
+W: 22, 0: Unused import sys (unused-import)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module link-intel-driver
+C: 22, 0: Line too long (103/100) (line-too-long)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, shutil) (multiple-imports)
+C: 39,40: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+************* Module conf_missing
+C: 40,43: More than one statement on a single line (multiple-statements)
+W: 22, 0: Unused import sys (unused-import)
+************* Module pal-gdb
+C:  1, 0: Module name "pal-gdb" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (os, sys, gdb) (multiple-imports)
+E:  3, 0: Unable to import 'gdb' (import-error)
+C: 11, 4: Constant name "ans" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 14, 8: Constant name "gdbfile" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  3, 0: Imports from package os are not grouped (ungrouped-imports)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to UPPER_CASE naming style (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to UPPER_CASE naming style (invalid-name)
+************* Module regression
+C: 10, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 19, 4: Method could be a function (no-self-use)
+C: 58, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to UPPER_CASE naming style (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module test_fs
+C: 19, 0: Line too long (127/100) (line-too-long)
+C: 19, 0: Exactly one space required before assignment
+        c.FILE_SIZES   = [0, 1, 2, 15, 16, 17, 255, 256, 257, 1023, 1024, 1025, 65535, 65536, 65537, 1048575, 1048576, 1048577]
+                       ^ (bad-whitespace)
+C: 20, 0: Exactly one space required before assignment
+        c.TEST_DIR     = 'tmp'
+                       ^ (bad-whitespace)
+C: 21, 0: Exactly one space required before assignment
+        c.INDEXES      = range(len(c.FILE_SIZES))
+                       ^ (bad-whitespace)
+C: 22, 0: Exactly one space required before assignment
+        c.INPUT_DIR    = os.path.join(c.TEST_DIR, 'input')
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required before assignment
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                       ^ (bad-whitespace)
+C: 23, 0: Exactly one space required after comma
+        c.INPUT_FILES  = [os.path.join(c.INPUT_DIR,  str(x)) for x in c.FILE_SIZES]
+                                                  ^ (bad-whitespace)
+C: 24, 0: Exactly one space required before assignment
+        c.OUTPUT_DIR   = os.path.join(c.TEST_DIR, 'output')
+                       ^ (bad-whitespace)
+C:142, 0: Line too long (108/100) (line-too-long)
+C:156, 0: Line too long (112/100) (line-too-long)
+C: 18, 4: Class method setUpClass should have 'cls' as first argument (bad-classmethod-argument)
+C: 35, 4: Class method tearDownClass should have 'cls' as first argument (bad-classmethod-argument)
+W: 44,25: Redefining built-in 'input' (redefined-builtin)
+R: 44, 4: Method could be a function (no-self-use)
+R: 97, 4: Too many arguments (7/5) (too-many-arguments)
+R:178, 4: Too many arguments (6/5) (too-many-arguments)
+W:209, 8: Redefining built-in 'input' (redefined-builtin)
+W:237,34: Redefining built-in 'input' (redefined-builtin)
+W:240,53: Redefining built-in 'exec' (redefined-builtin)
+W:271,27: Redefining built-in 'exec' (redefined-builtin)
+W:297, 8: Redefining built-in 'exec' (redefined-builtin)
+R: 16, 0: Too many public methods (27/20) (too-many-public-methods)
+W:  6, 0: Unused import sys (unused-import)Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+
+W:  7, 0: Unused import unittest (unused-import)
+************* Module test_libos
+C: 66, 0: Line too long (104/100) (line-too-long)
+C: 67, 0: Line too long (108/100) (line-too-long)
+C: 68, 0: Line too long (108/100) (line-too-long)
+C: 69, 0: Line too long (108/100) (line-too-long)
+C: 70, 0: Line too long (108/100) (line-too-long)
+C: 71, 0: Line too long (108/100) (line-too-long)
+C: 72, 0: Line too long (108/100) (line-too-long)
+C: 73, 0: Line too long (108/100) (line-too-long)
+C: 74, 0: Line too long (108/100) (line-too-long)
+C: 75, 0: Line too long (108/100) (line-too-long)
+C: 76, 0: Line too long (108/100) (line-too-long)
+C: 77, 0: Line too long (108/100) (line-too-long)
+C: 78, 0: Line too long (108/100) (line-too-long)
+C: 79, 0: Line too long (108/100) (line-too-long)
+C: 80, 0: Line too long (108/100) (line-too-long)
+C: 81, 0: Line too long (109/100) (line-too-long)
+C:200, 0: Line too long (124/100) (line-too-long)
+C:207, 0: Line too long (127/100) (line-too-long)
+C:134, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:135,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:153, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:210, 0: Too many public methods (21/20) (too-many-public-methods)
+************* Module runltp_xml
+E:260, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 36, 4: Constant name "fspath" doesn't conform to UPPER_CASE naming style (invalid-name)
+C: 39, 4: Class name "fspath" doesn't conform to '[A-Z_][A-Za-z0-9]*|TC_\\d\\d_.*' pattern (invalid-name)
+R:118, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:158,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:169,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:171,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:174,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:176,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:195, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:206, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:217, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:335, 4: Too many statements (53/50) (too-many-statements)
+R:442, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+I:471,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:533,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+************* Module test_pal
+C:319, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
+C:258, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:317, 4: Method could be a function (no-self-use)
+W: 23, 4: Unused read_manifest imported from pal_sgx_sign (unused-import)
++ :
++ ./.ci/run-pylint+  -f json
+./.ci/prfilter
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
++ ./.ci/run-shellcheck
+
+In Examples/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected test to end here (don't wrap commands in []/[[]]). Fix any mentioned problems and try again.
+
+
+In Examples/common_tools/benchmark-http.sh line 19:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 22:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 28:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY $DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 39:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Examples/common_tools/benchmark-http.sh line 44:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 45:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 46:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/python-simple/run-tests.sh line 6:
+echo -e "\n\nRunning helloworld.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In Examples/python-simple/run-tests.sh line 12:
+echo -e "\n\nRunning fibonacci.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In Examples/python-simple/run-tests.sh line 18:
+echo -e "\n\nRunning HTTP server dummy-web-server.py in the background:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In Examples/python-simple/run-tests.sh line 22:
+echo -e "\n\nRunning HTTP client test-http.py:"
+     ^-- SC2039: In POSIX sh, echo flags are undefined.
+
+
+In Examples/python-simple/run-tests.sh line 27:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In LibOS/shim/test/native/script1.sh line 1:
+#!/script2.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In LibOS/shim/test/native/script2.sh line 1:
+#!/script3.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In LibOS/shim/test/native/script3.sh line 1:
+#!/helloworld
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 20:
+read SELECT_PGIDS
+^-- SC2162: read without -r will mangle backslashes.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
++ :
++ ./.ci/run-shellcheck -f json
++ ./.ci/prfilter
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
++ cd LibOS
++ make -j 8 glibc-build/Build.success GLIBC_VERSION=2.27
+../Scripts/download --output glibc-2.27.tar.gz --sha256 881ca905e6b5eec724de7948f14d66a07d97bdee8013e1b2a7d021ff5d540522 --url https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz --url https://mirrors.kernel.org/gnu/glibc/glibc-2.27.tar.gz --url https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.27.tar.gz
+download: Trying to fetch https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz
+--2020-04-21 21:49:12--  https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30468265 (29M) [application/x-gzip]
+Saving to: './tmp.E4ZBbZ408X/unverified'
+
+     0K .......... .......... .......... .......... ..........  0%  623K 48s
+    50K .......... .......... .......... .......... ..........  0% 1.37M 34s
+   100K .......... .......... .......... .......... ..........  0% 51.7M 23s
+   150K .......... .......... .......... .......... ..........  0% 1.45M 22s
+   200K .......... .......... .......... .......... ..........  0% 1.41M 22s
+   250K .......... .......... .......... .......... ..........  1% 74.9M 18s
+   300K .......... .......... .......... .......... ..........  1% 1.34M 19s
+   350K .......... .......... .......... .......... ..........  1% 41.2M 16s
+   400K .......... .......... .......... .......... ..........  1% 1.33M 17s
+   450K .......... .......... .......... .......... ..........  1% 20.8M 15s
+   500K .......... .......... .......... .......... ..........  1% 1.35M 16s
+   550K .......... .......... .......... .......... ..........  2% 20.5M 15s
+   600K .......... .......... .......... .......... ..........  2%  767K 16s
+   650K .......... .......... .......... .......... ..........  2% 94.6M 15s
+   700K .......... .......... .......... .......... ..........  2% 82.2M 14s
+   750K .......... .......... .......... .......... ..........  2% 82.8M 13s
+   800K .......... .......... .......... .......... ..........  2% 1.73M 13s
+   850K .......... .......... .......... .......... ..........  3% 1.71M 14s
+   900K .......... .......... .......... .......... ..........  3% 13.1M 13s
+   950K .......... .......... .......... .......... ..........  3% 1.85M 13s
+  1000K .......... .......... .......... .......... ..........  3% 1.53M 13s
+  1050K .......... .......... .......... .......... ..........  3%  629K 15s
+  1100K .......... .......... .......... .......... ..........  3% 94.1M 14s
+  1150K .......... .......... .......... .......... ..........  4% 93.5M 13s
+  1200K .......... .......... .......... .......... ..........  4% 1.12M 14s
+  1250K .......... .......... .......... .......... ..........  4% 1.41M 14s
+  1300K .......... .......... .......... .......... ..........  4% 9.34M 14s
+  1350K .......... .......... .......... .......... ..........  4% 1.53M 14s
+  1400K .......... .......... .......... .......... ..........  4% 1.68M 14s
+  1450K .......... .......... .......... .......... ..........  5% 1.76M 14s
+  1500K .......... .......... .......... .......... ..........  5% 1.96M 14s
+  1550K .......... .......... .......... .......... ..........  5% 8.63M 14s
+  1600K .......... .......... .......... .......... ..........  5% 1.72M 14s
+  1650K .......... .......... .......... .......... ..........  5% 1.75M 14s
+  1700K .......... .......... .......... .......... ..........  5% 1.78M 14s
+  1750K .......... .......... .......... .......... ..........  6% 1.87M 14s
+  1800K .......... .......... .......... .......... ..........  6% 1.94M 14s
+  1850K .......... .......... .......... .......... ..........  6% 6.91M 13s
+  1900K .......... .......... .......... .......... ..........  6% 1.79M 13s
+  1950K .......... .......... .......... .......... ..........  6% 1.83M 13s
+  2000K .......... .......... .......... .......... ..........  6% 1.69M 13s
+  2050K .......... .......... .......... .......... ..........  7% 1.88M 13s
+  2100K .......... .......... .......... .......... ..........  7% 6.60M 13s
+  2150K .......... .......... .......... .......... ..........  7% 1.70M 13s
+  2200K .......... .......... .......... .......... ..........  7% 1.63M 13s
+  2250K .......... .......... .......... .......... ..........  7% 1.90M 13s
+  2300K .......... .......... .......... .......... ..........  7% 1.48M 13s
+  2350K .......... .......... .......... .......... ..........  8% 3.48M 13s
+  2400K .......... .......... .......... .......... ..........  8% 1.32M 13s
+  2450K .......... .......... .......... .......... ..........  8% 1.87M 13s
+  2500K .......... .......... .......... .......... ..........  8% 2.16M 13s
+  2550K .......... .......... .......... .......... ..........  8% 1.91M 13s
+  2600K .......... .......... .......... .......... ..........  8% 4.43M 13s
+  2650K .......... .......... .......... .......... ..........  9% 1.94M 13s
+  2700K .......... .......... .......... .......... ..........  9% 2.09M 13s
+  2750K .......... .......... .......... .......... ..........  9% 4.87M 13s
+  2800K .......... .......... .......... .......... ..........  9% 1.78M 13s
+  2850K .......... .......... .......... .......... ..........  9% 1.87M 13s
+  2900K .......... .......... .......... .......... ..........  9% 1.93M 13s
+  2950K .......... .......... .......... .......... .......... 10% 2.06M 13s
+  3000K .......... .......... .......... .......... .......... 10% 4.29M 13s
+  3050K .......... .......... .......... .......... .......... 10% 1.95M 13s
+  3100K .......... .......... .......... .......... .......... 10% 1.86M 13s
+  3150K .......... .......... .......... .......... .......... 10% 1.82M 13s
+  3200K .......... .......... .......... .......... .......... 10% 1.69M 13s
+  3250K .......... .......... .......... .......... .......... 11% 5.78M 13s
+  3300K .......... .......... .......... .......... .......... 11% 1.98M 13s
+  3350K .......... .......... .......... .......... .......... 11% 1.94M 13s
+  3400K .......... .......... .......... .......... .......... 11% 6.81M 12s
+  3450K .......... .......... .......... .......... .......... 11% 1.86M 12s
+  3500K .......... .......... .......... .......... .......... 11% 1.99M 12s
+  3550K .......... .......... .......... .......... .......... 12% 1.93M 12s
+  3600K .......... .......... .......... .......... .......... 12% 1.93M 12s
+  3650K .......... .......... .......... .......... .......... 12% 3.71M 12s
+  3700K .......... .......... .......... .......... .......... 12% 2.05M 12s
+  3750K .......... .......... .......... .......... .......... 12% 2.11M 12s
+  3800K .......... .......... .......... .......... .......... 12% 4.11M 12s
+  3850K .......... .......... .......... .......... .......... 13% 1.96M 12s
+  3900K .......... .......... .......... .......... .......... 13% 2.15M 12s
+  3950K .......... .......... .......... .......... .......... 13% 2.10M 12s
+  4000K .......... .......... .......... .......... .......... 13% 2.98M 12s
+  4050K .......... .......... .......... .......... .......... 13% 1.98M 12s
+  4100K .......... .......... .......... .......... .......... 13% 2.33M 12s
+  4150K .......... .......... .......... .......... .......... 14% 2.17M 12s
+  4200K .......... .......... .......... .......... .......... 14% 3.34M 12s
+  4250K .......... .......... .......... .......... .......... 14% 1.92M 12s
+  4300K .......... .......... .......... .......... .......... 14% 2.29M 12s
+  4350K .......... .......... .......... .......... .......... 14% 4.57M 12s
+  4400K .......... .......... .......... .......... .......... 14% 1.77M 12s
+  4450K .......... .......... .......... .......... .......... 15% 1.83M 12s
+  4500K .......... .......... .......... .......... .......... 15% 2.36M 12s
+  4550K .......... .......... .......... .......... .......... 15% 4.37M 12s
+  4600K .......... .......... .......... .......... .......... 15% 1.94M 12s
+  4650K .......... .......... .......... .......... .......... 15% 2.23M 12s
+  4700K .......... .......... .......... .......... .......... 15% 2.02M 12s
+  4750K .......... .......... .......... .......... .......... 16% 3.67M 11s
+  4800K .......... .......... .......... .......... .......... 16% 1.73M 11s
+  4850K .......... .......... .......... .......... .......... 16% 1.76M 11s
+  4900K .......... .......... .......... .......... .......... 16% 1.54M 11s
+  4950K .......... .......... .......... .......... .......... 16% 94.9M 11s
+  5000K .......... .......... .......... .......... .......... 16% 1.75M 11s
+  5050K .......... .......... .......... .......... .......... 17% 1.71M 11s
+  5100K .......... .......... .......... .......... .......... 17% 1.72M 11s
+  5150K .......... .......... .......... .......... .......... 17% 1.71M 11s
+  5200K .......... .......... .......... .......... .......... 17% 1.29M 11s
+  5250K .......... .......... .......... .......... .......... 17% 2.49M 11s
+  5300K .......... .......... .......... .......... .......... 17% 1.74M 11s
+  5350K .......... .......... .......... .......... .......... 18% 1.72M 11s
+  5400K .......... .......... .......... .......... .......... 18% 1.82M 11s
+  5450K .......... .......... .......... .......... .......... 18% 1.95M 11s
+  5500K .......... .......... .......... .......... .......... 18% 2.10M 11s
+  5550K .......... .......... .......... .......... .......... 18% 3.15M 11s
+  5600K .......... .......... .......... .......... .......... 18%  786K 11s
+  5650K .......... .......... .......... .......... .......... 19% 2.02M 11s
+  5700K .......... .......... .......... .......... .......... 19% 92.5M 11s
+  5750K .......... .......... .......... .......... .......... 19% 1.70M 11s
+  5800K .......... .......... .......... .......... .......... 19% 1.47M 11s
+  5850K .......... .......... .......... .......... .......... 19% 1.69M 11s
+  5900K .......... .......... .......... .......... .......... 19% 1.43M 11s
+  5950K .......... .......... .......... .......... .......... 20% 1.72M 11s
+  6000K .......... .......... .......... .......... .......... 20% 1.11M 11s
+  6050K .......... .......... .......... .......... .......... 20% 1.46M 11s
+  6100K .......... .......... .......... .......... .......... 20% 1.66M 11s
+  6150K .......... .......... .......... .......... .......... 20% 1.73M 11s
+  6200K .......... .......... .......... .......... .......... 21% 1.51M 11s
+  6250K .......... .......... .......... .......... .......... 21% 1.74M 11s
+  6300K .......... .......... .......... .......... .......... 21% 1.95M 11s
+  6350K .......... .......... .......... .......... .......... 21% 1.93M 11s
+  6400K .......... .......... .......... .......... .......... 21% 1.38M 11s
+  6450K .......... .......... .......... .......... .......... 21% 1.95M 11s
+  6500K .......... .......... .......... .......... .......... 22% 1.75M 11s
+  6550K .......... .......... .......... .......... .......... 22% 1.80M 11s
+  6600K .......... .......... .......... .......... .......... 22% 1.68M 11s
+  6650K .......... .......... .......... .......... .......... 22% 1.35M 11s
+  6700K .......... .......... .......... .......... .......... 22% 1.76M 11s
+  6750K .......... .......... .......... .......... .......... 22% 1.90M 11s
+  6800K .......... .......... .......... .......... .......... 23% 1.52M 11s
+  6850K .......... .......... .......... .......... .......... 23% 1.87M 11s
+  6900K .......... .......... .......... .......... .......... 23% 1.58M 11s
+  6950K .......... .......... .......... .......... .......... 23% 1.92M 11s
+  7000K .......... .......... .......... .......... .......... 23% 1.84M 11s
+  7050K .......... .......... .......... .......... .......... 23% 1.88M 11s
+  7100K .......... .......... .......... .......... .......... 24% 1.88M 11s
+  7150K .......... .......... .......... .......... .......... 24% 1.93M 11s
+  7200K .......... .......... .......... .......... .......... 24% 1.20M 11s
+  7250K .......... .......... .......... .......... .......... 24% 1.84M 11s
+  7300K .......... .......... .......... .......... .......... 24% 1.96M 11s
+  7350K .......... .......... .......... .......... .......... 24% 1.69M 11s
+  7400K .......... .......... .......... .......... .......... 25% 1.94M 11s
+  7450K .......... .......... .......... .......... .......... 25% 1.90M 11s
+  7500K .......... .......... .......... .......... .......... 25% 1.65M 11s
+  7550K .......... .......... .......... .......... .......... 25% 1.75M 11s
+  7600K .......... .......... .......... .......... .......... 25% 1008K 11s
+  7650K .......... .......... .......... .......... .......... 25% 1.74M 11s
+  7700K .......... .......... .......... .......... .......... 26% 1.73M 11s
+  7750K .......... .......... .......... .......... .......... 26% 1.94M 11s
+  7800K .......... .......... .......... .......... .......... 26% 1.96M 11s
+  7850K .......... .......... .......... .......... .......... 26% 2.15M 11s
+  7900K .......... .......... .......... .......... .......... 26% 1.96M 11s
+  7950K .......... .......... .......... .......... .......... 26% 4.49M 11s
+  8000K .......... .......... .......... .......... .......... 27% 1.18M 11s
+  8050K .......... .......... .......... .......... .......... 27% 1.97M 11s
+  8100K .......... .......... .......... .......... .......... 27% 2.14M 11s
+  8150K .......... .......... .......... .......... .......... 27% 1.96M 11s
+  8200K .......... .......... .......... .......... .......... 27% 5.99M 11s
+  8250K .......... .......... .......... .......... .......... 27% 1.94M 11s
+  8300K .......... .......... .......... .......... .......... 28% 2.08M 11s
+  8350K .......... .......... .......... .......... .......... 28% 2.09M 11s
+  8400K .......... .......... .......... .......... .......... 28% 1.71M 11s
+  8450K .......... .......... .......... .......... .......... 28% 1.97M 11s
+  8500K .......... .......... .......... .......... .......... 28% 2.26M 11s
+  8550K .......... .......... .......... .......... .......... 28% 1.95M 11s
+  8600K .......... .......... .......... .......... .......... 29% 1.95M 11s
+  8650K .......... .......... .......... .......... .......... 29% 1.99M 10s
+  8700K .......... .......... .......... .......... .......... 29% 1.95M 10s
+  8750K .......... .......... .......... .......... .......... 29% 2.02M 10s
+  8800K .......... .......... .......... .......... .......... 29% 1.92M 10s
+  8850K .......... .......... .......... .......... .......... 29% 2.00M 10s
+  8900K .......... .......... .......... .......... .......... 30% 4.85M 10s
+  8950K .......... .......... .......... .......... .......... 30% 1.94M 10s
+  9000K .......... .......... .......... .......... .......... 30% 1.19M 10s
+  9050K .......... .......... .......... .......... .......... 30% 17.0M 10s
+  9100K .......... .......... .......... .......... .......... 30% 1.56M 10s
+  9150K .......... .......... .......... .......... .......... 30% 1.23M 10s
+  9200K .......... .......... .......... .......... .......... 31% 1.87M 10s
+  9250K .......... .......... .......... .......... .......... 31%  843K 10s
+  9300K .......... .......... .......... .......... .......... 31% 94.3M 10s
+  9350K .......... .......... .......... .......... .......... 31% 1.22M 10s
+  9400K .......... .......... .......... .......... .......... 31% 1021K 10s
+  9450K .......... .......... .......... .......... .......... 31% 1.87M 10s
+  9500K .......... .......... .......... .......... .......... 32% 1.01M 10s
+  9550K .......... .......... .......... .......... .......... 32% 1.83M 10s
+  9600K .......... .......... .......... .......... .......... 32% 1005K 10s
+  9650K .......... .......... .......... .......... .......... 32% 1015K 10s
+  9700K .......... .......... .......... .......... .......... 32% 1.90M 10s
+  9750K .......... .......... .......... .......... .......... 32% 1.44M 10s
+  9800K .......... .......... .......... .......... .......... 33% 1.07M 10s
+  9850K .......... .......... .......... .......... .......... 33% 1.78M 10s
+  9900K .......... .......... .......... .......... .......... 33% 1.02M 10s
+  9950K .......... .......... .......... .......... .......... 33% 1.80M 10s
+ 10000K .......... .......... .......... .......... .......... 33%  685K 10s
+ 10050K .......... .......... .......... .......... .......... 33% 1.96M 10s
+ 10100K .......... .......... .......... .......... .......... 34% 1001K 10s
+ 10150K .......... .......... .......... .......... .......... 34%  993K 10s
+ 10200K .......... .......... .......... .......... .......... 34% 1000K 10s
+ 10250K .......... .......... .......... .......... .......... 34% 1.81M 10s
+ 10300K .......... .......... .......... .......... .......... 34% 1004K 10s
+ 10350K .......... .......... .......... .......... .......... 34% 1014K 10s
+ 10400K .......... .......... .......... .......... .......... 35%  983K 10s
+ 10450K .......... .......... .......... .......... .......... 35% 1017K 10s
+ 10500K .......... .......... .......... .......... .......... 35% 1004K 10s
+ 10550K .......... .......... .......... .......... .......... 35% 1.86M 10s
+ 10600K .......... .......... .......... .......... .......... 35% 1004K 10s
+ 10650K .......... .......... .......... .......... .......... 35% 1002K 10s
+ 10700K .......... .......... .......... .......... .......... 36% 1.89M 10s
+ 10750K .......... .......... .......... .......... .......... 36% 1005K 10s
+ 10800K .......... .......... .......... .......... .......... 36%  995K 10s
+ 10850K .......... .......... .......... .......... .......... 36% 1021K 10s
+ 10900K .......... .......... .......... .......... .......... 36% 1.86M 10s
+ 10950K .......... .......... .......... .......... .......... 36% 1.00M 10s
+ 11000K .......... .......... .......... .......... .......... 37% 1.85M 10s
+ 11050K .......... .......... .......... .......... .......... 37% 1018K 10s
+ 11100K .......... .......... .......... .......... .......... 37% 1.89M 10s
+ 11150K .......... .......... .......... .......... .......... 37% 1016K 10s
+ 11200K .......... .......... .......... .......... .......... 37% 1007K 10s
+ 11250K .......... .......... .......... .......... .......... 37% 1.88M 10s
+ 11300K .......... .......... .......... .......... .......... 38% 1.02M 10s
+ 11350K .......... .......... .......... .......... .......... 38% 1.81M 10s
+ 11400K .......... .......... .......... .......... .......... 38% 1.89M 10s
+ 11450K .......... .......... .......... .......... .......... 38% 1.02M 10s
+ 11500K .......... .......... .......... .......... .......... 38% 1.79M 10s
+ 11550K .......... .......... .......... .......... .......... 38% 1.86M 10s
+ 11600K .......... .......... .......... .......... .......... 39%  994K 10s
+ 11650K .......... .......... .......... .......... .......... 39% 1.94M 10s
+ 11700K .......... .......... .......... .......... .......... 39% 1.01M 10s
+ 11750K .......... .......... .......... .......... .......... 39% 1.85M 10s
+ 11800K .......... .......... .......... .......... .......... 39% 1.92M 10s
+ 11850K .......... .......... .......... .......... .......... 39% 1.01M 10s
+ 11900K .......... .......... .......... .......... .......... 40% 1.90M 10s
+ 11950K .......... .......... .......... .......... .......... 40% 1.88M 10s
+ 12000K .......... .......... .......... .......... .......... 40% 1012K 10s
+ 12050K .......... .......... .......... .......... .......... 40% 1.90M 10s
+ 12100K .......... .......... .......... .......... .......... 40% 1.91M 10s
+ 12150K .......... .......... .......... .......... .......... 41% 1021K 10s
+ 12200K .......... .......... .......... .......... .......... 41% 1.96M 10s
+ 12250K .......... .......... .......... .......... .......... 41% 1.87M 10s
+ 12300K .......... .......... .......... .......... .......... 41% 1.90M 10s
+ 12350K .......... .......... .......... .......... .......... 41% 1.02M 10s
+ 12400K .......... .......... .......... ..Aborted by Borys
+Sending interrupt signal to process
+........ .......... 41% 1.87M 10s
+ 12450K .......... .......... .......... .......... .......... 42% 1.00M 10s
+ 12500K .......... .......... .......... .......... .......... 42% 1.91M 10s
+ 12550K .......... .......... .......... .......... .......... 42%  953K 10s
+ 12600K .......... .......... .......... .......... .......... 42% 83.0M 10s
+ 12650K .......... .......... .......... .......... .......... 42% 1024K 10s
+ 12700K .......... .......... .......... .......... .......... 42%  664K 10s
+ 12750K .......... .......... .......... .......... .......... 43% 71.9M 10s
+ 12800K .......... .......... .......... .......... .......... 43%  946K 10s
+ 12850K .......... .......... .......... .......... .......... 43%  994K 10s
+ 12900K .......... .......... .......... .......... .......... 43%  975K 10s
+ 12950K .......... .......... .......... .......... .......... 43% 1003K 10s
+ 13000K .......... .......... .......... .......... .......... 43% 1002K 10s
+ 13050K .......... .......... .......... .......... .......... 44%  693K 10s
+ 13100K .......... .......... .......... .......... .......... 44% 1019K 10s
+ 13150K .......... .......... .......... .......... .......... 44%  962K 10s
+ 13200K .......... .......... .......... .......... ........Terminated
+../Scripts/download: line 54:   294 Terminated              wget --timeout=10 -O "$tmpd/unverified" "$url"
+Makefile:110: recipe for target 'glibc-2.27.tar.gz' failed
+make: *** [glibc-2.27.tar.gz] Terminated
+script returned exit code 143
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 52a983e3cbba69f6ce9663a7ff157ca130d77a26ede68b45b6d1f430f34962dd
+$ docker rm -f 52a983e3cbba69f6ce9663a7ff157ca130d77a26ede68b45b6d1f430f34962dd
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of a954b616bbd9bb69c34046137f512c77a70b9a90 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/2577 and message: 'Build finished. '
+Using context: Jenkins-18.04
+Finished: ABORTED

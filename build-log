@@ -1,0 +1,99 @@
+Started by user David Cowhig
+Replayed #3837
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘slave-salminella’ is offline
+Running on slave-salminella in /home/jenkins/workspace/graphene
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 84355a0c51d3e877f3348798fe8a7e53daac8cbb (detached)
+ > git rev-parse 84355a0c51d3e877f3348798fe8a7e53daac8cbb^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 84355a0c51d3e877f3348798fe8a7e53daac8cbb # timeout=10
+Commit message: "[DO NOT MERGE] Make sched_yield() no-op for performance testing"
+ > git rev-list --no-walk 84355a0c51d3e877f3348798fe8a7e53daac8cbb # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 393ff17ad5c64964bc5390c1ab35e170b9a219a7 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  487.4MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+16.04: Pulling from library/ubuntu
+e92ed755c008: Pulling fs layer
+b9fd7cb1ff8f: Pulling fs layer
+ee690f2d57a1: Pulling fs layer
+53e3366ec435: Pulling fs layer
+53e3366ec435: Waiting
+ee690f2d57a1: Download complete
+53e3366ec435: Verifying Checksum
+53e3366ec435: Download complete
+b9fd7cb1ff8f: Verifying Checksum
+b9fd7cb1ff8f: Download complete
+e92ed755c008: Verifying Checksum
+e92ed755c008: Download complete
+e92ed755c008: Pull complete
+b9fd7cb1ff8f: Pull complete
+ee690f2d57a1: Pull complete
+53e3366ec435: Pull complete
+Digest: sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209
+Status: Downloaded newer image for ubuntu:16.04
+ ---> 005d2078bdfa
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Running in 198dfb2b8a7d
+Err:1 http://security.ubuntu.com/ubuntu xenial-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:2 http://archive.ubuntu.com/ubuntu xenial InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Cannot contact slave-salminella: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@1bd4f9a5:slave-salminella": Remote call on slave-salminella failed. The channel is closing down or has closed down
+Could not connect to slave-salminella to send interrupt signal to process
+Aborted by David Cowhig
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: ABORTED

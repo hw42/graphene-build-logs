@@ -1,0 +1,2225 @@
+GitHub pull request #1462 of commit e1935a4232d5a0303955390455a83072f763014a, no merge conflicts.
+Setting status of e1935a4232d5a0303955390455a83072f763014a to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/3840/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read Jenkinsfiles/Linux-Debug
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1462/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1462/merge^{commit} # timeout=10
+Checking out Revision acf966aa4b7c9a7f510d873ad2e34edc0e322971 (refs/remotes/origin/pr/1462/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f acf966aa4b7c9a7f510d873ad2e34edc0e322971 # timeout=20
+Commit message: "Merge e1935a4232d5a0303955390455a83072f763014a into d9ed743a6dd49ed90b9016db2f300b5e8c8bc307"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision acf966aa4b7c9a7f510d873ad2e34edc0e322971 (refs/remotes/origin/pr/1462/merge)
+Commit message: "Merge e1935a4232d5a0303955390455a83072f763014a into d9ed743a6dd49ed90b9016db2f300b5e8c8bc307"
+ > git rev-parse refs/remotes/origin/pr/1462/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1462/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f acf966aa4b7c9a7f510d873ad2e34edc0e322971 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t d4c894b158950e0d5b0a966d4b79c753efc3f840 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  530.9MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 4cfa2e04b81c
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 5a48625d7ccd
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> b5cf0f2baef4
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 009fe6982c9d
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> ffea9c4b401b
+Successfully built ffea9c4b401b
+Successfully tagged d4c894b158950e0d5b0a966d4b79c753efc3f840:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . d4c894b158950e0d5b0a966d4b79c753efc3f840
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug -v /home/jenkins/workspace/graphene-debug:/home/jenkins/workspace/graphene-debug:rw,z -v /home/jenkins/workspace/graphene-debug@tmp:/home/jenkins/workspace/graphene-debug@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** d4c894b158950e0d5b0a966d4b79c753efc3f840 cat
+$ docker top 7fd83508c2f6d12290a71d5aeabc8caf1bbc1a446435a2ab30bb7cfc58f4b71a -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-shellcheck
+
+In Examples/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected "]". Fix any mentioned problems and try again.
+
+
+In Examples/common_tools/benchmark-http.sh line 19:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 22:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 28:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY $DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 39:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Examples/common_tools/benchmark-http.sh line 44:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 45:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 46:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/python-simple/run-tests.sh line 6:
+echo -e "\n\nRunning helloworld.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 12:
+echo -e "\n\nRunning fibonacci.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 18:
+echo -e "\n\nRunning HTTP server dummy-web-server.py in the background:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 22:
+echo -e "\n\nRunning HTTP client test-http.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 27:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In LibOS/shim/test/native/script1.sh line 1:
+#!/script2.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script1.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script2.sh line 1:
+#!/script3.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script2.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script3.sh line 1:
+#!/helloworld
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script3.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 22:
+    for a; do cmd+="'${a//"'"/"'\\''"}' "; done
+                             ^-- SC2140: The double quotes around this do nothing. Remove or escape them.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
++ :
++ ./.ci/run-shellcheck -f json
++ ./.ci/prfilter
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
++ make -j 8 DEBUG=1 WERROR=1 GLIBC_VERSION=2.27
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_mutex.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/pal_error.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.obj/slab.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+--2020-05-05 23:10:04--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+--2020-05-05 23:10:04--  https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/avl_tree.o ]
+Resolving github.com (github.com)... Resolving github.com (github.com)...   [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/graphene/config.o ]
+140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+connected.
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+HTTP request sent, awaiting response... HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strchr.o ]
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2020-05-05 23:10:04--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)...   [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strcmp.o ]
+140.82.113.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.10|:443...   [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strendswith.o ]
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2020-05-05 23:10:04--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)...   [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/strlen.o ]
+connected.
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/string/wordcopy.o ]
+140.82.113.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.10|:443... connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.XD88zYgZil/unverified'
+
+     0K .......... .......... .......... .........200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.cAVUR4f4yo/unverified'
+
+     0K .......... ... .......... 1.70M
+    50K .......... .......... .......... .......... ........... .......... .............. 3.43M
+   100K .......... .......... .......... .......... .......... 20.5M
+   150K .......... .......... .......... ..... .............. 1.72M..
+    50K ...... ............. ..... 19.3M..
+   200K ........ .......... ................. .......... .......... .......... .......... 4.22M
+   250K .......... .......... .......... ...... .............. 3.44M
+   100K ..... ......... ............... 15.8M..
+   300K . ................... .. .................. . ........... 22.5M
+   150K .......... .......... .......... .......... ........... .......... .......... 4.10M
+   350K ......... 4.24M
+   200K ........... ............ ........... .............. . .................. ... 23.9M.
+   250K ............... .... .................. .. ................ 12.6M.. .
+   400K ................... . ................. 26.6M..
+   300K . ................... . ............... ..... .......... 28.6M
+   450K .......... .......... .......... .......... .......... 38.0M
+   500K .......... .......... .......... .......... .......... 48.2M
+   550K .......... .......... .......... .......... .......... 49.9M
+   600K .......... .......... .......... .......... .......... 33.0M
+   650K .......... .......... .......... .......... .......... 15.1M
+   700K .......... .......... .......... ............... ............. 35.1M
+   750K. . ................. ......... ........ ........... 4.15M.
+   350K ...... ............ .............. ....... .......... ........ 15.7M.
+   800K. ......... ........... .......... 21.4M.
+   400K ....... .............. ...... ............. ....... .............. .... 25.8M
+   850K .......... .......... .......... .......... .......... 27.3M
+   900K .............. ........ ........... .......... ............. 7.55M..
+   450K . ................... . 12.7M.
+   950K .................. .. .................. .......... .......... .......... 10.4M
+  1000K .......... .......... .......... .......... .......... .......... 5.33M
+   500K .......... .......... ........ .......... 4.63M
+  1050K .......... .......... .......... .......... .......... 26.5M
+  1100K ...... .......... .......... 4.72M
+   550K .......... .......... .......... .......... .......... 8.10M
+   600K ............ .......... .......... ......... ........... .......... .............. .......... 4.81M
+  1150K .......... ........ .......... 11.5M
+   650K .......... .......... .......... ........... .... ............. 11.7M.
+   700K ....... .......... .......... 6.83M
+  1200K ................ .. .................. ......... .. ...................  ................ 5.38M
+  1250K .......... .......... .......... .......... .......... 8.60M
+  1300K .......... ...... .......... 2.90M
+   750K .......... .......... ............ ............ ......... ............. 18.9M
+   800K .......... .......... .......... .......... .......... 21.2M
+   850K .......... .......... .......... .......... .......... 13.1M.. ..
+   900K. ............... ...... ............. 4.42M.
+  1350K .... .................. .. ................. ..... .......... ................ 12.8M ..
+   950K ................ 16.6M..
+  1400K .......... .......... .......... .......... .......... 17.4M
+  1450K .......... .......... .......... .......... .......... 15.2M
+  1500K .... .......... .......... .......... .......... 4.81M
+  1000K .......... .......... .......... .......... .......... .......... .......... 4.94M
+  1550K .......... .......... .......... ........... ............. ..... 6.35M....... .......... 3.39M
+  1050K .......... .......... ..
+  1600K .......... .......... .......... .......... .......... 5.84M
+  1650K .......... .......... ............... ....... .............. ...... ............ 4.01M
+  1100K .......... .......... .......... .......... .......... 19.4M
+  1150K .......... ......... 4.64M
+  1700K .......... ..                                       6.31M=0.2s
+
+2020-05-05 23:10:04 (6.14 MB/s) - './tmp.cAVUR4f4yo/unverified' saved [1193102]
+
+........ .......... .......... .......... 7.04M
+  1750K .......... .......... .......... .......... .......... 11.4M
+  1800K .......... .......... .......... .......... .......... 7.48M
+  1850K .......... .......... .......... ........download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+.. .......... 14.3M
+  1900K .......... .......... .......... .......... .......... 9.87M
+  1950K .......... .......... .......... .......... .......... 7.93M
+  2000K .......... .......... .......... .......... .......... 13.2M
+  2050K .......... .......... .......... .......... .......... 5.78M
+  2100K .......... .......... .......... .......... .......... 11.7M
+  2150K .......... .......... .......... .......... .......... 10.4M
+  2200K .......... .......... .......... .......... .......... 9.27M
+  2250K .......... .......... .......... .......... .......... 10.5M
+  2300K .......... .......... .......... .......... .......... 8.43M
+  2350K .......... .......... .......... .......... .......... 10.9M
+  2400K .......... .......... .......... .......... .......... 10.9M
+  2450K .......... .......... .......... .......... .......... 10.7M
+  2500K .......... .......... .......... .......... .......... 10.1M
+  2550K .......... .......... .......... .......... .......... 11.1M
+  2600K .......... .......... .......... .......... .......... 9.60M
+  2650K .......... .......... .......... .......... .......... 8.55M
+  2700K .......... .......... .......... .......... .......... 12.9M
+  2750K .......... .......... .......... .......... .......... 8.16M
+  2800K .......... .......... .......... .......... .......... 1.95M
+  2850K .......... .......... .......... .......... .......... 16.4M
+  2900K .......... .......... .......... .......... .......... 9.76M
+  2950K .......... .......... .......... ...                   3.64M=0.4s
+
+2020-05-05 23:10:05 (8.10 MB/s) - './tmp.XD88zYgZil/unverified' saved [3055269]
+
+download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+rm -f -r crypto/mbedtls
+cd crypto && tar -mxzf mbedtls-2.21.0.tar.gz
+cd crypto && tar -mxzf mbedcrypto-3.1.0.tar.gz
+mv crypto/mbedtls-mbedtls-2.21.0 crypto/mbedtls
+rm -f -r crypto/mbedtls/crypto
+mv crypto/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls
+mv crypto/mbedtls/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls/crypto
+cd crypto/mbedtls && patch -p1 < ../mbedtls-2.21.0.diff || exit 255
+patching file library/ssl_tls.c
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && ./scripts/config.pl set MBEDTLS_CMAC_C && make CFLAGS="" SHARED=1 DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls'
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    aes.c
+  CC    aesni.c
+  CC    arc4.c
+  CC    aria.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    base64.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    camellia.c
+  CC    ccm.c
+  CC    chacha20.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    cmac.c
+  CC    ctr_drbg.c
+  CC    des.c
+  CC    dhm.c
+  CC    ecdh.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md4.c
+  CC    md5.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    platform_util.c
+  CC    poly1305.c
+  CC    psa_crypto.c
+  CC    psa_crypto_se.c
+  CC    psa_crypto_slot_management.c
+  CC    psa_crypto_storage.c
+  CC    psa_its_file.c
+  CC    ripemd160.c
+  CC    rsa_internal.c
+  CC    rsa.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    xtea.c
+  CC    /home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/library/error.c
+  CC    /home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/library/version.c
+  CC    /home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/library/version_features.c
+  CC    ../3rdparty/everest/library/everest.c
+  CC    ../3rdparty/everest/library/x25519.c
+  CC    ../3rdparty/everest/library/Hacl_Curve25519_joined.c
+  AR    libmbedcrypto.a
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+  LD    libmbedcrypto.so.4
+  LN    libmbedcrypto.so -> libmbedcrypto.so.4
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  LD    libmbedx509.so.1
+  LN    libmbedx509.so -> libmbedx509.so.1
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    ssl_msg.c
+  CC    ssl_srv.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  LD    libmbedtls.so.13
+  LN    libmbedtls.so -> libmbedtls.so.13
+  AR    libmbedx509.a
+  AR    libmbedtls.a
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/hello.c
+  CC    hash/generic_sum.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify_pss.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/ssl_client1.c
+  CC    ssl/ssl_client2.c
+  CC    ssl/ssl_server.c
+  CC    ssl/ssl_server2.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_mail_client.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_havege.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    test/query_compile_time_config.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/crl_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/req_app.c
+make[6]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/programs/fuzz'
+ cc common.o onefile.o fuzz_privkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_privkey
+ cc common.o onefile.o fuzz_x509csr.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509csr
+ cc common.o onefile.o fuzz_server.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_server
+ cc common.o onefile.o fuzz_x509crt.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crt
+ cc common.o onefile.o fuzz_dtlsclient.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsclient
+ cc common.o onefile.o fuzz_pubkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_pubkey
+ cc common.o onefile.o fuzz_x509crl.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crl
+ cc common.o onefile.o fuzz_client.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_client
+ cc common.o onefile.o fuzz_dtlsserver.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsserver
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/programs/fuzz'
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib/crypto/mbedtls'
+rm -f crypto/mbedtls/include/mbedtls/config.h
+rm -f crypto/mbedtls/crypto/include/mbedtls/config.h
+cp crypto/config.h crypto/mbedtls/crypto/include/mbedtls
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux'
+  [ clone-x86_64.o ]
+  [ db_devices.o ]
+  [ db_eventfd.o ]
+  [ db_events.o ]
+  [ db_exception.o ]
+  [ db_files.o ]
+  [ db_main.o ]
+  [ db_memory.o ]
+  [ db_misc.o ]
+  [ db_mutex.o ]
+  [ db_object.o ]
+  [ db_pipes.o ]
+  [ db_process.o ]
+  [ db_rtld.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_threading.o ]
+  [ bogomips.o ]
+  [ pal.map ]
+  [ libpal-Linux.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux'
+  [ host/Linux/libpal.so ]
+  [ host/Linux/libpal.a ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/../../Runtime/pal-Linux ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/../../Runtime/libpal-Linux.so ]
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+make -C crt_init
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+  [ user_start.o ]
+  [ user_shared_start.o ]
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C LibOS all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS'
+../Scripts/download --output glibc-2.27.tar.gz --sha256 881ca905e6b5eec724de7948f14d66a07d97bdee8013e1b2a7d021ff5d540522 --url https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz --url https://mirrors.kernel.org/gnu/glibc/glibc-2.27.tar.gz --url https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.27.tar.gz
+download: Trying to fetch https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz
+--2020-05-05 23:10:29--  https://ftp.gnu.org/gnu/glibc/glibc-2.27.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30468265 (29M) [application/x-gzip]
+Saving to: './tmp.WSKhh3uH7G/unverified'
+
+     0K .......... .......... .......... .......... ..........  0%  920K 32s
+    50K .......... .......... .......... .......... ..........  0% 1.98M 23s
+   100K .......... .......... .......... .......... ..........  0% 1.77M 21s
+   150K .......... .......... .......... .......... ..........  0% 49.2M 16s
+   200K .......... .......... .......... .......... ..........  0% 2.17M 15s
+   250K .......... .......... .......... .......... ..........  1% 37.0M 13s
+   300K .......... .......... .......... .......... ..........  1% 49.2M 11s
+   350K .......... .......... .......... .......... ..........  1% 2.19M 11s
+   400K .......... .......... .......... .......... ..........  1% 29.3M 10s
+   450K .......... .......... .......... .......... ..........  1% 2.07M 11s
+   500K .......... .......... .......... .......... ..........  1% 36.3M 10s
+   550K .......... .......... .......... .......... ..........  2% 2.05M 10s
+   600K .......... .......... .......... .......... ..........  2% 30.7M 9s
+   650K .......... .......... .......... .......... ..........  2% 2.08M 10s
+   700K .......... .......... .......... .......... ..........  2% 32.1M 9s
+   750K .......... .......... .......... .......... ..........  2% 2.08M 9s
+   800K .......... .......... .......... .......... ..........  2% 21.1M 9s
+   850K .......... .......... .......... .......... ..........  3% 2.11M 9s
+   900K .......... .......... .......... .......... ..........  3% 25.4M 9s
+   950K .......... .......... .......... .......... ..........  3% 2.12M 9s
+  1000K .......... .......... .......... .......... ..........  3% 27.9M 8s
+  1050K .......... .......... .......... .......... ..........  3% 2.06M 9s
+  1100K .......... .......... .......... .......... ..........  3% 31.8M 8s
+  1150K .......... .......... .......... .......... ..........  4% 2.13M 8s
+  1200K .......... .......... .......... .......... ..........  4% 1.77M 9s
+  1250K .......... .......... .......... .......... ..........  4% 47.4M 8s
+  1300K .......... .......... .......... .......... ..........  4% 47.8M 8s
+  1350K .......... .......... .......... .......... ..........  4% 2.07M 8s
+  1400K .......... .......... .......... .......... ..........  4% 2.11M 8s
+  1450K .......... .......... .......... .......... ..........  5% 16.7M 8s
+  1500K .......... .......... .......... .......... ..........  5% 2.02M 8s
+  1550K .......... .......... .......... .......... ..........  5% 2.09M 8s
+  1600K .......... .......... .......... .......... ..........  5% 2.12M 9s
+  1650K .......... .......... .......... .......... ..........  5% 10.9M 8s
+  1700K .......... .......... .......... .......... ..........  5%  991K 9s
+  1750K .......... .......... .......... .......... ..........  6% 46.0M 9s
+  1800K .......... .......... .......... .......... ..........  6% 2.08M 9s
+  1850K .......... .......... .......... .......... ..........  6% 1.90M 9s
+  1900K .......... .......... .......... .......... ..........  6% 49.5M 9s
+  1950K .......... .......... .......... .......... ..........  6% 1.12M 9s
+  2000K .......... .......... .......... .......... ..........  6% 1.53M 9s
+  2050K .......... .......... .......... .......... ..........  7% 1.15M 10s
+  2100K .......... .......... .......... .......... ..........  7% 1.59M 10s
+  2150K .......... .......... .......... .......... ..........  7% 1.83M 10s
+  2200K .......... .......... .......... .......... ..........  7% 1.11M 10s
+  2250K .......... .......... .......... .......... ..........  7%  998K 11s
+  2300K .......... .......... .......... .......... ..........  7% 1017K 11s
+  2350K .......... .......... .......... .......... ..........  8%  951K 11s
+  2400K .......... .......... .......... .......... ..........  8%  676K 12s
+  2450K .......... .......... .......... .......... ..........  8%  847K 12s
+  2500K .......... .......... .......... .......... ..........  8%  762K 13s
+  2550K .......... .......... .......... .......... ..........  8%  833K 13s
+  2600K .......... .......... .......... .......... ..........  8%  866K 13s
+  2650K .......... .......... .......... .......... ..........  9%  672K 14s
+  2700K .......... .......... .......... .......... ..........  9%  703K 14s
+  2750K .......... .......... .......... .......... ..........  9%  671K 15s
+  2800K .......... .......... .......... .......... ..........  9%  400K 16s
+  2850K .......... .......... .......... .......... ..........  9%  760K 16s
+  2900K .......... .......... .......... .......... ..........  9%  764K 16s
+  2950K .......... .......... .......... .......... .......... 10%  567K 17s
+  3000K .......... .......... .......... .......... .......... 10%  829K 17s
+  3050K .......... .......... .......... .......... .......... 10%  841K 17s
+  3100K .......... .......... .......... .......... .......... 10%  860K 17s
+  3150K .......... .......... .......... .......... .......... 10%  840K 17s
+  3200K .......... .......... .......... .......... .......... 10%  576K 18s
+  3250K .......... .......... .......... .......... .......... 11%  842K 18s
+  3300K .......... .......... .......... .......... .......... 11%  840K 18s
+  3350K .......... .......... .......... .......... .......... 11%  843K 18s
+  3400K .......... .......... .......... .......... .......... 11%  834K 18s
+  3450K .......... .......... .......... .......... .......... 11%  860K 19s
+  3500K .......... .......... .......... .......... .......... 11%  868K 19s
+  3550K .......... .......... .......... .......... .......... 12%  875K 19s
+  3600K .......... .......... .......... .......... .......... 12%  818K 19s
+  3650K .......... .......... .......... .......... .......... 12%  884K 19s
+  3700K .......... .......... .......... .......... .......... 12%  898K 19s
+  3750K .......... .......... .......... .......... .......... 12%  870K 19s
+  3800K .......... .......... .......... .......... .......... 12%  868K 19s
+  3850K .......... .......... .......... .......... .......... 13%  851K 20s
+  3900K .......... .......... .......... .......... .......... 13%  869K 20s
+  3950K .......... .......... .......... .......... .......... 13%  868K 20s
+  4000K .......... .......... .......... .......... .......... 13%  858K 20s
+  4050K .......... .......... .......... .......... .......... 13%  871K 20s
+  4100K .......... .......... .......... .......... .......... 13% 1.63M 20s
+  4150K .......... .......... .......... .......... .......... 14%  859K 20s
+  4200K .......... .......... .......... .......... .......... 14%  861K 20s
+  4250K .......... .......... .......... .......... .......... 14% 1.75M 20s
+  4300K .......... .......... .......... .......... .......... 14%  910K 20s
+  4350K .......... .......... .......... .......... .......... 14%  819K 20s
+  4400K .......... .......... .......... .......... .......... 14%  805K 20s
+  4450K .......... .......... .......... .......... .......... 15%  838K 20s
+  4500K .......... .......... .......... .......... .......... 15%  846K 20s
+  4550K .......... .......... .......... .......... .......... 15%  844K 20s
+  4600K .......... .......... .......... .......... .......... 15%  825K 20s
+  4650K .......... .......... .......... .......... .......... 15%  958K 20s
+  4700K .......... .......... .......... .......... .......... 15%  207K 21s
+  4750K .......... .......... .......... .......... .......... 16% 47.8M 21s
+  4800K .......... .......... .......... .......... .......... 16%  995K 21s
+  4850K .......... .......... .......... .......... .......... 16% 1.92M 21s
+  4900K .......... .......... .......... .......... .......... 16%  877K 21s
+  4950K .......... .......... .......... .......... .......... 16%  878K 21s
+  5000K .......... .......... .......... .......... .......... 16%  869K 21s
+  5050K .......... .......... .......... .......... .......... 17% 1.62M 21s
+  5100K .......... .......... .......... .......... .......... 17%  826K 21s
+  5150K .......... .......... .......... .......... .......... 17%  752K 21s
+  5200K .......... .......... .......... .......... .......... 17%  836K 21s
+  5250K .......... .......... .......... .......... .......... 17%  908K 21s
+  5300K .......... .......... .......... .......... .......... 17% 1.54M 21s
+  5350K .......... .......... .......... .......... .......... 18%  878K 21s
+  5400K .......... .......... .......... .......... .......... 18% 1.53M 21s
+  5450K .......... .......... .......... .......... .......... 18%  604K 21s
+  5500K .......... .......... .......... .......... .......... 18% 1.67M 21s
+  5550K .......... .......... .......... .......... .......... 18%  981K 21s
+  5600K .......... .......... .......... .......... .......... 18%  711K 21s
+  5650K .......... .......... .......... .......... .......... 19%  908K 21s
+  5700K .......... .......... .......... .......... .......... 19% 1.10M 21s
+  5750K .......... .......... .......... .......... .......... 19%  993K 21s
+  5800K .......... .......... .......... .......... .......... 19%  989K 21s
+  5850K .......... .......... .......... .......... .......... 19% 1017K 21s
+  5900K .......... .......... .......... .......... .......... 19% 1012K 21s
+  5950K .......... .......... .......... .......... .......... 20% 1.51M 21s
+  6000K .......... .......... .......... .......... .......... 20%  722K 21s
+  6050K .......... .......... .......... .......... .......... 20% 1.00M 21s
+  6100K .......... .......... .......... .......... .......... 20% 1.51M 21s
+  6150K .......... .......... .......... .......... .......... 20% 1008K 21s
+  6200K .......... .......... .......... .......... .......... 21% 1.09M 21s
+  6250K .......... .......... .......... .......... .......... 21% 1.02M 21s
+  6300K .......... .......... .......... .......... .......... 21% 1.50M 21s
+  6350K .......... .......... .......... .......... .......... 21% 1.09M 21s
+  6400K .......... .......... .......... .......... .......... 21%  919K 21s
+  6450K .......... .......... .......... .......... .......... 21% 1.11M 21s
+  6500K .......... .......... .......... .......... .......... 22% 1.56M 20s
+  6550K .......... .......... .......... .......... .......... 22% 1.08M 20s
+  6600K .......... .......... .......... .......... .......... 22% 1.63M 20s
+  6650K .......... .......... .......... .......... .......... 22% 1.09M 20s
+  6700K .......... .......... .......... .......... .......... 22%  674K 20s
+  6750K .......... .......... .......... .......... .......... 22% 8.69M 20s
+  6800K .......... .......... .......... .......... .......... 23%  715K 20s
+  6850K .......... .......... .......... .......... .......... 23%  995K 20s
+  6900K .......... .......... .......... .......... .......... 23% 1.01M 20s
+  6950K .......... .......... .......... .......... .......... 23%  646K 20s
+  7000K .......... .......... .......... .......... .......... 23% 1.90M 20s
+  7050K .......... .......... .......... .......... .......... 23%  681K 20s
+  7100K .......... .......... .......... .......... .......... 24%  650K 20s
+  7150K .......... .......... .......... .......... .......... 24%  675K 20s
+  7200K .......... .......... .......... .......... .......... 24%  497K 20s
+  7250K .......... .......... .......... .......... .......... 24%  666K 20s
+  7300K .......... .......... .......... .......... .......... 24%  656K 20s
+  7350K .......... .......... .......... .......... .......... 24%  468K 21s
+  7400K .......... .......... .......... .......... .......... 25%  349K 21s
+  7450K .......... .......... .......... .......... .......... 25%  400K 21s
+  7500K .......... .......... .......... .......... .......... 25%  458K 21s
+  7550K .......... .......... .......... .......... .......... 25%  494K 21s
+  7600K .......... .......... .......... .......... .......... 25%  337K 22s
+  7650K .......... .......... .......... .......... .......... 25%  553K 22s
+  7700K .......... .......... .......... .......... .......... 26%  577K 22s
+  7750K .......... .......... .......... .......... .......... 26%  565K 22s
+  7800K .......... .......... .......... .......... .......... 26%  668K 22s
+  7850K .......... .......... .......... .......... .......... 26%  666K 22s
+  7900K .......... .......... .......... .......... .......... 26%  815K 22s
+  7950K .......... .......... .......... .......... .......... 26%  672K 22s
+  8000K .......... .......... .......... .......... .......... 27%  535K 22s
+  8050K .......... .......... .......... .......... .......... 27%  834K 22s
+  8100K .......... .......... .......... .......... .......... 27%  938K 22s
+  8150K .......... .......... .......... .......... .......... 27%  801K 22s
+  8200K .......... .......... .......... .......... .......... 27%  778K 22s
+  8250K .......... .......... .......... .......... .......... 27%  966K 22s
+  8300K .......... .......... .......... .......... .......... 28%  832K 22s
+  8350K .......... .......... .......... .......... .......... 28%  664K 22s
+  8400K .......... .......... .......... .......... .......... 28%  498K 22s
+  8450K .......... .......... .......... .......... .......... 28%  744K 22s
+  8500K .......... .......... .......... .......... .......... 28%  800K 22s
+  8550K .......... .......... .......... .......... .......... 28%  786K 22s
+  8600K .......... .......... .......... .......... .......... 29%  804K 22s
+  8650K .......... .......... .......... .......... .......... 29%  987K 22s
+  8700K .......... .......... .......... .......... .......... 29%  662K 22s
+  8750K .......... .......... .......... .......... .......... 29%  991K 22s
+  8800K .......... .......... .......... .......... .......... 29%  492K 22s
+  8850K .......... .......... .......... .......... .......... 29%  680K 22s
+  8900K .......... .......... .......... .......... .......... 30%  667K 22s
+  8950K .......... .......... .......... .......... .......... 30%  766K 22s
+  9000K .......... .......... .......... .......... .......... 30%  666K 22s
+  9050K .......... .......... .......... .......... .......... 30%  798K 22s
+  9100K .......... .......... .......... .......... .......... 30%  686K 22s
+  9150K .......... .......... .......... .......... .......... 30%  787K 22s
+  9200K .......... .......... .......... .......... .......... 31%  584K 22s
+  9250K .......... .......... .......... .......... .......... 31%  965K 22s
+  9300K .......... .......... .......... .......... .......... 31% 1000K 21s
+  9350K .......... .......... .......... .......... .......... 31%  806K 21s
+  9400K .......... .......... .......... .......... .......... 31%  978K 21s
+  9450K .......... .......... .......... .......... .......... 31%  836K 21s
+  9500K .......... .......... .......... .......... .......... 32%  981K 21s
+  9550K .......... .......... .......... .......... .......... 32%  664K 21s
+  9600K .......... .......... .......... .......... .......... 32%  538K 21s
+  9650K .......... .......... .......... .......... .......... 32%  872K 21s
+  9700K .......... .......... .......... .......... .......... 32%  743K 21s
+  9750K .......... .......... .......... .......... .......... 32%  856K 21s
+  9800K .......... .......... .......... .......... .......... 33%  736K 21s
+  9850K .......... .......... .......... .......... .......... 33%  600K 21s
+  9900K .......... .......... .......... .......... .......... 33%  666K 21s
+  9950K .......... .......... .......... .......... .......... 33%  757K 21s
+ 10000K .......... .......... .......... .......... .......... 33%  458K 21s
+ 10050K .......... .......... .......... .......... .......... 33%  761K 21s
+ 10100K .......... .......... .......... .......... .......... 34%  584K 21s
+ 10150K .......... .......... .......... .......... .......... 34%  670K 21s
+ 10200K .......... .......... .......... .......... .......... 34%  539K 21s
+ 10250K .......... .......... .......... .......... .......... 34%  597K 21s
+ 10300K .......... .......... .......... .......... .......... 34%  645K 21s
+ 10350K .......... .......... .......... .......... .......... 34%  664K 21s
+ 10400K .......... .......... .......... .......... .......... 35%  502K 21s
+ 10450K .......... .......... .......... .......... .......... 35%  659K 21s
+ 10500K .......... .......... .......... .......... .......... 35%  502K 21s
+ 10550K .......... .......... .......... .......... .......... 35%  658K 21s
+ 10600K .......... .......... .......... .......... .......... 35%  529K 21s
+ 10650K .......... .......... .......... .......... .......... 35%  609K 21s
+ 10700K .......... .......... .......... .......... .......... 36%  503K 21s
+ 10750K .......... .......... .......... .......... .......... 36%  505K 21s
+ 10800K .......... .......... .......... .......... .......... 36%  400K 21s
+ 10850K .......... .......... .......... .......... .......... 36%  508K 21s
+ 10900K .......... .......... .......... .......... .......... 36%  652K 21s
+ 10950K .......... .......... .......... .......... .......... 36%  664K 21s
+ 11000K .......... .......... .......... .......... .......... 37%  508K 21s
+ 11050K .......... .......... .......... .......... .......... 37%  670K 21s
+ 11100K .......... .......... .......... .......... .......... 37%  661K 21s
+ 11150K .......... .......... .......... .......... .......... 37%  992K 21s
+ 11200K .......... .......... .......... .......... .......... 37%  500K 21s
+ 11250K .......... .......... .......... .......... .......... 37%  459K 21s
+ 11300K .......... .......... .......... .......... .......... 38% 1001K 21s
+ 11350K .......... .......... .......... .......... .......... 38%  992K 21s
+ 11400K .......... .......... .......... .......... .......... 38%  653K 21s
+ 11450K .......... .......... .......... .......... .......... 38%  663K 21s
+ 11500K .......... .......... .......... .......... .......... 38% 1000K 21s
+ 11550K .......... .......... .......... .......... .......... 38%  666K 21s
+ 11600K .......... .......... .......... .......... .......... 39%  499K 21s
+ 11650K .......... .......... .......... .......... .......... 39%  661K 21s
+ 11700K .......... .......... .......... .......... .......... 39%  670K 21s
+ 11750K .......... .......... .......... .......... .......... 39%  651K 21s
+ 11800K .......... .......... .......... .......... .......... 39%  672K 21s
+ 11850K .......... .......... .......... .......... .......... 39%  663K 21s
+ 11900K .......... .......... .......... .......... .......... 40%  500K 21s
+ 11950K .......... .......... .......... .......... .......... 40%  500K 21s
+ 12000K .......... .......... .......... .......... .......... 40%  399K 21s
+ 12050K .......... .......... .......... .......... .......... 40%  398K 21s
+ 12100K .......... .......... .......... .......... .......... 40%  646K 21s
+ 12150K .......... .......... .......... .......... .......... 41%  510K 21s
+ 12200K .......... .......... .......... .......... .......... 41%  648K 21s
+ 12250K .......... .......... .......... .......... .......... 41%  511K 21s
+ 12300K .......... .......... .......... .......... .......... 41%  651K 21s
+ 12350K .......... .......... .......... .......... .......... 41%  511K 21s
+ 12400K .......... .......... .......... .......... .......... 41%  654K 21s
+ 12450K .......... .......... .......... .......... .......... 42%  493K 21s
+ 12500K .......... .......... .......... .......... .......... 42%  666K 21s
+ 12550K .......... .......... .......... .......... .......... 42%  334K 21s
+ 12600K .......... .......... .......... .......... .......... 42%  969K 21s
+ 12650K .......... .......... .......... .......... .......... 42%  498K 21s
+ 12700K .......... .......... .......... .......... .......... 42%  501K 21s
+ 12750K .......... .......... .......... .......... .......... 43%  505K 21s
+ 12800K .......... .......... .......... .......... .......... 43%  403K 21s
+ 12850K .......... .......... .......... .......... .......... 43%  668K 21s
+ 12900K .......... .......... .......... .......... .......... 43%  979K 21s
+ 12950K .......... .......... .......... .......... .......... 43%  673K 20s
+ 13000K .......... .......... .......... .......... .......... 43%  659K 20s
+ 13050K .......... .......... .......... .......... .......... 44%  673K 20s
+ 13100K .......... .......... .......... .......... .......... 44%  991K 20s
+ 13150K .......... .......... .......... .......... .......... 44%  668K 20s
+ 13200K .......... .......... .......... .......... .......... 44%  660K 20s
+ 13250K .......... .......... .......... .......... .......... 44%  994K 20s
+ 13300K .......... .......... .......... .......... .......... 44%  986K 20s
+ 13350K .......... .......... .......... .......... .......... 45%  684K 20s
+ 13400K .......... .......... .......... .......... .......... 45%  998K 20s
+ 13450K .......... .......... .......... .......... .......... 45%  993K 20s
+ 13500K .......... .......... .......... .......... .......... 45%  999K 20s
+ 13550K .......... .......... .......... .......... .......... 45%  994K 20s
+ 13600K .......... .......... .......... .......... .......... 45%  926K 20s
+ 13650K .......... .......... .......... .......... .......... 46%  658K 20s
+ 13700K .......... .......... .......... .......... .......... 46% 1021K 20s
+ 13750K .......... .......... .......... .......... .......... 46%  994K 19s
+ 13800K .......... .......... .......... .......... .......... 46%  666K 19s
+ 13850K .......... .......... .......... .......... .......... 46%  988K 19s
+ 13900K .......... .......... .......... .......... .......... 46%  666K 19s
+ 13950K .......... .......... .......... .......... .......... 47%  652K 19s
+ 14000K .......... .......... .......... .......... .......... 47%  497K 19s
+ 14050K .......... .......... .......... .......... .......... 47%  675K 19s
+ 14100K .......... .......... .......... .......... .......... 47%  497K 19s
+ 14150K .......... .......... .......... .......... .......... 47%  653K 19s
+ 14200K .......... .......... .......... .......... .......... 47%  285K 19s
+ 14250K .......... .......... .......... .......... .......... 48%  332K 19s
+ 14300K .......... .......... .......... .......... .......... 48%  396K 19s
+ 14350K .......... .......... .......... .......... .......... 48%  394K 19s
+ 14400K .......... .......... .......... .......... .......... 48%  392K 19s
+ 14450K .......... .......... .......... .......... .......... 48%  504K 19s
+ 14500K .......... .......... .......... .......... .......... 48%  623K 19s
+ 14550K .......... .......... .......... .......... .......... 49%  509K 19s
+ 14600K .......... .......... .......... .......... .......... 49%  667K 19s
+ 14650K .......... .......... .......... .......... .......... 49%  664K 19s
+ 14700K .......... .......... .......... .......... .......... 49%  669K 19s
+ 14750K .......... .......... .......... .......... .......... 49%  917K 19s
+ 14800K .......... .......... .......... .......... .......... 49%  503K 19s
+ 14850K .......... .......... .......... .......... .......... 50%  696K 19s
+ 14900K .......... .......... .......... .......... .......... 50%  932K 19s
+ 14950K .......... .......... .......... .......... .......... 50%  968K 19s
+ 15000K .......... .......... .......... .......... .......... 50%  694K 19s
+ 15050K .......... .......... .......... .......... .......... 50%  941K 19s
+ 15100K .......... .......... .......... .......... .......... 50%  695K 19s
+ 15150K .......... .......... .......... .......... .......... 51%  988K 18s
+ 15200K .......... .......... .......... .......... .......... 51%  668K 18s
+ 15250K .......... .......... .......... .......... .......... 51%  955K 18s
+ 15300K .......... .......... .......... .......... .......... 51%  997K 18s
+ 15350K .......... .......... .......... .......... .......... 51%  994K 18s
+ 15400K .......... .......... .......... .......... .......... 51% 1.02M 18s
+ 15450K .......... .......... .......... .......... .......... 52% 1014K 18s
+ 15500K .......... .......... .......... .......... .......... 52% 1.63M 18s
+ 15550K .......... .......... .......... .......... .......... 52%  985K 18s
+ 15600K .......... .......... .......... .......... .......... 52%  722K 18s
+ 15650K .......... .......... .......... .......... .......... 52% 1.56M 18s
+ 15700K .......... .......... .......... .......... .......... 52% 1022K 18s
+ 15750K .......... .......... .......... .......... .......... 53% 1.04M 18s
+ 15800K .......... .......... .......... .......... .......... 53% 1.64M 17s
+ 15850K .......... .......... .......... .......... .......... 53% 1.01M 17s
+ 15900K .......... .......... .......... .......... .......... 53% 1.02M 17s
+ 15950K .......... .......... .......... .......... .......... 53% 1.65M 17s
+ 16000K .......... .......... .......... .......... .......... 53% 1002K 17s
+ 16050K .......... .......... .......... .......... .......... 54% 1.06M 17s
+ 16100K .......... .......... .......... .......... .......... 54% 1.67M 17s
+ 16150K .......... .......... .......... .......... .......... 54% 1.02M 17s
+ 16200K .......... .......... .......... .......... .......... 54% 1.75M 17s
+ 16250K .......... .......... .......... .......... .......... 54% 1.04M 17s
+ 16300K .......... .......... .......... .......... .......... 54% 1.82M 17s
+ 16350K .......... .......... .......... .......... .......... 55% 1.06M 17s
+ 16400K .......... .......... .......... .......... .......... 55% 1007K 16s
+ 16450K .......... .......... .......... .......... .......... 55% 1.70M 16s
+ 16500K .......... .......... .......... .......... .......... 55% 1.04M 16s
+ 16550K .......... .......... .......... .......... .......... 55% 1.86M 16s
+ 16600K .......... .......... .......... .......... .......... 55% 1.83M 16s
+ 16650K .......... .......... .......... .......... .......... 56% 1.04M 16s
+ 16700K .......... .......... .......... .......... .......... 56% 1.79M 16s
+ 16750K .......... .......... .......... .......... .......... 56% 1.04M 16s
+ 16800K .......... .......... .......... .......... .......... 56% 1.75M 16s
+ 16850K .......... .......... .......... .......... .......... 56% 1.04M 16s
+ 16900K .......... .......... .......... .......... .......... 56% 1.89M 16s
+ 16950K .......... .......... .......... .......... .......... 57% 1.83M 16s
+ 17000K .......... .......... .......... .......... .......... 57% 1.04M 16s
+ 17050K .......... .......... .......... .......... .......... 57% 1.89M 15s
+ 17100K .......... .......... .......... .......... .......... 57% 1.89M 15s
+ 17150K .......... .......... .......... .......... .......... 57%  682K 15s
+ 17200K .......... .......... .......... .......... .......... 57% 21.5M 15s
+ 17250K .......... .......... .......... .......... .......... 58% 1.02M 15s
+ 17300K .......... .......... .......... .......... .......... 58%  998K 15s
+ 17350K .......... .......... .......... .......... .......... 58% 1.76M 15s
+ 17400K .......... .......... .......... .......... .......... 58% 1.02M 15s
+ 17450K .......... .......... .......... .......... .......... 58% 1.77M 15s
+ 17500K .......... .......... .......... .......... .......... 58% 1.03M 15s
+ 17550K .......... .......... .......... .......... .......... 59% 1018K 15s
+ 17600K .......... .......... .......... .......... .......... 59% 1003K 15s
+ 17650K .......... .......... .......... .......... .......... 59% 1.78M 15s
+ 17700K .......... .......... .......... .......... .......... 59% 1.02M 14s
+ 17750K .......... .......... .......... .......... .......... 59% 1.88M 14s
+ 17800K .......... .......... .......... .......... .......... 59% 1015K 14s
+ 17850K .......... .......... .......... .......... .......... 60% 1.91M 14s
+ 17900K .......... .......... .......... .......... .......... 60% 1.82M 14s
+ 17950K .......... .......... .......... .......... .......... 60% 1.01M 14s
+ 18000K .......... .......... .......... .......... .......... 60% 1007K 14s
+ 18050K .......... .......... .......... .......... .......... 60% 1.92M 14s
+ 18100K .......... .......... .......... .......... .......... 60% 1016K 14s
+ 18150K .......... .......... .......... .......... .......... 61% 1.88M 14s
+ 18200K .......... .......... .......... .......... .......... 61% 1.75M 14s
+ 18250K .......... .......... .......... .......... .......... 61% 1.06M 14s
+ 18300K .......... .......... .......... .......... .......... 61% 1.74M 14s
+ 18350K .......... .......... .......... .......... .......... 61% 1.93M 13s
+ 18400K .......... .......... .......... .......... .......... 62% 1007K 13s
+ 18450K .......... .......... .......... .......... .......... 62% 1.93M 13s
+ 18500K .......... .......... .......... .......... .......... 62% 1.05M 13s
+ 18550K .......... .......... .......... .......... .......... 62% 1.71M 13s
+ 18600K .......... .......... .......... .......... .......... 62% 1.90M 13s
+ 18650K .......... .......... .......... .......... .......... 62% 1.06M 13s
+ 18700K .......... .......... .......... .......... .......... 63% 1.70M 13s
+ 18750K .......... .......... .......... .......... .......... 63% 1.92M 13s
+ 18800K .......... .......... .......... .......... .......... 63% 1009K 13s
+ 18850K .......... .......... .......... .......... .......... 63% 1.91M 13s
+ 18900K .......... .......... .......... .......... .......... 63% 1.05M 13s
+ 18950K .......... .......... .......... .......... .......... 63% 1.74M 13s
+ 19000K .......... .......... .......... .......... .......... 64% 1.91M 13s
+ 19050K .......... .......... .......... .......... .......... 64% 1.06M 12s
+ 19100K .......... .......... .......... .......... .......... 64% 1.92M 12s
+ 19150K .......... .......... .......... .......... .......... 64% 1.73M 12s
+ 19200K .......... .......... .......... .......... .......... 64% 1.07M 12s
+ 19250K .......... .......... .......... .......... .......... 64% 1.75M 12s
+ 19300K .......... .......... .......... .......... .......... 65% 1.84M 12s
+ 19350K .......... .......... .......... .......... .......... 65% 1.92M 12s
+ 19400K .......... .......... .......... .......... .......... 65% 1.09M 12s
+ 19450K .......... .......... .......... .......... .......... 65% 1.92M 12s
+ 19500K .......... .......... .......... .......... .......... 65% 1.74M 12s
+ 19550K .......... .......... .......... .......... .......... 65% 1.91M 12s
+ 19600K .......... .......... .......... .......... .......... 66% 1.03M 12s
+ 19650K .......... .......... .......... .......... .......... 66% 1.90M 12s
+ 19700K .......... .......... .......... .......... .......... 66% 1.83M 12s
+ 19750K .......... .......... .......... .......... .......... 66% 1.87M 11s
+ 19800K .......... .......... .......... .......... .......... 66% 1.75M 11s
+ 19850K .......... .......... .......... .......... .......... 66% 1.06M 11s
+ 19900K .......... .......... .......... .......... .......... 67% 1.83M 11s
+ 19950K .......... .......... .......... .......... .......... 67% 1.01M 11s
+ 20000K .......... .......... .......... .......... .......... 67% 1022K 11s
+ 20050K .......... .......... .......... .......... .......... 67% 1.75M 11s
+ 20100K .......... .......... .......... .......... .......... 67% 1.06M 11s
+ 20150K .......... .......... .......... .......... .......... 67% 1.65M 11s
+ 20200K .......... .......... .......... .......... .......... 68% 1.01M 11s
+ 20250K .......... .......... .......... .......... .......... 68% 1.78M 11s
+ 20300K .......... .......... .......... .......... .......... 68% 1012K 11s
+ 20350K .......... .......... .......... .......... .......... 68% 1009K 11s
+ 20400K .......... .......... .......... .......... .......... 68%  693K 11s
+ 20450K .......... .......... .......... .......... .......... 68% 1004K 11s
+ 20500K .......... .......... .......... .......... .......... 69%  960K 10s
+ 20550K .......... .......... .......... .......... .......... 69% 1.01M 10s
+ 20600K .......... .......... .......... .......... .......... 69%  996K 10s
+ 20650K .......... .......... .......... .......... .......... 69%  983K 10s
+ 20700K .......... .......... .......... .......... .......... 69%  991K 10s
+ 20750K .......... .......... .......... .......... .......... 69%  993K 10s
+ 20800K .......... .......... .......... .......... .......... 70%  667K 10s
+ 20850K .......... .......... .......... .......... .......... 70%  688K 10s
+ 20900K .......... .......... .......... .......... .......... 70%  996K 10s
+ 20950K .......... .......... .......... .......... .......... 70%  983K 10s
+ 21000K .......... .......... .......... .......... .......... 70%  998K 10s
+ 21050K .......... .......... .......... .......... .......... 70% 1002K 10s
+ 21100K .......... .......... .......... .......... .......... 71% 1002K 10s
+ 21150K .......... .......... .......... .......... .......... 71% 1024K 10s
+ 21200K .......... .......... .......... .......... .......... 71%  963K 10s
+ 21250K .......... .......... .......... .......... .......... 71% 1002K 10s
+ 21300K .......... .......... .......... .......... .......... 71% 1.05M 10s
+ 21350K .......... .......... .......... .......... .......... 71% 1.68M 9s
+ 21400K .......... .......... .......... .......... .......... 72% 1005K 9s
+ 21450K .......... .......... .......... .......... .......... 72% 1.03M 9s
+ 21500K .......... .......... .......... .......... .......... 72% 1.73M 9s
+ 21550K .......... .......... .......... .......... .......... 72% 1019K 9s
+ 21600K .......... .......... .......... .......... .......... 72%  981K 9s
+ 21650K .......... .......... .......... .......... .......... 72% 1.01M 9s
+ 21700K .......... .......... .......... .......... .......... 73% 1.83M 9s
+ 21750K .......... .......... .......... .......... .......... 73% 1022K 9s
+ 21800K .......... .......... .......... .......... .......... 73% 1.05M 9s
+ 21850K .......... .......... .......... .......... .......... 73% 1.70M 9s
+ 21900K .......... .......... .......... .......... .......... 73% 1.06M 9s
+ 21950K .......... .......... .......... .......... .......... 73% 1.67M 9s
+ 22000K .......... .......... .......... .......... .......... 74% 1019K 9s
+ 22050K .......... .......... .......... .......... .......... 74% 1.05M 9s
+ 22100K .......... .......... .......... .......... .......... 74% 1.92M 9s
+ 22150K .......... .......... .......... .......... .......... 74% 1.67M 8s
+ 22200K .......... .......... .......... .......... .......... 74%  980K 8s
+ 22250K .......... .......... .......... .......... .......... 74% 1.09M 8s
+ 22300K .......... .......... .......... .......... .......... 75%  993K 8s
+ 22350K .......... .......... .......... .......... .......... 75%  999K 8s
+ 22400K .......... .......... .......... .......... .......... 75%  657K 8s
+ 22450K .......... .......... .......... .......... .......... 75%  672K 8s
+ 22500K .......... .......... .......... .......... .......... 75%  994K 8s
+ 22550K .......... .......... .......... .......... .......... 75%  669K 8s
+ 22600K .......... .......... .......... .......... .......... 76%  666K 8s
+ 22650K .......... .......... .......... .......... .......... 76%  660K 8s
+ 22700K .......... .......... .......... .......... .......... 76%  654K 8s
+ 22750K .......... .......... .......... .......... .......... 76%  677K 8s
+ 22800K .......... .......... .......... .......... .......... 76%  392K 8s
+ 22850K .......... .......... .......... .......... .......... 76%  665K 8s
+ 22900K .......... .......... .......... .......... .......... 77%  644K 8s
+ 22950K .......... .......... .......... .......... .......... 77%  502K 8s
+ 23000K .......... .......... .......... .......... .......... 77%  663K 8s
+ 23050K .......... .......... .......... .......... .......... 77%  498K 8s
+ 23100K .......... .......... .......... .......... .......... 77%  666K 8s
+ 23150K .......... .......... .......... .......... .......... 77%  502K 7s
+ 23200K .......... .......... .......... .......... .......... 78%  658K 7s
+ 23250K .......... .......... .......... .......... .......... 78%  504K 7s
+ 23300K .......... .......... .......... .......... .......... 78%  659K 7s
+ 23350K .......... .......... .......... .......... .......... 78%  504K 7s
+ 23400K .......... .......... .......... .......... .......... 78%  655K 7s
+ 23450K .......... .......... .......... .......... .......... 78%  483K 7s
+ 23500K .......... .......... .......... .......... .......... 79%  663K 7s
+ 23550K .......... .......... .......... .......... .......... 79%  502K 7s
+ 23600K .......... .......... .......... .......... .......... 79%  399K 7s
+ 23650K .......... .......... .......... .......... .......... 79%  672K 7s
+ 23700K .......... .......... .......... .......... .......... 79%  657K 7s
+ 23750K .......... .......... .......... .......... .......... 79%  663K 7s
+ 23800K .......... .......... .......... .......... .......... 80%  501K 7s
+ 23850K .......... .......... .......... .......... .......... 80%  667K 7s
+ 23900K .......... .......... .......... .......... .......... 80%  506K 7s
+ 23950K .......... .......... .......... .......... .......... 80%  662K 7s
+ 24000K .......... .......... .......... .......... .......... 80%  396K 7s
+ 24050K .......... .......... .......... .......... .......... 80%  989K 7s
+ 24100K .......... .......... .......... .......... .......... 81%  502K 7s
+ 24150K .......... .......... .......... .......... .......... 81%  654K 6s
+ 24200K .......... .......... .......... .......... .......... 81%  668K 6s
+ 24250K .......... .......... .......... .......... .......... 81%  673K 6s
+ 24300K .......... .......... .......... .......... .......... 81%  675K 6s
+ 24350K .......... .......... .......... .......... .......... 82%  658K 6s
+ 24400K .......... .......... .......... .......... .......... 82%  500K 6s
+ 24450K .......... .......... .......... .......... .......... 82%  666K 6s
+ 24500K .......... .......... .......... .......... .......... 82%  952K 6s
+ 24550K .......... .......... .......... .......... .......... 82%  687K 6s
+ 24600K .......... .......... .......... .......... .......... 82%  930K 6s
+ 24650K .......... .......... .......... .......... .......... 83%  682K 6s
+ 24700K .......... .......... .......... .......... .......... 83%  971K 6s
+ 24750K .......... .......... .......... .......... .......... 83%  996K 6s
+ 24800K .......... .......... .......... .......... .......... 83%  657K 6s
+ 24850K .......... .......... .......... .......... .......... 83%  981K 6s
+ 24900K .......... .......... .......... .......... .......... 83% 1006K 6s
+ 24950K .......... .......... .......... .......... .......... 84%  988K 6s
+ 25000K .......... .......... .......... .......... .......... 84%  987K 5s
+ 25050K .......... .......... .......... .......... .......... 84%  672K 5s
+ 25100K .......... .......... .......... .......... .......... 84%  972K 5s
+ 25150K .......... .......... .......... .......... .......... 84%  683K 5s
+ 25200K .......... .......... .......... .......... .......... 84%  667K 5s
+ 25250K .......... .......... .......... .......... .......... 85%  953K 5s
+ 25300K .......... .......... .......... .......... .......... 85%  691K 5s
+ 25350K .......... .......... .......... .......... .......... 85%  938K 5s
+ 25400K .......... .......... .......... .......... .......... 85%  981K 5s
+ 25450K .......... .......... .......... .......... .......... 85%  716K 5s
+ 25500K .......... .......... .......... .......... .......... 85% 1000K 5s
+ 25550K .......... .......... .......... .......... .......... 86%  974K 5s
+ 25600K .......... .......... .......... .......... .......... 86%  677K 5s
+ 25650K .......... .......... .......... .......... .......... 86%  965K 5s
+ 25700K .......... .......... .......... .......... .......... 86%  996K 5s
+ 25750K .......... .......... .......... .......... .......... 86%  994K 5s
+ 25800K .......... .......... .......... .......... .......... 86%  995K 5s
+ 25850K .......... .......... .......... .......... .......... 87%  967K 5s
+ 25900K .......... .......... .......... .......... .......... 87%  679K 4s
+ 25950K .......... .......... .......... .......... .......... 87%  975K 4s
+ 26000K .......... .......... .......... .......... .......... 87%  653K 4s
+ 26050K .......... .......... .......... .......... .......... 87%  692K 4s
+ 26100K .......... .......... .......... .......... .......... 87%  978K 4s
+ 26150K .......... .......... .......... .......... .......... 88%  983K 4s
+ 26200K .......... .......... .......... .......... .......... 88%  686K 4s
+ 26250K .......... .......... .......... .......... .......... 88%  951K 4s
+ 26300K .......... .......... .......... .......... .......... 88%  998K 4s
+ 26350K .......... .......... .......... .......... .......... 88%  974K 4s
+ 26400K .......... .......... .......... .......... .......... 88%  661K 4s
+ 26450K .......... .......... .......... .......... .......... 89%  993K 4s
+ 26500K .......... .......... .......... .......... .......... 89%  989K 4s
+ 26550K .......... .......... .......... .......... .......... 89%  815K 4s
+ 26600K .......... .......... .......... .......... .......... 89%  693K 4s
+ 26650K .......... .......... .......... .......... .......... 89%  884K 4s
+ 26700K .......... .......... .......... .......... .......... 89%  797K 4s
+ 26750K .......... .......... .......... .......... .......... 90%  695K 3s
+ 26800K .......... .......... .......... .......... .......... 90%  585K 3s
+ 26850K .......... .......... .......... .......... .......... 90%  435K 3s
+ 26900K .......... .......... .......... .......... .......... 90% 1.89M 3s
+ 26950K .......... .......... .......... .......... .......... 90%  666K 3s
+ 27000K .......... .......... .......... .......... .......... 90%  670K 3s
+ 27050K .......... .......... .......... .......... .......... 91%  681K 3s
+ 27100K .......... .......... .......... .......... .......... 91%  671K 3s
+ 27150K .......... .......... .......... .......... .......... 91%  975K 3s
+ 27200K .......... .......... .......... .......... .......... 91%  666K 3s
+ 27250K .......... .......... .......... .......... .......... 91%  675K 3s
+ 27300K .......... .......... .......... .......... .......... 91%  985K 3s
+ 27350K .......... .......... .......... .......... .......... 92%  995K 3s
+ 27400K .......... .......... .......... .......... .......... 92%  992K 3s
+ 27450K .......... .......... .......... .......... .......... 92%  780K 3s
+ 27500K .......... .......... .......... .......... .......... 92%  594K 3s
+ 27550K .......... .......... .......... .......... .......... 92%  991K 3s
+ 27600K .......... .......... .......... .......... .......... 92%  938K 2s
+ 27650K .......... .......... .......... .......... .......... 93%  688K 2s
+ 27700K .......... .......... .......... .......... .......... 93%  964K 2s
+ 27750K .......... .......... .......... .......... .......... 93% 1.56M 2s
+ 27800K .......... .......... .......... .......... .......... 93%  855K 2s
+ 27850K .......... .......... .......... .......... .......... 93%  900K 2s
+ 27900K .......... .......... .......... .......... .......... 93%  916K 2s
+ 27950K .......... .......... .......... .......... .......... 94%  902K 2s
+ 28000K .......... .......... .......... .......... .......... 94%  616K 2s
+ 28050K .......... .......... .......... .......... .......... 94% 1.58M 2s
+ 28100K .......... .......... .......... .......... .......... 94%  866K 2s
+ 28150K .......... .......... .......... .......... .......... 94%  824K 2s
+ 28200K .......... .......... .......... .......... .......... 94%  831K 2s
+ 28250K .......... .......... .......... .......... .......... 95% 1.47M 2s
+ 28300K .......... .......... .......... .......... .......... 95%  528K 2s
+ 28350K .......... .......... .......... .......... .......... 95% 1.52M 2s
+ 28400K .......... .......... .......... .......... .......... 95%  469K 2s
+ 28450K .......... .......... .......... .......... .......... 95%  822K 1s
+ 28500K .......... .......... .......... .......... .......... 95%  633K 1s
+ 28550K .......... .......... .......... .......... .......... 96%  843K 1s
+ 28600K .......... .......... .......... .......... .......... 96% 1001K 1s
+ 28650K .......... .......... .......... .......... .......... 96% 1007K 1s
+ 28700K .......... .......... .......... .......... .......... 96% 1003K 1s
+ 28750K .......... .......... .......... .......... .......... 96%  969K 1s
+ 28800K .......... .......... .......... .......... .......... 96%  506K 1s
+ 28850K .......... .......... .......... .......... .......... 97% 1009K 1s
+ 28900K .......... .......... .......... .......... .......... 97%  654K 1s
+ 28950K .......... .......... .......... .......... .......... 97%  505K 1s
+ 29000K .......... .......... .......... .......... .......... 97%  653K 1s
+ 29050K .......... .......... .......... .......... .......... 97%  505K 1s
+ 29100K .......... .......... .......... .......... .......... 97%  660K 1s
+ 29150K .......... .......... .......... .......... .......... 98%  502K 1s
+ 29200K .......... .......... .......... .......... .......... 98%  498K 1s
+ 29250K .......... .......... .......... .......... .......... 98%  665K 1s
+ 29300K .......... .......... .......... .......... .......... 98%  670K 0s
+ 29350K .......... .......... .......... .......... .......... 98%  670K 0s
+ 29400K .......... .......... .......... .......... .......... 98%  669K 0s
+ 29450K .......... .......... .......... .......... .......... 99%  658K 0s
+ 29500K .......... .......... .......... .......... .......... 99%  672K 0s
+ 29550K .......... .......... .......... .......... .......... 99%  502K 0s
+ 29600K .......... .......... .......... .......... .......... 99%  335K 0s
+ 29650K .......... .......... .......... .......... .......... 99%  488K 0s
+ 29700K .......... .......... .......... .......... .......... 99%  495K 0s
+ 29750K ....                                                  100% 40.8M=36s
+
+2020-05-05 23:11:05 (837 KB/s) - './tmp.WSKhh3uH7G/unverified' saved [30468265/30468265]
+
+download: Fetched 'glibc-2.27.tar.gz' (881ca905...) successfully.
+rm -f -r glibc-2.27
+tar -xzf glibc-2.27.tar.gz
+cd glibc-2.27 && \
+for p in glibc-patches/glibc-2.27.patch glibc-patches/syscalldb-api.patch glibc-patches/liblibos.patch glibc-patches/hp-timing-2.23+.patch; do \
+	echo applying $p; \
+	patch -p1 < ../$p || exit 255; \
+done
+applying glibc-patches/glibc-2.27.patch
+patching file elf/dl-load.c
+patching file elf/Makefile
+patching file elf/rtld.c
+patching file elf/Versions
+patching file Makeconfig
+Hunk #2 succeeded at 1206 with fuzz 1 (offset 105 lines).
+patching file Makefile
+patching file sysdeps/unix/sysv/linux/x86_64/cancellation.S
+patching file sysdeps/unix/sysv/linux/x86_64/clone.S
+patching file sysdeps/unix/sysv/linux/x86_64/getcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/____longjmp_chk.S
+patching file sysdeps/unix/sysv/linux/x86_64/lowlevellock.S
+patching file sysdeps/unix/sysv/linux/x86_64/setcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/sigaction.c
+patching file sysdeps/unix/sysv/linux/x86_64/swapcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/syscall.S
+patching file sysdeps/unix/sysv/linux/x86_64/sysdep.h
+patching file sysdeps/unix/sysv/linux/x86_64/vfork.S
+patching file sysdeps/x86_64/dl-machine.h
+patching file sysdeps/x86_64/nptl/tls.h
+patching file shlib-versions
+Hunk #1 succeeded at 29 (offset -35 lines).
+applying glibc-patches/syscalldb-api.patch
+patching symbolic link elf/syscallas.S
+patching symbolic link elf/syscalldb.c
+patching file syscallas.S
+patching file syscalldb.c
+patching file syscalldb.h
+patching symbolic link sysdeps/unix/sysv/linux/x86_64/syscalldb.h
+applying glibc-patches/liblibos.patch
+patching file libos/Makefile
+patching file libos/Versions
+patching file libos/wrapper.c
+applying glibc-patches/hp-timing-2.23+.patch
+patching file sysdeps/x86_64/hp-timing.h
+touch glibc-2.27/configure
+mkdir -p glibc-build
+(cd glibc-build || exit 1; \
+CFLAGS=$GLIBC_CFLAGS ../glibc-2.27/configure --prefix=/home/jenkins/workspace/graphene-debug/LibOS/../Runtime \
+	--with-tls \
+	--without-selinux \
+	--disable-test \
+	--disable-nscd \
+)
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc tile x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... no
+checking sysdep dirs... sysdeps/unix/sysv/linux/x86_64/64 sysdeps/unix/sysv/linux/x86_64 sysdeps/unix/sysv/linux/x86 sysdeps/x86/nptl sysdeps/unix/sysv/linux/wordsize-64 sysdeps/x86_64/nptl sysdeps/unix/sysv/linux sysdeps/nptl sysdeps/pthread sysdeps/gnu sysdeps/unix/inet sysdeps/unix/sysv sysdeps/unix/x86_64 sysdeps/unix sysdeps/posix sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether as is GNU as... yes
+checking whether ld is GNU ld... yes
+checking for as... as
+checking version of as... 2.26.1, ok
+checking for ld... ld
+checking version of ld... 2.26.1, ok
+checking for gnumake... no
+checking for gmake... no
+checking for make... make
+checking version of make... 4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... msgfmt
+checking version of msgfmt... 0.19.7, ok
+checking for makeinfo... makeinfo
+checking version of makeinfo... 6.1, ok
+checking for sed... sed
+checking version of sed... 4.2.2, ok
+checking for gawk... gawk
+checking version of gawk... 4.1.3, ok
+checking for bison... bison
+checking version of bison... 3.0.4, ok
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+checking LD_LIBRARY_PATH variable... ok
+checking for bash... /bin/bash
+checking for perl... /usr/bin/perl
+checking for install-info... no
+checking for .set assembler directive... yes
+checking linker support for protected data symbol... yes
+checking linker support for INSERT in linker script... yes
+checking for broken __attribute__((alias()))... no
+checking whether to put _rtld_local into .sdata section... no
+checking whether to use .ctors/.dtors header and trailer... no
+checking for libunwind-support in compiler... no
+checking whether --noexecstack is desirable for .S files... yes
+checking for -z combreloc... yes
+checking for linker that supports -z execstack... yes
+checking for linker that supports --no-dynamic-linker... yes
+checking for -static-pie... no
+checking for -fpie... yes
+checking for --hash-style option... yes
+checking for sufficient default -shared layout... no
+checking for GLOB_DAT reloc... yes
+checking linker output format... elf64-x86-64
+checking for -fno-toplevel-reorder -fno-section-anchors... yes
+checking for -mtls-dialect=gnu2... yes
+checking whether cc puts quotes around section names... no
+checking for __builtin_memset... yes
+checking for redirection of built-in functions... yes
+checking for compiler option to disable generation of FMA instructions... -ffp-contract=off
+checking if gcc accepts -fno-tree-loop-distribute-patterns with __attribute__ ((__optimize__))... yes
+checking for libgd... no
+checking for _FORTIFY_SOURCE predefine... no
+checking whether the linker provides working __ehdr_start... yes
+checking for __builtin_trap with no external dependencies... yes
+checking whether the C++ compiler supports thread_local... yes
+running configure fragment for sysdeps/unix/sysv/linux/x86_64/64
+running configure fragment for sysdeps/unix/sysv/linux/x86_64
+running configure fragment for sysdeps/unix/sysv/linux
+checking installed Linux kernel header files... 3.2.0 or later
+checking for kernel header at least 3.2.0... ok
+checking for symlinks in /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/include... ok
+running configure fragment for sysdeps/gnu
+running configure fragment for sysdeps/unix/inet
+running configure fragment for sysdeps/x86_64
+checking for AVX512DQ support in assembler... yes
+checking for AVX512 support... yes
+checking for Intel MPX support... yes
+checking whether -fPIC is default... no
+checking whether -fPIE is default... no
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing default commands
+Building glibc, may take a while to finish. Warning messages may show up. If this process terminates with failures, see "glibc-build/build.log" for more information.
+(make -C glibc-build 2>&1 >> build.log) && touch glibc-build/Build.success
+*** errlist.c count 134 inflated to GLIBC_2.12 count 135 (old errno.h?)
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/crt1.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/crti.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/crtn.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/ld-linux-x86-64.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libc.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libdl.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libc.so.6 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/liblibos.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libm.so.6 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libutil.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libpthread.so.0 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libthread_db.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libnss_dns.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/libresolv.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/../Runtime/librt.so.1 ]
+make -C shim all
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim'
+make -C src
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/src'
+  [ shim_async.o ]
+  [ generated-offsets.s ]
+  [ shim_debug.o ]
+  [ shim_malloc.o ]
+  [ shim_object.o ]
+  [ shim_parser.o ]
+  [ shim_init.o ]
+  [ shim_syscalls.o ]
+  [ shim_table.o ]
+  [ start.o ]
+  [ bookkeep/shim_handle.o ]
+  [ bookkeep/shim_signal.o ]
+  [ bookkeep/shim_thread.o ]
+  [ bookkeep/shim_vma.o ]
+  [ elf/shim_rtld.o ]
+  [ fs/shim_dcache.o ]
+  [ fs/shim_fs.o ]
+  [ fs/shim_fs_hash.o ]
+  [ fs/shim_fs_pseudo.o ]
+  [ fs/shim_namei.o ]
+  [ fs/chroot/fs.o ]
+  [ fs/dev/attestation.o ]
+  [ fs/dev/fs.o ]
+  [ fs/dev/null.o ]
+  [ fs/dev/random.o ]
+  [ fs/dev/std.o ]
+  [ fs/dev/zero.o ]
+  [ fs/eventfd/fs.o ]
+  [ fs/pipe/fs.o ]
+  [ fs/proc/fs.o ]
+  [ fs/proc/info.o ]
+  [ fs/proc/ipc-thread.o ]
+  [ fs/proc/thread.o ]
+  [ fs/socket/fs.o ]
+  [ fs/str/fs.o ]
+  [ ipc/shim_ipc.o ]
+  [ ipc/shim_ipc_child.o ]
+  [ ipc/shim_ipc_helper.o ]
+  [ ipc/shim_ipc_pid.o ]
+  [ ipc/shim_ipc_sysv.o ]
+  [ sys/shim_access.o ]
+  [ sys/shim_alarm.o ]
+  [ sys/shim_benchmark.o ]
+  [ sys/shim_brk.o ]
+  [ sys/shim_clone.o ]
+  [ sys/shim_dup.o ]
+  [ sys/shim_epoll.o ]
+  [ sys/shim_eventfd.o ]
+  [ sys/shim_exec.o ]
+  [ sys/shim_exit.o ]
+  [ sys/shim_fcntl.o ]
+  [ sys/shim_fork.o ]
+  [ sys/shim_fs.o ]
+  [ sys/shim_futex.o ]
+  [ sys/shim_getcwd.o ]
+  [ sys/shim_getpid.o ]
+  [ sys/shim_getrlimit.o ]
+  [ sys/shim_ioctl.o ]
+  [ sys/shim_migrate.o ]
+  [ sys/shim_mmap.o ]
+  [ sys/shim_msgget.o ]
+  [ sys/shim_open.o ]
+  [ sys/shim_pipe.o ]
+  [ sys/shim_poll.o ]
+  [ sys/shim_sched.o ]
+  [ sys/shim_semget.o ]
+  [ sys/shim_sigaction.o ]
+  [ sys/shim_sleep.o ]
+  [ sys/shim_socket.o ]
+  [ sys/shim_stat.o ]
+  [ sys/shim_time.o ]
+  [ sys/shim_uname.o ]
+  [ sys/shim_vfork.o ]
+  [ sys/shim_wait.o ]
+  [ sys/shim_wrappers.o ]
+  [ utils/md5.o ]
+  [ utils/printf.o ]
+  [ utils/strobjs.o ]
+  [ vdso/vdso.o ]
+  [ vdso/vdso-note.o ]
+make -C ../../../Pal/lib target=/home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/
+  [ asm-offsets.h ]
+  [ shim_checkpoint.o ]
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ syscallas.o ]
+  [ vdso/.vdso-linked-for-reloc-check.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ check_no_reloc vdso/.vdso-linked-for-reloc-check.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ vdso/vdso.so.dbg ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ vdso/vdso.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ vdso/vdso-data.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ libsysdb.a ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/../../../Runtime/libsysdb.a ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/.lib/graphene-lib.a ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ libsysdb.so ]
+  [ libsysdb_debug.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/../../../Runtime/libsysdb.so ]
+  [ /home/jenkins/workspace/graphene-debug/LibOS/shim/src/../../../Runtime/libsysdb_debug.so ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/src'
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS'
+make -C Runtime all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Runtime'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Runtime'
++ make -j 8 DEBUG=1 WERROR=1 GLIBC_VERSION=2.27 test
+make -C Scripts test
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make[1]: Nothing to be done for 'test'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make -C Pal test
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C src test
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+make -C host/Linux test
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux'
+make[3]: Nothing to be done for 'test'.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux'
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+make -C crt_init test
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+make[2]: Nothing to be done for 'test'.
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+make -C regression
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/regression'
+make -C ../crt_init all
+make -C ../lib target=/home/jenkins/workspace/graphene-debug/Pal/regression/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+  [ manifest ]
+  [ AvxDisable.manifest ]
+  [ Bootstrap2.manifest ]
+  [ Bootstrap3.manifest ]
+  [ Bootstrap4.manifest ]
+  [ Bootstrap5.manifest ]
+  [ Bootstrap6.manifest ]
+  [ Bootstrap7.manifest ]
+  [ File.manifest ]
+  [ Process.manifest ]
+  [ Process2.manifest ]
+  [ Process3.manifest ]
+  [ SendHandle.manifest ]
+  [ Thread2.manifest ]
+  [ Thread2_exitless.manifest ]
+  [ nonelf_binary.manifest ]
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/regression/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ Preload1.so ]
+  [ Preload2.so ]
+  [ ..Bootstrap ]
+  [ AtomicMath ]
+  [ AttestationReport ]
+  [ Bootstrap ]
+  [ avl_tree_test ]
+  [ AvxDisable ]
+  [ Bootstrap2 ]
+  [ Bootstrap3 ]
+  [ Bootstrap7 ]
+  [ Directory ]
+  [ Event ]
+  [ Event2 ]
+  [ Exception ]
+  [ Exception2 ]
+  [ Exit ]
+  [ Failure ]
+  [ File ]
+  [ File2 ]
+  [ HelloWorld ]
+  [ Hex ]
+  [ Memory ]
+  [ Misc ]
+  [ Pie ]
+  [ Pipe ]
+  [ Process ]
+  [ Process2 ]
+  [ Process3 ]
+  [ Process4 ]
+  [ Segment ]
+  [ Select ]
+  [ Semaphore ]
+  [ SendHandle ]
+  [ Sleep ]
+  [ Socket ]
+  [ Symbols ]
+  [ Tcp ]
+  [ Thread ]
+  [ Thread2 ]
+  [ Udp ]
+  [ Wait ]
+  [ Yield ]
+  [ normalize_path ]
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/regression'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C LibOS test
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS'
+make -C shim test
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim'
+make -C test
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test'
+for d in regression native fs inline benchmark; do \
+	make -C $d all || exit 255; \
+done
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/regression'
+ln -sf /home/jenkins/workspace/graphene-debug/Runtime/pal_loader
+  [ abort ]
+  [ abort_multithread ]
+  [ attestation ]
+  [ bootstrap ]
+  [ bootstrap_pie ]
+  [ bootstrap_static ]
+  [ cpuid ]
+  [ dev ]
+  [ epoll_wait_timeout ]
+  [ eventfd ]
+  [ exec ]
+  [ exec_invalid_args ]
+  [ exec_same ]
+  [ exec_victim ]
+  [ exit ]
+  [ exit_group ]
+  [ fdleak ]
+  [ file_check_policy ]
+  [ file_size ]
+  [ fopen_cornercases ]
+  [ fork_and_exec ]
+  [ fstat_cwd ]
+  [ futex_bitset ]
+  [ futex_requeue ]
+  [ futex_timeout ]
+  [ futex_wake_op ]
+  [ getcwd ]
+  [ getdents ]
+  [ getsockopt ]
+  [ host_root_fs ]
+  [ init_fail ]
+  [ large_mmap ]
+  [ large_dir_read ]
+  [ mmap_file ]
+  [ mprotect_file_fork ]
+  [ multi_pthread ]
+  [ openmp ]
+  [ pipe ]
+  [ poll ]
+  [ poll_many_types ]
+  [ ppoll ]
+  [ proc ]
+  [ proc_path ]
+  [ proc_cpuinfo ]
+  [ pselect ]
+  [ readdir ]
+  [ sched ]
+  [ select ]
+  [ shared_object ]
+  [ sigaltstack ]
+  [ sighandler_reset ]
+  [ sigprocmask ]
+  [ spinlock ]
+  [ stat_invalid_args ]
+  [ str_close_leak ]
+  [ syscall ]
+  [ system ]
+  [ tcp_ipv6_v6only ]
+  [ tcp_msg_peek ]
+  [ udp ]
+  [ unix ]
+  [ vfork_and_exec ]
+  [ bootstrap_c++ ]
+  [ echo.manifest ]
+  [ file_check_policy_allow_all_but_log.manifest ]
+  [ file_check_policy_strict.manifest ]
+  [ multi_pthread_exitless.manifest ]
+  [ sh.manifest ]
+  [ manifest ]
+  [ attestation.manifest ]
+  [ eventfd.manifest ]
+  [ exec_victim.manifest ]
+  [ exit_group.manifest ]
+  [ futex_bitset.manifest ]
+  [ futex_requeue.manifest ]
+  [ futex_wake_op.manifest ]
+  [ getdents.manifest ]
+  [ host_root_fs.manifest ]
+  [ init_fail.manifest ]
+  [ large_mmap.manifest ]
+  [ mmap_file.manifest ]
+  [ multi_pthread.manifest ]
+  [ openmp.manifest ]
+  [ proc_path.manifest ]
+  [ shared_object.manifest ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/regression'
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/native'
+ln -sf /home/jenkins/workspace/graphene-debug/Runtime/pal_loader
+  [ brk ]
+  [ alarm ]
+  [ clone ]
+  [ cpuinfo ]
+  [ dir ]
+  [ condvar ]
+  [ divzero ]
+  [ dup ]
+  [ epoll ]
+  [ epoll_socket ]
+  [ errno ]
+  [ exec_fork ]
+  [ file ]
+  [ fork ]
+  [ fork_bomb ]
+  [ fork_exec ]
+  [ fs ]
+  [ futextest ]
+  [ get_time ]
+  [ helloworld ]
+  [ helloworld_pthread ]
+  [ kill ]
+  [ malloc ]
+  [ meminfo ]
+  [ msg_create ]
+  [ msg_create_libos ]
+  [ msg_send ]
+  [ msg_send_libos ]
+  [ multiproc ]
+  [ multisleep ]
+  [ pause ]
+  [ pid_alloc ]
+  [ pid_kill ]
+  [ pipe ]
+  [ pipe_latency ]
+  [ readdir ]
+  [ rename ]
+  [ script ]
+  [ sem ]
+  [ sleep ]
+  [ socketpair ]
+  [ sqrt ]
+  [ start ]
+  [ sync ]
+  [ system ]
+  [ tcp ]
+  [ test_start_pthread_m ]
+  [ time ]
+  [ vfork ]
+  [ vfork_exec ]
+  [ ls.manifest ]
+  [ manifest ]
+  [ exec_fork.manifest ]
+  [ script.manifest ]
+  [ static.manifest ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/native'
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/fs'
+ln -sf /home/jenkins/workspace/graphene-debug/Runtime/pal_loader
+  [ common.o ]
+  [ common_copy.o ]
+  [ manifest ]
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_rev.c common.o common_copy.o   -o copy_mmap_rev
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_seq.c common.o common_copy.o   -o copy_mmap_seq
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_whole.c common.o common_copy.o   -o copy_mmap_whole
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    copy_rev.c common.o common_copy.o   -o copy_rev
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    copy_seq.c common.o common_copy.o   -o copy_seq
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    copy_whole.c common.o common_copy.o   -o copy_whole
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    delete.c common.o   -o delete
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    open_close.c common.o   -o open_close
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    open_flags.c common.o   -o open_flags
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    read_write.c common.o   -o read_write
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    seek_tell.c common.o   -o seek_tell
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    stat.c common.o   -o stat
+gcc -Wall -std=c11 -gdwarf-2 -g3 -DDEBUG -Werror    truncate.c common.o   -o truncate
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/fs'
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/inline'
+Makefile:33: warning: overriding recipe for target 'crt_init-recurse'
+Makefile:25: warning: ignoring old recipe for target 'crt_init-recurse'
+ln -sf /home/jenkins/workspace/graphene-debug/Runtime/pal_loader
+make -C /home/jenkins/workspace/graphene-debug/Pal/src/../crt_init/ all
+  [ manifest ]
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/crt_init'
+  [ fork ]
+  [ helloworld ]
+  [ vfork ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/inline'
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/benchmark'
+ln -sf /home/jenkins/workspace/graphene-debug/Runtime/pal_loader
+  [ fork_latency ]
+  [ rpc_latency ]
+  [ rpc_latency2 ]
+  [ sig_latency ]
+  [ start ]
+  [ test_start ]
+  [ manifest ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test/benchmark'
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim/test'
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS/shim'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/LibOS'
+make -C Runtime test
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Runtime'
+make[1]: Nothing to be done for 'test'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Runtime'
+[Pipeline] sh
++ cd Pal/src
++ make -j 8 PAL_HOST=Skeleton DEBUG=1 WERROR=1
+  [ host/Skeleton/.obj/db_events.o ]
+  [ host/Skeleton/.obj/db_exception.o ]
+  [ host/Skeleton/.obj/db_main.o ]
+  [ host/Skeleton/.obj/db_memory.o ]
+  [ host/Skeleton/.obj/db_misc.o ]
+  [ host/Skeleton/.obj/db_mutex.o ]
+  [ host/Skeleton/.obj/db_object.o ]
+  [ host/Skeleton/.obj/db_process.o ]
+  [ host/Skeleton/.obj/db_rtld.o ]
+  [ host/Skeleton/.obj/db_streams.o ]
+  [ host/Skeleton/.obj/db_threading.o ]
+  [ host/Skeleton/.obj/pal_error.o ]
+  [ host/Skeleton/.obj/printf.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/
+  [ host/Skeleton/.obj/slab.o ]
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/udivmodti4.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/graphene/config.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/strendswith.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/string/wordcopy.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton/.lib/graphene-lib.a ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src/host/Skeleton'
+  [ db_files.o ]
+  [ db_devices.o ]
+  [ db_pipes.o ]
+  [ db_eventfd.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+In file included from db_files.c:24:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_files.o' failed
+make[1]: *** [db_files.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from db_devices.c:24:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_devices.o' failed
+make[1]: *** [db_devices.o] Error 1
+In file included from db_pipes.c:24:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_pipes.o' failed
+make[1]: *** [db_pipes.o] Error 1
+In file included from db_eventfd.c:24:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_eventfd.o' failed
+make[1]: *** [db_eventfd.o] Error 1
+In file included from db_sockets.c:25:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_sockets.o' failed
+make[1]: *** [db_sockets.o] Error 1
+In file included from db_streams.c:25:0:
+../../../include/pal/pal.h:63:20: fatal error: atomic.h: No such file or directory
+compilation terminated.
+Makefile:23: recipe for target 'db_streams.o' failed
+make[1]: *** [db_streams.o] Error 1
+make[1]: *** wait: No child processes.  Stop.
+Makefile:94: recipe for target 'host_lib_recurse' failed
+make: *** [host_lib_recurse] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 7fd83508c2f6d12290a71d5aeabc8caf1bbc1a446435a2ab30bb7cfc58f4b71a
+$ docker rm -f 7fd83508c2f6d12290a71d5aeabc8caf1bbc1a446435a2ab30bb7cfc58f4b71a
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of e1935a4232d5a0303955390455a83072f763014a to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/3840/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+ERROR: script returned exit code 2
+Finished: FAILURE

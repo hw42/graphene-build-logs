@@ -1,0 +1,1271 @@
+GitHub pull request #1466 of commit 8d337c5de54a303a6ec3eddbb6efe24d7983c5cd, no merge conflicts.
+Setting status of 8d337c5de54a303a6ec3eddbb6efe24d7983c5cd to PENDING with url https://leeroy.cs.unc.edu/job/graphene/3934 and message: 'Build started for merge commit.'
+Using context: Jenkins
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene@script to read ./Jenkinsfiles/Linux
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1466/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1466/merge^{commit} # timeout=10
+Checking out Revision 2b0e7c59ddf663624c3767478e3cd7564c9500ee (refs/remotes/origin/pr/1466/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2b0e7c59ddf663624c3767478e3cd7564c9500ee # timeout=10
+Commit message: "Merge 8d337c5de54a303a6ec3eddbb6efe24d7983c5cd into f25510a2590a760c0c97e6c65cacf429ea03b011"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘slave-beaker12’ is reserved for jobs with matching label expression; ‘slave-constantine’ is reserved for jobs with matching label expression; ‘slave-gonzo’ is reserved for jobs with matching label expression; ‘slave-salminella’ is reserved for jobs with matching label expression
+Running on slave-pepe in /home/jenkins/workspace/graphene
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 2b0e7c59ddf663624c3767478e3cd7564c9500ee (refs/remotes/origin/pr/1466/merge)
+Commit message: "Merge 8d337c5de54a303a6ec3eddbb6efe24d7983c5cd into f25510a2590a760c0c97e6c65cacf429ea03b011"
+ > git rev-parse refs/remotes/origin/pr/1466/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1466/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2b0e7c59ddf663624c3767478e3cd7564c9500ee # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 393ff17ad5c64964bc5390c1ab35e170b9a219a7 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  487.9MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libexpat1        libexpat1-dev        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 4cfa2e04b81c
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 5a48625d7ccd
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> b5cf0f2baef4
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 009fe6982c9d
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> ffea9c4b401b
+Successfully built ffea9c4b401b
+Successfully tagged 393ff17ad5c64964bc5390c1ab35e170b9a219a7:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 393ff17ad5c64964bc5390c1ab35e170b9a219a7
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene -v /home/jenkins/workspace/graphene:/home/jenkins/workspace/graphene:rw,z -v /home/jenkins/workspace/graphene@tmp:/home/jenkins/workspace/graphene@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 393ff17ad5c64964bc5390c1ab35e170b9a219a7 cat
+$ docker top db160dcb3d93a0d9358f7f29d6e04ee4ab4094c72ca19eb276d1aa6ef0b04e11 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-shellcheck
+
+In Examples/bash/scripts/bash_test.sh line 4:
+[ $times -gt 0 2> /dev/null ] || times=300
+^-- SC1073: Couldn't parse this test expression.
+               ^-- SC1072: Expected "]". Fix any mentioned problems and try again.
+
+
+In Examples/common_tools/benchmark-http.sh line 19:
+touch $RESULT
+      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 22:
+while [ $RUN -lt $LOOP ]
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 28:
+        ab $OPTIONS -n $REQUESTS -c $CONCURRENCY $DOWNLOAD_HOST/$DOWNLOAD_FILE > OUTPUT || exit $?
+                                    ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 39:
+    RUN=$(expr $RUN + 1)
+          ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Examples/common_tools/benchmark-http.sh line 44:
+    THROUGHPUT=$(echo ${THROUGHPUTS[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 45:
+    LATENCY=$(echo ${LATENCIES[$CONCURRENCY]} | tr " " "\n" | sort -n | awk '{a[NR]=$0}END{if(NR%2==1)print a[int(NR/2)+1];else print(a[NR/2-1]+a[NR/2])/2}')
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/common_tools/benchmark-http.sh line 46:
+    echo "$THROUGHPUT,$LATENCY" >> $RESULT
+                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Examples/python-simple/run-tests.sh line 6:
+echo -e "\n\nRunning helloworld.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 12:
+echo -e "\n\nRunning fibonacci.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 18:
+echo -e "\n\nRunning HTTP server dummy-web-server.py in the background:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 22:
+echo -e "\n\nRunning HTTP client test-http.py:"
+     ^-- SC2039: In POSIX sh, echo flags are not supported.
+
+
+In Examples/python-simple/run-tests.sh line 27:
+kill `cat server.PID`
+     ^-- SC2046: Quote this to prevent word splitting.
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In LibOS/shim/test/native/script1.sh line 1:
+#!/script2.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script1.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script2.sh line 1:
+#!/script3.sh
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script2.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In LibOS/shim/test/native/script3.sh line 1:
+#!/helloworld
+^-- SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/ksh.
+
+
+In LibOS/shim/test/native/script3.sh line 2:
+
+^-- SC1014: Couldn't read any commands.
+
+
+In Pal/src/host/Linux-SGX/debugger/gdb line 3:
+DIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+              ^-- SC2046: Quote this to prevent word splitting.
+                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 3:
+ID=`id -u`
+^-- SC2034: ID appears unused. Verify it or export it.
+   ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 4:
+PGIDS=`ps -a -o pgid,command | tail -n +2 | \
+      ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 11:
+	ps -p $PGID -o pid,args 2> /dev/null | tail -n +2
+              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 36:
+	PIDS=`ps -a -o pgid,pid --sort=start_time 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 42:
+		STAT=`ps -a -p $PID -o stat | tail -n +2`
+                     ^-- SC2006: Use $(..) instead of legacy `..`.
+                               ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 44:
+			printf "    %3d: process %5d (DEAD):" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 46:
+			printf "    %3d: process %5d       :" $CNT $PID
+                                                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 50:
+			printf " %5d" ${TASK##*/}
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 53:
+		CNT=`expr $CNT + 1`
+                    ^-- SC2006: Use $(..) instead of legacy `..`.
+                     ^-- SC2003: expr is antiquated. Consider rewriting this using $((..)), ${} or [[ ]].
+
+
+In Scripts/list-all-graphene.sh line 60:
+	PIDS=`ps -a -o pgid,pid 2> /dev/null | tail -n +2 | \
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/list-all-graphene.sh line 62:
+	kill -9 $PGID $PIDS
+                ^-- SC2086: Double quote to prevent globbing and word splitting.
+                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 69:
+		do_kill $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 71:
+		do_list $PGID
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 80:
+			do_kill $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/list-all-graphene.sh line 82:
+			do_list $PGID
+                                ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 14:
+pgid=`ps -o pgid= $$`
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 16:
+command="$@"
+        ^-- SC2124: Assigning an array to a string! Assign as array, or use * instead of @ to concatenate.
+
+
+In Scripts/memusg line 19:
+if [ $pgid = $(ps -o pgid= $(ps -o ppid= $$)) ]; then
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
+             ^-- SC2046: Quote this to prevent word splitting.
+                           ^-- SC2046: Quote this to prevent word splitting.
+
+
+In Scripts/memusg line 22:
+    for a; do cmd+="'${a//"'"/"'\\''"}' "; done
+                             ^-- SC2140: The double quotes around this do nothing. Remove or escape them.
+
+
+In Scripts/memusg line 27:
+case `uname` in
+     ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 28:
+    Darwin|*BSD) sizes() { /bin/ps -o rss= -g $1; } ;;
+                                              ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 29:
+    Linux) sizes() { /bin/ps -o rss= -$1; } ;;
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 30:
+    *) echo "`uname`: unsupported operating system" >&2; exit 2 ;;
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In Scripts/memusg line 38:
+while sizes=`sizes $pgid`
+            ^-- SC2006: Use $(..) instead of legacy `..`.
+                   ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 40:
+    set -- $sizes
+           ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In Scripts/memusg line 48:
+monpid=$!
+^-- SC2034: monpid appears unused. Verify it or export it.
+
+
+In Scripts/memusg line 50:
+echo "running: exec $@"
+                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
++ :
++ ./.ci/run-shellcheck -f json
++ ./.ci/prfilter
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
++ cd LibOS
++ make -j 8 glibc-build/Build.success GLIBC_VERSION=2.23
+../Scripts/download --output glibc-2.23.tar.gz --sha256 2bd08abb24811cda62e17e61e9972f091f02a697df550e2e44ddcfb2255269d2 --url https://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz --url https://mirrors.kernel.org/gnu/glibc/glibc-2.23.tar.gz --url https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.23.tar.gz
+download: Trying to fetch https://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz
+--2020-05-07 17:13:40--  https://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 27186449 (26M) [application/x-gzip]
+Saving to: './tmp.rCxzD68XAj/unverified'
+
+     0K .......... .......... .......... .......... ..........  0%  875K 30s
+    50K .......... .......... .......... .......... ..........  0% 1.81M 22s
+   100K .......... .......... .......... .......... ..........  0%  933K 24s
+   150K .......... .......... .......... .......... ..........  0% 30.0M 18s
+   200K .......... .......... .......... .......... ..........  0% 46.3M 15s
+   250K .......... .......... .......... .......... ..........  1% 2.13M 14s
+   300K .......... .......... .......... .......... ..........  1% 34.4M 12s
+   350K .......... .......... .......... .......... ..........  1% 1.89M 12s
+   400K .......... .......... .......... .......... ..........  1% 25.1M 11s
+   450K .......... .......... .......... .......... ..........  1%  984K 13s
+   500K .......... .......... .......... .......... ..........  2% 42.9M 12s
+   550K .......... .......... .......... .......... ..........  2% 41.5M 11s
+   600K .......... .......... .......... .......... ..........  2% 2.12M 11s
+   650K .......... .......... .......... .......... ..........  2% 16.5M 10s
+   700K .......... .......... .......... .......... ..........  2% 1.99M 10s
+   750K .......... .......... .......... .......... ..........  3%  959K 11s
+   800K .......... .......... .......... .......... ..........  3% 1.77M 11s
+   850K .......... .......... .......... .......... ..........  3% 43.8M 11s
+   900K .......... .......... .......... .......... ..........  3% 2.11M 11s
+   950K .......... .......... .......... .......... ..........  3% 1.85M 11s
+  1000K .......... .......... .......... .......... ..........  3% 1.86M 11s
+  1050K .......... .......... .......... .......... ..........  4% 1.84M 11s
+  1100K .......... .......... .......... .......... ..........  4% 1.84M 11s
+  1150K .......... .......... .......... .......... ..........  4% 21.3M 11s
+  1200K .......... .......... .......... .......... ..........  4%  995K 11s
+  1250K .......... .......... .......... .......... ..........  4% 1.79M 11s
+  1300K .......... .......... .......... .......... ..........  5% 1.90M 11s
+  1350K .......... .......... .......... .......... ..........  5% 2.04M 11s
+  1400K .......... .......... .......... .......... ..........  5% 12.0M 11s
+  1450K .......... .......... .......... .......... ..........  5% 1.79M 11s
+  1500K .......... .......... .......... .......... ..........  5% 1.85M 11s
+  1550K .......... .......... .......... .......... ..........  6% 1.86M 11s
+  1600K .......... .......... .......... .......... ..........  6% 1.86M 11s
+  1650K .......... .......... .......... .......... ..........  6% 1.85M 11s
+  1700K .......... .......... .......... .......... ..........  6% 1.71M 11s
+  1750K .......... .......... .......... .......... ..........  6% 1.91M 11s
+  1800K .......... .......... .......... .......... ..........  6%  637K 12s
+  1850K .......... .......... .......... .......... ..........  7% 1.89M 12s
+  1900K .......... .......... .......... .......... ..........  7% 46.2M 12s
+  1950K .......... .......... .......... .......... ..........  7%  907K 12s
+  2000K .......... .......... .......... .......... ..........  7% 38.0M 12s
+  2050K .......... .......... .......... .......... ..........  7%  994K 12s
+  2100K .......... .......... .......... .......... ..........  8%  945K 12s
+  2150K .......... .......... .......... .......... ..........  8%  969K 13s
+  2200K .......... .......... .......... .......... ..........  8%  961K 13s
+  2250K .......... .......... .......... .......... ..........  8%  481K 14s
+  2300K .......... .......... .......... .......... ..........  8% 2.11M 14s
+  2350K .......... .......... .......... .......... ..........  9%  618K 14s
+  2400K .......... .......... .......... .......... ..........  9%  639K 15s
+  2450K .......... .......... .......... .......... ..........  9%  641K 15s
+  2500K .......... .......... .......... .......... ..........  9%  634K 15s
+  2550K .......... .......... .......... .......... ..........  9%  481K 16s
+  2600K .......... .......... .......... .......... ..........  9%  942K 16s
+  2650K .......... .......... .......... .......... .......... 10%  482K 17s
+  2700K .......... .......... .......... .......... .......... 10%  643K 17s
+  2750K .......... .......... .......... .......... .......... 10%  606K 17s
+  2800K .......... .......... .......... .......... .......... 10%  476K 18s
+  2850K .......... .......... .......... .......... .......... 10%  955K 18s
+  2900K .......... .......... .......... .......... .......... 11%  609K 18s
+  2950K .......... .......... .......... .......... .......... 11%  673K 19s
+  3000K .......... .......... .......... .......... .......... 11%  618K 19s
+  3050K .......... .......... .......... .......... .......... 11%  633K 19s
+  3100K .......... .......... .......... .......... .......... 11%  867K 19s
+  3150K .......... .......... .......... .......... .......... 12%  672K 19s
+  3200K .......... .......... .......... .......... .......... 12%  615K 20s
+  3250K .......... .......... .......... .......... .......... 12%  631K 20s
+  3300K .......... .......... .......... .......... .......... 12%  906K 20s
+  3350K .......... .......... .......... .......... .......... 12%  927K 20s
+  3400K .......... .......... .......... .......... .......... 12%  670K 20s
+  3450K .......... .......... .......... .......... .......... 13%  934K 20s
+  3500K .......... .......... .......... .......... .......... 13%  964K 20s
+  3550K .......... .......... .......... .......... .......... 13%  960K 20s
+  3600K .......... .......... .......... .......... .......... 13%  639K 20s
+  3650K .......... .......... .......... .......... .......... 13%  936K 20s
+  3700K .......... .......... .......... .......... .......... 14%  965K 20s
+  3750K .......... .......... .......... .......... .......... 14%  932K 20s
+  3800K .......... .......... .......... .......... .......... 14%  970K 20s
+  3850K .......... .......... .......... .......... .......... 14%  480K 21s
+  3900K .......... .......... .......... .......... .......... 14% 42.1M 20s
+  3950K .......... .......... .......... .......... .......... 15%  386K 21s
+  4000K .......... .......... .......... .......... .......... 15% 1.86M 21s
+  4050K .......... .......... .......... .......... .......... 15%  643K 21s
+  4100K .......... .......... .......... .......... .......... 15%  645K 21s
+  4150K .......... .......... .......... .......... .......... 15%  485K 21s
+  4200K .......... .......... .......... .......... .......... 16%  382K 22s
+  4250K .......... .......... .......... .......... .......... 16% 1.88M 21s
+  4300K .......... .......... .......... .......... .......... 16%  488K 22s
+  4350K .......... .......... .......... .......... .......... 16%  639K 22s
+  4400K .......... .......... .......... .......... .......... 16%  214K 23s
+  4450K .......... .......... .......... .......... .......... 16%  383K 23s
+  4500K .......... .......... .......... .......... .......... 17% 1.92M 23s
+  4550K .......... .......... .......... .......... .......... 17%  385K 23s
+  4600K .......... .......... .......... .......... .......... 17%  275K 24s
+  4650K .......... .......... .......... .......... .......... 17%  649K 24s
+  4700K .......... .......... .......... .......... .......... 17%  476K 24s
+  4750K .......... .......... .......... .......... .......... 18%  479K 24s
+  4800K .......... .......... .......... .......... .......... 18%  323K 24s
+  4850K .......... .......... .......... .......... .......... 18%  482K 25s
+  4900K .......... .......... .......... .......... .......... 18%  319K 25s
+  4950K .......... .......... .......... .......... .......... 18% 23.1M 25s
+  5000K .......... .......... .......... .......... .......... 19%  492K 25s
+  5050K .......... .......... .......... .......... .......... 19%  483K 25s
+  5100K .......... .......... .......... .......... .......... 19%  634K 25s
+  5150K .......... .......... .......... .......... .......... 19%  462K 25s
+  5200K .......... .......... .......... .......... .......... 19%  460K 25s
+  5250K .......... .......... .......... .......... .......... 19%  637K 25s
+  5300K .......... .......... .......... .......... .......... 20%  641K 25s
+  5350K .......... .......... .......... .......... .......... 20%  638K 25s
+  5400K .......... .......... .......... .......... .......... 20%  632K 25s
+  5450K .......... .......... .......... .......... .......... 20%  646K 25s
+  5500K .......... .......... .......... .......... .......... 20%  646K 25s
+  5550K .......... .......... .......... .......... .......... 21%  647K 25s
+  5600K .......... .......... .......... .......... .......... 21%  483K 25s
+  5650K .......... .......... .......... .......... .......... 21%  940K 25s
+  5700K .......... .......... .......... .......... .......... 21%  959K 25s
+  5750K .......... .......... .......... .......... .......... 21%  479K 25s
+  5800K .......... .......... .......... .......... .......... 22%  644K 25s
+  5850K .......... .......... .......... .......... .......... 22%  642K 25s
+  5900K .......... .......... .......... .......... .......... 22%  275K 26s
+  5950K .......... .......... .......... .......... .......... 22%  647K 26s
+  6000K .......... .......... .......... .......... .......... 22%  322K 26s
+  6050K .......... .......... .......... .......... .......... 22%  479K 26s
+  6100K .......... .......... .......... .......... .......... 23%  480K 26s
+  6150K .......... .......... .......... .......... .......... 23%  484K 26s
+  6200K .......... .......... .......... .......... .......... 23%  479K 26s
+  6250K .......... .......... .......... .......... .......... 23%  633K 26s
+  6300K .......... .......... .......... .......... .......... 23%  482K 26s
+  6350K .......... .......... .......... .......... .......... 24%  577K 26s
+  6400K .......... .......... .......... .......... .......... 24%  414K 26s
+  6450K .......... .......... .......... .......... .......... 24%  296K 27s
+  6500K .......... .......... .......... .......... .......... 24% 1.82M 26s
+  6550K .......... .......... .......... .......... .......... 24%  287K 27s
+  6600K .......... .......... .......... .......... .......... 25%  929K 27s
+  6650K .......... .......... .......... .......... .......... 25%  480K 27s
+  6700K .......... .......... .......... .......... .......... 25%  458K 27s
+  6750K .......... .......... .......... .......... .......... 25%  303K 27s
+  6800K .......... .......... .......... .......... .......... 25%  321K 27s
+  6850K .......... .......... .......... .......... .......... 25%  488K 27s
+  6900K .......... .......... .......... .......... .......... 26%  368K 27s
+  6950K .......... .......... .......... .......... .......... 26%  384K 27s
+  7000K .......... .......... .......... .......... .......... 26%  465K 27s
+  7050K .......... .......... .......... .......... .......... 26%  480K 27s
+  7100K .......... .......... .......... .......... .......... 26%  383K 27s
+  7150K .......... .......... .......... .......... .......... 27%  463K 27s
+  7200K .......... .......... .......... .......... .......... 27%  293K 28s
+  7250K .......... .......... .......... .......... .......... 27%  466K 28s
+  7300K .......... .......... .......... .......... .......... 27%  380K 28s
+  7350K .......... .......... .......... .......... .......... 27%  645K 28s
+  7400K .......... .......... .......... .......... .......... 28%  388K 28s
+  7450K .......... .......... .......... .......... .......... 28%  475K 28s
+  7500K .......... .......... .......... .......... .......... 28%  480K 28s
+  7550K .......... .......... .......... .......... .......... 28%  636K 28s
+  7600K .......... .......... .......... .......... .......... 28%  385K 28s
+  7650K .......... .......... .......... .......... .......... 29%  306K 28s
+  7700K .......... .......... .......... .......... .......... 29% 1.70M 28s
+  7750K .......... .......... .......... .......... .......... 29%  473K 28s
+  7800K .......... .......... .......... .......... .......... 29%  601K 28s
+  7850K .......... .......... .......... .......... .......... 29%  614K 28s
+  7900K .......... .......... .......... .......... .......... 29%  478K 28s
+  7950K .......... .......... .......... .......... .......... 30%  640K 28s
+  8000K .......... .......... .......... .......... .......... 30%  386K 28s
+  8050K .......... .......... .......... .......... .......... 30%  631K 28s
+  8100K .......... .......... .......... .......... .......... 30%  941K 27s
+  8150K .......... .......... .......... .......... .......... 30%  525K 27s
+  8200K .......... .......... .......... .......... .......... 31%  607K 27s
+  8250K .......... .......... .......... .......... .......... 31%  619K 27s
+  8300K .......... .......... .......... .......... .......... 31%  641K 27s
+  8350K .......... .......... .......... .......... .......... 31%  947K 27s
+  8400K .......... .......... .......... .......... .......... 31%  468K 27s
+  8450K .......... .......... .......... .......... .......... 32%  650K 27s
+  8500K .......... .......... .......... .......... .......... 32%  318K 27s
+  8550K .......... .......... .......... .......... .......... 32% 1.98M 27s
+  8600K .......... .......... .......... .......... .......... 32%  461K 27s
+  8650K .......... .......... .......... .......... .......... 32%  244K 27s
+  8700K .......... .......... .......... .......... .......... 32% 1.92M 27s
+  8750K .......... .......... .......... .......... .......... 33%  207K 27s
+  8800K .......... .......... .......... .......... .......... 33%  629K 27s
+  8850K .......... .......... .......... .......... .......... 33%  376K 27s
+  8900K .......... .......... .......... .......... .......... 33%  379K 27s
+  8950K .......... .......... .......... .......... .......... 33%  466K 27s
+  9000K .......... .......... .......... .......... .......... 34%  371K 27s
+  9050K .......... .......... .......... .......... .......... 34%  481K 27s
+  9100K .......... .......... .......... .......... .......... 34%  622K 27s
+  9150K .......... .......... .......... .......... .......... 34%  494K 27s
+  9200K .......... .......... .......... .......... .......... 34%  391K 27s
+  9250K .......... .......... .......... .......... .......... 35%  465K 27s
+  9300K .......... .......... .......... .......... .......... 35%  922K 27s
+  9350K .......... .......... .......... .......... .......... 35%  639K 27s
+  9400K .......... .......... .......... .......... .......... 35%  369K 27s
+  9450K .......... .......... .......... .......... .......... 35% 1.90M 27s
+  9500K .......... .......... .......... .......... .......... 35%  484K 27s
+  9550K .......... .......... .......... .......... .......... 36%  639K 27s
+  9600K .......... .......... .......... .......... .......... 36%  485K 27s
+  9650K .......... .......... .......... .......... .......... 36%  645K 27s
+  9700K .......... .......... .......... .......... .......... 36%  642K 26s
+  9750K .......... .......... .......... .......... .......... 36%  572K 26s
+  9800K .......... .......... .......... .......... .......... 37%  592K 26s
+  9850K .......... .......... .......... .......... .......... 37%  927K 26s
+  9900K .......... .......... .......... .......... .......... 37%  638K 26s
+  9950K .......... .......... .......... .......... .......... 37%  634K 26s
+ 10000K .......... .......... .......... .......... .......... 37%  626K 26s
+ 10050K .......... .......... .......... .......... .......... 38%  646K 26s
+ 10100K .......... .......... .......... .......... .......... 38%  872K 26s
+ 10150K .......... .......... .......... .......... .......... 38%  646K 26s
+ 10200K .......... .......... .......... .......... .......... 38%  647K 26s
+ 10250K .......... .......... .......... .......... .......... 38%  948K 25s
+ 10300K .......... .......... .......... .......... .......... 38%  957K 25s
+ 10350K .......... .......... .......... .......... .......... 39%  639K 25s
+ 10400K .......... .......... .......... .......... .......... 39%  653K 25s
+ 10450K .......... .......... .......... .......... .......... 39%  942K 25s
+ 10500K .......... .......... .......... .......... .......... 39%  735K 25s
+ 10550K .......... .......... .......... .......... .......... 39%  809K 25s
+ 10600K .......... .......... .......... .......... .......... 40%  933K 25s
+ 10650K .......... .......... .......... .......... .......... 40%  951K 25s
+ 10700K .......... .......... .......... .......... .......... 40%  887K 25s
+ 10750K .......... .......... .......... .......... .......... 40%  962K 24s
+ 10800K .......... .......... .......... .......... .......... 40%  643K 24s
+ 10850K .......... .......... .......... .......... .......... 41%  919K 24s
+ 10900K .......... .......... .......... .......... .......... 41%  965K 24s
+ 10950K .......... .......... .......... .......... .......... 41% 1.63M 24s
+ 11000K .......... .......... .......... .......... .......... 41%  489K 24s
+ 11050K .......... .......... .......... .......... .......... 41% 26.2M 24s
+ 11100K .......... .......... .......... .......... .......... 41%  666K 24s
+ 11150K .......... .......... .......... .......... .......... 42%  943K 24s
+ 11200K .......... .......... .......... .......... .......... 42%  648K 23s
+ 11250K .......... .......... .......... .......... .......... 42%  926K 23s
+ 11300K .......... .......... .......... .......... .......... 42%  680K 23s
+ 11350K .......... .......... .......... .......... .......... 42%  465K 23s
+ 11400K .......... .......... .......... .......... .......... 43% 45.5M 23s
+ 11450K .......... .......... .......... .......... .......... 43%  652K 23s
+ 11500K .......... .......... .......... .......... .......... 43%  329K 23s
+ 11550K .......... .......... .......... .......... .......... 43% 1.65M 23s
+ 11600K .......... .......... .......... .......... .......... 43%  481K 23s
+ 11650K .......... .......... .......... .......... .......... 44%  447K 23s
+ 11700K .......... .......... .......... .......... .......... 44%  594K 23s
+ 11750K .......... .......... .......... .......... .......... 44%  376K 23s
+ 11800K .......... .......... .......... .......... .......... 44%  947K 23s
+ 11850K .......... .......... .......... .......... .......... 44%  487K 23s
+ 11900K .......... .......... .......... .......... .......... 45%  614K 23s
+ 11950K .......... .......... .......... .......... .......... 45%  645K 22s
+ 12000K .......... .......... .......... .......... .......... 45%  384K 22s
+ 12050K .......... .......... .......... .......... .......... 45%  640K 22s
+ 12100K .......... .......... .......... .......... .......... 45%  642K 22s
+ 12150K .......... .......... .......... .......... .......... 45%  645K 22s
+ 12200K .......... .......... .......... .......... .......... 46%  638K 22s
+ 12250K .......... .......... .......... .......... .......... 46%  644K 22s
+ 12300K .......... .......... .......... .......... .......... 46%  946K 22s
+ 12350K .......... .......... .......... .......... .......... 46%  634K 22s
+ 12400K .......... .......... .......... .......... .......... 46%  377K 22s
+ 12450K .......... .......... .......... .......... .......... 47%  562K 22s
+ 12500K .......... .......... .......... .......... .......... 47%  628K 22s
+ 12550K .......... .......... .......... .......... .......... 47%  570K 22s
+ 12600K .......... .......... .......... .......... .......... 47%  575K 22s
+ 12650K .......... .......... .......... .......... .......... 47%  948K 21s
+ 12700K .......... .......... .......... .......... .......... 48%  647K 21s
+ 12750K .......... .......... .......... .......... .......... 48%  644K 21s
+ 12800K .......... .......... .......... .......... .......... 48%  486K 21s
+ 12850K .......... .......... .......... .......... .......... 48%  648K 21s
+ 12900K .......... .......... .......... .......... .......... 48%  950K 21s
+ 12950K .......... .......... .......... .......... .......... 48%  646K 21s
+ 13000K .......... .......... .......... .......... .......... 49%  934K 21s
+ 13050K .......... .......... .......... .......... .......... 49%  961K 21s
+ 13100K .......... .......... .......... .......... .......... 49%  641K 21s
+ 13150K .......... .......... .......... .......... .......... 49%  959K 21s
+ 13200K .......... .......... .......... .......... .......... 49%  644K 21s
+ 13250K .......... .......... .......... .......... .......... 50%  963K 20s
+ 13300K .......... .......... .......... .......... .......... 50%  958K 20s
+ 13350K .......... .......... .......... .......... .......... 50%  650K 20s
+ 13400K .......... .......... .......... .......... .......... 50%  964K 20s
+ 13450K .......... .......... .......... .......... .......... 50%  966K 20s
+ 13500K .......... .......... .......... .......... .......... 51% 1.55M 20s
+ 13550K .......... .......... .......... .......... .......... 51%  897K 20s
+ 13600K .......... .......... .......... .......... .......... 51%  442K 20s
+ 13650K .......... .......... .......... .......... .......... 51% 1.25M 20s
+ 13700K .......... .......... .......... .......... .......... 51%  894K 20s
+ 13750K .......... .......... .......... .......... .......... 51%  647K 20s
+ 13800K .......... .......... .......... .......... .......... 52%  940K 19s
+ 13850K .......... .......... .......... .......... .......... 52%  962K 19s
+ 13900K .......... .......... .......... .......... .......... 52%  944K 19s
+ 13950K .......... .......... .......... .......... .......... 52%  901K 19s
+ 14000K .......... .......... .......... .......... .......... 52%  678K 19s
+ 14050K .......... .......... .......... .......... .......... 53%  937K 19s
+ 14100K .......... .......... .......... .......... .......... 53%  925K 19s
+ 14150K .......... .......... .......... .......... .......... 53%  962K 19s
+ 14200K .......... .......... .......... .......... .......... 53%  653K 19s
+ 14250K .......... .......... .......... .......... .......... 53%  983K 19s
+ 14300K .......... .......... .......... .......... .......... 54%  373K 19s
+ 14350K .......... .......... .......... .......... .......... 54% 41.9M 18s
+ 14400K .......... .......... .......... .......... .......... 54%  382K 18s
+ 14450K .......... .......... .......... .......... .......... 54%  641K 18s
+ 14500K .......... .......... .......... .......... .......... 54%  483K 18s
+ 14550K .......... .......... .......... .......... .......... 54%  275K 18s
+ 14600K .......... .......... .......... .......... .......... 55% 1.81M 18s
+ 14650K .......... .......... .......... .......... .......... 55%  618K 18s
+ 14700K .......... .......... .......... .......... .......... 55%  624K 18s
+ 14750K .......... .......... .......... .......... .......... 55%  490K 18s
+ 14800K .......... .......... .......... .......... .......... 55%  454K 18s
+ 14850K .......... .......... .......... .......... .......... 56%  479K 18s
+ 14900K .......... .......... .......... .......... .......... 56%  620K 18s
+ 14950K .......... .......... .......... .......... .......... 56%  631K 18s
+ 15000K .......... .......... .......... .......... .......... 56%  635K 18s
+ 15050K .......... .......... .......... .......... .......... 56%  628K 18s
+ 15100K .......... .......... .......... .......... .......... 57%  618K 17s
+ 15150K .......... .......... .......... .......... .......... 57%  601K 17s
+ 15200K .......... .......... .......... .......... .......... 57%  481K 17s
+ 15250K .......... .......... .......... .......... .......... 57%  658K 17s
+ 15300K .......... .......... .......... .......... .......... 57%  924K 17s
+ 15350K .......... .......... .......... .......... .......... 58%  389K 17s
+ 15400K .......... .......... .......... .......... .......... 58% 2.10M 17s
+ 15450K .......... .......... .......... .......... .......... 58%  542K 17s
+ 15500K .......... .......... .......... .......... .......... 58%  652K 17s
+ 15550K .......... .......... .......... .......... .......... 58%  378K 17s
+ 15600K .......... .......... .......... .......... .......... 58%  929K 17s
+ 15650K .......... .......... .......... .......... .......... 59%  500K 17s
+ 15700K .......... .......... .......... .......... .......... 59%  468K 17s
+ 15750K .......... .......... .......... .......... .......... 59%  640K 17s
+ 15800K .......... .......... .......... .......... .......... 59%  392K 17s
+ 15850K .......... .......... .......... .......... .......... 59%  485K 16s
+ 15900K .......... .......... .......... .......... .......... 60%  625K 16s
+ 15950K .......... .......... .......... .......... .......... 60%  637K 16s
+ 16000K .......... .......... .......... .......... .......... 60%  394K 16s
+ 16050K .......... .......... .......... .......... .......... 60%  928K 16s
+ 16100K .......... .......... .......... .......... .......... 60%  648K 16s
+ 16150K .......... .......... .......... .......... .......... 61%  644K 16s
+ 16200K .......... .......... .......... .......... .......... 61%  963K 16s
+ 16250K .......... .......... .......... .......... .......... 61%  657K 16s
+ 16300K .......... .......... .......... .......... .......... 61%  939K 16s
+ 16350K .......... .......... .......... .......... .......... 61%  389K 16s
+ 16400K .......... .......... .......... .......... .......... 61%  971K 16s
+ 16450K .......... .......... .......... .......... .......... 62%  383K 16s
+ 16500K .......... .......... .......... .......... .......... 62% 48.3M 15s
+ 16550K .......... .......... .......... .......... .......... 62%  484K 15s
+ 16600K .......... .......... .......... .......... .......... 62%  639K 15s
+ 16650K .......... .......... .......... .......... .......... 62%  492K 15s
+ 16700K .......... .......... .......... .......... .......... 63%  632K 15s
+ 16750K .......... .......... .......... .......... .......... 63%  647K 15s
+ 16800K .......... .......... .......... .......... .......... 63%  485K 15s
+ 16850K .......... .......... .......... .......... .......... 63%  652K 15s
+ 16900K .......... .......... .......... .......... .......... 63%  925K 15s
+ 16950K .......... .......... .......... .......... .......... 64%  648K 15s
+ 17000K .......... .......... .......... .......... .......... 64%  958K 15s
+ 17050K .......... .......... .......... .......... .......... 64%  662K 15s
+ 17100K .......... .......... .......... .......... .......... 64%  930K 15s
+ 17150K .......... .......... .......... .......... .......... 64%  489K 14s
+ 17200K .......... .......... .......... .......... .......... 64%  649K 14s
+ 17250K .......... .......... .......... .......... .......... 65%  918K 14s
+ 17300K .......... .......... .......... .......... .......... 65%  660K 14s
+ 17350K .......... .......... .......... .......... .......... 65%  645K 14s
+ 17400K .......... .......... .......... .......... .......... 65%  954K 14s
+ 17450K .......... .......... .......... .......... .......... 65%  926K 14s
+ 17500K .......... .......... .......... .......... .......... 66%  668K 14s
+ 17550K .......... .......... .......... .......... .......... 66%  924K 14s
+ 17600K .......... .......... .......... .......... .......... 66%  496K 14s
+ 17650K .......... .......... .......... .......... .......... 66%  955K 14s
+ 17700K .......... .......... .......... .......... .......... 66%  928K 14s
+ 17750K .......... .......... .......... .......... .......... 67%  664K 13s
+ 17800K .......... .......... .......... .......... .......... 67%  476K 13s
+ 17850K .......... .......... .......... .......... .......... 67% 42.2M 13s
+ 17900K .......... .......... .......... .......... .......... 67%  657K 13s
+ 17950K .......... .......... .......... .......... .......... 67%  644K 13s
+ 18000K .......... .......... .......... .......... .......... 67%  384K 13s
+ 18050K .......... .......... .......... .......... .......... 68%  987K 13s
+ 18100K .......... .......... .......... .......... .......... 68%  620K 13s
+ 18150K .......... .......... .......... .......... .......... 68%  636K 13s
+ 18200K .......... .......... .......... .......... .......... 68%  483K 13s
+ 18250K .......... .......... .......... .......... .......... 68%  645K 13s
+ 18300K .......... .......... .......... .......... .......... 69%  629K 13s
+ 18350K .......... .......... .......... .......... .......... 69%  646K 13s
+ 18400K .......... .......... .......... .......... .......... 69%  473K 12s
+ 18450K .......... .......... .......... .......... .......... 69%  625K 12s
+ 18500K .......... .......... .......... .......... .......... 69%  950K 12s
+ 18550K .......... .......... .......... .......... .......... 70%  652K 12s
+ 18600K .......... .......... .......... .......... .......... 70%  939K 12s
+ 18650K .......... .......... .......... .......... .......... 70%  656K 12s
+ 18700K .......... .......... .......... .......... .......... 70%  903K 12s
+ 18750K .......... .......... .......... .......... .......... 70%  673K 12s
+ 18800K .......... .......... .......... .......... .......... 71%  886K 12s
+ 18850K .......... .......... .......... .......... .......... 71%  456K 12s
+ 18900K .......... .......... .......... .......... .......... 71%  891K 12s
+ 18950K .......... .......... .......... .......... .......... 71%  956K 12s
+ 19000K .......... .......... .......... .......... .......... 71%  967K 12s
+ 19050K .......... .......... .......... .......... .......... 71%  971K 11s
+ 19100K .......... .......... .......... .......... .......... 72%  480K 11s
+ 19150K .......... .......... .......... .......... .......... 72% 45.2M 11s
+ 19200K .......... .......... .......... .......... .......... 72%  634K 11s
+ 19250K .......... .......... .......... .......... .......... 72%  660K 11s
+ 19300K .......... .......... .......... .......... .......... 72%  964K 11s
+ 19350K .......... .......... .......... .......... .......... 73%  952K 11s
+ 19400K .......... .......... .......... .......... .......... 73%  916K 11s
+ 19450K .......... .......... .......... .......... .......... 73%  942K 11s
+ 19500K .......... .......... .......... .......... .......... 73%  886K 11s
+ 19550K .......... .......... .......... .......... .......... 73%  950K 11s
+ 19600K .......... .......... .......... .......... .......... 74%  647K 11s
+ 19650K .......... .......... .......... .......... .......... 74%  963K 10s
+ 19700K .......... .......... .......... .......... .......... 74%  954K 10s
+ 19750K .......... .......... .......... .......... .......... 74%  980K 10s
+ 19800K .......... .......... .......... .......... .......... 74% 1.03M 10s
+ 19850K .......... .......... .......... .......... .......... 74%  465K 10s
+ 19900K .......... .......... .......... .......... .......... 75% 46.1M 10s
+ 19950K .......... .......... .......... .......... .......... 75%  712K 10s
+ 20000K .......... .......... .......... .......... .......... 75%  620K 10s
+ 20050K .......... .......... .......... .......... .......... 75%  658K 10s
+ 20100K .......... .......... .......... .......... .......... 75%  938K 10s
+ 20150K .......... .......... .......... .......... .......... 76%  374K 10s
+ 20200K .......... .......... .......... .......... .......... 76% 43.8M 10s
+ 20250K .......... .......... .......... .......... .......... 76%  650K 9s
+ 20300K .......... .......... .......... .......... .......... 76%  503K 9s
+ 20350K .......... .......... .......... .......... .......... 76%  599K 9s
+ 20400K .......... .......... .......... .......... .......... 77%  408K 9s
+ 20450K .......... .......... .......... .......... .......... 77%  593K 9s
+ 20500K .......... .......... .......... .......... .......... 77%  513K 9s
+ 20550K .......... .......... .......... .......... .......... 77%  596K 9s
+ 20600K .......... .......... .......... .......... .......... 77%  512K 9s
+ 20650K .......... .......... .......... .......... .......... 77%  638K 9s
+ 20700K .......... .......... .......... .......... .......... 78%  632K 9s
+ 20750K .......... .......... .......... .......... .......... 78%  895K 9s
+ 20800K .......... .......... .......... .......... .......... 78%  481K 9s
+ 20850K .......... .......... .......... .......... .......... 78%  660K 9s
+ 20900K .......... .......... .......... .......... .......... 78%  945K 9s
+ 20950K .......... .......... .......... .......... .......... 79%  641K 8s
+ 21000K .......... .......... .......... .......... .......... 79%  932K 8s
+ 21050K .......... .......... .......... .......... .......... 79%  922K 8s
+ 21100K .......... .......... .......... .......... .......... 79%  667K 8s
+ 21150K .......... .......... .......... .......... .......... 79%  951K 8s
+ 21200K .......... .......... .......... .......... .......... 80%  635K 8s
+ 21250K .......... .......... .......... .......... .......... 80%  625K 8s
+ 21300K .......... .......... .......... .......... .......... 80% 1.90M 8s
+ 21350K .......... .......... .......... .......... .......... 80%  644K 8s
+ 21400K .......... .......... .......... .......... .......... 80%  644K 8s
+ 21450K .......... .......... .......... .......... .......... 80%  646K 8s
+ 21500K .......... .......... .......... .......... .......... 81%  945K 8s
+ 21550K .......... .......... .......... .......... .......... 81%  648K 8s
+ 21600K .......... .......... .......... .......... .......... 81%  641K 7s
+ 21650K .......... .......... .......... .......... .......... 81%  928K 7s
+ 21700K .......... .......... .......... .......... .......... 81%  632K 7s
+ 21750K .......... .......... .......... .......... .......... 82%  954K 7s
+ 21800K .......... .......... .......... .......... .......... 82%  936K 7s
+ 21850K .......... .......... .......... .......... .......... 82%  949K 7s
+ 21900K .......... .......... .......... .......... .......... 82%  646K 7s
+ 21950K .......... .......... .......... .......... .......... 82%  954K 7s
+ 22000K .......... .......... .......... .......... .......... 83%  944K 7s
+ 22050K .......... .......... .......... .......... .......... 83%  386K 7s
+ 22100K .......... .......... .......... .......... .......... 83% 1.83M 7s
+ 22150K .......... .......... .......... .......... .......... 83%  969K 7s
+ 22200K .......... .......... .......... .......... .......... 83%  638K 6s
+ 22250K .......... .......... .......... .......... .......... 83%  638K 6s
+ 22300K .......... .......... .......... .......... .......... 84%  950K 6s
+ 22350K .......... .......... .......... .......... .......... 84%  928K 6s
+ 22400K .......... .......... .......... .......... .......... 84%  484K 6s
+ 22450K .......... .......... .......... .......... .......... 84%  948K 6s
+ 22500K .......... .......... .......... .......... .......... 84%  627K 6s
+ 22550K .......... .......... .......... .......... .......... 85%  672K 6s
+ 22600K .......... .......... .......... .......... .......... 85%  636K 6s
+ 22650K .......... .......... .......... .......... .......... 85%  937K 6s
+ 22700K .......... .......... .......... .......... .......... 85%  630K 6s
+ 22750K .......... .......... .......... .......... .......... 85%  387K 6s
+ 22800K .......... .......... .......... .......... .......... 86%  643K 6s
+ 22850K .......... .......... .......... .......... .......... 86%  634K 6s
+ 22900K .......... .......... .......... .......... .......... 86%  623K 5s
+ 22950K .......... .......... .......... .......... .......... 86%  664K 5s
+ 23000K .......... .......... .......... .......... .......... 86%  627K 5s
+ 23050K .......... .......... .......... .......... .......... 87%  646K 5s
+ 23100K .......... .......... .......... .......... .......... 87%  644K 5s
+ 23150K .......... .......... .......... .......... .......... 87%  906K 5s
+ 23200K .......... .......... .......... .......... .......... 87%  634K 5s
+ 23250K .......... .......... .......... .......... .......... 87%  680K 5s
+ 23300K .......... .......... .......... .......... .......... 87%  890K 5s
+ 23350K .......... .......... .......... .......... .......... 88%  960K 5s
+ 23400K .......... .......... .......... .......... .......... 88%  944K 5s
+ 23450K .......... .......... .......... .......... .......... 88%  688K 5s
+ 23500K .......... .......... .......... .......... .......... 88%  963K 5s
+ 23550K .......... .......... .......... .......... .......... 88%  638K 4s
+ 23600K .......... .......... .......... .......... .......... 89%  903K 4s
+ 23650K .......... .......... .......... .......... .......... 89%  677K 4s
+ 23700K .......... .......... .......... .......... .......... 89%  895K 4s
+ 23750K .......... .......... .......... .......... .......... 89%  677K 4s
+ 23800K .......... .......... .......... .......... .......... 89%  906K 4s
+ 23850K .......... .......... .......... .......... .......... 90%  679K 4s
+ 23900K .......... .......... .......... .......... .......... 90%  961K 4s
+ 23950K .......... .......... .......... .......... .......... 90%  960K 4s
+ 24000K .......... .......... .......... .......... .......... 90%  646K 4s
+ 24050K .......... .......... .......... .......... .......... 90%  961K 4s
+ 24100K .......... .......... .......... .......... .......... 90%  963K 4s
+ 24150K .......... .......... .......... .......... .......... 91%  909K 4s
+ 24200K .......... .......... .......... .......... .......... 91%  969K 3s
+ 24250K .......... .......... .......... .......... .......... 91%  940K 3s
+ 24300K .......... .......... .......... .......... .......... 91% 1.04M 3s
+ 24350K .......... .......... .......... .......... .......... 91%  958K 3s
+ 24400K .......... .......... .......... .......... .......... 92%  883K 3s
+ 24450K .......... .......... .......... .......... .......... 92%  975K 3s
+ 24500K .......... .......... .......... .......... .......... 92% 1.03M 3s
+ 24550K .......... .......... .......... .......... .......... 92%  963K 3s
+ 24600K .......... .......... .......... .......... .......... 92% 1.62M 3s
+ 24650K .......... .......... .......... .......... .......... 93% 1.02M 3s
+ 24700K .......... .......... .......... .......... .......... 93%  957K 3s
+ 24750K .......... .......... .......... .......... .......... 93% 1009K 3s
+ 24800K .......... .......... .......... .......... .......... 93%  933K 3s
+ 24850K .......... .......... .......... .......... .......... 93% 1.67M 2s
+ 24900K .......... .......... .......... .......... .......... 93% 1.01M 2s
+ 24950K .......... .......... .......... .......... .......... 94% 1.65M 2s
+ 25000K .......... .......... .......... .......... .......... 94%  991K 2s
+ 25050K .......... .......... .......... .......... .......... 94% 1007K 2s
+ 25100K .......... .......... .......... .......... .......... 94% 1.69M 2s
+ 25150K .......... .......... .......... .......... .......... 94% 1008K 2s
+ 25200K .......... .......... .......... .......... .......... 95%  979K 2s
+ 25250K .......... .......... .......... .......... .......... 95% 1.76M 2s
+ 25300K .......... .......... .......... .......... .......... 95%  982K 2s
+ 25350K .......... .......... .......... .......... .......... 95% 1.84M 2s
+ 25400K .......... .......... .......... .......... .......... 95% 1.75M 2s
+ 25450K .......... .......... .......... .......... .......... 96%  953K 2s
+ 25500K .......... .......... .......... .......... .......... 96%  989K 1s
+ 25550K .......... .......... .......... .......... .......... 96%  635K 1s
+ 25600K .......... .......... .......... .......... .......... 96% 1.91M 1s
+ 25650K .......... .......... .......... .......... .......... 96%  649K 1s
+ 25700K .......... .......... .......... .......... .......... 96%  385K 1s
+ 25750K .......... .......... .......... .......... .......... 97% 45.6M 1s
+ 25800K .......... .......... .......... .......... .......... 97%  645K 1s
+ 25850K .......... .......... .......... .......... .......... 97%  661K 1s
+ 25900K .......... .......... .......... .......... .......... 97%  932K 1s
+ 25950K .......... .......... .......... .......... .......... 97%  646K 1s
+ 26000K .......... .......... .......... .......... .......... 98%  485K 1s
+ 26050K .......... .......... .......... .......... .......... 98%  647K 1s
+ 26100K .......... .......... .......... .......... .......... 98%  646K 1s
+ 26150K .......... .......... .......... .......... .......... 98%  384K 1s
+ 26200K .......... .......... .......... .......... .......... 98% 38.6M 0s
+ 26250K .......... .......... .......... .......... .......... 99%  655K 0s
+ 26300K .......... .......... .......... .......... .......... 99%  646K 0s
+ 26350K .......... .......... .......... .......... .......... 99%  635K 0s
+ 26400K .......... .......... .......... .......... .......... 99%  487K 0s
+ 26450K .......... .......... .......... .......... .......... 99%  765K 0s
+ 26500K .......... .......... .......... .......... ......... 100%  879K=39s
+
+2020-05-07 17:14:19 (682 KB/s) - './tmp.rCxzD68XAj/unverified' saved [27186449/27186449]
+
+download: Fetched 'glibc-2.23.tar.gz' (2bd08abb...) successfully.
+rm -f -r glibc-2.23
+tar -xzf glibc-2.23.tar.gz
+cd glibc-2.23 && \
+for p in glibc-patches/glibc-2.23.patch glibc-patches/syscalldb-api.patch glibc-patches/liblibos.patch glibc-patches/hp-timing-2.23+.patch glibc-patches/dangling-else.patch glibc-patches/cvs-common-symbols.patch glibc-patches/rpc-format-overflow.patch glibc-patches/ieee754-boolean-context.patch glibc-patches/nis-bogus-conditional.patch; do \
+	echo applying $p; \
+	patch -p1 < ../$p || exit 255; \
+done
+applying glibc-patches/glibc-2.23.patch
+patching file elf/dl-load.c
+patching file elf/Makefile
+patching file elf/rtld.c
+patching file elf/Versions
+patching file Makeconfig
+Hunk #2 succeeded at 1100 (offset -1 lines).
+patching file Makefile
+patching file sysdeps/unix/sysv/linux/x86_64/cancellation.S
+patching file sysdeps/unix/sysv/linux/x86_64/clone.S
+patching file sysdeps/unix/sysv/linux/x86_64/getcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/____longjmp_chk.S
+patching file sysdeps/unix/sysv/linux/x86_64/lowlevellock.S
+patching file sysdeps/unix/sysv/linux/x86_64/lowlevelrobustlock.S
+patching file sysdeps/unix/sysv/linux/x86_64/pthread_cond_broadcast.S
+patching file sysdeps/unix/sysv/linux/x86_64/pthread_cond_signal.S
+patching file sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S
+patching file sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S
+patching file sysdeps/unix/sysv/linux/x86_64/setcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/sigaction.c
+patching file sysdeps/unix/sysv/linux/x86_64/swapcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/syscall.S
+patching file sysdeps/unix/sysv/linux/x86_64/sysdep.h
+Hunk #3 succeeded at 228 with fuzz 1.
+patching file sysdeps/unix/sysv/linux/x86_64/vfork.S
+patching file sysdeps/x86_64/dl-machine.h
+patching file sysdeps/x86_64/nptl/tls.h
+patching file shlib-versions
+Hunk #1 succeeded at 29 (offset -35 lines).
+applying glibc-patches/syscalldb-api.patch
+patching symbolic link elf/syscallas.S
+patching symbolic link elf/syscalldb.c
+patching file syscallas.S
+patching file syscalldb.c
+patching file syscalldb.h
+patching symbolic link sysdeps/unix/sysv/linux/x86_64/syscalldb.h
+applying glibc-patches/liblibos.patch
+patching file libos/Makefile
+patching file libos/Versions
+patching file libos/wrapper.c
+applying glibc-patches/hp-timing-2.23+.patch
+patching file sysdeps/x86_64/hp-timing.h
+applying glibc-patches/dangling-else.patch
+patching file stdlib/setenv.c
+Hunk #2 succeeded at 288 with fuzz 2.
+patching file nis/nis_call.c
+applying glibc-patches/cvs-common-symbols.patch
+patching file misc/regexp.c
+applying glibc-patches/rpc-format-overflow.patch
+patching file sunrpc/rpc_parse.c
+Hunk #1 succeeded at 521 with fuzz 2.
+applying glibc-patches/ieee754-boolean-context.patch
+patching file sysdeps/ieee754/dbl-64/e_pow.c
+applying glibc-patches/nis-bogus-conditional.patch
+patching file nis/nss_nisplus/nisplus-alias.c
+touch glibc-2.23/configure
+mkdir -p glibc-build
+(cd glibc-build || exit 1; \
+CFLAGS=$GLIBC_CFLAGS ../glibc-2.23/configure --prefix=/home/jenkins/workspace/graphene/LibOS/../Runtime \
+	--with-tls \
+	--without-selinux \
+	--disable-test \
+	--disable-nscd \
+)
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nacl nios2 powerpc s390 sh sparc tile x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+configure: running configure fragment for add-on libidn
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking sysdep dirs... sysdeps/unix/sysv/linux/x86_64/64 sysdeps/unix/sysv/linux/x86_64 sysdeps/unix/sysv/linux/x86 sysdeps/unix/sysv/linux/wordsize-64 sysdeps/x86_64/nptl sysdeps/unix/sysv/linux sysdeps/nptl sysdeps/pthread sysdeps/gnu sysdeps/unix/inet sysdeps/unix/sysv sysdeps/unix/x86_64 sysdeps/unix sysdeps/posix sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether as is GNU as... yes
+checking whether ld is GNU ld... yes
+checking for as... as
+checking version of as... 2.26.1, ok
+checking for ld... ld
+checking version of ld... 2.26.1, ok
+checking for gnumake... no
+checking for gmake... no
+checking for make... make
+checking version of make... 4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... msgfmt
+checking version of msgfmt... 0.19.7, ok
+checking for makeinfo... makeinfo
+checking version of makeinfo... 6.1, ok
+checking for sed... sed
+checking version of sed... 4.2.2, ok
+checking for gawk... gawk
+checking version of gawk... 4.1.3, ok
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking LD_LIBRARY_PATH variable... ok
+checking for bash... /bin/bash
+checking for perl... /usr/bin/perl
+checking for install-info... no
+checking for bison... bison
+checking version of bison... 3.0.4, ok
+checking for .set assembler directive... yes
+checking linker support for protected data symbol... yes
+checking for broken __attribute__((alias()))... no
+checking whether to put _rtld_local into .sdata section... no
+checking whether to use .ctors/.dtors header and trailer... no
+checking for libunwind-support in compiler... no
+checking whether --noexecstack is desirable for .S files... yes
+checking for -z combreloc... yes
+checking for linker that supports -z execstack... yes
+checking for -fpie... yes
+checking for --hash-style option... yes
+checking for sufficient default -shared layout... no
+checking for GLOB_DAT reloc... yes
+checking linker output format... elf64-x86-64
+checking for -fno-toplevel-reorder -fno-section-anchors... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking whether cc puts quotes around section names... no
+checking for __builtin_memset... yes
+checking for redirection of built-in functions... yes
+checking for compiler option to disable generation of FMA instructions... -ffp-contract=off
+checking if gcc accepts -fno-tree-loop-distribute-patterns with __attribute__ ((__optimize__))... yes
+checking for libgd... no
+checking for _FORTIFY_SOURCE predefine... no
+checking whether gcc implicitly enables -fstack-protector... no
+checking whether the linker provides working __ehdr_start... yes
+checking for __builtin_trap with no external dependencies... yes
+checking whether the C++ compiler supports thread_local... yes
+running configure fragment for sysdeps/unix/sysv/linux/x86_64/64
+running configure fragment for sysdeps/unix/sysv/linux/x86_64
+running configure fragment for sysdeps/unix/sysv/linux
+checking installed Linux kernel header files... 2.6.32 or later
+checking for kernel header at least 2.6.32... ok
+checking for linux/fanotify.h... yes
+checking for symlinks in /home/jenkins/workspace/graphene/LibOS/../Runtime/include... ok
+running configure fragment for sysdeps/gnu
+running configure fragment for sysdeps/x86_64
+checking for AVX512 support in assembler... yes
+checking for AVX512 support... yes
+checking for Intel MPX support... yes
+checking whether -fPIC is default... no
+checking whether -fPIE is default... no
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing default commands
+Building glibc, may take a while to finish. Warning messages may show up. If this process terminates with failures, see "glibc-build/build.log" for more information.
+(make -C glibc-build 2>&1 >> build.log) && touch glibc-build/Build.success
+*** errlist.c count 134 inflated to GLIBC_2.12 count 135 (old errno.h?)
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
++ rm -r glibc-build
++ cd ..
++ make -j 8 WERROR=1 GLIBC_VERSION=2.27
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene/Pal/src'
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_exception.o ]
+In file included from ../include/pal/pal.h:63:0,
+                 from db_events.c:24:
+../include/lib/atomic.h:47:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+In file included from db_events.c:23:0:
+../include/lib/api.h:176:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+  [ host/Linux/.obj/db_main.o ]
+In file included from ../include/pal/pal.h:63:0,
+                 from db_exception.c:28:
+../include/lib/atomic.h:47:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+In file included from db_exception.c:26:0:
+../include/lib/api.h:176:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_misc.o ]
+cc1: all warnings being treated as errors
+  [ host/Linux/.obj/db_mutex.o ]
+In file included from pal_rtld.h:26:0,
+                 from db_main.c:29:
+../include/lib/api.h:176:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+In file included from ../include/pal/pal.h:63:0,
+                 from db_main.c:25:
+../include/lib/atomic.h:47:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+Makefile:130: recipe for target 'host/Linux/.obj/db_events.o' failed
+make[2]: *** [host/Linux/.obj/db_events.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+cc1: all warnings being treated as errors
+Makefile:130: recipe for target 'host/Linux/.obj/db_exception.o' failed
+make[2]: *** [host/Linux/.obj/db_exception.o] Error 1
+In file included from ../include/pal/pal.h:63:0,
+                 from db_memory.c:24:
+../include/lib/atomic.h:47:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+In file included from db_memory.c:23:0:
+../include/lib/api.h:176:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+In file included from ../include/pal/pal.h:63:0,
+                 from db_misc.c:24:
+../include/lib/atomic.h:47:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+In file included from db_misc.c:23:0:
+../include/lib/api.h:176:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+In file included from ../include/pal/pal.h:63:0,
+                 from db_mutex.c:24:
+../include/lib/atomic.h:47:0: error: "COMPILER_BARRIER" redefined [-Werror]
+ #define COMPILER_BARRIER() __asm__ __volatile__("": : :"memory")
+ ^
+In file included from db_mutex.c:23:0:
+../include/lib/api.h:176:0: note: this is the location of the previous definition
+ #define COMPILER_BARRIER() ({ __asm__ __volatile__ ("" ::: "memory"); })
+ ^
+cc1: all warnings being treated as errors
+Makefile:130: recipe for target 'host/Linux/.obj/db_mutex.o' failed
+make[2]: *** [host/Linux/.obj/db_mutex.o] Error 1
+cc1: all warnings being treated as errors
+Makefile:130: recipe for target 'host/Linux/.obj/db_memory.o' failed
+make[2]: *** [host/Linux/.obj/db_memory.o] Error 1
+cc1: all warnings being treated as errors
+Makefile:130: recipe for target 'host/Linux/.obj/db_misc.o' failed
+make[2]: *** [host/Linux/.obj/db_misc.o] Error 1
+cc1: all warnings being treated as errors
+Makefile:130: recipe for target 'host/Linux/.obj/db_main.o' failed
+make[2]: *** [host/Linux/.obj/db_main.o] Error 1
+make[2]: *** wait: No child processes.  Stop.
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 db160dcb3d93a0d9358f7f29d6e04ee4ab4094c72ca19eb276d1aa6ef0b04e11
+$ docker rm -f db160dcb3d93a0d9358f7f29d6e04ee4ab4094c72ca19eb276d1aa6ef0b04e11
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 8d337c5de54a303a6ec3eddbb6efe24d7983c5cd to FAILURE with url https://leeroy.cs.unc.edu/job/graphene/3934 and message: 'Build finished. '
+Using context: Jenkins
+ERROR: script returned exit code 2
+Finished: FAILURE

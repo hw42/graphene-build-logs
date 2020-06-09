@@ -1,0 +1,85 @@
+GitHub pull request #1414 of commit 8d831e00e42b59daa608f6457997fb4c28a61313, has merge conflicts.
+Setting status of 8d831e00e42b59daa608f6457997fb4c28a61313 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/2939 and message: 'Build started for original commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse 8d831e00e42b59daa608f6457997fb4c28a61313^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 8d831e00e42b59daa608f6457997fb4c28a61313 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8d831e00e42b59daa608f6457997fb4c28a61313 # timeout=10
+Commit message: "fixup! [Pal/Linux-SGX] tools: add RA-TLS utility libraries"
+ > git rev-list --no-walk d95bc06e9f952c4e7d6ed2b75a0b699d07431f56 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+‘slave-beaker12’ is reserved for jobs with matching label expression; ‘slave-constantine’ is reserved for jobs with matching label expression; ‘slave-gonzo’ is reserved for jobs with matching label expression; ‘slave-leeroy’ is reserved for jobs with matching label expression; ‘slave-salminella’ is reserved for jobs with matching label expression
+Running on slave-uncledeadly in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+ > git rev-parse 8d831e00e42b59daa608f6457997fb4c28a61313^{commit} # timeout=10
+ > git rev-parse origin/8d831e00e42b59daa608f6457997fb4c28a61313^{commit} # timeout=10
+ > git rev-parse 8d831e00e42b59daa608f6457997fb4c28a61313^{commit} # timeout=10
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Setting status of 8d831e00e42b59daa608f6457997fb4c28a61313 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/2939 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE

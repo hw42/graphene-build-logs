@@ -1,0 +1,51 @@
+GitHub pull request #1562 of commit e673e08c21015ec627435a03469626d403a2598e, no merge conflicts.
+Setting status of e673e08c21015ec627435a03469626d403a2598e to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/1350/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-apps
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-apps@script to read Jenkinsfiles/Linux-SGX-apps
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-apps@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1562/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1562/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 85ddc5aa38c1f5e544547245cd143dff88b6e4b4 (refs/remotes/origin/pr/1562/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 85ddc5aa38c1f5e544547245cd143dff88b6e4b4 # timeout=20
+Commit message: "Merge e673e08c21015ec627435a03469626d403a2598e into 0f55c6de04eba7fe4ecce1c81f7cd9d4cbc8cf61"
+ > git rev-list --no-walk 4a62b0ca0901d2657b593770779a18c20872c366 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘sgx_slave’
+Aborted by Michał Kowalczyk
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of e673e08c21015ec627435a03469626d403a2598e to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/1350/ and message: 'Build finished. '
+Using context: Jenkins-SGX-apps
+Finished: ABORTED

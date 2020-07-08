@@ -1,0 +1,184 @@
+GitHub pull request #1647 of commit 85ca20408bfa67dd14cad691507a3f0721942e2e, no merge conflicts.
+Setting status of 85ca20408bfa67dd14cad691507a3f0721942e2e to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04-apps/1506 and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04-apps
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04-apps@script to read ./Jenkinsfiles/Linux-SGX-18.04-apps
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04-apps@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1647/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1647/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 8a92d8a514472256b3c586c53b9c40dedaa9c7ad (refs/remotes/origin/pr/1647/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8a92d8a514472256b3c586c53b9c40dedaa9c7ad # timeout=10
+Commit message: "Merge 85ca20408bfa67dd14cad691507a3f0721942e2e into 647bca34a580bf758bb0f09c5472cca6e65b1c78"
+ > git rev-list --no-walk 77e13d813ab54443add44fbb680065b565ce04e1 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘slave-uncledeadly’
+Running on slave-uncledeadly in /home/jenkins/workspace/graphene-sgx-18.04-apps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04-apps # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 8fc99594e5646cd44f0eedae23f0dbd9c751a310 (refs/remotes/origin/pr/1647/merge)
+Commit message: "Merge 5bad8b8e10d2d13e15d2373352368e45ec576577 into 647bca34a580bf758bb0f09c5472cca6e65b1c78"
+First time build. Skipping changelog.
+ > git rev-parse refs/remotes/origin/pr/1647/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1647/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8fc99594e5646cd44f0eedae23f0dbd9c751a310 # timeout=10
+ > git rev-list --no-walk 77e13d813ab54443add44fbb680065b565ce04e1 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 896a83801447e2b98390e2e5b1eaad280b1bc350 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  489.1MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> c3c304cb4f22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 6a73a9d60f5d
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 2b362533859e
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 9a0105c23d4e
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> dc2fe870d74f
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 9313ffbfc1bd
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> ef68f817539b
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 205c625e4bd6
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 285332da592e
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 4feb1cd05079
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> cb08212909c3
+Successfully built cb08212909c3
+Successfully tagged 896a83801447e2b98390e2e5b1eaad280b1bc350:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 896a83801447e2b98390e2e5b1eaad280b1bc350
+.
+[Pipeline] withDockerContainer
+slave-uncledeadly does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /playpen/linux:/playpen/linux:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/workspace/graphene-sgx-18.04-apps -v /home/jenkins/workspace/graphene-sgx-18.04-apps:/home/jenkins/workspace/graphene-sgx-18.04-apps:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04-apps@tmp:/home/jenkins/workspace/graphene-sgx-18.04-apps@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 896a83801447e2b98390e2e5b1eaad280b1bc350 cat
+$ docker top dc584e77efbfa9c085c8994c9719cb02654a9e15797a7c37895dff38818288a5 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04-apps/.pylintrc
+Aborted by Don Porter
+Sending interrupt signal to process
+Terminated
+script returned exit code 143
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 dc584e77efbfa9c085c8994c9719cb02654a9e15797a7c37895dff38818288a5
+$ docker rm -f dc584e77efbfa9c085c8994c9719cb02654a9e15797a7c37895dff38818288a5
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 85ca20408bfa67dd14cad691507a3f0721942e2e to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04-apps/1506 and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04-apps
+Finished: ABORTED

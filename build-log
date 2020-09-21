@@ -1,0 +1,938 @@
+GitHub pull request #1828 of commit 198e1d64e130b4d61f74a5847481d3ef0784c4d0, no merge conflicts.
+Setting status of 198e1d64e130b4d61f74a5847481d3ef0784c4d0 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3477/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1828/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1828/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision cc1f5ef3b47f291baafc1a3b3063409a07110a3e (refs/remotes/origin/pr/1828/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cc1f5ef3b47f291baafc1a3b3063409a07110a3e # timeout=20
+Commit message: "Merge 198e1d64e130b4d61f74a5847481d3ef0784c4d0 into 6c614e26adeab02ff02a4b24a47109a3cd37dd66"
+ > git rev-list --no-walk ec7810fd1ffd22c0f9cbaba6f72976fec59122ce # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-beaker11 in /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.7.4'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision cc1f5ef3b47f291baafc1a3b3063409a07110a3e (refs/remotes/origin/pr/1828/merge)
+Commit message: "Merge 198e1d64e130b4d61f74a5847481d3ef0784c4d0 into 6c614e26adeab02ff02a4b24a47109a3cd37dd66"
+ > git rev-parse refs/remotes/origin/pr/1828/merge^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/pr/1828/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cc1f5ef3b47f291baafc1a3b3063409a07110a3e # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t e4ce9c19fc1f6827fc5926b116af41a19980a430 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon    535MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> a2a15febcdf3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libexpat1     libexpat1-dev     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 3362ddc2c18f
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 61672d8d5482
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 090c41550804
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 1526828144ea
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 3fa2dd11b14c
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 046ac7b41e98
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> cd38648607c2
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 5f136756d54c
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 57450338f1ee
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> cb80c898b7b1
+Successfully built cb80c898b7b1
+Successfully tagged e4ce9c19fc1f6827fc5926b116af41a19980a430:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . e4ce9c19fc1f6827fc5926b116af41a19980a430
+.
+[Pipeline] withDockerContainer
+slave-beaker11 does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04 -v /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04:/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04@tmp:/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** e4ce9c19fc1f6827fc5926b116af41a19980a430 cat
+$ docker top 1a7a615eefc88a314c4d0ab814483130dfb7741250ba6fec5e679e3c584d86d9 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/.pylintrc
+************* Module conf_missing
+C: 25,43: More than one statement on a single line (multiple-statements)
+W:  7, 0: Unused import sys (unused-import)
+************* Module test_libos
+W:483, 0: FIXME: It's unclear what Graphene process should return when the app (fixme)
+C:115, 0: Line too long (104/100) (line-too-long)
+C:116, 0: Line too long (108/100) (line-too-long)
+C:117, 0: Line too long (108/100) (line-too-long)
+C:118, 0: Line too long (108/100) (line-too-long)
+C:119, 0: Line too long (108/100) (line-too-long)
+C:120, 0: Line too long (108/100) (line-too-long)
+C:121, 0: Line too long (108/100) (line-too-long)
+C:122, 0: Line too long (108/100) (line-too-long)
+C:123, 0: Line too long (108/100) (line-too-long)
+C:124, 0: Line too long (108/100) (line-too-long)
+C:125, 0: Line too long (108/100) (line-too-long)
+C:126, 0: Line too long (108/100) (line-too-long)
+C:127, 0: Line too long (108/100) (line-too-long)
+C:128, 0: Line too long (108/100) (line-too-long)
+C:129, 0: Line too long (108/100) (line-too-long)
+C:130, 0: Line too long (109/100) (line-too-long)
+C:268, 0: Line too long (124/100) (line-too-long)
+C:275, 0: Line too long (127/100) (line-too-long)
+C: 45,46: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 66,12: Unused variable 'i' (unused-variable)
+C: 76,45: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 82,16: Unused variable 'i' (unused-variable)
+C:192, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:193,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:212, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:221, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R: 20, 0: Too many public methods (25/20) (too-many-public-methods)
+C:482, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:293, 0: Too many public methods (25/20) (too-many-public-methods)
+W:  8, 0: Unused ON_X86 imported from regression (unused-import)
+************* Module conf_merge
+W:  7, 0: Unused import sys (unused-import)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module runltp_xml
+E:245, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 21, 4: Constant name "fspath" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 24, 4: Class name "fspath" doesn't conform to '[A-Z_][A-Za-z0-9]*|TC_\\d\\d_.*' pattern (invalid-name)
+R:103, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:143,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:154,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:156,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:159,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:161,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:180, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:191, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:202, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:320, 4: Too many statements (53/50) (too-many-statements)
+R:427, 0: Too many instance attributes (8/7) (too-many-instance-attributes)
+I:456,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:518,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module regression
+C: 11, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 21, 4: Method could be a function (no-self-use)
+C: 93, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module link-intel-driver
+C: 28, 0: Line too long (101/100) (line-too-long)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, shutil) (multiple-imports)
+C: 50,40: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+************* Module gsc
+C:356, 0: Line too long (102/100) (line-too-long)
+C:368, 0: Line too long (101/100) (line-too-long)
+E: 14, 0: Unable to import 'docker' (import-error)
+E: 15, 0: Unable to import 'yaml' (import-error)
+C: 83, 0: Function name "extract_binary_cmd_from_image_config" doesn't conform to snake_case naming style (invalid-name)
+C: 92, 7: Do not use `len(SEQUENCE)` to determine if a sequence is empty (len-as-condition)
+C:279, 0: Function name "generate_dockerfile_sign_manifests" doesn't conform to snake_case naming style (invalid-name)
+C:330, 0: Constant name "subcommands" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:332, 0: Constant name "sub_build" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:356, 0: Constant name "sub_build_graphene" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:373, 0: Constant name "sub_sign" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module test_pal
+C:309, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
+C:247, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:307, 4: Method could be a function (no-self-use)
+W: 24, 4: Unused read_manifest imported from pal_sgx_sign (unused-import)
++ :
++ + ./.ci/run-pylint./.ci/prfilter -f
+ json
+Using config file /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/.pylintrc
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus (2 primes)
+..............................++++
+..............................................................................................................................++++
+e is 3 (0x03)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/01org/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout sgx_driver_1.9
+Note: checking out 'sgx_driver_1.9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 3abcf82 Merge pull request #31 from avchinch/master
++ make -j8
+make -C /lib/modules/4.4.0-189-generic/build SUBDIRS=/opt/intel/linux-sgx-driver modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-189-generic'
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_main.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_page_cache.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_ioctl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_vma.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_util.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /opt/intel/linux-sgx-driver/isgx.mod.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-189-generic'
++ cd /opt/intel
++ git clone https://github.com/intel/SGXDataCenterAttestationPrimitives.git
+Cloning into 'SGXDataCenterAttestationPrimitives'...
++ cd SGXDataCenterAttestationPrimitives
++ git checkout DCAP_1.5
+Note: checking out 'DCAP_1.5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at ab8d31d Intel(R) SGX DCAP 1.5 Release
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/sgx-driver
++ ISGX_DRIVER_PATH=/opt/intel/SGXDataCenterAttestationPrimitives/driver/linux make
+make -C /lib/modules/4.4.0-189-generic/build M=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver CFLAGS_MODULE="-DDEBUG -g -O0" modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-189-generic'
+  CC [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx.mod.o
+  LD [M]  /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/sgx-driver/gsgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-189-generic'
++ cd ../../../../../
++ make -j8 SGX=1 WERROR=1
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+  [ host/Linux-SGX/.obj/db_events.o ]
+  [ host/Linux-SGX/.obj/db_exception.o ]
+  [ host/Linux-SGX/.obj/db_main.o ]
+  [ host/Linux-SGX/.obj/db_memory.o ]
+  [ host/Linux-SGX/.obj/db_misc.o ]
+  [ host/Linux-SGX/.obj/db_mutex.o ]
+  [ host/Linux-SGX/.obj/db_object.o ]
+  [ host/Linux-SGX/.obj/db_process.o ]
+  [ host/Linux-SGX/.obj/db_rtld.o ]
+  [ host/Linux-SGX/.obj/db_streams.o ]
+  [ host/Linux-SGX/.obj/db_threading.o ]
+  [ host/Linux-SGX/.obj/pal_error.o ]
+  [ host/Linux-SGX/.obj/printf.o ]
+make -C ../lib target=/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/
+  [ host/Linux-SGX/.obj/slab.o ]
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+../../Scripts/download --output ../include/lib/uthash.h --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+--2020-09-21 22:46:59--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+Resolving github.com (github.com)... --2020-09-21 22:46:59--  https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+Resolving github.com (github.com)... --2020-09-21 22:46:59--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
+connected.
+HTTP request sent, awaiting response...   [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/avl_tree.o ]
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2020-09-21 22:46:59--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)... HTTP request sent, awaiting response... 140.82.113.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.9|:443... 200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: './tmp.uqn06rVA4N/unverified'
+
+     0K .......... ..302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2020-09-21 22:46:59--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)...   [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/udivmodti4.o ]
+........ .......... ........connected.
+.. .......... 65% 2.24M 0s
+    50K ......140.82.112.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.9|:443... .... .......... ......                          100% 7.92M=0.03s
+
+2020-09-21 22:46:59 (2.99 MB/s) - './tmp.uqn06rVA4N/unverified' saved [78453/78453]
+
+HTTP request sent, awaiting response... download: Fetched '../include/lib/uthash.h' (ba9af0e8...) successfully.
+connected.
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/config.o ]
+HTTP request sent, awaiting response... 200 OK
+Length: 1193102 (1.1M) [application/x-gzip]
+Saving to: './tmp.fnAUQ6UEXV/unverified'
+
+     0K .......... .200 OK
+Length: 3055269 (2.9M) [application/x-gzip]
+Saving to: './tmp.wnury6BwDY/unverified'
+
+     0K .......... .......... .......... ................ .......... ......  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene/path.o ]
+... ..........  4% 1.72M 1s
+    50K .......... .......... .......... .......... ...... ..........  1% 2.25M 1s
+    50K .......... .......... .......... ................  8% 3.50M 0s
+   100K .......... .......... .......... .......... .......... 12% 43.2M 0s
+   150K .......... .......... .......... .......... .......... 17% 42.6M 0s.. ..........  3% 4.19M 1s
+   100K .......... .......... .......... .......... ..........  5% 63.0M 1s
+   150K .......... .......... .......... .......... ..........  6% 4.78M 1s
+   200K .......... .......... .......... .......... .....
+   200K .......... .......... .......... .......... .......... 21% 3.50M 0s
+   250K .......... .......... .......... .......... .......... 25%  108M 0s
+   300K .......... .......... .......... .......... .......... 30%  140M 0s
+   350K .......... .......... .......... .......... ...........  8% 12.8M 1s
+   250K .......... .........  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/hton.o ]
+. .......... .......... .......... 10% 65.6M 0s
+   300K .......... .......... .......... .......... .......... 11% 7.20M 0s
+   350K .......... .......... .......... .......... .......... 13%  145M 0s
+   400K .......... .......... .......... .......... .......... 15%  111M 0s
+   450K .......... .......... .......... .......... .......... 16% 69.1M 0s
+   500K .......... .......... .......... .......... .......... 18% 95.4M 0s
+   550K .......... .......... .......... .......... .......... 20% 63.3M 0s
+   600K ............. 34% 3.96M 0s
+   400K .......... .......... .......... .......... .......... 38% 88.2M 0s
+   450K .......... .......... .......... .......... .......... 42%  146M 0s
+   500K .......... .......... .......... .......... .......... 47%  104M 0s
+   550K .......... .......... .......... .......... .......... 51% 92.5M 0s
+   600K .......... .......... .......... .......... .......... 55% 99.0M 0s
+   650K .......... .......... .......... .......... .......... 60%  146M 0s
+   700K .......... .......... .......... .......... .......... 64% 76.0M 0s
+   750K .......... .......... .......... .......... ....... .......... .......... .......... .......... 21% 6.24M 0s
+   650K .......... .......... .......... .......... .......... 23%  105M 0s
+   700K .......... .......... .......... .......... .......... 25%  116M 0s
+   750K .......... .......... .......... .......... .......... 26%  142M 0s
+   800K .......... .......... .......... .......... .......... 28% 78.9M 0s
+   850K .......... .......... .......... .......... .......... 30% 94.4M 0s
+   900K .......... .......... .......... .......... .......... 31% 91.7M 0s
+   950K .......... .......... .......... .......... .......... 33% 61.7M 0s
+  1000K .......... .......... .......... .......... .......... 35% 92.9M 0s
+  1050K .......... .......... .......... .......... .......... 36% 93.0M 0s
+  1100K ......... 68% 4.51M 0s
+   800K .......... .......... .......... .......... .......... 72% 84.0M 0s
+   850K .......... .......... .......... .......... .......... 77% 53.4M 0s
+   900K .......... .......... .......... .......... .......... 81% 82.2M 0s
+   950K .......... .......... .......... .......... .......... 85%  112M 0s
+  1000K .......... ............... .......... . .......... ............... .......... .......... 38% 6.93M 0s
+  1150K ....... .......... 90% 34.2M 0s
+  1050K ......... .......... .......... ............. .......... .......... ......... .......... 40% 52.6M 0s
+  1200K .......... ............. .......... 94% 47.7M 0s
+  1100K .......... .......... .......... ..... .......... .......... ................. .......... 98% 61.5M 0s
+  1150K .......... .....                                      100%  147M=0.09s
+
+2020-09-21 22:46:59 (12.4 MB/s) - './tmp.fnAUQ6UEXV/unverified' saved [1193102/1193102]
+
+. 41% 20.3M 0s
+  1250K .......... .......... .......... .......... .......... 43%  116M 0s
+  1300K .......... .......... .......... .......... .......... 45%  118M 0s
+  1350K .......... .......... .......... .......... .......... 46%  120M 0s
+  1400K .......... .......... .......... .......... .......... 48%  134M 0s
+  1450K .......... .......... .......... .......... .......... 50%  130M 0s
+  1500K .......... .......... .......... .......... .......... 51%  146M 0s
+  1550K .......... .......... .......... .......... .......... 53%  124M 0s
+  1600K .......... .......... .......... .......... .......... 55%  129M 0s
+  1650K .......... .......... .......... .......... .......... 56%  123M 0s
+  1700K .......... .......... .......... .......... .......... 58%  104M 0s
+  1750K .......... .......... .......... .......... .......... 60% 93.9M 0s
+  1800K .......... .......... .......... .......... .......... 62%  122M 0s
+  1850K .......... .......... .......... .......... .......... 63%  115M 0s
+  1900K .......... .......... .......... .......... .......... 65% 13.4M 0s
+  1950K .......... .......... .......... .......... .......... 67%  151M 0s
+  2000K .......... .......... .......... .......... .......... 68%  134M 0s
+  2050K .......... .......... .......... .......... .......... 70%  163M 0s
+  2100K .......... .......... .......... .......... .......... 72%  160M 0s
+  2150K .......... .......... .......... .......... .......... 73%  164M 0s
+  2200K .......... .......... .......... .......... .......... 75%  150M 0s
+  2250K .......... .......... .......... .......... .......... 77%  150M 0s
+  2300K .......... .......... .......... .......... .......... 78% 89.1M 0s
+  2350K .......... .......... .......... .......... .......... 80% 95.1M 0s
+  2400K .......... .......... .......... .......... .......... 82% 37.9M 0s
+  2450K .......... .......... .......... .......... .......... 83%  140M 0s
+  2500K .......... .......... .......... .......... .......... 85% 47.2M 0s
+  2550K .......... .......... .......... .......... .......... 87%  134M 0s
+  2600K .......... .......... .......... .......... .......... 88% 84.2M 0s
+  2650K .......... .......... .......... .......... .......... 90%  145M 0s
+  2700K .......... .......... .......... .......... .......... 92% 74.0M 0s
+  2750K .......... .......... .......... .......... .......... 93%  145M 0s
+  2800K .......... .......... .......... .......... .......... 95%  121M 0s
+  2850K .......... .......... .......... .......... .......... 97%  153M 0s
+  2900K .......... .......... .......... .......... .......... 98% 84.7M 0s
+  2950K .......... .......... .......... ...                  100% 84.2M=0.1s
+
+2020-09-21 22:46:59 (29.1 MB/s) - './tmp.wnury6BwDY/unverified' saved [3055269/3055269]
+
+download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/network/inet_pton.o ]
+download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/atoi.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memcpy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/memset.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strchr.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strcmp.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strendswith.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strlen.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/string/strstr.o ]
+rm -f -r crypto/mbedtls
+cd crypto && tar -mxzf mbedtls-2.21.0.tar.gz
+cd crypto && tar -mxzf mbedcrypto-3.1.0.tar.gz
+mv crypto/mbedtls-mbedtls-2.21.0 crypto/mbedtls
+rm -f -r crypto/mbedtls/crypto
+mv crypto/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls
+mv crypto/mbedtls/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls/crypto
+cd crypto/mbedtls && patch -p1 < ../mbedtls-2.21.0.diff || exit 255
+patching file library/ssl_tls.c
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && perl ./scripts/config.pl set MBEDTLS_CMAC_C && make CFLAGS="" SHARED=1 DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls'
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library'
+make[6]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    aes.c
+  CC    aesni.c
+  CC    arc4.c
+  CC    aria.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    base64.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    camellia.c
+  CC    ccm.c
+  CC    chacha20.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    cmac.c
+  CC    ctr_drbg.c
+  CC    des.c
+  CC    dhm.c
+  CC    ecdh.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md4.c
+  CC    md5.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    platform_util.c
+  CC    poly1305.c
+  CC    psa_crypto.c
+  CC    psa_crypto_se.c
+  CC    psa_crypto_slot_management.c
+  CC    psa_crypto_storage.c
+  CC    psa_its_file.c
+  CC    ripemd160.c
+  CC    rsa_internal.c
+  CC    rsa.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    xtea.c
+  CC    /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library/error.c
+  CC    /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library/version.c
+  CC    /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library/version_features.c
+  CC    ../3rdparty/everest/library/everest.c
+  CC    ../3rdparty/everest/library/x25519.c
+  CC    ../3rdparty/everest/library/Hacl_Curve25519_joined.c
+  AR    libmbedcrypto.a
+make[6]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  LD    libmbedcrypto.so.4
+  LN    libmbedcrypto.so -> libmbedcrypto.so.4
+make[6]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  LD    libmbedx509.so.1
+  LN    libmbedx509.so -> libmbedx509.so.1
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    ssl_msg.c
+  CC    ssl_srv.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  LD    libmbedtls.so.13
+  LN    libmbedtls.so -> libmbedtls.so.13
+  AR    libmbedx509.a
+  AR    libmbedtls.a
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/hello.c
+  CC    hash/generic_sum.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify_pss.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/ssl_client1.c
+  CC    ssl/ssl_client2.c
+  CC    ssl/ssl_server.c
+  CC    ssl/ssl_server2.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_mail_client.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_havege.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    test/query_compile_time_config.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/crl_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/req_app.c
+make[6]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+ cc common.o onefile.o fuzz_x509csr.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509csr
+ cc common.o onefile.o fuzz_server.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_server
+ cc common.o onefile.o fuzz_privkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_privkey
+ cc common.o onefile.o fuzz_x509crt.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crt
+ cc common.o onefile.o fuzz_dtlsclient.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsclient
+ cc common.o onefile.o fuzz_pubkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_pubkey
+ cc common.o onefile.o fuzz_x509crl.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crl
+ cc common.o onefile.o fuzz_client.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_client
+ cc common.o onefile.o fuzz_dtlsserver.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsserver
+make[6]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib/crypto/mbedtls'
+rm -f crypto/mbedtls/include/mbedtls/config.h
+rm -f crypto/mbedtls/crypto/include/mbedtls/config.h
+cp crypto/config.h crypto/mbedtls/crypto/include/mbedtls
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/lib'
+make[3]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX'
+  [ db_devices.o ]
+  [ db_eventfd.o ]
+  [ db_events.o ]
+  [ db_exception.o ]
+  [ db_files.o ]
+  [ db_main.o ]
+  [ db_main-x86_64.o ]
+  [ db_memory.o ]
+  [ db_misc.o ]
+  [ db_mutex.o ]
+  [ db_object.o ]
+  [ db_pipes.o ]
+  [ db_process.o ]
+  [ db_rtld.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_threading.o ]
+  [ enclave_ecalls.o ]
+  [ enclave_framework.o ]
+  [ enclave_ocalls.o ]
+  [ enclave_pages.o ]
+  [ enclave_pf.o ]
+  [ enclave_platform.o ]
+  [ enclave_untrusted.o ]
+  [ enclave_xstate.o ]
+  [ protected-files/lru_cache.o ]
+  [ protected-files/protected_files.o ]
+  [ bogomips.o ]
+  [ gdb_integration/sgx_gdb.so ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+  [ generated-offsets.s ]
+[ host/Linux-SGX/quote/aesm.pb-c.c ]
+  [ pal.map ]
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+make -C tools
+make[4]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools'
+make -C common all
+[ host/Linux-SGX/quote/aesm.pb-c.h ]
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/common'
+../../../../../../Scripts/download --output v1.7.12.tar.gz --url https://github.com/DaveGamble/cJSON/archive//v1.7.12.tar.gz --sha256 760687665ab41a5cff9c40b1053c19572bcdaadef1194e5cba1b5e6f824686e7
+download: Trying to fetch https://github.com/DaveGamble/cJSON/archive//v1.7.12.tar.gz
+--2020-09-21 22:47:13--  https://github.com/DaveGamble/cJSON/archive//v1.7.12.tar.gz
+Resolving github.com (github.com)... mkdir -p cJSON-1.7.12
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../../../../../include/lib -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -I../../protected-files -DCRYPTO_USE_MBEDTLS -D_POSIX_C_SOURCE=200809L -fPIC   -c -o ias.o ias.c
+140.82.112.3
+Connecting to github.com (github.com)|140.82.112.3|:443...   [ clone-x86_64.o ]
+connected.
+HTTP request sent, awaiting response... gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../../../../../include/lib -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -I../../protected-files -DCRYPTO_USE_MBEDTLS -D_POSIX_C_SOURCE=200809L -fPIC   -c -o pf_util.o pf_util.c
+302 Found
+Location: https://codeload.github.com/DaveGamble/cJSON/tar.gz/v1.7.12 [following]
+--2020-09-21 22:47:13--  https://codeload.github.com/DaveGamble/cJSON/tar.gz/v1.7.12
+Resolving codeload.github.com (codeload.github.com)...   [ lru_cache.o ]
+  [ protected_files.o ]
+140.82.114.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.10|:443... connected.
+HTTP request sent, awaiting response...   [ sgx_enclave.o ]
+200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.gr4D4zec8k/unverified'
+
+     0K .......... .......... .......... .......... .......... 1.73M
+    50K .......... .......... .......... .......... .......... 8.03M
+   100K .......... .......... .......... .......... .......... 5.44M
+   150K .......... .......... .......... .......... .......... 9.03M
+   200K .......... .......... .......... .......... .......... 5.71M
+   250K .......... .......... .......... .......... .......... 63.9M
+   300K .......... .......... .......... ..........            55.2M=0.06s
+
+2020-09-21 22:47:13 (5.65 MB/s) - './tmp.gr4D4zec8k/unverified' saved [348294]
+
+download: Fetched 'v1.7.12.tar.gz' (76068766...) successfully.
+  [ sgx_exception.o ]
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../../../../../include/lib -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -I../../protected-files -DCRYPTO_USE_MBEDTLS -D_POSIX_C_SOURCE=200809L -fPIC   -c -o util.o util.c
+  [ sgx_framework.o ]
+tar --touch -zxvf v1.7.12.tar.gz cJSON-1.7.12/cJSON.h
+cJSON-1.7.12/cJSON.h
+tar --touch -zxvf v1.7.12.tar.gz cJSON-1.7.12/cJSON.c
+cJSON-1.7.12/cJSON.c
+cp cJSON-1.7.12/cJSON.h .
+cp cJSON-1.7.12/cJSON.c .
+  [ sgx_graphene.o ]
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../../../../../include/lib -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -I../../protected-files -DCRYPTO_USE_MBEDTLS -D_POSIX_C_SOURCE=200809L -fPIC   -c -o attestation.o attestation.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../../../../../include/lib -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -I../../protected-files -DCRYPTO_USE_MBEDTLS -D_POSIX_C_SOURCE=200809L -fPIC   -c -o cJSON.o cJSON.c
+  [ sgx_main.o ]
+  [ sgx_platform.o ]
+  [ sgx_process.o ]
+  [ sgx_gdb_info.o ]
+sgx_gdb_info.c: In function 'execute_gdb_command':
+sgx_gdb_info.c:12:14: error: expected identifier or '(' before '__asm__'
+     volatile __asm__(""); // Required in addition to __noinline__ to prevent deleting this function.
+              ^~~~~~~
+Makefile:103: recipe for target 'sgx_gdb_info.o' failed
+make[3]: *** [sgx_gdb_info.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+gcc attestation.o cJSON.o ias.o lru_cache.o pf_util.o protected_files.o util.o -L../../../../../lib/crypto/mbedtls/install/lib ../../.lib/crypto/adapters/mbedtls_encoding.o -lmbedcrypto -lcurl -shared -o libsgx_util.so
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/common'
+make -C is-sgx-available all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/is-sgx-available'
+g++ -O2 -std=c++14 -DNDEBUG -Wall -Wextra -Wno-multichar -masm=intel is_sgx_available.cpp -o is_sgx_available
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/is-sgx-available'
+make -C quote-dump all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/quote-dump'
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -L../common -L../../../../../lib/crypto/mbedtls/install/lib -D_GNU_SOURCE   -c -o quote_dump.o quote_dump.c
+  [ quote_dump ]
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/quote-dump'
+make -C ias-request all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/ias-request'
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -L../common -L../../../../../lib/crypto/mbedtls/install/lib -D_GNU_SOURCE   -c -o ias_request.o ias_request.c
+  [ ias_request ]
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/ias-request'
+make -C verify-ias-report all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/verify-ias-report'
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -L../common -L../../../../../lib/crypto/mbedtls/install/lib -D_GNU_SOURCE   -c -o verify_ias_report.o verify_ias_report.c
+  [ verify_ias_report ]
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/verify-ias-report'
+make -C ra-tls all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/ra-tls'
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o ra_tls_attest.o ra_tls_attest.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o ra_tls_verify_common.o ra_tls_verify_common.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o ra_tls_verify_epid.o ra_tls_verify_epid.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o secret_prov_common.o secret_prov_common.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o secret_prov_attest.o secret_prov_attest.c
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../../../../lib/crypto/mbedtls/install/include -I../../../../../lib/crypto/mbedtls/crypto/include -fPIC -fvisibility=hidden   -c -o secret_prov_verify.o secret_prov_verify.c
+gcc ra_tls_attest.o -L../../../../../lib/crypto/mbedtls/install/lib -Wl,-rpath,. -l:libmbedx509.a -l:libmbedcrypto.a -shared -o libra_tls_attest.so
+gcc ra_tls_verify_common.o ra_tls_verify_epid.o -L../../../../../lib/crypto/mbedtls/install/lib -Wl,-rpath,. -L../common -lsgx_util -lmbedcrypto -lmbedx509 -shared -o libra_tls_verify_epid.so
+gcc ra_tls_verify_common.o ra_tls_verify_epid.o secret_prov_common.o secret_prov_verify.o -L../../../../../lib/crypto/mbedtls/install/lib -Wl,-rpath,. -L../common -lsgx_util -lmbedcrypto -lmbedx509 -lmbedtls -shared -o libsecret_prov_verify_epid.so
+gcc ra_tls_attest.o secret_prov_common.o secret_prov_attest.o -L../../../../../lib/crypto/mbedtls/install/lib -Wl,-rpath,. -l:libmbedx509.a -l:libmbedtls.a -l:libmbedcrypto.a -shared -o libsecret_prov_attest.so
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/ra-tls'
+make -C pf_crypt all
+make[5]: Entering directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/pf_crypt'
+gcc -Wall -std=c11 -Wmissing-prototypes -O2 -Werror -I../.. -I../common -I../../protected-files -L../common -L../../../../../lib/crypto/mbedtls/install/lib -D_GNU_SOURCE   -c -o pf_crypt.o pf_crypt.c
+  [ pf_crypt ]
+make[5]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools/pf_crypt'
+make[4]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src/host/Linux-SGX/tools'
+make[3]: *** wait: No child processes.  Stop.
+Makefile:93: recipe for target 'host_lib_recurse' failed
+make[2]: *** [host_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/jenkins_slave/workspace/graphene-sgx-18.04/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 1a7a615eefc88a314c4d0ab814483130dfb7741250ba6fec5e679e3c584d86d9
+$ docker rm -f 1a7a615eefc88a314c4d0ab814483130dfb7741250ba6fec5e679e3c584d86d9
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 198e1d64e130b4d61f74a5847481d3ef0784c4d0 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3477/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

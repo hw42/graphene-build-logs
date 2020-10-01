@@ -1,0 +1,172 @@
+GitHub pull request #1858 of commit 9fd1ccffbb601c62566af0f6c53a6aa4dd8ee451, no merge conflicts.
+Setting status of 9fd1ccffbb601c62566af0f6c53a6aa4dd8ee451 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3548/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1858/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 9e7ada601c9ceaa6cf66044c192c54e40213209c (refs/remotes/origin/pr/1858/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9e7ada601c9ceaa6cf66044c192c54e40213209c # timeout=20
+Commit message: "Merge 9fd1ccffbb601c62566af0f6c53a6aa4dd8ee451 into 3c326a4c0ddcfd9fb207c96c257ee52133016283"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘sgx_slave’
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.28.0'
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --force --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 9e7ada601c9ceaa6cf66044c192c54e40213209c (refs/remotes/origin/pr/1858/merge)
+Commit message: "Merge 9fd1ccffbb601c62566af0f6c53a6aa4dd8ee451 into 3c326a4c0ddcfd9fb207c96c257ee52133016283"
+ > git rev-parse refs/remotes/origin/pr/1858/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9e7ada601c9ceaa6cf66044c192c54e40213209c # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-sgx-18.04-3548 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  535.5MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 775349758637
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> f0b574374d8d
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 699c93925181
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 561437ea6786
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 7f4e2022214d
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 274df9e48ac8
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 44de75aef6d8
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 818078a27423
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 6dce34c0ca25
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> e670bb8d61bd
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 43e08c722c1d
+Successfully built 43e08c722c1d
+Successfully tagged local:jenkins-graphene-sgx-18.04-3548
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 9fd1ccffbb601c62566af0f6c53a6aa4dd8ee451 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3548/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+groovy.lang.MissingPropertyException: No such property: DOCKER_ARGS for class: groovy.lang.Binding
+	at groovy.lang.Binding.getVariable(Binding.java:63)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onGetProperty(SandboxInterceptor.java:270)
+	at org.kohsuke.groovy.sandbox.impl.Checker$7.call(Checker.java:353)
+	at org.kohsuke.groovy.sandbox.impl.Checker.checkedGetProperty(Checker.java:357)
+	at org.kohsuke.groovy.sandbox.impl.Checker.checkedGetProperty(Checker.java:333)
+	at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.getProperty(SandboxInvoker.java:29)
+	at com.cloudbees.groovy.cps.impl.PropertyAccessBlock.rawGet(PropertyAccessBlock.java:20)
+	at WorkflowScript.run(WorkflowScript:8)
+	at ___cps.transform___(Native Method)
+	at com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.get(PropertyishBlock.java:74)
+	at com.cloudbees.groovy.cps.LValueBlock$GetAdapter.receive(LValueBlock.java:30)
+	at com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.fixName(PropertyishBlock.java:66)
+	at jdk.internal.reflect.GeneratedMethodAccessor365.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+	at com.cloudbees.groovy.cps.Next.step(Next.java:83)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:174)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:163)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:129)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:268)
+	at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:163)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:51)
+	at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:185)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:400)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.access$400(CpsThreadGroup.java:96)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:312)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:276)
+	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:67)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:136)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:59)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Finished: FAILURE

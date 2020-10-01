@@ -1,0 +1,134 @@
+GitHub pull request #1858 of commit b8fffc71c51bdde4c07175a7af2ac1e8d5eafbb9, no merge conflicts.
+Setting status of b8fffc71c51bdde4c07175a7af2ac1e8d5eafbb9 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/3605 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1858/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision df02a50a610159345f36b1d0d82793f42a07956b (refs/remotes/origin/pr/1858/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f df02a50a610159345f36b1d0d82793f42a07956b # timeout=10
+Commit message: "Merge b8fffc71c51bdde4c07175a7af2ac1e8d5eafbb9 into 3c326a4c0ddcfd9fb207c96c257ee52133016283"
+ > git rev-list --no-walk 7627ed0a71bbe18694be1aceaa7f7b8d502a1ed0 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] load
+[Pipeline] // load
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of b8fffc71c51bdde4c07175a7af2ac1e8d5eafbb9 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/3605 and message: 'Build finished. '
+Using context: Jenkins-18.04
+Also:   hudson.remoting.Channel$CallSiteStackTrace: Remote call to slave-pepe
+		at hudson.remoting.Channel.attachCallSiteStackTrace(Channel.java:1800)
+		at hudson.remoting.UserRequest$ExceptionResponse.retrieve(UserRequest.java:357)
+		at hudson.remoting.Channel.call(Channel.java:1001)
+		at hudson.FilePath.act(FilePath.java:1070)
+		at hudson.FilePath.act(FilePath.java:1059)
+		at hudson.FilePath.readToString(FilePath.java:2077)
+		at org.jenkinsci.plugins.workflow.cps.steps.LoadStepExecution.start(LoadStepExecution.java:39)
+		at org.jenkinsci.plugins.workflow.cps.DSL.invokeStep(DSL.java:286)
+		at org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:179)
+		at org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:122)
+		at jdk.internal.reflect.GeneratedMethodAccessor13804.invoke(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+		at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+		at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1213)
+		at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+		at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
+		at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+		at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+		at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:163)
+		at org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:23)
+		at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:157)
+		at org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:161)
+		at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:165)
+		at org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:135)
+		at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)
+		at com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:86)
+		at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:113)
+		at com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:83)
+		at jdk.internal.reflect.GeneratedMethodAccessor358.invoke(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+		at com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+		at com.cloudbees.groovy.cps.Next.step(Next.java:83)
+		at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:174)
+		at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:163)
+		at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:129)
+		at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:268)
+		at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:163)
+		at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)
+		at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:51)
+		at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:185)
+		at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:400)
+		at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.access$400(CpsThreadGroup.java:96)
+		at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:312)
+		at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:276)
+		at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:67)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:136)
+		at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+		at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:59)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+java.nio.file.NoSuchFileException: /home/jenkins/workspace/graphene-18.04/.ci/lib/config.jenkinsfile
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at hudson.FilePath$ReadToString.invoke(FilePath.java:2083)
+	at hudson.FilePath$ReadToString.invoke(FilePath.java:2079)
+	at hudson.FilePath$FileCallableWrapper.call(FilePath.java:3112)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:375)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:73)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Finished: FAILURE

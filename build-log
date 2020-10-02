@@ -1,0 +1,357 @@
+GitHub pull request #1858 of commit be9600ddd789032edf2c7839284e9c74a5c4e8e1, no merge conflicts.
+Setting status of be9600ddd789032edf2c7839284e9c74a5c4e8e1 to PENDING with url https://leeroy.cs.unc.edu/job/graphene/4880 and message: 'Build started for merge commit.'
+Using context: Jenkins
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene@script to read ./Jenkinsfiles/Linux
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1858/merge^{commit} # timeout=10
+Checking out Revision 9762d60f17437e15a72f72306ef63f605dd9f6de (refs/remotes/origin/pr/1858/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9762d60f17437e15a72f72306ef63f605dd9f6de # timeout=10
+Commit message: "Merge be9600ddd789032edf2c7839284e9c74a5c4e8e1 into 73b774f5ebee56185b03f98bee81e0dd62fab9db"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-waldorf in /home/jenkins/workspace/graphene
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.7.4'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 9762d60f17437e15a72f72306ef63f605dd9f6de (refs/remotes/origin/pr/1858/merge)
+Commit message: "Merge be9600ddd789032edf2c7839284e9c74a5c4e8e1 into 73b774f5ebee56185b03f98bee81e0dd62fab9db"
+ > git rev-parse refs/remotes/origin/pr/1858/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9762d60f17437e15a72f72306ef63f605dd9f6de # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-4880 -f .ci/ubuntu16.04.dockerfile .
+Sending build context to Docker daemon  491.7MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> fd19b50d8e52
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 1ef35de93776
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> 8a644108dfe0
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> a5afea83e69d
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> 1a8a59e8adc0
+Successfully built 1a8a59e8adc0
+Successfully tagged local:jenkins-graphene-4880
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-4880
+.
+[Pipeline] withDockerContainer
+slave-waldorf does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene -v /home/jenkins/workspace/graphene:/home/jenkins/workspace/graphene:rw,z -v /home/jenkins/workspace/graphene@tmp:/home/jenkins/workspace/graphene@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-4880 cat
+$ docker top 058c6a81a0d916166b6f86e69f040266988e1ff4312e37b3fd07e3cc80f8a16b -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/environment.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] sh
++ printenv
+JENKINS_HOME=/var/lib/jenkins
+ghprbSourceBranch=woju/modular-jenkins-stage1
+ghprbTriggerAuthorEmail=
+WERROR=1
+ghprbPullAuthorEmail=
+HOSTNAME=058c6a81a0d9
+ghprbPullDescription=GitHub pull request #1858 of commit be9600ddd789032edf2c7839284e9c74a5c4e8e1, no merge conflicts.
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=changes
+NODE_LABELS=nonsgx_slave slave-waldorf waldorf
+HUDSON_URL=https://leeroy.cs.unc.edu/
+ghprbActualCommit=be9600ddd789032edf2c7839284e9c74a5c4e8e1
+branch=${sha1}
+HOME=/leeroy
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene/4880/
+ghprbTriggerAuthorLoginMention=
+ghprbActualCommitAuthor=Wojtek Porczyk
+ghprbPullAuthorLoginMention=@woju
+JENKINS_SERVER_COOKIE=durable-4dc7bb75f3869ab106e25a7c1dac1a5c
+ghprbGhRepository=oscarlab/graphene
+MAKEOPTS=-jnull
+WORKSPACE=/home/jenkins/workspace/graphene
+DOCKER_ARGS=
+    --volume=/lib/modules:/lib/modules:ro
+    --volume=/usr/src:/usr/src:ro
+    --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+    --device=/dev/gsgx:/dev/gsgx
+    --device=/dev/isgx:/dev/isgx
+
+ghprbPullLongDescription=<!--\r\n    Please fill in the following form before submitting this PR\r\n    and ensure that your code follows our coding style guideline:\r\n    https://graphene.readthedocs.io/en/latest/devel/coding-style.html -->\r\n\r\n## Description of the changes <!-- (reasons and measures) -->\r\n\r\nThis splits jenkinsfiles into subfiles in an attempt to reverse duplication and slight differences that happened over time.\r\n\r\n- jenkinsfiles are moved under `.ci/`, since they're not supposed to be touched frequently. Optimally they should be static and new tests/features should be added to some script or make target, but the reality is that they are still sometimes changed. This should be discouraged.\r\n- Matrix builds are not viable, because they cannot be rerun without rerunning full Cartesian product of all axes.\r\n\r\nsee #1844\r\n\r\nAfter merging this PR, pipelines should be switched to new jenkinsfiles in `.ci/`. After this is done, the next PR (TBD) should be merged, which would delete `Jenkinsfile` directory.\r\n\r\n## How to test this PR? <!-- (if applicable) -->\r\n\r\nRun through Jenkins.\n\n<!-- Reviewable:start -->\n---\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/1858)\n<!-- Reviewable:end -->\n
+NODE_NAME=slave-waldorf
+ghprbCredentialsId=a66ebde8-6372-4e67-8aaf-1beba8f3c6d4
+RUN_ARTIFACTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=artifacts
+ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver
+GIT_BRANCH=woju/modular-jenkins-stage1
+EXECUTOR_NUMBER=0
+ghprbTriggerAuthorLogin=
+BUILD_DISPLAY_NAME=#4880
+ghprbPullAuthorLogin=woju
+RUN_TESTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=tests
+HUDSON_HOME=/var/lib/jenkins
+ghprbTriggerAuthor=
+JOB_BASE_NAME=graphene
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=origin/pr/1858/merge
+BUILD_ID=4880
+BUILD_TAG=jenkins-graphene-4880
+JENKINS_URL=https://leeroy.cs.unc.edu/
+ghprbCommentBody=null
+ghprbPullTitle=WIP RFC: Modular Jenkins, stage 1
+random_string=ZZHK4564V3LP
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene/
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/1858
+BUILD_NUMBER=4880
+JENKINS_NODE_COOKIE=21f9a25b-27aa-4fc4-9dfc-fb8afd1a7d38
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect
+ghprbActualCommitAuthorEmail=woju@invisiblethingslab.com
+ghprbAuthorRepoGitUrl=https://github.com/oscarlab/graphene.git
+build_revision=origin/pr/1858/merge
+GLIBC_VERSION=2.27
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene
+PWD=/home/jenkins/workspace/graphene
+ghprbPullId=1858
+WORKSPACE_TMP=/home/jenkins/workspace/graphene@tmp
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ printenv
+JENKINS_HOME=/var/lib/jenkins
+ghprbSourceBranch=woju/modular-jenkins-stage1
+ghprbTriggerAuthorEmail=
+WERROR=1
+ghprbPullAuthorEmail=
+HOSTNAME=058c6a81a0d9
+ghprbPullDescription=GitHub pull request #1858 of commit be9600ddd789032edf2c7839284e9c74a5c4e8e1, no merge conflicts.
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=changes
+NODE_LABELS=nonsgx_slave slave-waldorf waldorf
+HUDSON_URL=https://leeroy.cs.unc.edu/
+ghprbActualCommit=be9600ddd789032edf2c7839284e9c74a5c4e8e1
+branch=${sha1}
+HOME=/leeroy
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene/4880/
+ghprbTriggerAuthorLoginMention=
+ghprbActualCommitAuthor=Wojtek Porczyk
+ghprbPullAuthorLoginMention=@woju
+JENKINS_SERVER_COOKIE=durable-4dc7bb75f3869ab106e25a7c1dac1a5c
+ghprbGhRepository=oscarlab/graphene
+MAKEOPTS=-jnull
+WORKSPACE=/home/jenkins/workspace/graphene
+DOCKER_ARGS=
+    --volume=/lib/modules:/lib/modules:ro
+    --volume=/usr/src:/usr/src:ro
+    --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+    --device=/dev/gsgx:/dev/gsgx
+    --device=/dev/isgx:/dev/isgx
+
+ghprbPullLongDescription=<!--\r\n    Please fill in the following form before submitting this PR\r\n    and ensure that your code follows our coding style guideline:\r\n    https://graphene.readthedocs.io/en/latest/devel/coding-style.html -->\r\n\r\n## Description of the changes <!-- (reasons and measures) -->\r\n\r\nThis splits jenkinsfiles into subfiles in an attempt to reverse duplication and slight differences that happened over time.\r\n\r\n- jenkinsfiles are moved under `.ci/`, since they're not supposed to be touched frequently. Optimally they should be static and new tests/features should be added to some script or make target, but the reality is that they are still sometimes changed. This should be discouraged.\r\n- Matrix builds are not viable, because they cannot be rerun without rerunning full Cartesian product of all axes.\r\n\r\nsee #1844\r\n\r\nAfter merging this PR, pipelines should be switched to new jenkinsfiles in `.ci/`. After this is done, the next PR (TBD) should be merged, which would delete `Jenkinsfile` directory.\r\n\r\n## How to test this PR? <!-- (if applicable) -->\r\n\r\nRun through Jenkins.\n\n<!-- Reviewable:start -->\n---\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/1858)\n<!-- Reviewable:end -->\n
+NODE_NAME=slave-waldorf
+ghprbCredentialsId=a66ebde8-6372-4e67-8aaf-1beba8f3c6d4
+RUN_ARTIFACTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=artifacts
+ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver
+GIT_BRANCH=woju/modular-jenkins-stage1
+EXECUTOR_NUMBER=0
+STAGE_NAME=build
+ghprbTriggerAuthorLogin=
+BUILD_DISPLAY_NAME=#4880
+ghprbPullAuthorLogin=woju
+RUN_TESTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect?page=tests
+HUDSON_HOME=/var/lib/jenkins
+ghprbTriggerAuthor=
+JOB_BASE_NAME=graphene
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=origin/pr/1858/merge
+BUILD_ID=4880
+BUILD_TAG=jenkins-graphene-4880
+JENKINS_URL=https://leeroy.cs.unc.edu/
+ghprbCommentBody=null
+ghprbPullTitle=WIP RFC: Modular Jenkins, stage 1
+random_string=ZZHK4564V3LP
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene/
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/1858
+BUILD_NUMBER=4880
+JENKINS_NODE_COOKIE=21f9a25b-27aa-4fc4-9dfc-fb8afd1a7d38
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/4880/display/redirect
+ghprbActualCommitAuthorEmail=woju@invisiblethingslab.com
+ghprbAuthorRepoGitUrl=https://github.com/oscarlab/graphene.git
+build_revision=origin/pr/1858/merge
+GLIBC_VERSION=2.27
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene
+PWD=/home/jenkins/workspace/graphene
+ghprbPullId=1858
+WORKSPACE_TMP=/home/jenkins/workspace/graphene@tmp
++ .ci/isdistro xenial
++ cd LibOS
++ make -jnull glibc-build/Build.success
+make: the '-j' option requires a positive integer argument
+Usage: make [options] [target] ...
+Options:
+  -b, -m                      Ignored for compatibility.
+  -B, --always-make           Unconditionally make all targets.
+  -C DIRECTORY, --directory=DIRECTORY
+                              Change to DIRECTORY before doing anything.
+  -d                          Print lots of debugging information.
+  --debug[=FLAGS]             Print various types of debugging information.
+  -e, --environment-overrides
+                              Environment variables override makefiles.
+  --eval=STRING               Evaluate STRING as a makefile statement.
+  -f FILE, --file=FILE, --makefile=FILE
+                              Read FILE as a makefile.
+  -h, --help                  Print this message and exit.
+  -i, --ignore-errors         Ignore errors from recipes.
+  -I DIRECTORY, --include-dir=DIRECTORY
+                              Search DIRECTORY for included makefiles.
+  -j [N], --jobs[=N]          Allow N jobs at once; infinite jobs with no arg.
+  -k, --keep-going            Keep going when some targets can't be made.
+  -l [N], --load-average[=N], --max-load[=N]
+                              Don't start multiple jobs unless load is below N.
+  -L, --check-symlink-times   Use the latest mtime between symlinks and target.
+  -n, --just-print, --dry-run, --recon
+                              Don't actually run any recipe; just print them.
+  -o FILE, --old-file=FILE, --assume-old=FILE
+                              Consider FILE to be very old and don't remake it.
+  -O[TYPE], --output-sync[=TYPE]
+                              Synchronize output of parallel jobs by TYPE.
+  -p, --print-data-base       Print make's internal database.
+  -q, --question              Run no recipe; exit status says if up to date.
+  -r, --no-builtin-rules      Disable the built-in implicit rules.
+  -R, --no-builtin-variables  Disable the built-in variable settings.
+  -s, --silent, --quiet       Don't echo recipes.
+  -S, --no-keep-going, --stop
+                              Turns off -k.
+  -t, --touch                 Touch targets instead of remaking them.
+  --trace                     Print tracing information.
+  -v, --version               Print the version number of make and exit.
+  -w, --print-directory       Print the current directory.
+  --no-print-directory        Turn off -w, even if it was turned on implicitly.
+  -W FILE, --what-if=FILE, --new-file=FILE, --assume-new=FILE
+                              Consider FILE to be infinitely new.
+  --warn-undefined-variables  Warn when an undefined variable is referenced.
+
+This program built for x86_64-pc-linux-gnu
+Report bugs to <bug-make@gnu.org>
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 058c6a81a0d916166b6f86e69f040266988e1ff4312e37b3fd07e3cc80f8a16b
+$ docker rm -f 058c6a81a0d916166b6f86e69f040266988e1ff4312e37b3fd07e3cc80f8a16b
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of be9600ddd789032edf2c7839284e9c74a5c4e8e1 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene/4880 and message: 'Build finished. '
+Using context: Jenkins
+ERROR: script returned exit code 2
+Finished: FAILURE

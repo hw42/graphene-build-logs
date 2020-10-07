@@ -1,0 +1,213 @@
+GitHub pull request #1868 of commit e2a9ea876e09cf3c9d796f7408c01d12393df213, no merge conflicts.
+Setting status of e2a9ea876e09cf3c9d796f7408c01d12393df213 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/3649 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/1868/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc (refs/remotes/origin/pr/1868/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc # timeout=10
+Commit message: "Merge e2a9ea876e09cf3c9d796f7408c01d12393df213 into 3bcab01a0c0665d190b991b8823bdbbb6ed887ef"
+ > git rev-list --no-walk 6398453aafeb4cbaab401a4fc0c9695a2cc59b67 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-waldorf in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc (refs/remotes/origin/pr/1868/merge)
+Commit message: "Merge e2a9ea876e09cf3c9d796f7408c01d12393df213 into 3bcab01a0c0665d190b991b8823bdbbb6ed887ef"
+ > git rev-parse refs/remotes/origin/pr/1868/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 455b6c70116c134a4d7b91b3ecc54a34391c9ef8 -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  491.7MB
+Step 1/11 : FROM ubuntu:18.04
+18.04: Pulling from library/ubuntu
+171857c49d0f: Pulling fs layer
+419640447d26: Pulling fs layer
+61e52f862619: Pulling fs layer
+419640447d26: Verifying Checksum
+419640447d26: Download complete
+61e52f862619: Verifying Checksum
+61e52f862619: Download complete
+171857c49d0f: Download complete
+171857c49d0f: Pull complete
+419640447d26: Pull complete
+61e52f862619: Pull complete
+Digest: sha256:646942475da61b4ce9cc5b3fadb42642ea90e5d0de46111458e100ff2c7031e6
+Status: Downloaded newer image for ubuntu:18.04
+ ---> 56def654ec22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Running in d9d45144474e
+Err:1 http://archive.ubuntu.com/ubuntu bionic InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists...
+[91mW: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/bionic-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/bionic-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+Package texinfo is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+Package libpcre3-dev is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+[91mE: Unable to locate package apache2-utils
+E: Unable to locate package autoconf
+E: Unable to locate package bison
+E: Unable to locate package build-essential
+E: Unable to locate package curl
+E: Unable to locate package flex
+E: Unable to locate package gawk
+E: Unable to locate package gdb
+E: [0m[91mUnable to locate package gettext
+E: Unable to locate package git
+E: Unable to locate package libapr1-dev
+E: Unable to locate package libaprutil1-dev
+E: Unable to locate package libcurl4-openssl-dev
+E: [0m[91mUnable to locate package libelf-dev
+E: Unable to locate package libevent-dev
+E: Unable to locate package libexpat1
+E[0m[91m: Unable to locate package libexpat1-dev
+E: Unable to locate package libmemcached-tools
+E: Unable to locate package libnss-mdns
+E: [0m[91mUnable to locate package libnuma1
+E: Unable to locate package libomp-dev
+E: Unable to locate package libpcre2-dev
+[0m[91mE: Package 'libpcre3-dev' has no installation candidate
+E: Unable to locate package libprotobuf-c-dev
+E: Unable to locate package libssl-dev
+E: Unable to locate package libxfixes3
+E: [0m[91mUnable to locate package libxi6
+E: Unable to locate package libxml2-dev
+E: Unable to locate package libxrender1
+E[0m[91m: Unable to locate package libxxf86vm1
+E: Unable to locate package linux-headers-4.15.0-20-generic
+E: Couldn't find any package by glob 'linux-headers-4.15.0-20-generic'
+E[0m[91m: Couldn't find any package by regex 'linux-headers-4.15.0-20-generic'
+E: Unable to locate package net-tools
+E[0m[91m: Unable to locate package protobuf-c-compiler
+E: Unable to locate package pylint3
+E: Unable to locate package python[0m[91m
+E: Unable to locate package python3-apport
+E: [0m[91mUnable to locate package python3-apt
+E[0m[91m: Unable to locate package python3-breathe
+E: Unable to locate package python3-lxml
+E: [0m[91mUnable to locate package python3-numpy
+E[0m[91m: Unable to locate package python3-pip
+E: Unable to locate package python3-protobuf[0m[91m
+E: [0m[91mUnable to locate package python3-pytest
+E: Unable to locate package python3-scipy
+[0m[91mE: [0m[91mUnable to locate package r-base-core
+[0m[91mE: Unable to locate package shellcheck
+E: Package 'texinfo' has no installation candidate
+E[0m[91m: Unable to locate package wget
+E: Unable to locate package zlib1g-dev[0m[91m
+[0mThe command '/bin/sh -c apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev' returned a non-zero code: 100
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Setting status of e2a9ea876e09cf3c9d796f7408c01d12393df213 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/3649 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 100
+Finished: FAILURE

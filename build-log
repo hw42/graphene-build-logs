@@ -1,0 +1,169 @@
+Started by user David Cowhig
+Replayed #4835
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-waldorf in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc (refs/remotes/origin/pr/1868/merge)
+ > git rev-parse refs/remotes/origin/pr/1868/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9abe9e9592a6fef7ee1b00577b0e034f2b66b4dc # timeout=20
+Commit message: "Merge e2a9ea876e09cf3c9d796f7408c01d12393df213 into 3bcab01a0c0665d190b991b8823bdbbb6ed887ef"
+First time build. Skipping changelog.
+ > git rev-list --no-walk 6398453aafeb4cbaab401a4fc0c9695a2cc59b67 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t a19bc9310e849b807deb1958aa7443b07f06c612 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  535.6MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+16.04: Pulling from library/ubuntu
+4f53fa4d2cf0: Pulling fs layer
+6af7c939e38e: Pulling fs layer
+903d0ffd64f6: Pulling fs layer
+04feeed388b7: Pulling fs layer
+04feeed388b7: Waiting
+6af7c939e38e: Download complete
+903d0ffd64f6: Verifying Checksum
+903d0ffd64f6: Download complete
+04feeed388b7: Verifying Checksum
+04feeed388b7: Download complete
+4f53fa4d2cf0: Verifying Checksum
+4f53fa4d2cf0: Download complete
+4f53fa4d2cf0: Pull complete
+6af7c939e38e: Pull complete
+903d0ffd64f6: Pull complete
+04feeed388b7: Pull complete
+Digest: sha256:185fec2d6dbe9165f35e4a1136b4cf09363b328d4f850695393ca191aa1475fd
+Status: Downloaded newer image for ubuntu:16.04
+ ---> 096efd74bb89
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Running in 7be1db2be3c4
+Err:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu xenial-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+Err:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists...
+[91mW: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/xenial-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/xenial-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+Package libpcre3-dev is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+[91mE: Unable to locate package apache2-utils
+E: Unable to locate package autoconf
+E: Unable to locate package bison
+E: Unable to locate package build-essential
+E: Unable to locate package curl
+E: Unable to locate package flex
+E: Unable to locate package gawk
+E: Unable to locate package gdb
+E: Unable to locate package gettext
+E: Unable to locate package git
+E: Unable to locate package libapr1-dev
+E: Unable to locate package libaprutil1-dev
+E: Unable to locate package libcurl4-openssl-dev
+E: Unable to locate package libevent-dev
+E: Unable to locate package libexpat1
+E: Unable to locate package libexpat1-dev
+E: Unable to locate package libmemcached-tools
+E: Unable to locate package libnss-mdns
+E: Unable to locate package libnuma1
+E: Unable to locate package libomp-dev
+E: Unable to locate package libpcre2-dev
+E: Package 'libpcre3-dev' has no installation candidate
+E: Unable to locate package libprotobuf-c-dev
+E: Unable to locate package libssl-dev
+E: Unable to locate package libxfixes3
+E: Unable to locate package libxi6
+E: [0m[91mUnable to locate package libxml2-dev
+E: Unable to locate package libxrender1
+E: Unable to locate package libxxf86vm1
+E: [0m[91mUnable to locate package linux-headers-4.4.0-161-generic
+E: Couldn't find any package by glob 'linux-headers-4.4.0-161-generic'
+E: Couldn't find any package by regex 'linux-headers-4.4.0-161-generic'
+E: Unable to locate package net-tools
+E: Unable to locate package protobuf-c-compiler[0m[91m
+E: Unable to locate package python
+E: Unable to locate package python3-apport
+E: Unable to locate package python3-apt
+[0m[91mE: Unable to locate package python3-lxml
+E: Unable to locate package python3-minimal
+E: Unable to locate package python3-numpy
+E: Unable to locate package python3-pip
+E: Unable to locate package python3-pytest
+E: Unable to locate package python3-scipy
+E: Unable to locate package r-base-core
+E: Unable to locate package shellcheck
+E: Unable to locate package texinfo
+E: Unable to locate package wget
+E: Unable to locate package zlib1g-dev
+[0mThe command '/bin/sh -c apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel' returned a non-zero code: 100
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 100
+Finished: FAILURE

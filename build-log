@@ -1,0 +1,356 @@
+GitHub pull request #1876 of commit 0d04e437f79974dd7cac2a7ff3dc6fdd295f05ea, no merge conflicts.
+Setting status of 0d04e437f79974dd7cac2a7ff3dc6fdd295f05ea to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3698/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read Jenkinsfiles/Linux-SGX-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1876/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 0eeb8c4dd24eeeb65a417d9c7199626b94be8d8d (refs/remotes/origin/pr/1876/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0eeb8c4dd24eeeb65a417d9c7199626b94be8d8d # timeout=20
+Commit message: "Merge 0d04e437f79974dd7cac2a7ff3dc6fdd295f05ea into 36edd357fac526467025bd6676cfd452a326191a"
+ > git rev-list --no-walk 5e217dd9ee17f9ddb8fdd029272dd3abf1f99acf # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘sgx_slave_2.6’
+Running on slave-uncledeadly in /home/jenkins/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision dd021e7e1745f7e31b4dcfa0925f5e2da42bd68a (refs/remotes/origin/pr/1876/merge)
+Commit message: "Merge e78497fd7752c8919751a9092b501ac92bdc3401 into 36edd357fac526467025bd6676cfd452a326191a"
+First time build. Skipping changelog.
+ > git rev-parse refs/remotes/origin/pr/1876/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f dd021e7e1745f7e31b4dcfa0925f5e2da42bd68a # timeout=20
+ > git rev-list --no-walk 5e217dd9ee17f9ddb8fdd029272dd3abf1f99acf # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 16c41c03b97d05c23097d1d511234ee75f5b673e -f Jenkinsfiles/ubuntu-18.04.dockerfile .
+Sending build context to Docker daemon  535.9MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 6526a1858e5d
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 05abc61bcbaf
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> dbbd3c4e4e47
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> b27f209775e0
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 1fe051909174
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> ae27d2fa30fc
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 928c3669ee0a
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> f9fc68947585
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> c8f41e824f1d
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 18ee654be7a5
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 4fcbe8b40a74
+Successfully built 4fcbe8b40a74
+Successfully tagged 16c41c03b97d05c23097d1d511234ee75f5b673e:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 16c41c03b97d05c23097d1d511234ee75f5b673e
+.
+[Pipeline] withDockerContainer
+slave-uncledeadly does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/workspace/graphene-sgx-18.04 -v /home/jenkins/workspace/graphene-sgx-18.04:/home/jenkins/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04@tmp:/home/jenkins/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 16c41c03b97d05c23097d1d511234ee75f5b673e cat
+$ docker top 28ee214b4185addc4f068205152e0052ecbaea47bfa2e70f4b0129524f0ebc81 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module link-intel-driver
+C: 28, 0: Line too long (101/100) (line-too-long)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, shutil) (multiple-imports)
+C: 50,40: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+************* Module benchmarks.makeenv
+E:  8, 0: Unable to import 'asv.environment' (import-error)
+E:  9, 0: Unable to import 'asv.util' (import-error)
+E: 10, 0: Unable to import 'asv.console' (import-error)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module benchmarks
+E: 58, 8: Instance of 'PurePath' has no 'mkdir' member (no-member)
+************* Module conf_merge
+W:  7, 0: Unused import sys (unused-import)
+************* Module conf_missing
+C: 25,43: More than one statement on a single line (multiple-statements)
+W:  7, 0: Unused import sys (unused-import)
+************* Module regression
+C: 12, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 23, 4: Method could be a function (no-self-use)
+C: 34, 8: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:134, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module gsc
+C:359, 0: Line too long (102/100) (line-too-long)
+C:371, 0: Line too long (101/100) (line-too-long)
+E: 14, 0: Unable to import 'docker' (import-error)
+E: 15, 0: Unable to import 'yaml' (import-error)
+C: 83, 0: Function name "extract_binary_cmd_from_image_config" doesn't conform to snake_case naming style (invalid-name)
+C: 92, 7: Do not use `len(SEQUENCE)` to determine if a sequence is empty (len-as-condition)
+C:282, 0: Function name "generate_dockerfile_sign_manifests" doesn't conform to snake_case naming style (invalid-name)
+C:333, 0: Constant name "subcommands" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:335, 0: Constant name "sub_build" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:359, 0: Constant name "sub_build_graphene" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:378, 0: Constant name "sub_sign" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module test_pal
+C:309, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
+C:247, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:307, 4: Method could be a function (no-self-use)
+W: 24, 4: Unused read_manifest imported from pal_sgx_sign (unused-import)
+************* Module runltp_xml
+E:250, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+C: 22, 4: Constant name "fspath" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 25, 4: Class name "fspath" doesn't conform to '[A-Z_][A-Za-z0-9]*|TC_\\d\\d_.*' pattern (invalid-name)
+R:104, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+I:144,18: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:155,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:157,12: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:160,25: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:162,16: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:181, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:192, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:203, 8: Module 'lxml.etree' has not 'SubElement' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+R:325, 4: Too many statements (53/50) (too-many-statements)
+R:432, 0: Too many instance attributes (9/7) (too-many-instance-attributes)
+I:465,19: Module 'lxml.etree' has not 'Element' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+I:536,21: Module 'lxml.etree' has not 'tostring' member, but source is unavailable. Consider adding this module to extension-pkg-whitelist if you want to perform analysis based on run-time introspection of living objects. (c-extension-no-member)
+************* Module test_libos
+W:490, 0: FIXME: It's unclear what Graphene process should return when the app (fixme)
+C:118, 0: Line too long (104/100) (line-too-long)
+C:119, 0: Line too long (108/100) (line-too-long)
+C:120, 0: Line too long (108/100) (line-too-long)
+C:121, 0: Line too long (108/100) (line-too-long)
+C:122, 0: Line too long (108/100) (line-too-long)
+C:123, 0: Line too long (108/100) (line-too-long)
+C:124, 0: Line too long (108/100) (line-too-long)
+C:125, 0: Line too long (108/100) (line-too-long)
+C:126, 0: Line too long (108/100) (line-too-long)
+C:127, 0: Line too long (108/100) (line-too-long)
+C:128, 0: Line too long (108/100) (line-too-long)
+C:129, 0: Line too long (108/100) (line-too-long)
+C:130, 0: Line too long (108/100) (line-too-long)
+C:131, 0: Line too long (108/100) (line-too-long)
+C:132, 0: Line too long (108/100) (line-too-long)
+C:133, 0: Line too long (109/100) (line-too-long)
+C:271, 0: Line too long (124/100) (line-too-long)
+C:278, 0: Line too long (127/100) (line-too-long)
+W:511, 0: Unnecessary semicolon (unnecessary-semicolon)
+W:512, 0: Unnecessary semicolon (unnecessary-semicolon)
+C: 48,46: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 69,12: Unused variable 'i' (unused-variable)
+C: 79,45: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 85,16: Unused variable 'i' (unused-variable)
+C:195, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:196,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:215, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:224, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R: 23, 0: Too many public methods (25/20) (too-many-public-methods)
+C:489, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:296, 0: Too many public methods (28/20) (too-many-public-methods)
+W:607,16: Unused variable 'stderr' (unused-variable)
+W:635,16: Unused variable 'stderr' (unused-variable)
+W:  8, 0: Unused import sys (unused-import)
++ :
++ + ./.ci/run-pylint -f./.ci/prfilter json
+
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
+MESSAGES AFFECTING THIS PR:
+tests/benchmarks/makeenv.py +8:0: import-error: Unable to import 'asv.environment'
+tests/benchmarks/makeenv.py +9:0: import-error: Unable to import 'asv.util'
+tests/benchmarks/makeenv.py +10:0: import-error: Unable to import 'asv.console'
+tests/benchmarks/__init__.py +58:8: no-member: Instance of 'PurePath' has no 'mkdir' member
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+Stage "Build" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 28ee214b4185addc4f068205152e0052ecbaea47bfa2e70f4b0129524f0ebc81
+$ docker rm -f 28ee214b4185addc4f068205152e0052ecbaea47bfa2e70f4b0129524f0ebc81
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 0d04e437f79974dd7cac2a7ff3dc6fdd295f05ea to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/3698/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 4
+Finished: FAILURE

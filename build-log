@@ -1,0 +1,644 @@
+GitHub pull request #1892 of commit 81303c45676be3c69fa96429c2c855e311062f25, has merge conflicts.
+Setting status of 81303c45676be3c69fa96429c2c855e311062f25 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/2147/ and message: 'Build started for original commit.'
+Using context: Jenkins-SGX-apps
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-apps@script to read Jenkinsfiles/Linux-SGX-apps
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-apps@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse 81303c45676be3c69fa96429c2c855e311062f25^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 81303c45676be3c69fa96429c2c855e311062f25 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 81303c45676be3c69fa96429c2c855e311062f25 # timeout=20
+Commit message: "[LibOS/test] Change manifest.template files to TOML"
+ > git rev-list --no-walk e64ffabf5d5af763091b039ae795bde068cd214a # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-uncledeadly in /home/jenkins/workspace/graphene-sgx-apps
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-apps # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 81303c45676be3c69fa96429c2c855e311062f25 (detached)
+Commit message: "[LibOS/test] Change manifest.template files to TOML"
+ > git rev-parse 81303c45676be3c69fa96429c2c855e311062f25^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 81303c45676be3c69fa96429c2c855e311062f25 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t cce8be3c736cdec07d114dc4b2816d5f4e24e092 -f Jenkinsfiles/ubuntu-16.04.dockerfile .
+Sending build context to Docker daemon  536.6MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/6 : FROM ubuntu:16.04
+ ---> 4b22027ede29
+Step 2/6 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        protobuf-c-compiler        python        python3-apport        python3-apt        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 8620959ce77b
+Step 3/6 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 7f0e55010d3e
+Step 4/6 : USER leeroy
+ ---> Using cache
+ ---> 6f32ad5895a2
+Step 5/6 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 6aa72b6bf083
+Step 6/6 : CMD ["bash"]
+ ---> Using cache
+ ---> 5308752adbc7
+Successfully built 5308752adbc7
+Successfully tagged cce8be3c736cdec07d114dc4b2816d5f4e24e092:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . cce8be3c736cdec07d114dc4b2816d5f4e24e092
+.
+[Pipeline] withDockerContainer
+slave-uncledeadly does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -v /lib/modules:/lib/modules:ro -v /usr/src:/usr/src:ro -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket --device=/dev/gsgx:/dev/gsgx --device=/dev/isgx:/dev/isgx -w /home/jenkins/workspace/graphene-sgx-apps -v /home/jenkins/workspace/graphene-sgx-apps:/home/jenkins/workspace/graphene-sgx-apps:rw,z -v /home/jenkins/workspace/graphene-sgx-apps@tmp:/home/jenkins/workspace/graphene-sgx-apps@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** cce8be3c736cdec07d114dc4b2816d5f4e24e092 cat
+$ docker top 3a2333f254e46bb326f871e9f485a7963cf0357da9fec1cc2dd748527a759207 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Lint)
+[Pipeline] sh
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus
+...........++
+............++
+e is 3 (0x3)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/intel/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout 276c5c6a064d22358542f5e0aa96b1c0ace5d695
+Note: checking out '276c5c6a064d22358542f5e0aa96b1c0ace5d695'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 276c5c6... Fix compilation on 5.8 kernel (#120)
++ make -j8
+make -C /lib/modules/4.15.0-118-generic/build M=/opt/intel/linux-sgx-driver modules
+make[1]: Entering directory '/usr/src/linux-headers-4.15.0-118-generic'
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_main.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_page_cache.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_ioctl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_vma.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_util.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_encl.o
+  CC [M]  /opt/intel/linux-sgx-driver/sgx_encl2.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /opt/intel/linux-sgx-driver/isgx.mod.o
+  LD [M]  /opt/intel/linux-sgx-driver/isgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.15.0-118-generic'
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/sgx-driver
++ ISGX_DRIVER_PATH=/opt/intel/linux-sgx-driver make
+make -C /lib/modules/4.15.0-118-generic/build M=/home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/sgx-driver CFLAGS_MODULE="-DDEBUG -g -O0" modules
+make[1]: Entering directory '/usr/src/linux-headers-4.15.0-118-generic'
+  CC [M]  /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/sgx-driver/gsgx.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/sgx-driver/gsgx.mod.o
+  LD [M]  /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/sgx-driver/gsgx.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.15.0-118-generic'
+[Pipeline] sh
++ make -j8 SGX=1 WERROR=1 GLIBC_VERSION=2.27
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/src'
+  [ host/Linux-SGX/.obj/db_events.o ]
+  [ host/Linux-SGX/.obj/db_exception.o ]
+  [ host/Linux-SGX/.obj/db_main.o ]
+  [ host/Linux-SGX/.obj/db_memory.o ]
+  [ host/Linux-SGX/.obj/db_misc.o ]
+  [ host/Linux-SGX/.obj/db_mutex.o ]
+  [ host/Linux-SGX/.obj/db_object.o ]
+  [ host/Linux-SGX/.obj/db_process.o ]
+  [ host/Linux-SGX/.obj/db_rtld.o ]
+  [ host/Linux-SGX/.obj/db_streams.o ]
+  [ host/Linux-SGX/.obj/db_threading.o ]
+  [ host/Linux-SGX/.obj/pal_error.o ]
+  [ host/Linux-SGX/.obj/printf.o ]
+make -C ../lib target=/home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/
+  [ host/Linux-SGX/.obj/slab.o ]
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib'
+../../Scripts/download --output ../include/lib/uthash.h --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+--2020-10-23 15:15:02--  https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+--2020-10-23 15:15:02--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+--2020-10-23 15:15:02--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving github.com (github.com)... Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443...   [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/avl_tree.o ]
+140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... connected.
+connected.
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/udivmodti4.o ]
+connected.
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/graphene/path.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/network/hton.o ]
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/network/inet_pton.o ]
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2020-10-23 15:15:02--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)... 200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: './tmp.cIkOpdC7e5/unverified'
+
+     0K .......... ..  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/atoi.o ]
+........ .......... ..........  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/memcmp.o ]
+140.82.114.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.9|:443...  .......... 65% 1.37M 0s
+    50K .......... ..  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/memcpy.o ]
+........ ......                          100% 6.89M=0.04s
+
+2020-10-23 15:15:02 (1.90 MB/s) - './tmp.cIkOpdC7e5/unverified' saved [78453/78453]
+
+download: Fetched '../include/lib/uthash.h' (ba9af0e8...) successfully.
+connected.
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/strlen.o ]
+HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/toml/toml.o ]
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2020-10-23 15:15:02--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)... 140.82.113.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.9|:443... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.AMtoYUBfgl/unverified'
+
+     0K .......... ..connected.
+........ .......... .......... .......... 1.21M
+    50K .......... .......... .......... .........HTTP request sent, awaiting response... . .......... 2.44M
+   100K .......... .......... .......... .......... .......... 58.2M
+   150K .......... .......... .......... .......... .......... 2.97M
+   200K .......... .......... .......... .......... .......... 52.1M
+   250K .......... .......... .......... .......... .......... 45.1M
+   300K .......... .......... .......... .......... .......... 49.8M
+   350K .......... .......... .......... .......... .......... 2.67M
+   400K .......... .......... .......... .......... .......... 98.3M
+   450K .......... .......... .......... .......... ..........  134M
+   500K .......... .......... .......... .......... .......... 30.4M
+   550K .......... .......... .......... .......... .......... 97.9M
+   600K .......... .......... .......... .......... .......... 53.4M
+   650K .......... .......... .......... .......... .......... 66.7M
+   700K .......... .......... .......... .......... .......... 68.3M
+   750K .......... .......... .......... .......... .......... 2.96M
+   800K .......... .......... .......... .......... .......... 88.7M
+   850K .......... .......... .......... .......... .......... 65.3M
+   900K .......... .......... .......... .......... .......... 55.5M
+   950K .......... .......... .......... .......... .......... 62.8M
+  1000K .......... .......... .......... .......... .......... 7.11M
+  1050K .......... .......... .......... .......... .......... 1.60M
+  1100K .......... .......... .......... .......... .......... 9.58M
+  1150K .......... .......... .......... .......... ..........  100M
+  1200K .......... .......... .......... .......... .......... 5.10M
+  1250K .......... .......... .......... .......... ..........  123M
+  1300K .......... .......... .......... .......... .......... 6.52M
+  1350K .......... .......... ..........200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.k8BOYNvHY6/unverified'
+
+     0K .......... .. .......... .......... 5.74M
+  1400K .......... .......... .......... .......... .......... 67.6M
+  1450K .......... .......... .......... .......... ..........  134M
+  1500K .......... ............ .......... .............. .......... .......... .......... 1.66M
+  1550K .......... ....... .......... 1.38M
+    50K .......... .......... .......... ....... .......... .......... .......... 4.86M
+  1600K .......... .......... .......... .......... .......... 13.1M
+  1650K .......... .......... .......... .......... .......... 15.1M
+  1700K .................. .......... 2.83M
+   100K .......... .... .......... .......... .......... .......... 4.51M
+  1750K .......... .......... .......... .......... .......... 16.7M
+  1800K ............... ........... .......... ..... ......... 2.74M..
+   150K ......... ........... ......... ............ ......... .......... 7.33M
+  1850K .......... .......... .......... .......... .......... 23.8M
+  1900K .......... .......... .......... .......... .......... 8.24M
+  1950K .......... .......... .......... ........ .......... .......... 3.20M
+   200K .......... .......... .......... .............. ......... ..... 5.82M...
+  2000K .......... 24.9M.
+   250K ......... ........... ......... ........... .......... ...... .......... .......... 34.4M
+   300K .......... .......... ........... ......... .......... 7.68M
+  2050K .......... .......... .................. .......... 4.41M
+   350K .......... .......... .......... .......... .......... 34.8M
+   400K .......... .......... .......... .......... .......... 31.7M
+   450K .......... .......... .......... .......... .......... 23.6M
+   500K .......... .......... .......... .......... ... ................ ... 19.3M.
+   550K ............... 3.46M
+  2100K. ... ................. .......... .......... .......... .......... 22.2M
+  2150K .......... ... .......... .......... .......... 3.02M
+   600K .......... .......... .......... .......... .......... 32.1M
+   650K .......... .......... .......... ............ .......... .......... .......... 2.30M
+  2200K .......... .......... .......... .......... .......... 33.3M
+  2250K .......... ................ .. ................. 5.61M.
+   700K  ....................  ............. .............. ........... 20.0M.. .
+  2300K ................. 31.3M.
+   750K .... ............... .... ................ .......... .......... 31.0M
+  2350K ............ .......... .......... ..... ......... 19.2M..
+   800K ............ .......... .......... ........... .......... 24.1M
+   850K .......... ...... .......... .......... .......... 5.90M
+  2400K ........... .......... .......... .......... .......... 31.3M
+  2450K .......... ........ .......... .......... .......... 5.22M
+   900K ............... ..... ............ .......... ......... ........... ........ 10.9M..
+  2500K ......... ........... ...... 24.1M
+   950K .......... .......... .......... .......... .......... 15.2M
+  1000K .......... ............... ....... .......... ......... .......... .......... 3.17M
+  1050K .......... .......... ......... .......... 1.95M
+  2550K .......... .......... .......... .......... .......... 34.9M
+  2600K .......... .......... .......... .......... .......... 32.0M
+  2650K .......... .......... .......... .......... .......... .......... 4.12M
+  1100K .......... .......... .......... .......... .......... 13.3M
+  1150K .......... ............. .......... 4.30M
+  2700K .......... .......... .......... .......... .......... 33.7M
+  2750K .......... .......... .. .      .         . .       .      .        .. 5.68M=0.2s
+
+ ..2020-10-23 15:15:03 (6.04 MB/s) - './tmp.k8BOYNvHY6/unverified' saved [1193102]
+
+........ .......... 33.0M
+  2800K .......... .......... .......... .......... ........download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+.. 2.42M
+  2850K .......... .......... .......... .......... .......... 13.3M
+  2900K .......... .......... .......... .......... .......... 9.68M
+  2950K .......... .......... .......... ...                   3.26M=0.4s
+
+2020-10-23 15:15:03 (6.91 MB/s) - './tmp.AMtoYUBfgl/unverified' saved [3055269]
+
+download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+rm -f -r crypto/mbedtls
+cd crypto && tar -mxzf mbedtls-2.21.0.tar.gz
+cd crypto && tar -mxzf mbedcrypto-3.1.0.tar.gz
+mv crypto/mbedtls-mbedtls-2.21.0 crypto/mbedtls
+rm -f -r crypto/mbedtls/crypto
+mv crypto/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls
+mv crypto/mbedtls/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls/crypto
+cd crypto/mbedtls && patch -p1 < ../mbedtls-2.21.0.diff || exit 255
+patching file library/ssl_tls.c
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && perl ./scripts/config.pl set MBEDTLS_CMAC_C && make CFLAGS="" SHARED=1 DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls'
+make[4]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[5]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    aes.c
+  CC    aesni.c
+  CC    arc4.c
+  CC    aria.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    base64.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    camellia.c
+  CC    ccm.c
+  CC    chacha20.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    cmac.c
+  CC    ctr_drbg.c
+  CC    des.c
+  CC    dhm.c
+  CC    ecdh.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md4.c
+  CC    md5.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    platform_util.c
+  CC    poly1305.c
+  CC    psa_crypto.c
+  CC    psa_crypto_se.c
+  CC    psa_crypto_slot_management.c
+  CC    psa_crypto_storage.c
+  CC    psa_its_file.c
+  CC    ripemd160.c
+  CC    rsa_internal.c
+  CC    rsa.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    xtea.c
+  CC    /home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/library/error.c
+  CC    /home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/library/version.c
+  CC    /home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/library/version_features.c
+  CC    ../3rdparty/everest/library/everest.c
+  CC    ../3rdparty/everest/library/x25519.c
+  CC    ../3rdparty/everest/library/Hacl_Curve25519_joined.c
+  AR    libmbedcrypto.a
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+  LD    libmbedcrypto.so.4
+  LN    libmbedcrypto.so -> libmbedcrypto.so.4
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  LD    libmbedx509.so.1
+  LN    libmbedx509.so -> libmbedx509.so.1
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    ssl_msg.c
+  CC    ssl_srv.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  LD    libmbedtls.so.13
+  LN    libmbedtls.so -> libmbedtls.so.13
+  AR    libmbedx509.a
+  AR    libmbedtls.a
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/hello.c
+  CC    hash/generic_sum.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify_pss.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/ssl_client1.c
+  CC    ssl/ssl_client2.c
+  CC    ssl/ssl_server.c
+  CC    ssl/ssl_server2.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_mail_client.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_havege.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    test/query_compile_time_config.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/crl_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/req_app.c
+make[6]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/programs/fuzz'
+ cc common.o onefile.o fuzz_privkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_privkey
+ cc common.o onefile.o fuzz_x509csr.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509csr
+ cc common.o onefile.o fuzz_server.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_server
+ cc common.o onefile.o fuzz_x509crt.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crt
+ cc common.o onefile.o fuzz_dtlsclient.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsclient
+ cc common.o onefile.o fuzz_pubkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_pubkey
+ cc common.o onefile.o fuzz_x509crl.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crl
+ cc common.o onefile.o fuzz_client.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_client
+ cc common.o onefile.o fuzz_dtlsserver.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsserver
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/programs/fuzz'
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib/crypto/mbedtls'
+rm -f crypto/mbedtls/include/mbedtls/config.h
+rm -f crypto/mbedtls/crypto/include/mbedtls/config.h
+cp crypto/config.h crypto/mbedtls/crypto/include/mbedtls
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib'
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX'
+  [ db_devices.o ]
+  [ db_eventfd.o ]
+  [ db_events.o ]
+  [ db_exception.o ]
+  [ db_files.o ]
+  [ db_main.o ]
+  [ db_main-x86_64.o ]
+  [ db_memory.o ]
+  [ db_misc.o ]
+  [ db_mutex.o ]
+db_misc.c: In function '_DkAttestationQuote':
+db_misc.c:418:27: error: comparison between signed and unsigned integer expressions [-Werror=sign-compare]
+     for (ssize_t i = 0; i < strlen(ra_client_spid_str); i++) {
+                           ^
+db_misc.c:449:9: error: redeclaration of 'ret' with no linkage
+     int ret = _DkRandomBitsRead(&nonce, sizeof(nonce));
+         ^
+db_misc.c:390:9: note: previous declaration of 'ret' was here
+     int ret;
+         ^
+  [ db_object.o ]
+cc1: all warnings being treated as errors
+Makefile:107: recipe for target 'db_misc.o' failed
+make[3]: *** [db_misc.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[3]: *** wait: No child processes.  Stop.
+Makefile:93: recipe for target 'host_lib_recurse' failed
+make[2]: *** [host_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+Stage "Test" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+Stage "Deploy" skipped due to earlier failure(s)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Failure while on the pipeline
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 3a2333f254e46bb326f871e9f485a7963cf0357da9fec1cc2dd748527a759207
+$ docker rm -f 3a2333f254e46bb326f871e9f485a7963cf0357da9fec1cc2dd748527a759207
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 81303c45676be3c69fa96429c2c855e311062f25 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/2147/ and message: 'Build finished. '
+Using context: Jenkins-SGX-apps
+ERROR: script returned exit code 2
+Finished: FAILURE

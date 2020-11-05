@@ -1,0 +1,580 @@
+GitHub pull request #1892 of commit a683f2f7693d0e58334b12eb1ed5f7ce17a4191c, no merge conflicts.
+Setting status of a683f2f7693d0e58334b12eb1ed5f7ce17a4191c to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1892/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 15cea1edf32c1ea2b046ea8b1c6f56a344060b03 (refs/remotes/origin/pr/1892/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15cea1edf32c1ea2b046ea8b1c6f56a344060b03 # timeout=20
+Commit message: "Merge a683f2f7693d0e58334b12eb1ed5f7ce17a4191c into 200452cd8a69c9032327b859f72629d317269ac1"
+ > git rev-list --no-walk 7060abec28fd571194746370302355a749931b3d # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-constantine in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 15cea1edf32c1ea2b046ea8b1c6f56a344060b03 (refs/remotes/origin/pr/1892/merge)
+Commit message: "Merge a683f2f7693d0e58334b12eb1ed5f7ce17a4191c into 200452cd8a69c9032327b859f72629d317269ac1"
+ > git rev-parse refs/remotes/origin/pr/1892/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15cea1edf32c1ea2b046ea8b1c6f56a344060b03 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-debug.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-debug-18.04-3906 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon    536MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> d27b9ffc5667
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 603835f40da3
+Step 3/11 : RUN pip3 install 'Sphinx==1.8' sphinx_rtd_theme recommonmark
+ ---> Using cache
+ ---> 4e10229ec367
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> d68c8dd4298a
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 9c47b695f1a9
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 21fd842f1201
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 89d689971dbc
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 0c89da404e46
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 69f7f1e08bbc
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> ea017e7da473
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> f83f66991032
+Successfully built f83f66991032
+Successfully tagged local:jenkins-graphene-debug-18.04-3906
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-debug-18.04-3906
+.
+[Pipeline] withDockerContainer
+slave-constantine does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-debug-18.04-3906 cat
+$ docker top 8dcbb238d216b22ab7b34326a2c5b4a277d3cc7bf8d77411cc46999f27ef616d -eo pid,comm
+[Pipeline] {
+[Pipeline] sh
++ printenv
+JENKINS_HOME=/var/lib/jenkins
+ghprbTriggerAuthorEmail=
+ghprbSourceBranch=dimakuv/add-toml-manifest-syntax
+WERROR=1
+ghprbPullAuthorEmail=dmitrii.kuvaiskii@intel.com
+HOSTNAME=8dcbb238d216
+ghprbPullDescription=GitHub pull request #1892 of commit a683f2f7693d0e58334b12eb1ed5f7ce17a4191c, no merge conflicts.
+DEBUG=1
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/display/redirect?page=changes
+NODE_LABELS=constantine nonsgx_slave slave-constantine
+ghprbActualCommit=a683f2f7693d0e58334b12eb1ed5f7ce17a4191c
+HUDSON_URL=https://leeroy.cs.unc.edu/
+branch=${sha1}
+HOME=/leeroy
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/
+ghprbTriggerAuthorLoginMention=
+ghprbActualCommitAuthor=Dmitrii Kuvaiskii
+ghprbPullAuthorLoginMention=@dimakuv
+JENKINS_SERVER_COOKIE=durable-ec6308e3c70764b005ee7a73cc8d858a
+ghprbGhRepository=oscarlab/graphene
+PYTHONVERSION=python3.6
+MAKEOPTS=-j8
+WORKSPACE=/home/jenkins/workspace/graphene-debug-18.04
+DOCKER_ARGS=
+    --volume=/lib/modules:/lib/modules:ro
+    --volume=/usr/src:/usr/src:ro
+    --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+    --device=/dev/gsgx:/dev/gsgx
+    --device=/dev/isgx:/dev/isgx
+
+ghprbPullLongDescription=<!--\r\n    Please fill in the following form before submitting this PR\r\n    and ensure that your code follows our coding style guideline:\r\n    https://graphene.readthedocs.io/en/latest/devel/coding-style.html -->\r\n\r\n## Description of the changes <!-- (reasons and measures) -->\r\n\r\n**DRAFT**.\r\n\r\nCurrent commits:\r\n- Port tomlc99 library for manifests in TOML syntax. The tomlc99 library is embedded in Graphene as slightly modified toml.c and toml.h source files. The original license is MIT, the author is CK Tan (cktan), used commit ddb9cc4eeb (Sep 22, 2020).\r\n\r\n~~Needs to be rebased on top of https://github.com/oscarlab/graphene/pull/1888.~~\r\n\r\n~~Needs to be rebased on top of https://github.com/oscarlab/graphene/pull/1897.~~\r\n\r\nNeeds to be rebased on top of https://github.com/oscarlab/graphene/pull/1922.\r\n\r\nNeeds to be rebased on top of https://github.com/oscarlab/graphene/pull/1926.\r\n\r\nNeeds to be rebased on top of https://github.com/oscarlab/graphene/pull/1930.\r\n\r\n## How to test this PR? <!-- (if applicable) -->\r\n\r\nAll manifests will be rewritten in TOML...\r\n\r\n<!-- Reviewable:start -->\r\n---\r\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/1892)\r\n<!-- Reviewable:end -->\r\n
+NODE_NAME=slave-constantine
+ghprbCredentialsId=a66ebde8-6372-4e67-8aaf-1beba8f3c6d4
+RUN_ARTIFACTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/display/redirect?page=artifacts
+GIT_BRANCH=dimakuv/add-toml-manifest-syntax
+EXECUTOR_NUMBER=0
+ghprbTriggerAuthorLogin=
+RUN_TESTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/display/redirect?page=tests
+BUILD_DISPLAY_NAME=#3906
+ghprbPullAuthorLogin=dimakuv
+ghprbTriggerAuthor=
+HUDSON_HOME=/var/lib/jenkins
+JOB_BASE_NAME=graphene-debug-18.04
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=origin/pr/1892/merge
+BUILD_ID=3906
+BUILD_TAG=jenkins-graphene-debug-18.04-3906
+ghprbCommentBody=null
+JENKINS_URL=https://leeroy.cs.unc.edu/
+random_string=KEMFCE9WPUUT
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/
+ghprbPullTitle=Move manifest syntax to TOML
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/1892
+BUILD_NUMBER=3906
+JENKINS_NODE_COOKIE=889f22d7-a9e9-4468-af5d-5046affb183e
+build_revision=origin/pr/1892/merge
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/display/redirect
+GLIBC_VERSION=2.31
+ghprbActualCommitAuthorEmail=dmitrii.kuvaiskii@intel.com
+ghprbAuthorRepoGitUrl=https://github.com/oscarlab/graphene.git
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene-debug-18.04
+PWD=/home/jenkins/workspace/graphene-debug-18.04
+ghprbPullId=1892
+WORKSPACE_TMP=/home/jenkins/workspace/graphene-debug-18.04@tmp
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+************* Module link-intel-driver
+C: 28, 0: Line too long (101/100) (line-too-long)
+C:  1, 0: Module name "link-intel-driver" doesn't conform to snake_case naming style (invalid-name)
+C:  3, 0: Multiple imports on one line (sys, os, shutil) (multiple-imports)
+C: 50,40: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+************* Module conf_merge
+W:  7, 0: Unused import sys (unused-import)
+************* Module conf_missing
+C: 25,43: More than one statement on a single line (multiple-statements)
+W:  7, 0: Unused import sys (unused-import)
+************* Module test-scipy
+C:  1, 0: Module name "test-scipy" doesn't conform to snake_case naming style (invalid-name)
+C:  5, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  9, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+C:  1, 0: Module name "test-numpy" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Constant name "x" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 16, 0: Constant name "setup" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 17, 0: Constant name "count" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+W:  4, 0: Unused import sys (unused-import)
+C:  4, 0: standard import "import sys" should be placed before "import numpy" (wrong-import-order)
+C:  5, 0: standard import "import timeit" should be placed before "import numpy" (wrong-import-order)
+************* Module dummy-web-server
+C:  1, 0: Module name "dummy-web-server" doesn't conform to snake_case naming style (invalid-name)
+W: 22, 0: Unused import socketserver (unused-import)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item in rloop(seqin[1:],newcomb):   
+                                           ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:104, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+W: 24,16: Redefining name 'item' from outer scope (line 22) (redefined-outer-name)
+E: 40,21: Instance of 'Benchmark' has no 'parameters' member (no-member)
+E: 46,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 47,35: Value 'self.reference' is unsubscriptable (unsubscriptable-object)
+E: 53,16: Instance of 'Benchmark' has no 'run' member (no-member)
+C: 64, 8: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+C: 78,11: Comparison to None should be 'expr is None' (singleton-comparison)
+C: 96, 8: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C: 98,12: Variable name "ts" doesn't conform to snake_case naming style (invalid-name)
+C:106,15: Comparison to None should be 'expr is None' (singleton-comparison)
+W: 94, 8: Unused variable 'reftimes' (unused-variable)
+W:102, 8: Unused variable 'rows' (unused-variable)
+W: 14, 4: Unused clock imported from time (unused-import)
+W: 16, 4: Unused time imported from time as clock (unused-import)
+************* Module fibonacci
+C:  9, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 14, 0: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 4: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 17, 7: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+C: 19, 8: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+C: 19,11: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+W: 18, 8: Unused variable 'i' (unused-variable)
+C: 34, 4: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+C: 35, 8: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+C: 41,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 43,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+C: 47,12: Variable name "t1" doesn't conform to snake_case naming style (invalid-name)
+C: 48,18: More than one statement on a single line (multiple-statements)
+C: 49,18: More than one statement on a single line (multiple-statements)
+C: 50,12: Variable name "t2" doesn't conform to snake_case naming style (invalid-name)
+R: 34, 4: Method could be a function (no-self-use)
+************* Module test-http
+C:  1, 0: Module name "test-http" doesn't conform to snake_case naming style (invalid-name)
+C:  6, 0: Constant name "request" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  7, 0: Constant name "opener" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:  8, 0: Constant name "response" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C: 10, 4: Constant name "data" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+************* Module regression
+C: 12, 0: Function name "expectedFailureIf" doesn't conform to snake_case naming style (invalid-name)
+R: 23, 4: Method could be a function (no-self-use)
+C: 34, 8: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+C:134, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+************* Module test_pal
+C:296, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
+C:234, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:294, 4: Method could be a function (no-self-use)
+W: 24, 4: Unused read_manifest imported from pal_sgx_sign (unused-import)
+************* Module test_libos
+W:497, 0: FIXME: It's unclear what Graphene process should return when the app (fixme)
+C:118, 0: Line too long (104/100) (line-too-long)
+C:119, 0: Line too long (108/100) (line-too-long)
+C:120, 0: Line too long (108/100) (line-too-long)
+C:121, 0: Line too long (108/100) (line-too-long)
+C:122, 0: Line too long (108/100) (line-too-long)
+C:123, 0: Line too long (108/100) (line-too-long)
+C:124, 0: Line too long (108/100) (line-too-long)
+C:125, 0: Line too long (108/100) (line-too-long)
+C:126, 0: Line too long (108/100) (line-too-long)
+C:127, 0: Line too long (108/100) (line-too-long)
+C:128, 0: Line too long (108/100) (line-too-long)
+C:129, 0: Line too long (108/100) (line-too-long)
+C:130, 0: Line too long (108/100) (line-too-long)
+C:131, 0: Line too long (108/100) (line-too-long)
+C:132, 0: Line too long (108/100) (line-too-long)
+C:133, 0: Line too long (109/100) (line-too-long)
+C:278, 0: Line too long (124/100) (line-too-long)
+C:285, 0: Line too long (127/100) (line-too-long)
+W:518, 0: Unnecessary semicolon (unnecessary-semicolon)
+W:519, 0: Unnecessary semicolon (unnecessary-semicolon)
+C: 48,46: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 69,12: Unused variable 'i' (unused-variable)
+C: 79,45: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+W: 85,16: Unused variable 'i' (unused-variable)
+C:191, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:192,28: Comparison should be e.returncode >= 1 (misplaced-comparison-constant)
+C:211, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+C:220, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R: 23, 0: Too many public methods (25/20) (too-many-public-methods)
+C:496, 8: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+R:303, 0: Too many public methods (28/20) (too-many-public-methods)
+W:614,16: Unused variable 'stderr' (unused-variable)
+W:642,16: Unused variable 'stderr' (unused-variable)
+W:  8, 0: Unused import sys (unused-import)
+************* Module runltp_xmlUnable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/gsc1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/gsc1.stats'
+
+E:254, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+R:108, 0: Too many instance attributes (11/7) (too-many-instance-attributes)
+R:327, 4: Too many statements (53/50) (too-many-statements)
+R:434, 0: Too many instance attributes (9/7) (too-many-instance-attributes)
+************* Module gsc
+C:359, 0: Line too long (102/100) (line-too-long)
+C:371, 0: Line too long (101/100) (line-too-long)
+E: 14, 0: Unable to import 'docker' (import-error)
+E: 15, 0: Unable to import 'yaml' (import-error)
+C: 83, 0: Function name "extract_binary_cmd_from_image_config" doesn't conform to snake_case naming style (invalid-name)
+C: 92, 7: Do not use `len(SEQUENCE)` to determine if a sequence is empty (len-as-condition)
+C:282, 0: Function name "generate_dockerfile_sign_manifests" doesn't conform to snake_case naming style (invalid-name)
+C:333, 0: Constant name "subcommands" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:335, 0: Constant name "sub_build" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:359, 0: Constant name "sub_build_graphene" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
+C:378, 0: Constant name "sub_sign" doesn't conform to '(^_)|(^[A-Z][A-Z0-9_]*$)' pattern (invalid-name)
++ :
++ ./.ci/run-pylint -f json
++ ./.ci/prfilter
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/gsc1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/gsc1.stats'
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+../../Scripts/download --output ../include/lib/uthash.h --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+--2020-11-05 10:06:08--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+--2020-11-05 10:06:08--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+--2020-11-05 10:06:08--  https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving github.com (github.com)... Resolving github.com (github.com)... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... 140.82.114.4
+Connecting to github.com (github.com)|140.82.114.4|:443... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
+connected.
+connected.
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/avl_tree.o ]
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2020-11-05 10:06:08--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)... 200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: './tmp.UIoGoSKbRr/unverified'
+
+     0K .......... ..302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2020-11-05 10:06:08--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)... ........ .......... ....140.82.113.9
+..Connecting to codeload.github.com (codeload.github.com)|140.82.113.9|:443... .... .......... 65% 2.25M 0s
+    50K ...140.82.114.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.9|:443... .......connected.
+ .......... ......                          100% 9.97M=0.02s
+
+2020-11-05 10:06:08 (3.08 MB/s) - './tmp.UIoGoSKbRr/unverified' saved [78453/78453]
+
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/graphene/path.o ]
+download: Fetched '../include/lib/uthash.h' (ba9af0e8...) successfully.
+connected.
+HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/network/hton.o ]
+HTTP request sent, awaiting response...   [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/ctype.o ]
+200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.BR2fRCWraX/unverified'
+
+     0K .......... ..  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memcmp.o ]
+........ .......... .......... .......... 2.16M
+    50K .......... .......... ..........200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.zLbFYb8xYP/unverified'
+
+     0K .......... .. .......... .......... 4.35M
+   100K .......... .......... .......... .......... .  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memcpy.o ]
+......... 4.56M
+   150K .......... .......... .......... .......... .......... 48.9M
+   200K .......... .......... .......... .......... .......... 47.7M
+   250K .............. .......... ............. .......... .......... ........... .. .................. 3.03M 1.61M
+   300K 
+    50K. ................. ...... ................ .......... ........  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memset.o ]
+ .......... .......... .......... 4.12M
+   350K .......... .......... .......... 3.38M
+   100K .......... .......... .......... .......... ... .......... .......... .......... 4.48M
+   400K .......... .......... .......... ..  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strchr.o ]
+........ .......... 8.10M
+   450K .......... .............. ........... 3.28M.
+   150K ............. .......... .......... .......... .......... 37.1M
+   200K .......... .......... .......... .......... .......... 49.1M
+   250K .......... .......... ......... .......... .......... 4.48M
+   500K .......... .......... ......... .......... .......... 3.96M
+   300K .......... .......... .......... .......... .......... 66.7M
+   350K .......... .......... .......... .......... .......... 65.3M
+   400K .......... .......... .......... .......... .......... 60.9M
+   450K .......... .......... .......... .......... .......... 76.0M
+   500K .......... .......... .......... .......... .......... 91.0M
+   550K .......... .......... .......... ..... .......... .......... 5.15M
+   550K .......... .......... .......... .......... ..  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strcmp.o ]
+........ 5.45M
+   600K ............ .............. ....... 4.38M
+   600K .............. ..... ............. ...... ........ .................. .......... 63.6M
+   650K .......... .......... .......... .......... .......... 68.7M
+   700K .......... .......... .......... .......... .......... 70.5M
+   750K .......... .......... .......... .......... .......... 70.5M
+   800K .......... .......... .......... .......... ........ ... 40.3M.
+   850K ................ 10.4M..
+   650K .. ................. ... .................. .. .......... .......... 48.5M
+   900K .................. . ................. .......... .......... 11.7M
+   700K .......... .......... ...... ............. ....... ............ 5.13M
+   950K .......... .......... .......... .......... .......... 5.12M
+  1000K .......... ........... ......... ........ ................ 2.91M
+   750K .......... .......... .......... .......... ..  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strlen.o ]
+........ 31.6M
+   800K .......... .......... .......... .......... .......... 42.3M
+   850K .......... .......... .......... .......... .......... 6.99M
+   900K .......... .......... .......... . ............... .......... 4.16M..
+  1050K ..... 46.7M
+   950K .............. ............. .......... .......... .......... 49.7M
+  1100K ..... .......... ........ ................. . ................... .. .................. 4.12M .
+  1000K. ................ 4.38M.
+  1150K ... ................ ... ...........  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strspn.o ]
+.. .......... .......... .......... 5.87M
+  1200K .......... ............ .......... .......... 4.50M
+  1050K .......... .......... ...... .......... .......... .......... 4.62M
+  1250K .......... .......... .................. .......... .......... 3.68M
+  1100K .......... .......... .......... ...... .......... .......... 7.76M
+  1300K .......... ...... .......... 12.4M
+  1150K .......... ............. ........                                       7.10M=0.2s
+
+2020-11-05 10:06:08 (5.71 MB/s) - './tmp.BR2fRCWraX/unverified' saved [1193102]
+
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strstr.o ]
+.. .......... .......... 4.07M
+  1350K .......... .......... .......... .......... .......... 21.3M
+  1400K .......... .......... .......... .......... ........download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+.. 13.1M
+  1450K .......... .......... .......... ..make[3]: *** No rule to make target '../include/lib/toml.h', needed by 'toml.c'.  Stop.
+make[3]: *** Waiting for unfinished jobs....
+........ .......... 13.7M
+  1500K ....  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/utils.o ]
+...... .......... .......... .......... .......... 5.15M
+  1550K .......... .......... .......... .......... .......... 4.75M
+  1600K .......... .......... .......... .......... .......... 5.20M
+  1650K .......... .......... .......... .......... .......... 3.20M
+  1700K .......... .......... .......... .......... .......... 9.37M
+  1750K .......... .......... .......... .......... .......... 8.60M
+  1800K .......... .......... .......... .......... .......... 9.68M
+  1850K .......... .......... .......... .......... .......... 12.2M
+  1900K .......... .......... .......... .......... .......... 9.11M
+  1950K .......... .......... .......... .......... .......... 6.64M
+  2000K .......... .......... .......... .......... .......... 7.21M
+  2050K .......... .......... .......... .......... .......... 7.40M
+  2100K .......... .......... .......... .......... .......... 9.41M
+  2150K .......... .......... .......... .......... .......... 6.68M
+  2200K .......... .......... .......... .......... .......... 13.7M
+  2250K .......... .......... .......... .......... .......... 9.60M
+  2300K .......... .......... .......... .......... .......... 8.23M
+  2350K .......... .......... .......... .......... .......... 10.3M
+  2400K .......... .......... .......... .......... .......... 8.74M
+  2450K .......... .......... .......... .......... .......... 10.1M
+  2500K .......... .......... .......... .......... .......... 8.98M
+  2550K .......... .......... .......... .......... .......... 8.48M
+  2600K .......... .......... .......... .......... .......... 10.1M
+  2650K .......... .......... .......... .......... .......... 7.81M
+  2700K .......... .......... .......... .......... .......... 10.9M
+  2750K .......... .......... .......... .......... .......... 8.87M
+  2800K .......... .......... .......... .......... .......... 2.69M
+  2850K .......... .......... .......... .......... .......... 13.5M
+  2900K .......... .......... .......... .......... .......... 9.69M
+  2950K .......... .......... .......... ...                   3.27M=0.4s
+
+2020-11-05 10:06:09 (7.56 MB/s) - './tmp.zLbFYb8xYP/unverified' saved [3055269]
+
+download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+Makefile:87: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 8dcbb238d216b22ab7b34326a2c5b4a277d3cc7bf8d77411cc46999f27ef616d
+$ docker rm -f 8dcbb238d216b22ab7b34326a2c5b4a277d3cc7bf8d77411cc46999f27ef616d
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of a683f2f7693d0e58334b12eb1ed5f7ce17a4191c to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/3906/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

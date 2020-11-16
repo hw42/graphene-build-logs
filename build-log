@@ -1,0 +1,556 @@
+GitHub pull request #1972 of commit 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38, has merge conflicts.
+Unable to query GitHub for status of PullRequestorg.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.getPullRequest(GHRepository.java:1347)
+	at org.jenkinsci.plugins.ghprb.GhprbRepository.getActualPullRequest(GhprbRepository.java:341)
+	at org.jenkinsci.plugins.ghprb.GhprbPullRequest.getPullRequest(GhprbPullRequest.java:827)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:112)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/pulls/1972
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 11 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/pulls/1972
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 11 more
+Setting status of 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/3995 and message: 'Build started for original commit.'
+Using context: Jenkins-18.04
+Could not update commit status of the Pull Request on GitHub.
+org.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.createCommitStatus(GHRepository.java:1906)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.createCommitStatus(GhprbSimpleStatus.java:283)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.onBuildStart(GhprbSimpleStatus.java:195)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:144)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 11 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 11 more
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read ./Jenkinsfiles/Linux-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 # timeout=10
+Commit message: "fixup! [CI] Enable pylint unconditionally, fix violations"
+ > git rev-list --no-walk cffa975fea36429f8b3db6148f325993cb760be2 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 (detached)
+ > git rev-parse 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 # timeout=10
+Commit message: "fixup! [CI] Enable pylint unconditionally, fix violations"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-18.04-3995 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  492.3MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 56def654ec22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> c14d7b865973
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme
+ ---> Using cache
+ ---> 9074b57f8683
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 4109dfc3887f
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 6463127e759e
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> bd0128426853
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 1847e0f6b7e9
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> d1eeb77ca8d1
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 1b2d8367a657
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 2d5fa430fa91
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 67e3f2f0f558
+Successfully built 67e3f2f0f558
+Successfully tagged local:jenkins-graphene-18.04-3995
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-18.04-3995
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-18.04-3995 cat
+$ docker top 051b9192928fcda9774ab554e31284cc9af2cd5b2aaedefa0d86fd55f10564af -eo pid,comm
+[Pipeline] {
+[Pipeline] sh
++ printenv
+JENKINS_HOME=/var/lib/jenkins
+ghprbTriggerAuthorEmail=
+WERROR=1
+ghprbSourceBranch=pawel/pylint
+ghprbPullAuthorEmail=pwmarcz@gmail.com
+HOSTNAME=051b9192928f
+ghprbPullDescription=GitHub pull request #1972 of commit 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38, has merge conflicts.
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/3995/display/redirect?page=changes
+HUDSON_URL=https://leeroy.cs.unc.edu/
+ghprbActualCommit=4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+NODE_LABELS=nonsgx_slave pepe slave-pepe
+branch=${sha1}
+HOME=/leeroy
+ghprbTriggerAuthorLoginMention=
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/3995/
+ghprbPullAuthorLoginMention=@pwmarcz
+ghprbActualCommitAuthor=Paweł Marczewski
+JENKINS_SERVER_COOKIE=durable-5d73961955ecd15d739027a58660d224
+ghprbGhRepository=oscarlab/graphene
+MAKEOPTS=-j8
+PYTHONVERSION=python3.6
+WORKSPACE=/home/jenkins/workspace/graphene-18.04
+DOCKER_ARGS=
+    --volume=/lib/modules:/lib/modules:ro
+    --volume=/usr/src:/usr/src:ro
+    --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+    --device=/dev/gsgx:/dev/gsgx
+    --device=/dev/isgx:/dev/isgx
+
+ghprbPullLongDescription=Pylint output was filtered so that many files with existing pylint\r\nviolations were allowed to stay broken.\r\n\r\nI made sure all files pass pylint, but whitelisted some rules that\r\nwe commonly disable:\r\n\r\n* missing docstrings: most of the code is tests/internal anyway\r\n* invalid-name: too many violations, and we commonly use one- or\r\n  two-character names (like \"a, b\" or \"t1, t2\") which is\r\n  disallowed by this rule; we could tweak it and then fix\r\n  remaining violations such as camel-case or lowercase constants\r\n* fixme: we leave TODOs as a matter of practice, same as in C\r\n* high-level style rules like too-few-* and too-many-*,\r\n  no-self-use\r\n\r\nHopefully that will make using pylint less annoying, while also\r\ncatching serious issues (such as unused variables or imports).\n\n<!-- Reviewable:start -->\n---\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/1972)\n<!-- Reviewable:end -->\n
+ghprbCredentialsId=woju-graphene
+NODE_NAME=slave-pepe
+RUN_ARTIFACTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/3995/display/redirect?page=artifacts
+EXECUTOR_NUMBER=0
+GIT_BRANCH=pawel/pylint
+ghprbTriggerAuthorLogin=
+BUILD_DISPLAY_NAME=#3995
+RUN_TESTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/3995/display/redirect?page=tests
+ghprbPullAuthorLogin=pwmarcz
+HUDSON_HOME=/var/lib/jenkins
+ghprbTriggerAuthor=
+JOB_BASE_NAME=graphene-18.04
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+BUILD_ID=3995
+BUILD_TAG=jenkins-graphene-18.04-3995
+ghprbCommentBody=null
+JENKINS_URL=https://leeroy.cs.unc.edu/
+random_string=3U09D0YICRA5
+ghprbPullTitle=[CI] Enable pylint unconditionally, fix violations
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/
+BUILD_NUMBER=3995
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/1972
+JENKINS_NODE_COOKIE=766c2a51-b7a6-49ea-9646-5a3d6e2bfb41
+GLIBC_VERSION=2.31
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/3995/display/redirect
+ghprbActualCommitAuthorEmail=pawel@invisiblethingslab.com
+build_revision=4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+ghprbAuthorRepoGitUrl=https://github.com/pwmarcz/graphene.git
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-18.04/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene-18.04
+PWD=/home/jenkins/workspace/graphene-18.04
+ghprbPullId=1972
+WORKSPACE_TMP=/home/jenkins/workspace/graphene-18.04@tmp
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+************* Module benchmarks.makeenv
+E: 42, 0: Bad option value 'subprocess-run-check' (bad-option-value)
+************* Module gsc
+E: 14, 0: Unable to import 'docker' (import-error)
+E: 15, 0: Unable to import 'yaml' (import-error)
+C: 92, 7: Do not use `len(SEQUENCE)` to determine if a sequence is empty (len-as-condition)
+************* Module regression
+E:  9, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+E:  9, 0: Bad option value 'subprocess-run-check' (bad-option-value)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item2 in rloop(seqin[1:],newcomb):
+                                            ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:105, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+************* Module runltp_xml
+E:253, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+************* Module test_pal
+C:289, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
++ :
++ ./.ci/run-pylint -f json
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+[
+    {
+        "type": "error",
+        "module": "benchmarks.makeenv",
+        "obj": "",
+        "line": 42,
+        "column": 0,
+        "path": "tests/benchmarks/makeenv.py",
+        "symbol": "bad-option-value",
+        "message": "Bad option value 'subprocess-run-check'",
+        "message-id": "E0012"
+    },
+    {
+        "type": "error",
+        "module": "gsc",
+        "obj": "",
+        "line": 14,
+        "column": 0,
+        "path": "Tools/gsc/gsc.py",
+        "symbol": "import-error",
+        "message": "Unable to import 'docker'",
+        "message-id": "E0401"
+    },
+    {
+        "type": "error",
+        "module": "gsc",
+        "obj": "",
+        "line": 15,
+        "column": 0,
+        "path": "Tools/gsc/gsc.py",
+        "symbol": "import-error",
+        "message": "Unable to import 'yaml'",
+        "message-id": "E0401"
+    },
+    {
+        "type": "convention",
+        "module": "gsc",
+        "obj": "extract_binary_cmd_from_image_config",
+        "line": 92,
+        "column": 7,
+        "path": "Tools/gsc/gsc.py",
+        "symbol": "len-as-condition",
+        "message": "Do not use `len(SEQUENCE)` to determine if a sequence is empty",
+        "message-id": "C1801"
+    },
+    {
+        "type": "convention",
+        "module": "benchrun",
+        "obj": "",
+        "line": 20,
+        "column": 0,
+        "path": "Examples/python-simple/scripts/benchrun.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required after comma\n    def rloop(seqin,comb):\n                   ^",
+        "message-id": "C0326"
+    },
+    {
+        "type": "convention",
+        "module": "benchrun",
+        "obj": "",
+        "line": 24,
+        "column": 0,
+        "path": "Examples/python-simple/scripts/benchrun.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required after comma\n                for item2 in rloop(seqin[1:],newcomb):\n                                            ^",
+        "message-id": "C0326"
+    },
+    {
+        "type": "convention",
+        "module": "benchrun",
+        "obj": "",
+        "line": 28,
+        "column": 0,
+        "path": "Examples/python-simple/scripts/benchrun.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required after comma\n    return rloop(seqin,[])\n                      ^",
+        "message-id": "C0326"
+    },
+    {
+        "type": "convention",
+        "module": "benchrun",
+        "obj": "",
+        "line": 105,
+        "column": 0,
+        "path": "Examples/python-simple/scripts/benchrun.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required after assignment\n            pvalues =  vals[:-1]\n                    ^",
+        "message-id": "C0326"
+    },
+    {
+        "type": "error",
+        "module": "runltp_xml",
+        "obj": "",
+        "line": 253,
+        "column": 0,
+        "path": "LibOS/shim/test/ltp/runltp_xml.py",
+        "symbol": "bad-option-value",
+        "message": "Bad option value 'subprocess-popen-preexec-fn'",
+        "message-id": "E0012"
+    },
+    {
+        "type": "error",
+        "module": "regression",
+        "obj": "",
+        "line": 9,
+        "column": 0,
+        "path": "Scripts/regression.py",
+        "symbol": "bad-option-value",
+        "message": "Bad option value 'subprocess-popen-preexec-fn'",
+        "message-id": "E0012"
+    },
+    {
+        "type": "error",
+        "module": "regression",
+        "obj": "",
+        "line": 9,
+        "column": 0,
+        "path": "Scripts/regression.py",
+        "symbol": "bad-option-value",
+        "message": "Bad option value 'subprocess-run-check'",
+        "message-id": "E0012"
+    },
+    {
+        "type": "convention",
+        "module": "test-numpy",
+        "obj": "",
+        "line": 14,
+        "column": 0,
+        "path": "Examples/python-scipy-insecure/scripts/test-numpy.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required after comma\nx = numpy.random.random((1000,1000))\n                             ^",
+        "message-id": "C0326"
+    },
+    {
+        "type": "convention",
+        "module": "test_pal",
+        "obj": "",
+        "line": 289,
+        "column": 0,
+        "path": "Pal/regression/test_pal.py",
+        "symbol": "bad-whitespace",
+        "message": "Exactly one space required before assignment\n        altstack  = 0\n                  ^",
+        "message-id": "C0326"
+    }
+]
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 051b9192928fcda9774ab554e31284cc9af2cd5b2aaedefa0d86fd55f10564af
+$ docker rm -f 051b9192928fcda9774ab554e31284cc9af2cd5b2aaedefa0d86fd55f10564af
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/3995 and message: 'Build finished. '
+Using context: Jenkins-18.04
+Could not update commit status of the Pull Request on GitHub.
+org.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.createCommitStatus(GHRepository.java:1906)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.createCommitStatus(GhprbSimpleStatus.java:283)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.onBuildComplete(GhprbSimpleStatus.java:241)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onCompleted(GhprbBuilds.java:205)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onCompleted(GhprbBuildListener.java:28)
+	at hudson.model.listeners.RunListener.fireCompleted(RunListener.java:209)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.finish(WorkflowRun.java:610)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.access$800(WorkflowRun.java:137)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun$GraphL.onNewHead(WorkflowRun.java:1037)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.notifyListeners(CpsFlowExecution.java:1473)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$3.run(CpsThreadGroup.java:489)
+	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.run(CpsVmExecutorService.java:38)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:136)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:59)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 22 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/4c3cdc32826b52055ed0ad82e6a5c08c65dc6d38
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 22 more
+ERROR: script returned exit code 123
+Finished: FAILURE

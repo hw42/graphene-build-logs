@@ -1,0 +1,157 @@
+GitHub pull request #1973 of commit be98e93db91e524582756dce049b9256c3f0243f, has merge conflicts.
+Unable to query GitHub for status of PullRequestorg.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.getPullRequest(GHRepository.java:1347)
+	at org.jenkinsci.plugins.ghprb.GhprbRepository.getActualPullRequest(GhprbRepository.java:341)
+	at org.jenkinsci.plugins.ghprb.GhprbPullRequest.getPullRequest(GhprbPullRequest.java:827)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:112)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/pulls/1973
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 11 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/pulls/1973
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 11 more
+Setting status of be98e93db91e524582756dce049b9256c3f0243f to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/2986 and message: 'Build started for original commit.'
+Using context: Docs-18.04
+Could not update commit status of the Pull Request on GitHub.
+org.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.createCommitStatus(GHRepository.java:1906)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.createCommitStatus(GhprbSimpleStatus.java:283)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.onBuildStart(GhprbSimpleStatus.java:195)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onStarted(GhprbBuilds.java:144)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onStarted(GhprbBuildListener.java:20)
+	at hudson.model.listeners.RunListener.fireStarted(RunListener.java:238)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:301)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/be98e93db91e524582756dce049b9256c3f0243f
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 11 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/be98e93db91e524582756dce049b9256c3f0243f
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 11 more
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/docs-18.04@script to read ./Jenkinsfiles/Docs-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse be98e93db91e524582756dce049b9256c3f0243f^{commit} # timeout=10
+Checking out Revision be98e93db91e524582756dce049b9256c3f0243f (detached)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f be98e93db91e524582756dce049b9256c3f0243f # timeout=10
+Commit message: "test commit 123"
+ > git rev-list --no-walk 129c3d74144ad112b115309a913ae85dadabaa66 # timeout=10
+First time build. Skipping changelog.
+Setting status of be98e93db91e524582756dce049b9256c3f0243f to FAILURE with url https://leeroy.cs.unc.edu/job/docs-18.04/2986 and message: 'Build finished. '
+Using context: Docs-18.04
+Could not update commit status of the Pull Request on GitHub.
+org.kohsuke.github.HttpException: {"message":"Bad credentials. The API can't be accessed using username/password authentication. Please create a personal access token to access this endpoint: http://github.com/settings/tokens","documentation_url":"https://docs.github.com/articles/creating-a-personal-access-token-for-the-command-line"}
+	at org.kohsuke.github.GitHubClient.interpretApiError(GitHubClient.java:495)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:420)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:363)
+	at org.kohsuke.github.Requester.fetch(Requester.java:74)
+	at org.kohsuke.github.GHRepository.createCommitStatus(GHRepository.java:1906)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.createCommitStatus(GhprbSimpleStatus.java:283)
+	at org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus.onBuildComplete(GhprbSimpleStatus.java:241)
+	at org.jenkinsci.plugins.ghprb.GhprbBuilds.onCompleted(GhprbBuilds.java:205)
+	at org.jenkinsci.plugins.ghprb.GhprbBuildListener.onCompleted(GhprbBuildListener.java:28)
+	at hudson.model.listeners.RunListener.fireCompleted(RunListener.java:209)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.finish(WorkflowRun.java:610)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:353)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:428)
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/be98e93db91e524582756dce049b9256c3f0243f
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor1082.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1974)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1969)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1968)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1536)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:250)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient$HttpURLConnectionResponseInfo.bodyStream(GitHubHttpUrlConnectionClient.java:197)
+	at org.kohsuke.github.GitHubResponse$ResponseInfo.getBodyAsString(GitHubResponse.java:326)
+	at org.kohsuke.github.GitHubResponse.parseBody(GitHubResponse.java:91)
+	at org.kohsuke.github.Requester.lambda$fetch$1(Requester.java:74)
+	at org.kohsuke.github.GitHubClient.createResponse(GitHubClient.java:461)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:412)
+	... 12 more
+Caused by: java.io.IOException: Server returned HTTP response code: 401 for URL: https://api.github.com/repos/oscarlab/graphene/statuses/be98e93db91e524582756dce049b9256c3f0243f
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1924)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:334)
+	at org.kohsuke.github.GitHubHttpUrlConnectionClient.getResponseInfo(GitHubHttpUrlConnectionClient.java:69)
+	at org.kohsuke.github.GitHubClient.sendRequest(GitHubClient.java:400)
+	... 12 more
+ERROR: /var/lib/jenkins/workspace/docs-18.04@script/Jenkinsfiles/Docs-18.04 not found
+Finished: FAILURE

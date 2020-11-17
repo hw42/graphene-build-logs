@@ -1,0 +1,267 @@
+GitHub pull request #1972 of commit 1cb5f0379085e422120e1dfbc48125c3db8aebd2, no merge conflicts.
+Setting status of 1cb5f0379085e422120e1dfbc48125c3db8aebd2 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read Jenkinsfiles/Linux-Debug-18.04
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/1972/merge^{commit} # timeout=10
+Checking out Revision 71158cda41c32b6d0cbacc81ec670b7830d0168f (refs/remotes/origin/pr/1972/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 71158cda41c32b6d0cbacc81ec670b7830d0168f # timeout=20
+Commit message: "Merge 1cb5f0379085e422120e1dfbc48125c3db8aebd2 into 3330238e7f5ceeb078453eb53612744f9bf74aa7"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-pepe in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 71158cda41c32b6d0cbacc81ec670b7830d0168f (refs/remotes/origin/pr/1972/merge)
+Commit message: "Merge 1cb5f0379085e422120e1dfbc48125c3db8aebd2 into 3330238e7f5ceeb078453eb53612744f9bf74aa7"
+ > git rev-parse refs/remotes/origin/pr/1972/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 71158cda41c32b6d0cbacc81ec670b7830d0168f # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.Pal/src/host/Linux-SGX/sgx-driver.url # timeout=10
+ > git config -f .gitmodules --get submodule.Pal/src/host/Linux-SGX/sgx-driver.path # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive Pal/src/host/Linux-SGX/sgx-driver # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-debug.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-debug-18.04-4012 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  536.2MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 56def654ec22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> c14d7b865973
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme
+ ---> Using cache
+ ---> 9074b57f8683
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 4109dfc3887f
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 6463127e759e
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> bd0128426853
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 1847e0f6b7e9
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> d1eeb77ca8d1
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 1b2d8367a657
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 2d5fa430fa91
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 67e3f2f0f558
+Successfully built 67e3f2f0f558
+Successfully tagged local:jenkins-graphene-debug-18.04-4012
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-debug-18.04-4012
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-debug-18.04-4012 cat
+$ docker top 9a2a156c032d65cc4a3e4c15f50faf44a88485afb20b8b526232327817b6d089 -eo pid,comm
+[Pipeline] {
+[Pipeline] sh
++ printenv
+JENKINS_HOME=/var/lib/jenkins
+WERROR=1
+ghprbSourceBranch=pawel/pylint
+ghprbTriggerAuthorEmail=
+ghprbPullAuthorEmail=pwmarcz@gmail.com
+HOSTNAME=9a2a156c032d
+DEBUG=1
+RUN_CHANGES_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/display/redirect?page=changes
+ghprbPullDescription=GitHub pull request #1972 of commit 1cb5f0379085e422120e1dfbc48125c3db8aebd2, no merge conflicts.
+HUDSON_URL=https://leeroy.cs.unc.edu/
+NODE_LABELS=nonsgx_slave pepe slave-pepe
+ghprbActualCommit=1cb5f0379085e422120e1dfbc48125c3db8aebd2
+branch=${sha1}
+HOME=/leeroy
+BUILD_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/
+ghprbTriggerAuthorLoginMention=
+ghprbActualCommitAuthor=Paweł Marczewski
+ghprbPullAuthorLoginMention=@pwmarcz
+JENKINS_SERVER_COOKIE=durable-ec6308e3c70764b005ee7a73cc8d858a
+ghprbGhRepository=oscarlab/graphene
+MAKEOPTS=-j8
+PYTHONVERSION=python3.6
+WORKSPACE=/home/jenkins/workspace/graphene-debug-18.04
+DOCKER_ARGS=
+    --volume=/lib/modules:/lib/modules:ro
+    --volume=/usr/src:/usr/src:ro
+    --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket
+    --device=/dev/gsgx:/dev/gsgx
+    --device=/dev/isgx:/dev/isgx
+
+ghprbPullLongDescription=Pylint output was filtered so that many files with existing pylint\r\nviolations were allowed to stay broken.\r\n\r\nI made sure all files pass pylint, but whitelisted some rules that\r\nwe commonly disable:\r\n\r\n* missing docstrings: most of the code is tests/internal anyway\r\n* invalid-name: too many violations, and we commonly use one- or\r\n  two-character names (like \"a, b\" or \"t1, t2\") which is\r\n  disallowed by this rule; we could tweak it and then fix\r\n  remaining violations such as camel-case or lowercase constants\r\n* fixme: we leave TODOs as a matter of practice, same as in C\r\n* high-level style rules like too-few-* and too-many-*,\r\n  no-self-use\r\n\r\nHopefully that will make using pylint less annoying, while also\r\ncatching serious issues (such as unused variables or imports).\n\n<!-- Reviewable:start -->\n---\nThis change is [<img src=\"https://reviewable.io/review_button.svg\" height=\"34\" align=\"absmiddle\" alt=\"Reviewable\"/>](https://reviewable.io/reviews/oscarlab/graphene/1972)\n<!-- Reviewable:end -->\n
+NODE_NAME=slave-pepe
+ghprbCredentialsId=graphene-bot
+RUN_ARTIFACTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/display/redirect?page=artifacts
+GIT_BRANCH=pawel/pylint
+EXECUTOR_NUMBER=0
+ghprbTriggerAuthorLogin=
+BUILD_DISPLAY_NAME=#4012
+RUN_TESTS_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/display/redirect?page=tests
+ghprbPullAuthorLogin=pwmarcz
+ghprbTriggerAuthor=
+JOB_BASE_NAME=graphene-debug-18.04
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+sha1=origin/pr/1972/merge
+BUILD_ID=4012
+BUILD_TAG=jenkins-graphene-debug-18.04-4012
+ghprbCommentBody=null
+JENKINS_URL=https://leeroy.cs.unc.edu/
+ghprbPullTitle=[CI] Enable pylint unconditionally, fix violations
+JOB_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/
+random_string=YG4K3VAZR43M
+BUILD_NUMBER=4012
+ghprbPullLink=https://github.com/oscarlab/graphene/pull/1972
+JENKINS_NODE_COOKIE=f7671856-4938-49ed-a824-a8b491c40455
+ghprbAuthorRepoGitUrl=https://github.com/pwmarcz/graphene.git
+build_revision=origin/pr/1972/merge
+RUN_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/display/redirect
+GLIBC_VERSION=2.31
+ghprbActualCommitAuthorEmail=pawel@invisiblethingslab.com
+HUDSON_SERVER_COOKIE=a5b99a5c699e3165
+JOB_DISPLAY_URL=https://leeroy.cs.unc.edu/job/graphene-debug-18.04/display/redirect
+ghprbTargetBranch=master
+CLASSPATH=
+JOB_NAME=graphene-debug-18.04
+PWD=/home/jenkins/workspace/graphene-debug-18.04
+ghprbPullId=1972
+WORKSPACE_TMP=/home/jenkins/workspace/graphene-debug-18.04@tmp
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
+************* Module benchmarks.makeenv
+E: 42, 0: Bad option value 'subprocess-run-check' (bad-option-value)
+************* Module gsc
+E: 14, 0: Unable to import 'docker' (import-error)
+E: 15, 0: Unable to import 'yaml' (import-error)
+C: 92, 7: Do not use `len(SEQUENCE)` to determine if a sequence is empty (len-as-condition)
+************* Module benchrun
+C: 20, 0: Exactly one space required after comma
+    def rloop(seqin,comb):
+                   ^ (bad-whitespace)
+C: 24, 0: Exactly one space required after comma
+                for item2 in rloop(seqin[1:],newcomb):
+                                            ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return rloop(seqin,[])
+                      ^ (bad-whitespace)
+C:105, 0: Exactly one space required after assignment
+            pvalues =  vals[:-1]
+                    ^ (bad-whitespace)
+************* Module regression
+E:  9, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+E:  9, 0: Bad option value 'subprocess-run-check' (bad-option-value)
+************* Module runltp_xml
+E:253, 0: Bad option value 'subprocess-popen-preexec-fn' (bad-option-value)
+************* Module test-numpy
+C: 14, 0: Exactly one space required after comma
+x = numpy.random.random((1000,1000))
+                             ^ (bad-whitespace)
+************* Module test_pal
+C:289, 0: Exactly one space required before assignment
+        altstack  = 0
+                  ^ (bad-whitespace)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 9a2a156c032d65cc4a3e4c15f50faf44a88485afb20b8b526232327817b6d089
+$ docker rm -f 9a2a156c032d65cc4a3e4c15f50faf44a88485afb20b8b526232327817b6d089
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 1cb5f0379085e422120e1dfbc48125c3db8aebd2 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/4012/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 123
+Finished: FAILURE

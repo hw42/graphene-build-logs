@@ -1,0 +1,626 @@
+GitHub pull request #2071 of commit a7dee5022303e67e694bfb203326c8a3b8c9b11e, no merge conflicts.
+Setting status of a7dee5022303e67e694bfb203326c8a3b8c9b11e to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/4336 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-release.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/2071/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision f4a0e27a898508df67ff04a2392433cb70708d28 (refs/remotes/origin/pr/2071/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f4a0e27a898508df67ff04a2392433cb70708d28 # timeout=10
+Commit message: "Merge a7dee5022303e67e694bfb203326c8a3b8c9b11e into 303528131c67f58aeee677397ade9593f222ae88"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-pepe in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision f4a0e27a898508df67ff04a2392433cb70708d28 (refs/remotes/origin/pr/2071/merge)
+ > git rev-parse refs/remotes/origin/pr/2071/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f4a0e27a898508df67ff04a2392433cb70708d28 # timeout=10
+Commit message: "Merge a7dee5022303e67e694bfb203326c8a3b8c9b11e into 303528131c67f58aeee677397ade9593f222ae88"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-18.04-4336 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  493.3MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 56def654ec22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 28e75db5e6ed
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme
+ ---> Using cache
+ ---> 7f017ca491e5
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 1cbc3d3e301a
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 7394077a6bd4
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> cb8b15204d7d
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 9e8ed91b1d88
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 3c75cdc5d4b3
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 03bfc886e1d0
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> c9207c3c1415
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 95fa3ea3e275
+Successfully built 95fa3ea3e275
+Successfully tagged local:jenkins-graphene-18.04-4336
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-18.04-4336
+.
+[Pipeline] withDockerContainer
+slave-pepe does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 --device=/dev/kmsg:/dev/kmsg -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-18.04-4336 cat
+$ docker top d3c5cb49692e0316267cfa570c1a19451db1bf95fc1e3b53d4d3eaec8db2998a -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/test_pal1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/test_pal1.stats'
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib'
+../../Scripts/download --output ../include/lib/uthash.h --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+../../Scripts/download --output toml.h --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h --sha256 e79d6d272576561e1b46ee001b0dd6b554330843e6fc7c658a548c659f282ac5
+../../Scripts/download --output toml.c --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c --sha256 c21a546ab767a7e40d4f65df179d70357059c15e4439e1980d791625655fbbc6
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-01-11 00:57:56--  https://github.com/ARMmbed/mbed-crypto/archive//mbedcrypto-3.1.0.tar.gz
+--2021-01-11 00:57:56--  https://github.com/ARMmbed/mbedtls/archive//mbedtls-2.21.0.tar.gz
+--2021-01-11 00:57:56--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+--2021-01-11 00:57:56--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-01-11 00:57:56--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+Resolving github.com (github.com)... Resolving github.com (github.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... 140.82.112.3
+Connecting to github.com (github.com)|140.82.112.3|:443... connected.
+connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2021-01-11 00:57:56--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2021-01-11 00:57:56--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)... 200 OK
+Length: 5348 (5.2K) [text/plain]
+Saving to: './tmp.NlfcwSAufR/unverified'
+
+     0K .....                                                 100% 22.7M=0s
+
+2021-01-11 00:57:56 (22.7 MB/s) - './tmp.NlfcwSAufR/unverified' saved [5348/5348]
+
+200 OK
+Length: 46537 (45K) [text/plain]
+Saving to: './tmp.fGhDyJICX2/unverified'
+
+     0K ....200 OK
+.Length: 78453 (77K) [text/plain]
+.Saving to: './tmp.ndiAVr4nDI/unverified'
+..
+     0K. ... .................. .......... ...... .......... ..download: Fetched 'toml.h' (e79d6d27...) successfully.
+.... ..................140.82.112.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.9|:443... 140.82.113.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.10|:443...  .....     100% 3.23M=0.01s
+
+2021-01-11 00:57:56 (3.23 MB/s) - './tmp.fGhDyJICX2/unverified' saved [46537/46537]
+
+ .......... 65% 3.48M 0s
+    50K .......... .......... ......                          100% 8.55M=0.02s
+
+2021-01-11 00:57:56 (4.38 MB/s) - './tmp.ndiAVr4nDI/unverified' saved [78453/78453]
+
+download: Fetched 'toml.c' (c21a546a...) successfully.
+connected.
+download: Fetched '../include/lib/uthash.h' (ba9af0e8...) successfully.
+patch -p1 -l < toml.patch || exit 255
+patching file toml.c
+patching file toml.h
+connected.
+cp toml.h ../include/lib/toml.h
+touch toml.patched
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... 200 OK
+Length: 3055269 (2.9M) [application/x-gzip]
+Saving to: './tmp.O90ZtmkQsM/unverified'
+
+     0K .......... .......... .......... ........  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/avl_tree.o ]
+.. ..........  1% 1.72M 2s
+    50K .......... .......... .......... .......... ..........  3% 3.33M 1s
+   100K .......... .......... .......... .......... ..........  5% 26.0M 1s
+   150K .......... .......... .......... .......... ..........  6% 3.78M 1s
+   200K .......... .......... .......... .......... ..........  8% 26.3M 1s
+   250K .......... .......... .......... .......... ....  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/udivmodti4.o ]
+...... 10% 4.54M 1s
+   300K .......... .......... .......... .......... .......... 11% 47.6M 1s
+   350K .......... .......... .......... .......... .......... 13% 45.6M 0s
+   400K .......... .......... .......... .......... .......... 15% 48.0M 0s
+   450K .......... .......... .......... .......... .......... 16% 50.3M 0s
+   500K .......... .......... .......... .......... .......... 18% 50.2M 0s
+   550K .......... .......... .......... .......... .......... 20% 40.3M 0s
+   600K .......... .......... .......... .......... .......... 21% 5.41M 0s
+   650K .......... .......... .......... .......... .......... 23% 34.0M 0s
+   700K .......... .......... .......... .......... .......... 25% 33.1M 0s
+   750K .......... .......... .......... .......... .......... 26% 41.4M 0s
+   800K .......... .......... .......... .......... .......... 28% 49.3M 0s
+   850K .......... .......... .......... .......... .......... 30% 44.3M 0s
+   900K .......... .......... .......... .......... .......... 31% 46.1M 0s
+   950K .......... .......... .......... .......... .......... 33% 39.4M 0s
+  1000K .......... .......... .......... .......... .......... 35% 50.0M 0s
+  1050K .......... .......... .......... .......... .......... 36% 50.4M 0s
+  1100K .......... .......... .......... .......... .......... 38% 15.5M 0s
+  1150K .......... .......... .......... .......... .......... 40% 29.2M 0s
+  1200K .......... .......... .......... .......... .......... 41% 31.6M 0s
+  1250K .......... .......... .......... .......... .......... 43% 32.5M 0s
+  1300K .......... .......... .......... .......... .......... 45% 32.2M 0s
+  1350K .......... .......... .......... .......... .......... 46% 28.6M 0s
+  1400K .......... .......... .......... .......... .......... 48% 34.3M 0s
+  1450K .......... .......... .......... .......... .......... 50% 43.2M 0s
+  1500K .......... .......... .......... .......... .......... 51% 50.5M 0s
+  1550K .......... .......... .......... .......... .......... 53% 46.9M 0s
+  1600K .......... .......... .......... .......... .......... 55% 42.3M 0s
+  1650K ...  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene/path.o ]
+....... .......... .......... .......... .......... 56% 35.1M 0s
+  1700K .......... .......... .......... .......... .......... 58% 35.3M 0s
+  1750K .......... .......... .......... .......... .......... 60% 25.8M 0s
+  1800K .......... .......... .......... .......... ......200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.6tkyfK0DfV/unverified'
+.... 62% 30.9M
+     0K 0s 
+  1850K. ............ ......... .......... .......... .......... .......... 63% 38.0M 0s
+  1900K .......... .......... .......... .......... .......... 65% 44.3M 0s
+  1950K .......... .......... .......... .......... .......... 67% 46.7M 0s
+  2000K .......... .......... .......... .......... .......... 68% 50.0M 0s
+  2050K .......... .......... .......... .......... .......... 70% 49.8M 0s
+  2100K .......... .......... .......... .......... .......... 72% 46.1M 0s
+  2150K .......... .......... .......... .......... .......... 73% 40.0M 0s
+  2200K .......... .......... .......... .......... .......... 75% 50.1M 0s
+  2250K .......... .......... .......... .......... .......... 77% 49.7M 0s
+  2300K .......... .......... .......... .......... .......... 78% 49.8M 0s
+  2350K .......... .......... .......... .......... .......... 80% 47.2M 0s
+  2400K .......... .......... .......... .......... .......... 82% 50.2M 0s
+  2450K .......... .......... .......... .......... ........... 83% 46.4M 0s
+  2500K ................. ....... .......... ............. .... ............ ........... 85% 45.1M 0s
+  2550K .......... .......... .......... .......... .......... 87% 40.0M 0s
+  2600K .......... .......... .......... .......... .......... 88% 50.2M 0s
+  2650K .......... .......... .......... .......... .......... 90% 49.2M 0s
+  2700K .......... .......... .......... .......... .......... 92% 50.1M 0s
+  2750K .......... .......... .......... .......... .......... 93% 47.0M 0s
+  2800K .......... .......... .......... .......... .......... 95% 50.1M 0s
+  2850K .......... .......... .......... .......... .......... 97% 49.2M 0s
+  2900K .......... .......... .......... .......... .......... 98% 49.4M 0s
+  2950K .......... .......... .......... ...                  100% 43.3M=0.1s
+
+2021-01-11 00:57:56 (20.4 MB/s) - './tmp.O90ZtmkQsM/unverified' saved [3055269/3055269]
+
+... .......... 1.73M
+    50K .......... .......... ..........  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/hton.o ]
+ .......... .......... 3.42M
+   100K .......... .......... .......... .......... .......... 3.54M
+   150K .......... .......... .......... .......... .......... 21.2M
+   200K .......... .......... .......... .......... .......... 25.3M
+   250K .......... .......... .......... .download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+......... .......... 4.68M
+   300K .......... .......... .......... .......... .......... 20.6M
+   350K .......... .......... .......... .......... .......... 24.2M
+   400K .......... .......... .......... .......... .......... 24.7M
+   450K .......... .......... .......... .......... .......... 20.1M
+   500K .......... .......... ........  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+.. .......... .......... 5.91M
+   550K .......... .......... .......... .......... .......... 6.23M
+   600K .......... .......... .......... .......... .......... 13.0M
+   650K .......... .......... .......... .......... .......... 12.5M
+   700K .......... .......... .......... .......... .......... 4.41M
+   750K .......... .......... .......... .......... .......... 20.1M
+   800K .......... .......... .......... .......... .......... 20.5M
+   850K .......... .......... .......... .......... .......... 18.7M
+   900K .......... .......... .......... .......... .......... 14.0M
+   950K ..........  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+ .......... .......... .......... .......... 4.88M
+  1000K .......... .......... .......... .......... .......... 4.01M
+  1050K .......... .......... .......... .......... .......... 4.44M
+  1100K .......... .......... .......... .......... .......... 20.5M
+  1150K .......... .....                                       6.67M=0.2s
+
+2021-01-11 00:57:56 (6.97 MB/s) - './tmp.6tkyfK0DfV/unverified' saved [1193102]
+
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/atoi.o ]
+download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/ctype.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/toml_utils.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/toml.o ]
+rm -f -r crypto/mbedtls
+cd crypto && tar -mxzf mbedtls-2.21.0.tar.gz
+cd crypto && tar -mxzf mbedcrypto-3.1.0.tar.gz
+mv crypto/mbedtls-mbedtls-2.21.0 crypto/mbedtls
+rm -f -r crypto/mbedtls/crypto
+mv crypto/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls
+mv crypto/mbedtls/mbed-crypto-mbedcrypto-3.1.0 crypto/mbedtls/crypto
+cd crypto/mbedtls && patch -p1 < ../mbedtls-2.21.0.diff || exit 255
+patching file library/ssl_tls.c
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && perl ./scripts/config.pl set MBEDTLS_CMAC_C && make CFLAGS="" SHARED=1 DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/library'
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+make[6]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    aes.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    aesni.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    arc4.c
+  CC    aria.c
+  CC    ssl_msg.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    ssl_srv.c
+  CC    base64.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    camellia.c
+  CC    ccm.c
+  AR    libmbedx509.a
+  CC    chacha20.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    ctr_drbg.c
+  CC    cmac.c
+  AR    libmbedtls.a
+  CC    des.c
+  CC    dhm.c
+  CC    ecdh.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md4.c
+  CC    md5.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    platform_util.c
+  CC    poly1305.c
+  CC    psa_crypto.c
+  CC    psa_crypto_se.c
+  CC    psa_crypto_slot_management.c
+  CC    psa_its_file.c
+  CC    psa_crypto_storage.c
+  CC    ripemd160.c
+  CC    rsa.c
+  CC    rsa_internal.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    xtea.c
+  CC    /home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/library/error.c
+  CC    /home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/library/version.c
+  CC    /home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/library/version_features.c
+  CC    ../3rdparty/everest/library/everest.c
+  CC    ../3rdparty/everest/library/x25519.c
+  CC    ../3rdparty/everest/library/Hacl_Curve25519_joined.c
+  AR    libmbedcrypto.a
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  LD    libmbedcrypto.so.4
+  LN    libmbedcrypto.so -> libmbedcrypto.so.4
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  LD    libmbedx509.so.1
+make[6]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/crypto/library'
+  LN    libmbedx509.so -> libmbedx509.so.1
+  LD    libmbedtls.so.13
+  LN    libmbedtls.so -> libmbedtls.so.13
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/hello.c
+  CC    hash/generic_sum.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify_pss.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/ssl_client1.c
+  CC    ssl/ssl_server.c
+  CC    ssl/ssl_server2.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/ssl_client2.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_mail_client.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    random/gen_random_havege.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    test/query_compile_time_config.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/crl_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/req_app.c
+make[6]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+ cc common.o onefile.o fuzz_x509csr.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509csr
+ cc common.o onefile.o fuzz_privkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_privkey
+ cc common.o onefile.o fuzz_x509crt.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crt
+ cc common.o onefile.o fuzz_x509crl.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_x509crl
+ cc common.o onefile.o fuzz_server.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_server
+ cc common.o onefile.o fuzz_pubkey.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_pubkey
+ cc common.o onefile.o fuzz_dtlsclient.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsclient
+ cc common.o onefile.o fuzz_dtlsserver.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_dtlsserver
+ cc common.o onefile.o fuzz_client.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto -L../../crypto/library  -o fuzz_client
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib/crypto/mbedtls'
+rm -f crypto/mbedtls/include/mbedtls/config.h
+rm -f crypto/mbedtls/crypto/include/mbedtls/config.h
+cp crypto/config.h crypto/mbedtls/crypto/include/mbedtls
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/md.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/crypto/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_dh.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_encoding.o ]
+  [ /home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/lib'
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_mutex.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/pal_error.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.obj/slab.o ]
+make[3]: Entering directory '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux'
+  [ clone-x86_64.o ]
+  [ db_devices.o ]
+  [ db_eventfd.o ]
+  [ db_events.o ]
+  [ db_exception.o ]
+In file included from db_exception.c:26:0:
+../../../include/arch/x86_64/Linux/ucontext.h: In function 'ucontext_to_pal_context':
+../../../include/arch/x86_64/Linux/ucontext.h:78:88: error: expected ',' before ')' token
+     static_assert(offsetof(PAL_CONTEXT, fpregs) == offsetof(struct sigcontext, fpstate));
+                                                                                        ^
+Makefile:77: recipe for target 'db_exception.o' failed
+make[3]: *** [db_exception.o] Error 1
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/src/host/Linux'
+Makefile:101: recipe for target 'host_lib_recurse' failed
+make[2]: *** [host_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 d3c5cb49692e0316267cfa570c1a19451db1bf95fc1e3b53d4d3eaec8db2998a
+$ docker rm -f d3c5cb49692e0316267cfa570c1a19451db1bf95fc1e3b53d4d3eaec8db2998a
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of a7dee5022303e67e694bfb203326c8a3b8c9b11e to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/4336 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

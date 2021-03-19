@@ -1,0 +1,172 @@
+GitHub pull request #2258 of commit 1990949fdaaca18571c57551329ef1f96def725a, no merge conflicts.
+Setting status of 1990949fdaaca18571c57551329ef1f96def725a to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/3891 and message: 'Build started for merge commit.'
+Using context: Docs-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/docs-18.04@script to read .ci/docs.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/2258/merge^{commit} # timeout=10
+Checking out Revision 92a4e9032da3144ddae7131dbae14b7330be0bd7 (refs/remotes/origin/pr/2258/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 92a4e9032da3144ddae7131dbae14b7330be0bd7 # timeout=10
+Commit message: "Merge 1990949fdaaca18571c57551329ef1f96def725a into 7dfa608bf052f51595b8948c58d867fd75fe5c01"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-astoria in /home/jenkins/workspace/docs-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/docs-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 92a4e9032da3144ddae7131dbae14b7330be0bd7 (refs/remotes/origin/pr/2258/merge)
+Commit message: "Merge 1990949fdaaca18571c57551329ef1f96def725a into 7dfa608bf052f51595b8948c58d867fd75fe5c01"
+ > git rev-parse refs/remotes/origin/pr/2258/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 92a4e9032da3144ddae7131dbae14b7330be0bd7 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 0758b259a92d8cab5e524c7ebc5a6eea98b973e3 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  496.1MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 329ed837d508
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-pyelftools     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 6183fbb0bfcd
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> ad4ecb036ba6
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 405be9d33f3f
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> d63d631c4ced
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> efe3b7f43f50
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> d7bc1841738a
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> e0b17e13d026
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 55dae92fe902
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 295339753f4e
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 673a1e185e3a
+Successfully built 673a1e185e3a
+Successfully tagged 0758b259a92d8cab5e524c7ebc5a6eea98b973e3:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 0758b259a92d8cab5e524c7ebc5a6eea98b973e3
+.
+[Pipeline] withDockerContainer
+slave-astoria does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/docs-18.04 -v /home/jenkins/workspace/docs-18.04:/home/jenkins/workspace/docs-18.04:rw,z -v /home/jenkins/workspace/docs-18.04@tmp:/home/jenkins/workspace/docs-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 0758b259a92d8cab5e524c7ebc5a6eea98b973e3 cat
+$ docker top a8c2fbaf332077bd2acb95cb4b3ac2e15d12be8c7c49dc85b84257558f6965a6 -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -C Documentation html SPHINXOPTS=-W
+make: Entering directory '/home/jenkins/workspace/docs-18.04/Documentation'
+Running Sphinx v1.8.0
+
+Configuration error:
+There is a programmable error in your configuration file:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sphinx/config.py", line 353, in eval_config_file
+    execfile_(filename, namespace)
+  File "/usr/local/lib/python3.6/dist-packages/sphinx/util/pycompat.py", line 150, in execfile_
+    exec_(code, _globals)
+  File "/home/jenkins/workspace/docs-18.04/Documentation/conf.py", line 161, in <module>
+    for source, *_ in man_pages))
+AssertionError
+
+Makefile:22: recipe for target 'html' failed
+make: *** [html] Error 2
+make: Leaving directory '/home/jenkins/workspace/docs-18.04/Documentation'
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 a8c2fbaf332077bd2acb95cb4b3ac2e15d12be8c7c49dc85b84257558f6965a6
+$ docker rm -f a8c2fbaf332077bd2acb95cb4b3ac2e15d12be8c7c49dc85b84257558f6965a6
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 1990949fdaaca18571c57551329ef1f96def725a to FAILURE with url https://leeroy.cs.unc.edu/job/docs-18.04/3891 and message: 'Build finished. '
+Using context: Docs-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

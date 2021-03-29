@@ -1,0 +1,365 @@
+GitHub pull request #2277 of commit 6b3c5a6371df1d78aab38355518fd819a03ae12b, no merge conflicts.
+Setting status of 6b3c5a6371df1d78aab38355518fd819a03ae12b to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/6226/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read .ci/linux-direct-ubuntu16.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+Checking out Revision 546f765b11db656daed41b877cdb1e6595af3544 (refs/remotes/origin/pr/2277/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 546f765b11db656daed41b877cdb1e6595af3544 # timeout=20
+Commit message: "Merge 6b3c5a6371df1d78aab38355518fd819a03ae12b into e29d32582e37652edb1bdda232c0b710393e944f"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-constantine in /home/jenkins/workspace/graphene-debug
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 546f765b11db656daed41b877cdb1e6595af3544 (refs/remotes/origin/pr/2277/merge)
+Commit message: "Merge 6b3c5a6371df1d78aab38355518fd819a03ae12b into e29d32582e37652edb1bdda232c0b710393e944f"
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 546f765b11db656daed41b877cdb1e6595af3544 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu16.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-debug.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-debug-6226 -f .ci/ubuntu16.04.dockerfile .
+Sending build context to Docker daemon  541.1MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        netcat-openbsd        ninja-build        pkg-config        protobuf-c-compiler        python        python3-apport        python3-apt        python3-pyelftools        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf meson==0.45.1 toml>=0.10     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/7 : FROM ubuntu:16.04
+ ---> 5e13f8dd4c1a
+Step 2/7 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        netcat-openbsd        ninja-build        pkg-config        protobuf-c-compiler        python        python3-apport        python3-apt        python3-pyelftools        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf meson==0.45.1 toml>=0.10     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 1a3f22d51066
+Step 3/7 : RUN python3 -m pip install     asv
+ ---> Using cache
+ ---> fb87bfb1f375
+Step 4/7 : WORKDIR /leeroy
+ ---> Using cache
+ ---> e6202451d2dc
+Step 5/7 : USER leeroy
+ ---> Using cache
+ ---> aab09a510bf4
+Step 6/7 : ENV HOME /leeroy
+ ---> Using cache
+ ---> de466f1ad2bd
+Step 7/7 : CMD ["bash"]
+ ---> Using cache
+ ---> d36a11dd0ea3
+Successfully built d36a11dd0ea3
+Successfully tagged local:jenkins-graphene-debug-6226
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-debug-6226
+.
+[Pipeline] withDockerContainer
+slave-constantine does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 --device=/dev/kmsg:/dev/kmsg -w /home/jenkins/workspace/graphene-debug -v /home/jenkins/workspace/graphene-debug:/home/jenkins/workspace/graphene-debug:rw,z -v /home/jenkins/workspace/graphene-debug@tmp:/home/jenkins/workspace/graphene-debug@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-debug-6226 cat
+$ docker top a6f806795a1a5ca8903acae93ed0a8b4835052c1f83bb871194345263de54ff8 -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-debug/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+../../Scripts/download --output uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --url https://packages.grapheneproject.io/distfiles/uthash-2.1.0/src/uthash.h
+../../Scripts/download --output crypto/mbedtls-2.21.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.21.0.tar.gz --url https://packages.grapheneproject.io/distfiles/mbedtls-2.21.0.tar.gz --sha256 320e930b7596ade650ae4fc9ba94b510d05e3a7d63520e121d8fdc7a21602db9
+../../Scripts/download --output crypto/mbedcrypto-3.1.0.tar.gz --url https://github.com/ARMmbed/mbed-crypto/archive/mbedcrypto-3.1.0.tar.gz --url https://packages.grapheneproject.io/distfiles/mbedcrypto-3.1.0.tar.gz --sha256 7e171df03560031bc712489930831e70ae4b70ff521a609c6361f36bd5f8b76b
+../../Scripts/download --output toml.h --sha256 e79d6d272576561e1b46ee001b0dd6b554330843e6fc7c658a548c659f282ac5 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+../../Scripts/download --output toml.c --sha256 c21a546ab767a7e40d4f65df179d70357059c15e4439e1980d791625655fbbc6 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+download: Trying to fetch https://github.com/ARMmbed/mbed-crypto/archive/mbedcrypto-3.1.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.21.0.tar.gz
+--2021-03-29 12:35:23--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+--2021-03-29 12:35:23--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-03-29 12:35:23--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+--2021-03-29 12:35:23--  https://github.com/ARMmbed/mbed-crypto/archive/mbedcrypto-3.1.0.tar.gz
+--2021-03-29 12:35:23--  https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.21.0.tar.gz
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving github.com (github.com)... Resolving github.com (github.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... 185.199.111.133185.199.108.133, , 185.199.108.133185.199.109.133, , 185.199.110.133185.199.110.133, ..., ...
+
+185.199.108.133, 185.199.109.133, 185.199.110.133, ...Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... 
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0 [following]
+--2021-03-29 12:35:23--  https://codeload.github.com/ARMmbed/mbed-crypto/tar.gz/mbedcrypto-3.1.0
+Resolving codeload.github.com (codeload.github.com)... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0 [following]
+--2021-03-29 12:35:23--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.21.0
+Resolving codeload.github.com (codeload.github.com)... 140.82.112.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.10|:443... 140.82.112.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.112.10|:443... 200 OK
+Length: 46537 (45K) [text/plain]
+Saving to: './tmp.jkAhm1JPTF/unverified'
+
+     0K .......... .......... .......... ..........200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: './tmp.57yywdgK42/unverified'
+
+     0K .......... .......... ......connected.
+.... ..........connected.
+ .....     100% 4.22M=0.01s
+
+2021-03-29 12:35:23 (4.22 MB/s) - './tmp.jkAhm1JPTF/unverified' saved [46537/46537]
+
+ .......... 65% 4.60M 0s
+    50K .......... .......... ......                          100% 12.0M=0.01s
+
+2021-03-29 12:35:23 (5.86 MB/s) - './tmp.57yywdgK42/unverified' saved [78453/78453]
+
+download: Fetched 'toml.c' (c21a546a...) successfully.
+download: Fetched 'uthash.h' (ba9af0e8...) successfully.
+200 OK
+Length: 5348 (5.2K) [text/plain]
+Saving to: './tmp.bnMyAQilM6/unverified'
+
+     0K .....                                                 100% 40.9M=0s
+
+2021-03-29 12:35:23 (40.9 MB/s) - './tmp.bnMyAQilM6/unverified' saved [5348/5348]
+
+patch -p2 -l < uthash.patch || exit 255
+download: Fetched 'toml.h' (e79d6d27...) successfully.
+patch -p1 -l < toml.patch || exit 255
+patching file uthash.h
+Hunk #1 succeeded at 26 with fuzz 2.
+Hunk #2 succeeded at 126 (offset 10 lines).
+Hunk #3 FAILED at 510.
+1 out of 3 hunks FAILED -- saving rejects to file uthash.h.rej
+Makefile:172: recipe for target 'uthash.patched' failed
+make[3]: *** [uthash.patched] Error 255
+make[3]: *** Waiting for unfinished jobs....
+patching file toml.c
+patching file toml.h
+cp toml.h ../include/lib/toml.h
+touch toml.patched
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.lvGNnG3rq2/unverified'
+
+     0K .......... .......... .......... ........200 OK
+Length: unspecified [application/x-gzip]
+Saving to: './tmp.KIfFYO2vAC/unverified'
+
+     0K .......... .... .......... 2.24M
+    50K .......... .......... .................. .......... ... .............. .......... 4.43M
+   100K .......... .......... .......... .......... .... ........... 2.23M.
+    50K ................. 4.63M .
+   150K ................... . ................... .......... .......... .......... 29.9M
+   200K .......... .......... .......... .......... .......... 53.6M
+   250K .......... ..... .......... ............ 4.48M..
+   100K ...... ............. .......... ............ 5.56M ..
+   300K ............... ......... .......... ........... ....... ....... .......... .......... 39.8M
+   350K .......... .......... .......... .......... .......... 49.9M
+   400K .......... .......... .......... .......... .......... 87.3M
+   450K .......... .......... .......... .......... .......... 84.9M
+   500K .......... .......... .......... .......... ............. 6.91M
+   550K .......... .......... .......... .......... ............ 77.0M
+   600K ........... 4.14M... .....
+   150K ....... ................ ... .......... .......... ................ ........ ........ 42.1M..
+   200K. .......... 33.8M..
+   650K ..... ................ ... ............... ....... ........... ........... ............ 45.1M.
+   250K .... ............... ... 41.9M.
+   700K ................ .......... .......... .......... .......... 50.4M
+   750K .......... .......... .......... .......... .......... 52.4M
+   800K .......... .......... .......... .......... .......... 16.7M
+   850K .......... ...... .......... .......... .......... 5.51M
+   300K .......... .......... .......... .......... .......... 12.9M
+   350K ................ . ................. .......... .......... 5.76M
+   900K .......... .......... .......... .......... .......... .......... 5.72M
+   400K .......... .......... .......... .... .......... .......... 3.86M
+   950K .......... .......... .......... ................ .... .......... 8.16M
+   450K .......... .......... .................. 4.75M
+  1000K .......... .......... .......... .......... .......... .......... 4.00M
+   500K .......... .......... ........ .......... 5.07M
+  1050K .......... .......... .......... .......... .......... 35.2M
+  1100K ...... .......... .......... 4.32M
+   550K .......... .......... .......... .......... ........ .......... .......... .......... .......... 4.82M
+  1150K .......... ................ 6.30M
+   600K .......... .......... .......... .......... .......... 13.8M
+   650K .......... .......... .......... .......... .......... .......... .......... 5.51M
+  1200K ....... ........... ........ 10.2M..
+   700K .......... .......... .......... .......... .......... .......... .......... 5.08M
+  1250K .......... .......... .............. .......... 3.35M
+   750K .......... ........ .......... .......... 7.49M
+  1300K ....... .......... ....... .......... .......... 24.7M
+   800K .......... .......... .......... .......... ................ .......... 17.9M
+   850K .......... .......... .......... .......... ......... .......... ........... 5.16M
+  1350K ...... 8.01M...
+   900K ............. .......... .......... .......... .... ........... ............ 31.4M.
+   950K ..... ................. .......... 22.6M
+  1400K .......... .......... .......... .......... .......... 15.3M
+  1450K .......... .......... .......... .......... .......... 17.7M
+  1500K .... .......... .......... .......... .......... 4.96M
+  1000K .......... .......... .......... .......... .......... .......... .......... 5.80M
+  1550K .......... .......... .......... .......... .......... 6.78M...... .......... .......... 3.77M
+  1050K .......... .......... ..
+  1600K .......... .......... .......... .......... .......... 5.47M
+  1650K .......... .......... .......... .......... .............. .......... .......... 3.51M
+  1100K .......... .......... .......... .......... .......... 11.6M
+  1150K ...... 4.37M
+  1700K .......... .......... .....                                       4.17M=0.2s
+
+2021-03-29 12:35:23 (6.15 MB/s) - './tmp.KIfFYO2vAC/unverified' saved [1193102]
+
+........ .......... .......... .......... 9.01M
+  1750K .......... .......... .......... .......... .......... 11.7M
+  1800K .......... .......... .......... .......... .......... 10.4M
+  1850K .download: Fetched 'crypto/mbedtls-2.21.0.tar.gz' (320e930b...) successfully.
+......... .......... .......... .......... .......... 11.2M
+  1900K .......... .......... .......... .......... .......... 10.7M
+  1950K .......... .......... .......... .......... .......... 6.94M
+  2000K .......... .......... .......... .......... .......... 11.3M
+  2050K .......... .......... .......... .......... .......... 6.67M
+  2100K .......... .......... .......... .......... .......... 10.5M
+  2150K .......... .......... .......... .......... .......... 9.49M
+  2200K .......... .......... .......... .......... .......... 11.2M
+  2250K .......... .......... .......... .......... .......... 9.51M
+  2300K .......... .......... .......... .......... .......... 7.50M
+  2350K .......... .......... .......... .......... .......... 9.18M
+  2400K .......... .......... .......... .......... .......... 7.58M
+  2450K .......... .......... .......... .......... .......... 7.01M
+  2500K .......... .......... .......... .......... .......... 7.37M
+  2550K .......... .......... .......... .......... .......... 7.23M
+  2600K .......... .......... .......... .......... .......... 6.89M
+  2650K .......... .......... .......... .......... .......... 6.33M
+  2700K .......... .......... .......... .......... .......... 9.42M
+  2750K .......... .......... .......... .......... .......... 6.30M
+  2800K .......... .......... .......... .......... .......... 2.48M
+  2850K .......... .......... .......... .......... .......... 8.40M
+  2900K .......... .......... .......... .......... .......... 11.2M
+  2950K .......... .......... .......... ...                   4.74M=0.4s
+
+2021-03-29 12:35:23 (7.91 MB/s) - './tmp.lvGNnG3rq2/unverified' saved [3055269]
+
+download: Fetched 'crypto/mbedcrypto-3.1.0.tar.gz' (7e171df0...) successfully.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/lib'
+Makefile:99: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 a6f806795a1a5ca8903acae93ed0a8b4835052c1f83bb871194345263de54ff8
+$ docker rm -f a6f806795a1a5ca8903acae93ed0a8b4835052c1f83bb871194345263de54ff8
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 6b3c5a6371df1d78aab38355518fd819a03ae12b to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/6226/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+ERROR: script returned exit code 2
+Finished: FAILURE

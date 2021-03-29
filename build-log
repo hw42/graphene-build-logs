@@ -1,0 +1,203 @@
+GitHub pull request #2277 of commit 7f49f9c758520f371bef3ada3879a8ea14f0e024, no merge conflicts.
+Setting status of 7f49f9c758520f371bef3ada3879a8ea14f0e024 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5010/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+Checking out Revision 0c1a0405566feb42e3d15a51085f18ae761a2144 (refs/remotes/origin/pr/2277/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0c1a0405566feb42e3d15a51085f18ae761a2144 # timeout=20
+Commit message: "Merge 7f49f9c758520f371bef3ada3879a8ea14f0e024 into 990a3b012b3a47698ec9960aeeabf54ebe8ed0b2"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-constantine in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 1ec4756d34b12e0256537c73fe73dd67919e8e1e (refs/remotes/origin/pr/2277/merge)
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1ec4756d34b12e0256537c73fe73dd67919e8e1e # timeout=20
+Commit message: "Merge 7f49f9c758520f371bef3ada3879a8ea14f0e024 into e29d32582e37652edb1bdda232c0b710393e944f"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-debug.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-debug-18.04-5010 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  541.4MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 3339fde08fc3
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-pyelftools     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 2fa9f12851f2
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> 65245d2e0881
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> ee247affd8aa
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 3ac3230a3efb
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 2a62ae8eb094
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 5aea7f8a3909
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 56460fe6e003
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> b60e251e93bc
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> a53bee6f4598
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 5636be9a7292
+Successfully built 5636be9a7292
+Successfully tagged local:jenkins-graphene-debug-18.04-5010
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-debug-18.04-5010
+.
+[Pipeline] withDockerContainer
+slave-constantine does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 --device=/dev/kmsg:/dev/kmsg -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-debug-18.04-5010 cat
+$ docker top 70d1696acb9e98563199661f77b67f2dd15afba20207e47cbf5cf009694541c2 -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/graphenelibos.sgx_sign1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/graphenelibos.sgx_sign1.stats'
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+make[3]: *** No rule to make target '../include/lib/uthash.h', needed by 'all'.  Stop.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+Makefile:99: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 70d1696acb9e98563199661f77b67f2dd15afba20207e47cbf5cf009694541c2
+$ docker rm -f 70d1696acb9e98563199661f77b67f2dd15afba20207e47cbf5cf009694541c2
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 7f49f9c758520f371bef3ada3879a8ea14f0e024 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5010/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

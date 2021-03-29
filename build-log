@@ -1,0 +1,233 @@
+GitHub pull request #2277 of commit 7f49f9c758520f371bef3ada3879a8ea14f0e024, no merge conflicts.
+Setting status of 7f49f9c758520f371bef3ada3879a8ea14f0e024 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/3378/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-apps
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-apps@script to read .ci/linux-sgx-ubuntu16.04-gcc-release-apps.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-apps@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 1ec4756d34b12e0256537c73fe73dd67919e8e1e (refs/remotes/origin/pr/2277/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1ec4756d34b12e0256537c73fe73dd67919e8e1e # timeout=20
+Commit message: "Merge 7f49f9c758520f371bef3ada3879a8ea14f0e024 into e29d32582e37652edb1bdda232c0b710393e944f"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-astoria in /home/jenkins/workspace/graphene-sgx-apps
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-apps # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 1ec4756d34b12e0256537c73fe73dd67919e8e1e (refs/remotes/origin/pr/2277/merge)
+Commit message: "Merge 7f49f9c758520f371bef3ada3879a8ea14f0e024 into e29d32582e37652edb1bdda232c0b710393e944f"
+ > git rev-parse refs/remotes/origin/pr/2277/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1ec4756d34b12e0256537c73fe73dd67919e8e1e # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu16.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-sgx-apps-3378 -f .ci/ubuntu16.04.dockerfile .
+Sending build context to Docker daemon  541.4MB
+[91m[WARNING]: Empty continuation line found in:
+    RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        netcat-openbsd        ninja-build        pkg-config        protobuf-c-compiler        python        python3-apport        python3-apt        python3-pyelftools        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf meson==0.45.1 toml>=0.10     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+[WARNING]: Empty continuation lines will become errors in a future release.
+[0mStep 1/7 : FROM ubuntu:16.04
+ ---> f6f49faac5cf
+Step 2/7 : RUN apt-get update     && apt-get install -y        apache2-utils        autoconf        bison        build-essential        curl        flex        gawk        gdb        gettext        git        libapr1-dev        libaprutil1-dev        libcurl4-openssl-dev        libevent-dev        libexpat1        libexpat1-dev        libmemcached-tools        libnss-mdns        libnuma1        libomp-dev        libpcre2-dev        libpcre3-dev        libprotobuf-c-dev        libssl-dev        libxfixes3        libxi6        libxml2-dev        libxrender1        libxxf86vm1        linux-headers-4.4.0-161-generic        net-tools        netcat-openbsd        ninja-build        pkg-config        protobuf-c-compiler        python        python3-apport        python3-apt        python3-pyelftools        python3-lxml        python3-minimal        python3-numpy        python3-pip        python3-pytest        python3-scipy        r-base-core        shellcheck        texinfo        wget        zlib1g        zlib1g-dev     && /usr/bin/pip3 install protobuf meson==0.45.1 toml>=0.10     && groupadd -r leeroy -g 1001     && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy     && chmod 755 /leeroy     && chown 1001 /leeroy     && rm -f /leeroy/.rnd     && mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> dda4dc7a7b40
+Step 3/7 : RUN python3 -m pip install     asv
+ ---> Using cache
+ ---> 1c2ac887190f
+Step 4/7 : WORKDIR /leeroy
+ ---> Using cache
+ ---> ead96edd6856
+Step 5/7 : USER leeroy
+ ---> Using cache
+ ---> 1b9423e020b5
+Step 6/7 : ENV HOME /leeroy
+ ---> Using cache
+ ---> bb81859b1d2b
+Step 7/7 : CMD ["bash"]
+ ---> Using cache
+ ---> 17fd01867732
+Successfully built 17fd01867732
+Successfully tagged local:jenkins-graphene-sgx-apps-3378
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-sgx-apps-3378
+.
+[Pipeline] withDockerContainer
+slave-astoria does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 --device=/dev/kmsg:/dev/kmsg --volume=/lib/modules:/lib/modules:ro --volume=/usr/src:/usr/src:ro --device=/dev/isgx:/dev/isgx --device=/dev/gsgx:/dev/gsgx --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket -w /home/jenkins/workspace/graphene-sgx-apps -v /home/jenkins/workspace/graphene-sgx-apps:/home/jenkins/workspace/graphene-sgx-apps:rw,z -v /home/jenkins/workspace/graphene-sgx-apps@tmp:/home/jenkins/workspace/graphene-sgx-apps@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-sgx-apps-3378 cat
+$ docker top 1fef3ad02f954b4ebbc2324de42fdf01433cb0b463f7b74f9a0ebf5ccd0d2eaa -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-sgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ cd Pal/src/host/Linux-SGX/signer/
++ openssl genrsa -3 -out enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus
+.....................................++
+.............................................................++
+e is 3 (0x3)
++ cd /opt/intel
++ git clone https://github.com/intel/linux-sgx-driver.git
+Cloning into 'linux-sgx-driver'...
++ cd linux-sgx-driver
++ git checkout 276c5c6a064d22358542f5e0aa96b1c0ace5d695
+Note: checking out '276c5c6a064d22358542f5e0aa96b1c0ace5d695'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 276c5c6... Fix compilation on 5.8 kernel (#120)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/intel/SGXDataCenterAttestationPrimitives.git
+Cloning into 'SGXDataCenterAttestationPrimitives'...
++ cd SGXDataCenterAttestationPrimitives
++ git checkout DCAP_1.6
+Note: checking out 'DCAP_1.6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 4605fae... Intel(R) SGX DCAP 1.6 Release
++ cd /home/jenkins/workspace/graphene-sgx-apps
++ make -j8 ISGX_DRIVER_PATH=/opt/intel/SGXDataCenterAttestationPrimitives/driver/linux
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-sgx-apps/Pal/src/host/Linux-SGX/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib'
+make[3]: *** No rule to make target '../include/lib/uthash.h', needed by 'all'.  Stop.
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/lib'
+Makefile:99: recipe for target 'graphene_lib_recurse' failed
+make[2]: *** [graphene_lib_recurse] Error 2
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-sgx-apps/Pal'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 1fef3ad02f954b4ebbc2324de42fdf01433cb0b463f7b74f9a0ebf5ccd0d2eaa
+$ docker rm -f 1fef3ad02f954b4ebbc2324de42fdf01433cb0b463f7b74f9a0ebf5ccd0d2eaa
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 7f49f9c758520f371bef3ada3879a8ea14f0e024 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-apps/3378/ and message: 'Build finished. '
+Using context: Jenkins-SGX-apps
+ERROR: script returned exit code 2
+Finished: FAILURE

@@ -1,0 +1,40 @@
+GitHub pull request #2272 of commit e02dbcec7d42665dbfab9fc86f0146aa626aa3a8, no merge conflicts.
+Setting status of e02dbcec7d42665dbfab9fc86f0146aa626aa3a8 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug/6438/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug@script to read .ci/linux-direct-ubuntu16.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2272/merge^{commit} # timeout=10
+Checking out Revision 01ff5d79d09711a3c470f0ee4c006197076b4984 (refs/remotes/origin/pr/2272/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 01ff5d79d09711a3c470f0ee4c006197076b4984 # timeout=20
+Commit message: "Merge e02dbcec7d42665dbfab9fc86f0146aa626aa3a8 into b9dbf7d7ff38534c85bb4510ea8e78b3a792346e"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Setting status of e02dbcec7d42665dbfab9fc86f0146aa626aa3a8 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug/6438/ and message: 'Build finished. '
+Using context: Jenkins-Debug
+ERROR: /var/lib/jenkins/workspace/graphene-debug@script/.ci/linux-direct-ubuntu16.04-gcc-debug.jenkinsfile not found
+Finished: FAILURE

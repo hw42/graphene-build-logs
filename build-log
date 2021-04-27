@@ -1,0 +1,128 @@
+GitHub pull request #2325 of commit a3c4fe703b143b26e10328bccba9d0f62ae53f4d, no merge conflicts.
+Setting status of a3c4fe703b143b26e10328bccba9d0f62ae53f4d to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5284/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2325/merge^{commit} # timeout=10
+Checking out Revision 175ab55136332b752ee47a9c05b73bb9faa09377 (refs/remotes/origin/pr/2325/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 175ab55136332b752ee47a9c05b73bb9faa09377 # timeout=20
+Commit message: "Merge a3c4fe703b143b26e10328bccba9d0f62ae53f4d into 125b7ccffb9a4fd490ffe22532ca4c3d7f82a470"
+ > git rev-list --no-walk a08994ef5b30c235e3d7c90557042728354e420c # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-constantine in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 175ab55136332b752ee47a9c05b73bb9faa09377 (refs/remotes/origin/pr/2325/merge)
+Commit message: "Merge a3c4fe703b143b26e10328bccba9d0f62ae53f4d into 125b7ccffb9a4fd490ffe22532ca4c3d7f82a470"
+ > git rev-parse refs/remotes/origin/pr/2325/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 175ab55136332b752ee47a9c05b73bb9faa09377 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of a3c4fe703b143b26e10328bccba9d0f62ae53f4d to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5284/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+groovy.lang.MissingPropertyException: No such property: leeroy for class: groovy.lang.Binding
+	at groovy.lang.Binding.getVariable(Binding.java:63)
+	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onGetProperty(SandboxInterceptor.java:270)
+	at org.kohsuke.groovy.sandbox.impl.Checker$7.call(Checker.java:353)
+	at org.kohsuke.groovy.sandbox.impl.Checker.checkedGetProperty(Checker.java:357)
+	at com.cloudbees.groovy.cps.sandbox.SandboxInvoker.getProperty(SandboxInvoker.java:29)
+	at com.cloudbees.groovy.cps.impl.PropertyAccessBlock.rawGet(PropertyAccessBlock.java:20)
+	at Script1.run(Script1.groovy:30)
+	at ___cps.transform___(Native Method)
+	at com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.get(PropertyishBlock.java:74)
+	at com.cloudbees.groovy.cps.LValueBlock$GetAdapter.receive(LValueBlock.java:30)
+	at com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.fixName(PropertyishBlock.java:66)
+	at jdk.internal.reflect.GeneratedMethodAccessor262.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+	at com.cloudbees.groovy.cps.Next.step(Next.java:83)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:174)
+	at com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:163)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:129)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:268)
+	at com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:163)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)
+	at org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:51)
+	at org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:185)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:400)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.access$400(CpsThreadGroup.java:96)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:312)
+	at org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:276)
+	at org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:67)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:136)
+	at jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)
+	at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:59)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Finished: FAILURE

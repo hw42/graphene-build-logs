@@ -1,0 +1,2791 @@
+GitHub pull request #2379 of commit cfe5d1a1701880f131a476acafda83864c9ba4fd, no merge conflicts.
+Setting status of cfe5d1a1701880f131a476acafda83864c9ba4fd to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5474/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2379/merge^{commit} # timeout=10
+Checking out Revision 7071824f260290d138ace54a5ff9cc26e9fd4ee1 (refs/remotes/origin/pr/2379/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7071824f260290d138ace54a5ff9cc26e9fd4ee1 # timeout=20
+Commit message: "Merge cfe5d1a1701880f131a476acafda83864c9ba4fd into 8c7ac33f80d403b388248ea7827996cb0cc74019"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-waldorf in /home/jenkins/workspace/graphene-debug-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-debug-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+Checking out Revision 7071824f260290d138ace54a5ff9cc26e9fd4ee1 (refs/remotes/origin/pr/2379/merge)
+Commit message: "Merge cfe5d1a1701880f131a476acafda83864c9ba4fd into 8c7ac33f80d403b388248ea7827996cb0cc74019"
+ > git rev-parse refs/remotes/origin/pr/2379/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7071824f260290d138ace54a5ff9cc26e9fd4ee1 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-docker.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-debug-18.04-5474 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  543.4MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 56def654ec22
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> d11ca656861f
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> ea0ab3ed515f
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> e79b508d6925
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 81d011134da9
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 130e1c004c35
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 23a5bc635fe5
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 8775d482b901
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 1e8dae6bf1a7
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 7f5c129d3e65
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 8cdbb2ed0b1d
+Successfully built 8cdbb2ed0b1d
+Successfully tagged local:jenkins-graphene-debug-18.04-5474
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-debug-18.04-5474
+.
+[Pipeline] withDockerContainer
+slave-waldorf does not seem to be running inside a container
+$ docker run -t -d -u 1000:1000 --device=/dev/kmsg:/dev/kmsg --env=PATH=/home/jenkins/workspace/graphene-debug-18.04/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin -w /home/jenkins/workspace/graphene-debug-18.04 -v /home/jenkins/workspace/graphene-debug-18.04:/home/jenkins/workspace/graphene-debug-18.04:rw,z -v /home/jenkins/workspace/graphene-debug-18.04@tmp:/home/jenkins/workspace/graphene-debug-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-debug-18.04-5474 cat
+$ docker top 70beb8c848aa999d7c845ccf922b3eb359677edd489c4cad7d8f16404e74266d -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] sh
++ python3 Scripts/get-python-platlib.py /home/jenkins/workspace/graphene-debug-18.04/usr
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-debug.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-debug-18.04/.pylintrc
+Unable to create directory /leeroy/.pylint.d
+Unable to create file /leeroy/.pylint.d/graphenelibos.sgx_sign1.stats: [Errno 2] No such file or directory: '/leeroy/.pylint.d/graphenelibos.sgx_sign1.stats'
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Scripts'
+make -C Pal all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+../../Scripts/download --output uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --url https://packages.grapheneproject.io/distfiles/uthash-2.1.0/src/uthash.h
+../../Scripts/download --output crypto/mbedtls-2.26.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz --url https://packages.grapheneproject.io/distfiles/mbedtls-2.26.0.tar.gz --sha256 35d8d87509cd0d002bddbd5508b9d2b931c5e83747d087234cc7ad551d53fe05
+../../Scripts/download --output toml.h --sha256 e79d6d272576561e1b46ee001b0dd6b554330843e6fc7c658a548c659f282ac5 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+../../Scripts/download --output toml.c --sha256 c21a546ab767a7e40d4f65df179d70357059c15e4439e1980d791625655fbbc6 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-05-17 16:14:51--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+--2021-05-17 16:14:51--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+--2021-05-17 16:14:51--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-05-17 16:14:51--  https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz
+Resolving github.com (github.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... 185.199.108.133, 185.199.109.133, 185.199.110.133185.199.108.133, ..., 
+185.199.109.133185.199.108.133, , Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... 185.199.110.133185.199.109.133, ..., 
+185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 200 OK
+Length: 46537 (45K) [text/plain]
+Saving to: ‘./tmp.oaAZRFE0d0/unverified’
+
+     0K .......... ........200 OK
+Length: 5348 (5.2K) [text/plain]
+Saving to: ‘./tmp.ZwtpexCjoD/unverified’
+
+     0K .....                                         . .       100% 40.1M=0s
+
+ .2021-05-17 16:14:51 (40.1 MB/s) - ‘./tmp.ZwtpexCjoD/unverified’ saved [5348/5348]
+
+.200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: ‘./tmp.1kuICXevso/unverified’
+
+     0K ............. ......... ............ .............. ...download: Fetched 'toml.h' (e79d6d27...) successfully.
+....... .....     100% 3.20M=0.01s
+
+2021-05-17 16:14:51 (3.20 MB/s) - ‘./tmp.oaAZRFE0d0/unverified’ saved [46537/46537]
+
+302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.26.0 [following]
+--2021-05-17 16:14:51--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.26.0
+Resolving codeload.github.com (codeload.github.com)...  .......... 65% 3.45M 0s
+    50K .......... .download: Fetched 'toml.c' (c21a546a...) successfully.
+......... ......                          100% 10.9M=0.02s
+
+2021-05-17 16:14:51 (4.52 MB/s) - ‘./tmp.1kuICXevso/unverified’ saved [78453/78453]
+
+patch -p1 -l < toml.patch || exit 255
+download: Fetched 'uthash.h' (ba9af0e8...) successfully.
+patching file toml.c
+patching file toml.h
+cp toml.h ../include/lib/toml.h
+patch -p2 < uthash.patch || exit 255
+touch toml.patched
+patching file uthash.h
+cp uthash.h ../include/lib/uthash.h
+140.82.113.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.113.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4080986 (3.9M) [application/x-gzip]
+Saving to: ‘./tmp.kL5I3tKYPY/unverified’
+
+     0K .......... .......... .......... .......... ..........  1% 2.10M 2s
+    50K .......... .......... .......... .......... ..........  2% 4.49M 1s
+   100K .......... .......... .......... .......... ..........  3% 35.0M 1s
+   150K .......... .......... .......... .......... ..........  5% 4.99M 1s
+   200K .......... .......... .......... .......... ..........  6% 82.9M 1s
+   250K .......... .......... .......... .......... ..........  7% 80.2M 1s
+   300K .......... .......... .......... .......... ..........  8% 88.5M 0s
+   350K .......... .......... .......... .......... .......... 10% 5.41M 1s
+   400K .......... .......... .......... .......... .......... 11% 59.7M 0s
+   450K .......... .......... .......... .......... .......... 12% 71.9M 0s
+   500K .......... .......... .......... .......... .......... 13% 81.9M 0s
+   550K .......... .......... .......... .......... .......... 15% 92.0M 0s
+   600K .......... .......... .......... .......... .......... 16% 5.87M 0s
+   650K .......... .......... .......... .......... .......... 17% 72.6M 0s
+   700K .......... .......... .......... .......... .......... 18% 76.0M 0s
+   750K .......... .......... .......... .......... .......... 20% 60.4M 0s
+   800K .......... .......... .......... .......... .......... 21% 76.8M 0s
+   850K .......... .......... .......... .......... .......... 22% 74.9M 0s
+   900K .......... .......... .......... .......... .......... 23% 80.7M 0s
+   950K .......... .......... .......... .......... .......... 25% 74.4M 0s
+  1000K .......... .......... .......... .......... .......... 26% 74.6M 0s
+  1050K .......... .......... .......... .......... .......... 27% 89.8M 0s
+  1100K .......... .......... .......... .......... .......... 28% 98.4M 0s
+  1150K .......... .......... .......... .......... .......... 30% 78.7M 0s
+  1200K .......... .......... .......... .......... .......... 31% 98.5M 0s
+  1250K .......... .......... .......... .......... .......... 32% 98.6M 0s
+  1300K .......... .......... .......... .......... .......... 33% 15.0M 0s
+  1350K .......... .......... .......... .......... .......... 35% 73.8M 0s
+  1400K .......... .......... .......... .......... .......... 36% 79.1M 0s
+  1450K .......... .......... .......... .......... .......... 37% 75.8M 0s
+  1500K .......... .......... .......... .......... .......... 38% 74.2M 0s
+  1550K .......... .......... .......... .......... .......... 40% 61.6M 0s
+  1600K .......... .......... .......... .......... .......... 41% 75.5M 0s
+  1650K .......... .......... .......... .......... .......... 42% 79.6M 0s
+  1700K .......... .......... .......... .......... .......... 43% 73.7M 0s
+  1750K .......... .......... .......... .......... .......... 45% 84.1M 0s
+  1800K .......... .......... .......... .......... .......... 46% 93.0M 0s
+  1850K .......... .......... .......... .......... .......... 47% 98.3M 0s
+  1900K .......... .......... .......... .......... .......... 48% 98.2M 0s
+  1950K .......... .......... .......... .......... .......... 50% 78.5M 0s
+  2000K .......... .......... .......... .......... .......... 51% 44.5M 0s
+  2050K .......... .......... .......... .......... .......... 52% 84.9M 0s
+  2100K .......... .......... .......... .......... .......... 53% 60.2M 0s
+  2150K .......... .......... .......... .......... .......... 55% 71.3M 0s
+  2200K .......... .......... .......... .......... .......... 56% 75.4M 0s
+  2250K .......... .......... .......... .......... .......... 57% 78.7M 0s
+  2300K .......... .......... .......... .......... .......... 58% 77.2M 0s
+  2350K .......... .......... .......... .......... .......... 60% 58.7M 0s
+  2400K .......... .......... .......... .......... .......... 61% 76.4M 0s
+  2450K .......... .......... .......... .......... .......... 62% 77.3M 0s
+  2500K .......... .......... .......... .......... .......... 63% 73.6M 0s
+  2550K .......... .......... .......... .......... .......... 65% 70.4M 0s
+  2600K .......... .......... .......... .......... .......... 66% 79.3M 0s
+  2650K .......... .......... .......... .......... .......... 67% 77.8M 0s
+  2700K .......... .......... .......... .......... .......... 69% 59.6M 0s
+  2750K .......... .......... .......... .......... .......... 70% 84.0M 0s
+  2800K .......... .......... .......... .......... .......... 71% 79.9M 0s
+  2850K .......... .......... .......... .......... .......... 72% 77.9M 0s
+  2900K .......... .......... .......... .......... .......... 74% 90.1M 0s
+  2950K .......... .......... .......... .......... .......... 75% 86.1M 0s
+  3000K .......... .......... .......... .......... .......... 76% 70.0M 0s
+  3050K .......... .......... .......... .......... .......... 77% 76.4M 0s
+  3100K .......... .......... .......... .......... .......... 79% 61.3M 0s
+  3150K .......... .......... .......... .......... .......touch uthash.patched
+... 80% 75.7M 0s
+  3200K .......... .......... .......... .......... .......... 81% 76.4M 0s
+  3250K .......... .......... .......... .......... .......... 82% 73.5M 0s
+  3300K .......... .......... .......... .......... .......... 84% 65.7M 0s
+  3350K .......... .......... .......... .......... .......... 85% 73.0M 0s
+  3400K .......... .......... .......... .......... .......... 86% 76.5M 0s
+  3450K .......... .......... .......... .......... .......... 87% 88.4M 0s
+  3500K .......... .......... .......... .......... .......... 89% 74.6M 0s
+  3550K .......... .......... .......... .......... .......... 90% 94.5M 0s
+  3600K .......... .......... .......... .......... .......... 91% 98.0M 0s
+  3650K .......... .......... .......... .......... .......... 92% 92.1M 0s
+  3700K .......... .......... .......... .......... .......... 94% 89.9M 0s
+  3750K .......... .......... .......... .......... .......... 95% 97.3M 0s
+  3800K .......... .......... .......... .......... .......... 96% 94.4M 0s
+  3850K .......... .......... .......... .......... .......... 97% 98.1M 0s
+  3900K .......... .......... .......... .......... .......... 99% 77.5M 0s
+  3950K .......... .......... .......... .....                100%  122M=0.1s
+
+2021-05-17 16:14:51 (34.9 MB/s) - ‘./tmp.kL5I3tKYPY/unverified’ saved [4080986/4080986]
+
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/avl_tree.o ]
+download: Fetched 'crypto/mbedtls-2.26.0.tar.gz' (35d8d875...) successfully.
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/debug_map.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/path.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/stack_protector.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/ctype.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/toml_utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/toml.o ]
+rm -f -r crypto/mbedtls
+cd crypto && tar -mxzf mbedtls-2.26.0.tar.gz
+mv crypto/mbedtls-mbedtls-2.26.0 crypto/mbedtls
+cd crypto/mbedtls && patch -p1 < ../mbedtls-2.26.0.diff || exit 255
+patching file library/ssl_tls.c
+mkdir crypto/mbedtls/install
+cd crypto/mbedtls && perl ./scripts/config.pl set MBEDTLS_CMAC_C && make CFLAGS="" SHARED=1 DESTDIR=install install .
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/library'
+  CC    aes.c
+  CC    aesni.c
+  CC    arc4.c
+  CC    aria.c
+  CC    asn1parse.c
+  CC    asn1write.c
+  CC    base64.c
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/tests'
+  CC    src/helpers.c
+  CC    src/asn1_helpers.c
+  CC    src/psa_crypto_helpers.c
+  CC    bignum.c
+  CC    blowfish.c
+  CC    src/psa_exercise_key.c
+  CC    camellia.c
+  CC    ccm.c
+  CC    chacha20.c
+  CC    src/threading_helpers.c
+  CC    chachapoly.c
+  CC    cipher.c
+  CC    cipher_wrap.c
+  CC    src/random.c
+  CC    cmac.c
+  CC    src/fake_external_rng_for_test.c
+  CC    ctr_drbg.c
+  CC    des.c
+  CC    dhm.c
+  CC    src/drivers/signature.c
+  CC    src/drivers/cipher.c
+  CC    src/drivers/key_management.c
+  CC    ecdh.c
+  CC    src/drivers/size.c
+  CC    ecdsa.c
+  CC    ecjpake.c
+  CC    ecp.c
+  CC    ecp_curves.c
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/tests'
+  CC    entropy.c
+  CC    entropy_poll.c
+  CC    error.c
+  CC    gcm.c
+  CC    havege.c
+  CC    hkdf.c
+  CC    hmac_drbg.c
+  CC    md.c
+  CC    md2.c
+  CC    md5.c
+  CC    md4.c
+  CC    memory_buffer_alloc.c
+  CC    nist_kw.c
+  CC    oid.c
+  CC    padlock.c
+  CC    pem.c
+  CC    pk.c
+  CC    pk_wrap.c
+  CC    pkcs12.c
+  CC    pkcs5.c
+  CC    pkparse.c
+  CC    pkwrite.c
+  CC    platform.c
+  CC    poly1305.c
+  CC    platform_util.c
+  CC    psa_crypto.c
+  CC    psa_crypto_client.c
+  CC    psa_crypto_driver_wrappers.c
+  CC    psa_crypto_ecp.c
+  CC    psa_crypto_rsa.c
+  CC    psa_crypto_se.c
+  CC    psa_crypto_slot_management.c
+  CC    psa_crypto_storage.c
+  CC    psa_its_file.c
+  CC    ripemd160.c
+  CC    rsa.c
+  CC    rsa_internal.c
+  CC    sha1.c
+  CC    sha256.c
+  CC    sha512.c
+  CC    threading.c
+  CC    timing.c
+  CC    version.c
+  CC    version_features.c
+  CC    xtea.c
+  CC    ../3rdparty/everest/library/everest.c
+  CC    ../3rdparty/everest/library/x25519.c
+  CC    ../3rdparty/everest/library/Hacl_Curve25519_joined.c
+  CC    certs.c
+  CC    pkcs11.c
+  CC    x509.c
+  CC    x509_create.c
+  CC    x509_crl.c
+  CC    x509_crt.c
+  CC    x509_csr.c
+  CC    x509write_crt.c
+  CC    x509write_csr.c
+  CC    debug.c
+  CC    net_sockets.c
+  CC    ssl_cache.c
+  CC    ssl_ciphersuites.c
+  CC    ssl_cli.c
+  CC    ssl_cookie.c
+  CC    ssl_msg.c
+  CC    ssl_srv.c
+  CC    ssl_ticket.c
+  CC    ssl_tls.c
+  CC    ssl_tls13_keys.c
+  AR    libmbedcrypto.a
+  LD    libmbedcrypto.so.6
+  AR    libmbedx509.a
+  LN    libmbedcrypto.so -> libmbedcrypto.so.6
+  LD    libmbedx509.so.1
+  LN    libmbedx509.so -> libmbedx509.so.1
+  LD    libmbedtls.so.13
+  AR    libmbedtls.a
+  LN    libmbedtls.so -> libmbedtls.so.13
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/library'
+make[5]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/programs'
+  CC    aes/aescrypt2.c
+  CC    aes/crypt_and_hash.c
+  CC    hash/generic_sum.c
+  CC    hash/hello.c
+  CC    pkey/dh_client.c
+  CC    pkey/dh_genprime.c
+  CC    pkey/dh_server.c
+  CC    pkey/ecdh_curve25519.c
+  CC    pkey/ecdsa.c
+  CC    pkey/gen_key.c
+  CC    pkey/key_app.c
+  CC    pkey/key_app_writer.c
+  CC    pkey/mpi_demo.c
+  CC    pkey/pk_decrypt.c
+  CC    pkey/pk_encrypt.c
+  CC    pkey/pk_sign.c
+  CC    pkey/pk_verify.c
+  CC    pkey/rsa_decrypt.c
+  CC    pkey/rsa_encrypt.c
+  CC    pkey/rsa_genkey.c
+  CC    pkey/rsa_sign.c
+  CC    pkey/rsa_sign_pss.c
+  CC    pkey/rsa_verify.c
+  CC    pkey/rsa_verify_pss.c
+  CC    psa/crypto_examples.c
+  CC    psa/key_ladder_demo.c
+  CC    psa/psa_constant_names.c
+  CC    random/gen_entropy.c
+  CC    random/gen_random_havege.c
+  CC    random/gen_random_ctr_drbg.c
+  CC    ssl/dtls_client.c
+  CC    ssl/dtls_server.c
+  CC    ssl/mini_client.c
+  CC    ssl/ssl_client1.c
+  CC    test/query_config.c
+  CC    ssl/ssl_test_lib.c
+  CC    ssl/ssl_fork_server.c
+  CC    ssl/ssl_mail_client.c
+  CC    ssl/ssl_server.c
+  CC    test/benchmark.c
+  CC    test/selftest.c
+  CC    test/udp_proxy.c
+  CC    test/zeroize.c
+  CC    util/pem2der.c
+  CC    util/strerror.c
+  CC    x509/cert_app.c
+  CC    x509/cert_req.c
+  CC    x509/cert_write.c
+  CC    x509/crl_app.c
+  CC    x509/req_app.c
+make[6]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+  CC    ssl/ssl_client2.c
+  CC    ssl/ssl_context_info.c
+  CC    ssl/ssl_server2.c
+  CC    test/query_compile_time_config.c
+ cc common.o onefile.o fuzz_privkey.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_privkey
+ cc common.o onefile.o fuzz_x509csr.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_x509csr
+ cc common.o onefile.o fuzz_server.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_server
+ cc common.o onefile.o fuzz_x509crt.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_x509crt
+ cc common.o onefile.o fuzz_dtlsclient.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_dtlsclient
+ cc common.o onefile.o fuzz_pubkey.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_pubkey
+ cc common.o onefile.o fuzz_x509crl.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_x509crl
+ cc common.o onefile.o fuzz_client.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_client
+ cc common.o onefile.o fuzz_dtlsserver.o ../../tests/src/helpers.o ../../tests/src/asn1_helpers.o ../../tests/src/psa_crypto_helpers.o ../../tests/src/psa_exercise_key.o ../../tests/src/threading_helpers.o ../../tests/src/random.o ../../tests/src/fake_external_rng_for_test.o ../../tests/src/drivers/signature.o ../../tests/src/drivers/cipher.o ../../tests/src/drivers/key_management.o ../../tests/src/drivers/size.o -L../../library -lmbedtls -lmbedx509 -lmbedcrypto  -o fuzz_dtlsserver
+make[6]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/programs/fuzz'
+make[5]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls/programs'
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib/crypto/mbedtls'
+rm -f crypto/mbedtls/include/mbedtls/config.h
+cp crypto/config.h crypto/mbedtls/include/mbedtls
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/mbedtls/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux/.lib/graphene-lib.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ host/Linux/.obj/db_events.o ]
+  [ host/Linux/.obj/db_exception.o ]
+  [ host/Linux/.obj/db_main.o ]
+  [ host/Linux/.obj/db_memory.o ]
+  [ host/Linux/.obj/db_misc.o ]
+  [ host/Linux/.obj/db_object.o ]
+  [ host/Linux/.obj/db_process.o ]
+  [ host/Linux/.obj/db_rtld.o ]
+  [ host/Linux/.obj/db_streams.o ]
+  [ host/Linux/.obj/db_threading.o ]
+  [ host/Linux/.obj/pal_error.o ]
+  [ host/Linux/.obj/printf.o ]
+  [ host/Linux/.obj/slab.o ]
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux'
+  [ db_devices.o ]
+  [ db_eventfd.o ]
+  [ db_events.o ]
+  [ db_exception.o ]
+  [ db_files.o ]
+  [ db_main.o ]
+  [ db_memory.o ]
+  [ db_misc.o ]
+  [ db_object.o ]
+  [ db_pipes.o ]
+  [ db_process.o ]
+  [ db_rtld.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_threading.o ]
+  [ bogomips.o ]
+  [ file_utils.o ]
+  [ main_exec_path.o ]
+  [ timespec_utils.o ]
+  [ topo_info.o ]
+  [ arch/x86_64/clone.o ]
+  [ arch/x86_64/db_arch_exception.o ]
+  [ arch/x86_64/db_arch_misc.o ]
+  [ arch/x86_64/pal_start.o ]
+  [ pal.map ]
+  [ libpal-Linux.a ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Linux'
+  [ host/Linux/libpal.so ]
+  [ host/Linux/libpal.a ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/../../Runtime/pal-Linux ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/../../Runtime/libpal-Linux.so ]
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal'
+make -C LibOS all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS'
+../Scripts/download --output glibc-2.33.tar.gz --sha256 ad7dbed6b0cde9ddc90e84856da7e2c1f976a5e791cdee947d8dbb0392fc76cf --url https://ftp.gnu.org/gnu/glibc/glibc-2.33.tar.gz --url https://mirrors.kernel.org/gnu/glibc/glibc-2.33.tar.gz --url https://mirrors.ocf.berkeley.edu/gnu/glibc/glibc-2.33.tar.gz
+download: Trying to fetch https://ftp.gnu.org/gnu/glibc/glibc-2.33.tar.gz
+--2021-05-17 16:14:58--  https://ftp.gnu.org/gnu/glibc/glibc-2.33.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33227562 (32M) [application/x-gzip]
+Saving to: ‘./tmp.TJKIN4rBZ3/unverified’
+
+     0K .......... .......... .......... .......... ..........  0%  729K 44s
+    50K .......... .......... .......... .......... ..........  0% 1.44M 33s
+   100K .......... .......... .......... .......... ..........  0% 76.2M 22s
+   150K .......... .......... .......... .......... ..........  0% 1.49M 22s
+   200K .......... .......... .......... .......... ..........  0% 58.5M 18s
+   250K .......... .......... .......... .......... ..........  0% 72.7M 15s
+   300K .......... .......... .......... .......... ..........  1% 84.2M 13s
+   350K .......... .......... .......... .......... ..........  1% 1.58M 14s
+   400K .......... .......... .......... .......... ..........  1% 35.7M 12s
+   450K .......... .......... .......... .......... ..........  1% 68.8M 11s
+   500K .......... .......... .......... .......... ..........  1% 75.8M 10s
+   550K .......... .......... .......... .......... ..........  1% 70.9M 9s
+   600K .......... .......... .......... .......... ..........  2% 66.1M 8s
+   650K .......... .......... .......... .......... ..........  2% 87.2M 8s
+   700K .......... .......... .......... .......... ..........  2% 93.3M 7s
+   750K .......... .......... .......... .......... ..........  2% 1.73M 8s
+   800K .......... .......... .......... .......... ..........  2% 45.5M 8s
+   850K .......... .......... .......... .......... ..........  2% 54.6M 7s
+   900K .......... .......... .......... .......... ..........  2% 72.5M 7s
+   950K .......... .......... .......... .......... ..........  3% 68.8M 6s
+  1000K .......... .......... .......... .......... ..........  3% 65.7M 6s
+  1050K .......... .......... .......... .......... ..........  3% 70.3M 6s
+  1100K .......... .......... .......... .......... ..........  3% 73.4M 6s
+  1150K .......... .......... .......... .......... ..........  3% 67.4M 5s
+  1200K .......... .......... .......... .......... ..........  3% 67.0M 5s
+  1250K .......... .......... .......... .......... ..........  4% 91.9M 5s
+  1300K .......... .......... .......... .......... ..........  4% 92.8M 5s
+  1350K .......... .......... .......... .......... ..........  4% 1.97M 5s
+  1400K .......... .......... .......... .......... ..........  4% 44.8M 5s
+  1450K .......... .......... .......... .......... ..........  4% 76.6M 5s
+  1500K .......... .......... .......... .......... ..........  4% 49.6M 5s
+  1550K .......... .......... .......... .......... ..........  4% 66.2M 5s
+  1600K .......... .......... .......... .......... ..........  5% 54.7M 4s
+  1650K .......... .......... .......... .......... ..........  5% 73.2M 4s
+  1700K .......... .......... .......... .......... ..........  5% 73.0M 4s
+  1750K .......... .......... .......... .......... ..........  5% 74.1M 4s
+  1800K .......... .......... .......... .......... ..........  5% 68.5M 4s
+  1850K .......... .......... .......... .......... ..........  5% 70.4M 4s
+  1900K .......... .......... .......... .......... ..........  6% 69.9M 4s
+  1950K .......... .......... .......... .......... ..........  6% 71.7M 4s
+  2000K .......... .......... .......... .......... ..........  6% 57.1M 4s
+  2050K .......... .......... .......... .......... ..........  6% 68.4M 4s
+  2100K .......... .......... .......... .......... ..........  6% 75.7M 3s
+  2150K .......... .......... .......... .......... ..........  6% 74.1M 3s
+  2200K .......... .......... .......... .......... ..........  6% 65.9M 3s
+  2250K .......... .......... .......... .......... ..........  7% 76.0M 3s
+  2300K .......... .......... .......... .......... ..........  7% 71.2M 3s
+  2350K .......... .......... .......... .......... ..........  7% 73.4M 3s
+  2400K .......... .......... .......... .......... ..........  7% 65.0M 3s
+  2450K .......... .......... .......... .......... ..........  7% 92.3M 3s
+  2500K .......... .......... .......... .......... ..........  7% 93.0M 3s
+  2550K .......... .......... .......... .......... ..........  8% 93.6M 3s
+  2600K .......... .......... .......... .......... ..........  8% 87.5M 3s
+  2650K .......... .......... .......... .......... ..........  8% 93.6M 3s
+  2700K .......... .......... .......... .......... ..........  8% 93.2M 3s
+  2750K .......... .......... .......... .......... ..........  8% 93.6M 3s
+  2800K .......... .......... .......... .......... ..........  8% 3.26M 3s
+  2850K .......... .......... .......... .......... ..........  8% 51.2M 3s
+  2900K .......... .......... .......... .......... ..........  9% 59.5M 3s
+  2950K .......... .......... .......... .......... ..........  9% 68.6M 3s
+  3000K .......... .......... .......... .......... ..........  9% 70.0M 3s
+  3050K .......... .......... .......... .......... ..........  9% 75.2M 3s
+  3100K .......... .......... .......... .......... ..........  9% 71.7M 3s
+  3150K .......... .......... .......... .......... ..........  9% 73.8M 3s
+  3200K .......... .......... .......... .......... .......... 10% 53.1M 2s
+  3250K .......... .......... .......... .......... .......... 10% 76.1M 2s
+  3300K .......... .......... .......... .......... .......... 10% 74.2M 2s
+  3350K .......... .......... .......... .......... .......... 10% 71.5M 2s
+  3400K .......... .......... .......... .......... .......... 10% 68.2M 2s
+  3450K .......... .......... .......... .......... .......... 10% 73.3M 2s
+  3500K .......... .......... .......... .......... .......... 10% 72.8M 2s
+  3550K .......... .......... .......... .......... .......... 11% 72.7M 2s
+  3600K .......... .......... .......... .......... .......... 11% 60.0M 2s
+  3650K .......... .......... .......... .......... .......... 11% 72.5M 2s
+  3700K .......... .......... .......... .......... .......... 11% 73.6M 2s
+  3750K .......... .......... .......... .......... .......... 11% 70.1M 2s
+  3800K .......... .......... .......... .......... .......... 11% 67.9M 2s
+  3850K .......... .......... .......... .......... .......... 12% 72.7M 2s
+  3900K .......... .......... .......... .......... .......... 12% 74.4M 2s
+  3950K .......... .......... .......... .......... .......... 12% 83.6M 2s
+  4000K .......... .......... .......... .......... .......... 12% 57.8M 2s
+  4050K .......... .......... .......... .......... .......... 12% 71.2M 2s
+  4100K .......... .......... .......... .......... .......... 12% 89.8M 2s
+  4150K .......... .......... .......... .......... .......... 12% 93.0M 2s
+  4200K .......... .......... .......... .......... .......... 13% 87.5M 2s
+  4250K .......... .......... .......... .......... .......... 13% 93.5M 2s
+  4300K .......... .......... .......... .......... .......... 13% 93.2M 2s
+  4350K .......... .......... .......... .......... .......... 13% 93.4M 2s
+  4400K .......... .......... .......... .......... .......... 13% 73.1M 2s
+  4450K .......... .......... .......... .......... .......... 13% 92.6M 2s
+  4500K .......... .......... .......... .......... .......... 14% 92.5M 2s
+  4550K .......... .......... .......... .......... .......... 14% 93.3M 2s
+  4600K .......... .......... .......... .......... .......... 14% 87.8M 2s
+  4650K .......... .......... .......... .......... .......... 14% 5.04M 2s
+  4700K .......... .......... .......... .......... .......... 14% 76.6M 2s
+  4750K .......... .......... .......... .......... .......... 14% 72.0M 2s
+  4800K .......... .......... .......... .......... .......... 14% 58.5M 2s
+  4850K .......... .......... .......... .......... .......... 15% 72.5M 2s
+  4900K .......... .......... .......... .......... .......... 15% 71.8M 2s
+  4950K .......... .......... .......... .......... .......... 15% 70.7M 2s
+  5000K .......... .......... .......... .......... .......... 15% 68.5M 2s
+  5050K .......... .......... .......... .......... .......... 15% 73.3M 2s
+  5100K .......... .......... .......... .......... .......... 15% 72.4M 2s
+  5150K .......... .......... .......... .......... .......... 16% 71.0M 2s
+  5200K .......... .......... .......... .......... .......... 16% 57.2M 2s
+  5250K .......... .......... .......... .......... .......... 16% 69.3M 2s
+  5300K .......... .......... .......... .......... .......... 16% 72.9M 2s
+  5350K .......... .......... .......... .......... .......... 16% 75.8M 2s
+  5400K .......... .......... .......... .......... .......... 16% 67.0M 2s
+  5450K .......... .......... .......... .......... .......... 16% 69.8M 2s
+  5500K .......... .......... .......... .......... .......... 17% 63.5M 2s
+  5550K .......... .......... .......... .......... .......... 17% 75.1M 2s
+  5600K .......... .......... .......... .......... .......... 17% 57.5M 2s
+  5650K .......... .......... .......... .......... .......... 17% 76.8M 1s
+  5700K .......... .......... .......... .......... .......... 17% 72.6M 1s
+  5750K .......... .......... .......... .......... .......... 17% 76.0M 1s
+  5800K .......... .......... .......... .......... .......... 18% 68.2M 1s
+  5850K .......... .......... .......... .......... .......... 18% 72.8M 1s
+  5900K .......... .......... .......... .......... .......... 18% 75.7M 1s
+  5950K .......... .......... .......... .......... .......... 18% 72.2M 1s
+  6000K .......... .......... .......... .......... .......... 18% 60.2M 1s
+  6050K .......... .......... .......... .......... .......... 18% 68.3M 1s
+  6100K .......... .......... .......... .......... .......... 18% 72.0M 1s
+  6150K .......... .......... .......... .......... .......... 19% 73.3M 1s
+  6200K .......... .......... .......... .......... .......... 19% 68.1M 1s
+  6250K .......... .......... .......... .......... .......... 19% 72.5M 1s
+  6300K .......... .......... .......... .......... .......... 19% 75.3M 1s
+  6350K .......... .......... .......... .......... .......... 19% 72.0M 1s
+  6400K .......... .......... .......... .......... .......... 19% 57.7M 1s
+  6450K .......... .......... .......... .......... .......... 20% 72.1M 1s
+  6500K .......... .......... .......... .......... .......... 20% 89.6M 1s
+  6550K .......... .......... .......... .......... .......... 20% 93.4M 1s
+  6600K .......... .......... .......... .......... .......... 20% 87.6M 1s
+  6650K .......... .......... .......... .......... .......... 20% 93.5M 1s
+  6700K .......... .......... .......... .......... .......... 20% 91.7M 1s
+  6750K .......... .......... .......... .......... .......... 20% 93.2M 1s
+  6800K .......... .......... .......... .......... .......... 21% 74.3M 1s
+  6850K .......... .......... .......... .......... .......... 21% 89.8M 1s
+  6900K .......... .......... .......... .......... .......... 21% 93.0M 1s
+  6950K .......... .......... .......... .......... .......... 21% 93.5M 1s
+  7000K .......... .......... .......... .......... .......... 21% 87.5M 1s
+  7050K .......... .......... .......... .......... .......... 21% 92.1M 1s
+  7100K .......... .......... .......... .......... .......... 22% 92.8M 1s
+  7150K .......... .......... .......... .......... .......... 22% 93.2M 1s
+  7200K .......... .......... .......... .......... .......... 22% 58.1M 1s
+  7250K .......... .......... .......... .......... .......... 22% 76.9M 1s
+  7300K .......... .......... .......... .......... .......... 22% 74.5M 1s
+  7350K .......... .......... .......... .......... .......... 22% 75.4M 1s
+  7400K .......... .......... .......... .......... .......... 22% 67.6M 1s
+  7450K .......... .......... .......... .......... .......... 23% 74.7M 1s
+  7500K .......... .......... .......... .......... .......... 23% 74.2M 1s
+  7550K .......... .......... .......... .......... .......... 23% 70.6M 1s
+  7600K .......... .......... .......... .......... .......... 23% 58.2M 1s
+  7650K .......... .......... .......... .......... .......... 23% 71.3M 1s
+  7700K .......... .......... .......... .......... .......... 23% 76.5M 1s
+  7750K .......... .......... .......... .......... .......... 24% 74.4M 1s
+  7800K .......... .......... .......... .......... .......... 24% 67.1M 1s
+  7850K .......... .......... .......... .......... .......... 24% 71.6M 1s
+  7900K .......... .......... .......... .......... .......... 24% 71.4M 1s
+  7950K .......... .......... .......... .......... .......... 24% 70.6M 1s
+  8000K .......... .......... .......... .......... .......... 24% 59.0M 1s
+  8050K .......... .......... .......... .......... .......... 24% 77.0M 1s
+  8100K .......... .......... .......... .......... .......... 25% 82.1M 1s
+  8150K .......... .......... .......... .......... .......... 25% 83.9M 1s
+  8200K .......... .......... .......... .......... .......... 25% 74.4M 1s
+  8250K .......... .......... .......... .......... .......... 25% 71.2M 1s
+  8300K .......... .......... .......... .......... .......... 25% 72.4M 1s
+  8350K .......... .......... .......... .......... .......... 25% 73.2M 1s
+  8400K .......... .......... .......... .......... .......... 26% 58.0M 1s
+  8450K .......... .......... .......... .......... .......... 26% 77.1M 1s
+  8500K .......... .......... .......... .......... .......... 26% 69.7M 1s
+  8550K .......... .......... .......... .......... .......... 26% 72.1M 1s
+  8600K .......... .......... .......... .......... .......... 26% 72.1M 1s
+  8650K .......... .......... .......... .......... .......... 26% 77.7M 1s
+  8700K .......... .......... .......... .......... .......... 26% 74.4M 1s
+  8750K .......... .......... .......... .......... .......... 27% 79.8M 1s
+  8800K .......... .......... .......... .......... .......... 27% 58.7M 1s
+  8850K .......... .......... .......... .......... .......... 27% 77.1M 1s
+  8900K .......... .......... .......... .......... .......... 27% 74.7M 1s
+  8950K .......... .......... .......... .......... .......... 27% 68.3M 1s
+  9000K .......... .......... .......... .......... .......... 27% 68.6M 1s
+  9050K .......... .......... .......... .......... .......... 28% 80.0M 1s
+  9100K .......... .......... .......... .......... .......... 28% 85.9M 1s
+  9150K .......... .......... .......... .......... .......... 28% 91.7M 1s
+  9200K .......... .......... .......... .......... .......... 28% 73.9M 1s
+  9250K .......... .......... .......... .......... .......... 28% 93.2M 1s
+  9300K .......... .......... .......... .......... .......... 28% 93.6M 1s
+  9350K .......... .......... .......... .......... .......... 28% 93.5M 1s
+  9400K .......... .......... .......... .......... .......... 29% 87.7M 1s
+  9450K .......... .......... .......... .......... .......... 29% 93.1M 1s
+  9500K .......... .......... .......... .......... .......... 29% 91.9M 1s
+  9550K .......... .......... .......... .......... .......... 29% 93.4M 1s
+  9600K .......... .......... .......... .......... .......... 29% 74.1M 1s
+  9650K .......... .......... .......... .......... .......... 29% 21.0M 1s
+  9700K .......... .......... .......... .......... .......... 30% 71.6M 1s
+  9750K .......... .......... .......... .......... .......... 30% 74.8M 1s
+  9800K .......... .......... .......... .......... .......... 30% 69.3M 1s
+  9850K .......... .......... .......... .......... .......... 30% 71.3M 1s
+  9900K .......... .......... .......... .......... .......... 30% 73.0M 1s
+  9950K .......... .......... .......... .......... .......... 30% 74.5M 1s
+ 10000K .......... .......... .......... .......... .......... 30% 58.3M 1s
+ 10050K .......... .......... .......... .......... .......... 31% 74.0M 1s
+ 10100K .......... .......... .......... .......... .......... 31% 74.6M 1s
+ 10150K .......... .......... .......... .......... .......... 31% 71.7M 1s
+ 10200K .......... .......... .......... .......... .......... 31% 71.2M 1s
+ 10250K .......... .......... .......... .......... .......... 31% 71.2M 1s
+ 10300K .......... .......... .......... .......... .......... 31% 71.4M 1s
+ 10350K .......... .......... .......... .......... .......... 32% 67.5M 1s
+ 10400K .......... .......... .......... .......... .......... 32% 58.1M 1s
+ 10450K .......... .......... .......... .......... .......... 32% 74.0M 1s
+ 10500K .......... .......... .......... .......... .......... 32% 71.6M 1s
+ 10550K .......... .......... .......... .......... .......... 32% 65.8M 1s
+ 10600K .......... .......... .......... .......... .......... 32% 66.1M 1s
+ 10650K .......... .......... .......... .......... .......... 32% 74.2M 1s
+ 10700K .......... .......... .......... .......... .......... 33% 76.0M 1s
+ 10750K .......... .......... .......... .......... .......... 33% 69.2M 1s
+ 10800K .......... .......... .......... .......... .......... 33% 57.9M 1s
+ 10850K .......... .......... .......... .......... .......... 33% 70.0M 1s
+ 10900K .......... .......... .......... .......... .......... 33% 75.1M 1s
+ 10950K .......... .......... .......... .......... .......... 33% 72.5M 1s
+ 11000K .......... .......... .......... .......... .......... 34% 70.2M 1s
+ 11050K .......... .......... .......... .......... .......... 34% 72.7M 1s
+ 11100K .......... .......... .......... .......... .......... 34% 73.5M 1s
+ 11150K .......... .......... .......... .......... .......... 34% 74.3M 1s
+ 11200K .......... .......... .......... .......... .......... 34% 56.1M 1s
+ 11250K .......... .......... .......... .......... .......... 34% 77.2M 1s
+ 11300K .......... .......... .......... .......... .......... 34% 80.7M 1s
+ 11350K .......... .......... .......... .......... .......... 35% 74.7M 1s
+ 11400K .......... .......... .......... .......... .......... 35% 66.7M 1s
+ 11450K .......... .......... .......... .......... .......... 35% 84.5M 1s
+ 11500K .......... .......... .......... .......... .......... 35% 80.5M 1s
+ 11550K .......... .......... .......... .......... .......... 35% 83.2M 1s
+ 11600K .......... .......... .......... .......... .......... 35% 74.3M 1s
+ 11650K .......... .......... .......... .......... .......... 36% 93.6M 1s
+ 11700K .......... .......... .......... .......... .......... 36% 93.3M 1s
+ 11750K .......... .......... .......... .......... .......... 36% 93.4M 1s
+ 11800K .......... .......... .......... .......... .......... 36% 86.2M 1s
+ 11850K .......... .......... .......... .......... .......... 36% 93.4M 1s
+ 11900K .......... .......... .......... .......... .......... 36% 93.3M 1s
+ 11950K .......... .......... .......... .......... .......... 36% 93.4M 1s
+ 12000K .......... .......... .......... .......... .......... 37% 74.5M 1s
+ 12050K .......... .......... .......... .......... .......... 37% 93.0M 1s
+ 12100K .......... .......... .......... .......... .......... 37% 93.8M 1s
+ 12150K .......... .......... .......... .......... .......... 37% 80.1M 1s
+ 12200K .......... .......... .......... .......... .......... 37% 71.0M 1s
+ 12250K .......... .......... .......... .......... .......... 37% 74.5M 1s
+ 12300K .......... .......... .......... .......... .......... 38% 71.1M 1s
+ 12350K .......... .......... .......... .......... .......... 38% 69.6M 1s
+ 12400K .......... .......... .......... .......... .......... 38% 60.0M 1s
+ 12450K .......... .......... .......... .......... .......... 38% 72.8M 1s
+ 12500K .......... .......... .......... .......... .......... 38% 70.3M 1s
+ 12550K .......... .......... .......... .......... .......... 38% 69.5M 1s
+ 12600K .......... .......... .......... .......... .......... 38% 65.6M 1s
+ 12650K .......... .......... .......... .......... .......... 39% 71.7M 1s
+ 12700K .......... .......... .......... .......... .......... 39% 70.9M 1s
+ 12750K .......... .......... .......... .......... .......... 39% 70.1M 1s
+ 12800K .......... .......... .......... .......... .......... 39% 58.9M 1s
+ 12850K .......... .......... .......... .......... .......... 39% 72.4M 1s
+ 12900K .......... .......... .......... .......... .......... 39% 72.4M 1s
+ 12950K .......... .......... .......... .......... .......... 40% 77.9M 1s
+ 13000K .......... .......... .......... .......... .......... 40% 66.9M 1s
+ 13050K .......... .......... .......... .......... .......... 40% 70.1M 1s
+ 13100K .......... .......... .......... .......... .......... 40% 73.8M 1s
+ 13150K .......... .......... .......... .......... .......... 40% 76.3M 1s
+ 13200K .......... .......... .......... .......... .......... 40% 58.6M 1s
+ 13250K .......... .......... .......... .......... .......... 40% 73.4M 1s
+ 13300K .......... .......... .......... .......... .......... 41% 72.3M 1s
+ 13350K .......... .......... .......... .......... .......... 41% 70.0M 1s
+ 13400K .......... .......... .......... .......... .......... 41% 70.2M 1s
+ 13450K .......... .......... .......... .......... .......... 41% 81.9M 1s
+ 13500K .......... .......... .......... .......... .......... 41% 81.0M 1s
+ 13550K .......... .......... .......... .......... .......... 41% 69.5M 1s
+ 13600K .......... .......... .......... .......... .......... 42% 57.0M 1s
+ 13650K .......... .......... .......... .......... .......... 42% 70.9M 1s
+ 13700K .......... .......... .......... .......... .......... 42% 83.7M 1s
+ 13750K .......... .......... .......... .......... .......... 42% 69.6M 1s
+ 13800K .......... .......... .......... .......... .......... 42% 69.6M 1s
+ 13850K .......... .......... .......... .......... .......... 42% 75.0M 1s
+ 13900K .......... .......... .......... .......... .......... 42% 73.3M 1s
+ 13950K .......... .......... .......... .......... .......... 43% 74.6M 1s
+ 14000K .......... .......... .......... .......... .......... 43% 56.2M 1s
+ 14050K .......... .......... .......... .......... .......... 43% 77.6M 1s
+ 14100K .......... .......... .......... .......... .......... 43% 73.0M 1s
+ 14150K .......... .......... .......... .......... .......... 43% 85.7M 1s
+ 14200K .......... .......... .......... .......... .......... 43% 87.0M 1s
+ 14250K .......... .......... .......... .......... .......... 44% 93.5M 1s
+ 14300K .......... .......... .......... .......... .......... 44% 93.1M 1s
+ 14350K .......... .......... .......... .......... .......... 44% 90.6M 1s
+ 14400K .......... .......... .......... .......... .......... 44% 74.0M 1s
+ 14450K .......... .......... .......... .......... .......... 44% 93.4M 1s
+ 14500K .......... .......... .......... .......... .......... 44% 93.7M 1s
+ 14550K .......... .......... .......... .......... .......... 44% 91.1M 1s
+ 14600K .......... .......... .......... .......... .......... 45% 87.8M 1s
+ 14650K .......... .......... .......... .......... .......... 45% 93.2M 1s
+ 14700K .......... .......... .......... .......... .......... 45% 71.6M 1s
+ 14750K .......... .......... .......... .......... .......... 45% 71.5M 1s
+ 14800K .......... .......... .......... .......... .......... 45% 58.6M 1s
+ 14850K .......... .......... .......... .......... .......... 45% 74.2M 1s
+ 14900K .......... .......... .......... .......... .......... 46% 72.6M 1s
+ 14950K .......... .......... .......... .......... .......... 46% 70.5M 1s
+ 15000K .......... .......... .......... .......... .......... 46% 72.7M 1s
+ 15050K .......... .......... .......... .......... .......... 46% 72.7M 1s
+ 15100K .......... .......... .......... .......... .......... 46% 73.6M 1s
+ 15150K .......... .......... .......... .......... .......... 46% 68.3M 1s
+ 15200K .......... .......... .......... .......... .......... 46% 55.7M 1s
+ 15250K .......... .......... .......... .......... .......... 47% 68.5M 0s
+ 15300K .......... .......... .......... .......... .......... 47% 72.5M 0s
+ 15350K .......... .......... .......... .......... .......... 47% 73.6M 0s
+ 15400K .......... .......... .......... .......... .......... 47% 67.6M 0s
+ 15450K .......... .......... .......... .......... .......... 47% 77.2M 0s
+ 15500K .......... .......... .......... .......... .......... 47% 71.8M 0s
+ 15550K .......... .......... .......... .......... .......... 48% 79.7M 0s
+ 15600K .......... .......... .......... .......... .......... 48% 73.9M 0s
+ 15650K .......... .......... .......... .......... .......... 48% 77.0M 0s
+ 15700K .......... .......... .......... .......... .......... 48% 80.6M 0s
+ 15750K .......... .......... .......... .......... .......... 48% 78.1M 0s
+ 15800K .......... .......... .......... .......... .......... 48% 66.9M 0s
+ 15850K .......... .......... .......... .......... .......... 49% 73.1M 0s
+ 15900K .......... .......... .......... .......... .......... 49% 74.4M 0s
+ 15950K .......... .......... .......... .......... .......... 49% 68.2M 0s
+ 16000K .......... .......... .......... .......... .......... 49% 58.9M 0s
+ 16050K .......... .......... .......... .......... .......... 49% 73.7M 0s
+ 16100K .......... .......... .......... .......... .......... 49% 73.3M 0s
+ 16150K .......... .......... .......... .......... .......... 49% 74.5M 0s
+ 16200K .......... .......... .......... .......... .......... 50% 71.1M 0s
+ 16250K .......... .......... .......... .......... .......... 50% 74.3M 0s
+ 16300K .......... .......... .......... .......... .......... 50% 71.2M 0s
+ 16350K .......... .......... .......... .......... .......... 50% 74.1M 0s
+ 16400K .......... .......... .......... .......... .......... 50% 58.2M 0s
+ 16450K .......... .......... .......... .......... .......... 50% 75.0M 0s
+ 16500K .......... .......... .......... .......... .......... 51% 81.7M 0s
+ 16550K .......... .......... .......... .......... .......... 51% 70.6M 0s
+ 16600K .......... .......... .......... .......... .......... 51% 64.1M 0s
+ 16650K .......... .......... .......... .......... .......... 51% 70.0M 0s
+ 16700K .......... .......... .......... .......... .......... 51% 63.4M 0s
+ 16750K .......... .......... .......... .......... .......... 51% 90.1M 0s
+ 16800K .......... .......... .......... .......... .......... 51% 73.2M 0s
+ 16850K .......... .......... .......... .......... .......... 52% 86.8M 0s
+ 16900K .......... .......... .......... .......... .......... 52% 90.8M 0s
+ 16950K .......... .......... .......... .......... .......... 52% 93.2M 0s
+ 17000K .......... .......... .......... .......... .......... 52% 80.4M 0s
+ 17050K .......... .......... .......... .......... .......... 52% 87.3M 0s
+ 17100K .......... .......... .......... .......... .......... 52% 92.9M 0s
+ 17150K .......... .......... .......... .......... .......... 53% 89.8M 0s
+ 17200K .......... .......... .......... .......... .......... 53% 57.6M 0s
+ 17250K .......... .......... .......... .......... .......... 53% 77.6M 0s
+ 17300K .......... .......... .......... .......... .......... 53% 76.2M 0s
+ 17350K .......... .......... .......... .......... .......... 53% 68.4M 0s
+ 17400K .......... .......... .......... .......... .......... 53% 67.0M 0s
+ 17450K .......... .......... .......... .......... .......... 53% 75.3M 0s
+ 17500K .......... .......... .......... .......... .......... 54% 70.7M 0s
+ 17550K .......... .......... .......... .......... .......... 54% 72.9M 0s
+ 17600K .......... .......... .......... .......... .......... 54% 60.3M 0s
+ 17650K .......... .......... .......... .......... .......... 54% 71.6M 0s
+ 17700K .......... .......... .......... .......... .......... 54% 70.1M 0s
+ 17750K .......... .......... .......... .......... .......... 54% 70.6M 0s
+ 17800K .......... .......... .......... .......... .......... 55% 66.5M 0s
+ 17850K .......... .......... .......... .......... .......... 55% 71.2M 0s
+ 17900K .......... .......... .......... .......... .......... 55% 73.8M 0s
+ 17950K .......... .......... .......... .......... .......... 55% 72.7M 0s
+ 18000K .......... .......... .......... .......... .......... 55% 59.7M 0s
+ 18050K .......... .......... .......... .......... .......... 55% 71.5M 0s
+ 18100K .......... .......... .......... .......... .......... 55% 71.6M 0s
+ 18150K .......... .......... .......... .......... .......... 56% 76.5M 0s
+ 18200K .......... .......... .......... .......... .......... 56% 68.3M 0s
+ 18250K .......... .......... .......... .......... .......... 56% 72.7M 0s
+ 18300K .......... .......... .......... .......... .......... 56% 78.8M 0s
+ 18350K .......... .......... .......... .......... .......... 56% 70.4M 0s
+ 18400K .......... .......... .......... .......... .......... 56% 58.0M 0s
+ 18450K .......... .......... .......... .......... .......... 57% 72.1M 0s
+ 18500K .......... .......... .......... .......... .......... 57% 78.8M 0s
+ 18550K .......... .......... .......... .......... .......... 57% 73.0M 0s
+ 18600K .......... .......... .......... .......... .......... 57% 69.0M 0s
+ 18650K .......... .......... .......... .......... .......... 57% 73.2M 0s
+ 18700K .......... .......... .......... .......... .......... 57% 68.9M 0s
+ 18750K .......... .......... .......... .......... .......... 57% 79.2M 0s
+ 18800K .......... .......... .......... .......... .......... 58% 56.6M 0s
+ 18850K .......... .......... .......... .......... .......... 58% 75.5M 0s
+ 18900K .......... .......... .......... .......... .......... 58% 76.2M 0s
+ 18950K .......... .......... .......... .......... .......... 58% 68.5M 0s
+ 19000K .......... .......... .......... .......... .......... 58% 68.1M 0s
+ 19050K .......... .......... .......... .......... .......... 58% 76.2M 0s
+ 19100K .......... .......... .......... .......... .......... 59% 72.7M 0s
+ 19150K .......... .......... .......... .......... .......... 59% 78.2M 0s
+ 19200K .......... .......... .......... .......... .......... 59% 64.7M 0s
+ 19250K .......... .......... .......... .......... .......... 59% 72.6M 0s
+ 19300K .......... .......... .......... .......... .......... 59% 81.4M 0s
+ 19350K .......... .......... .......... .......... .......... 59% 93.0M 0s
+ 19400K .......... .......... .......... .......... .......... 59% 87.6M 0s
+ 19450K .......... .......... .......... .......... .......... 60% 93.4M 0s
+ 19500K .......... .......... .......... .......... .......... 60% 93.2M 0s
+ 19550K .......... .......... .......... .......... .......... 60% 93.5M 0s
+ 19600K .......... .......... .......... .......... .......... 60% 73.4M 0s
+ 19650K .......... .......... .......... .......... .......... 60% 92.9M 0s
+ 19700K .......... .......... .......... .......... .......... 60% 71.7M 0s
+ 19750K .......... .......... .......... .......... .......... 61% 74.6M 0s
+ 19800K .......... .......... .......... .......... .......... 61% 71.7M 0s
+ 19850K .......... .......... .......... .......... .......... 61% 66.4M 0s
+ 19900K .......... .......... .......... .......... .......... 61% 74.5M 0s
+ 19950K .......... .......... .......... .......... .......... 61% 68.9M 0s
+ 20000K .......... .......... .......... .......... .......... 61% 56.7M 0s
+ 20050K .......... .......... .......... .......... .......... 61% 73.1M 0s
+ 20100K .......... .......... .......... .......... .......... 62% 70.9M 0s
+ 20150K .......... .......... .......... .......... .......... 62% 71.3M 0s
+ 20200K .......... .......... .......... .......... .......... 62% 68.7M 0s
+ 20250K .......... .......... .......... .......... .......... 62% 73.3M 0s
+ 20300K .......... .......... .......... .......... .......... 62% 72.7M 0s
+ 20350K .......... .......... .......... .......... .......... 62% 75.1M 0s
+ 20400K .......... .......... .......... .......... .......... 63% 57.2M 0s
+ 20450K .......... .......... .......... .......... .......... 63% 76.2M 0s
+ 20500K .......... .......... .......... .......... .......... 63% 70.0M 0s
+ 20550K .......... .......... .......... .......... .......... 63% 69.6M 0s
+ 20600K .......... .......... .......... .......... .......... 63% 66.2M 0s
+ 20650K .......... .......... .......... .......... .......... 63% 73.3M 0s
+ 20700K .......... .......... .......... .......... .......... 63% 81.1M 0s
+ 20750K .......... .......... .......... .......... .......... 64% 81.8M 0s
+ 20800K .......... .......... .......... .......... .......... 64% 57.0M 0s
+ 20850K .......... .......... .......... .......... .......... 64% 69.1M 0s
+ 20900K .......... .......... .......... .......... .......... 64% 74.5M 0s
+ 20950K .......... .......... .......... .......... .......... 64% 75.0M 0s
+ 21000K .......... .......... .......... .......... .......... 64% 67.4M 0s
+ 21050K .......... .......... .......... .......... .......... 65% 70.7M 0s
+ 21100K .......... .......... .......... .......... .......... 65% 78.1M 0s
+ 21150K .......... .......... .......... .......... .......... 65% 74.6M 0s
+ 21200K .......... .......... .......... .......... .......... 65% 60.4M 0s
+ 21250K .......... .......... .......... .......... .......... 65% 74.1M 0s
+ 21300K .......... .......... .......... .......... .......... 65% 77.5M 0s
+ 21350K .......... .......... .......... .......... .......... 65% 72.3M 0s
+ 21400K .......... .......... .......... .......... .......... 66% 72.6M 0s
+ 21450K .......... .......... .......... .......... .......... 66% 74.9M 0s
+ 21500K .......... .......... .......... .......... .......... 66% 72.0M 0s
+ 21550K .......... .......... .......... .......... .......... 66% 72.4M 0s
+ 21600K .......... .......... .......... .......... .......... 66% 56.7M 0s
+ 21650K .......... .......... .......... .......... .......... 66% 76.1M 0s
+ 21700K .......... .......... .......... .......... .......... 67% 77.8M 0s
+ 21750K .......... .......... .......... .......... .......... 67% 83.8M 0s
+ 21800K .......... .......... .......... .......... .......... 67% 68.2M 0s
+ 21850K .......... .......... .......... .......... .......... 67% 86.9M 0s
+ 21900K .......... .......... .......... .......... .......... 67% 92.9M 0s
+ 21950K .......... .......... .......... .......... .......... 67% 93.2M 0s
+ 22000K .......... .......... .......... .......... .......... 67% 72.9M 0s
+ 22050K .......... .......... .......... .......... .......... 68% 93.3M 0s
+ 22100K .......... .......... .......... .......... .......... 68% 93.2M 0s
+ 22150K .......... .......... .......... .......... .......... 68% 87.0M 0s
+ 22200K .......... .......... .......... .......... .......... 68% 67.5M 0s
+ 22250K .......... .......... .......... .......... .......... 68% 75.9M 0s
+ 22300K .......... .......... .......... .......... .......... 68% 73.4M 0s
+ 22350K .......... .......... .......... .......... .......... 69% 72.9M 0s
+ 22400K .......... .......... .......... .......... .......... 69% 59.3M 0s
+ 22450K .......... .......... .......... .......... .......... 69% 70.0M 0s
+ 22500K .......... .......... .......... .......... .......... 69% 74.6M 0s
+ 22550K .......... .......... .......... .......... .......... 69% 75.4M 0s
+ 22600K .......... .......... .......... .......... .......... 69% 66.7M 0s
+ 22650K .......... .......... .......... .......... .......... 69% 74.0M 0s
+ 22700K .......... .......... .......... .......... .......... 70% 70.4M 0s
+ 22750K .......... .......... .......... .......... .......... 70% 71.6M 0s
+ 22800K .......... .......... .......... .......... .......... 70% 58.0M 0s
+ 22850K .......... .......... .......... .......... .......... 70% 72.3M 0s
+ 22900K .......... .......... .......... .......... .......... 70% 79.0M 0s
+ 22950K .......... .......... .......... .......... .......... 70% 77.8M 0s
+ 23000K .......... .......... .......... .......... .......... 71% 77.7M 0s
+ 23050K .......... .......... .......... .......... .......... 71% 90.2M 0s
+ 23100K .......... .......... .......... .......... .......... 71% 92.6M 0s
+ 23150K .......... .......... .......... .......... .......... 71% 77.2M 0s
+ 23200K .......... .......... .......... .......... .......... 71% 65.4M 0s
+ 23250K .......... .......... .......... .......... .......... 71% 78.5M 0s
+ 23300K .......... .......... .......... .......... .......... 71% 80.0M 0s
+ 23350K .......... .......... .......... .......... .......... 72% 79.9M 0s
+ 23400K .......... .......... .......... .......... .......... 72% 70.6M 0s
+ 23450K .......... .......... .......... .......... .......... 72% 72.7M 0s
+ 23500K .......... .......... .......... .......... .......... 72% 72.6M 0s
+ 23550K .......... .......... .......... .......... .......... 72% 79.5M 0s
+ 23600K .......... .......... .......... .......... .......... 72% 57.9M 0s
+ 23650K .......... .......... .......... .......... .......... 73% 75.7M 0s
+ 23700K .......... .......... .......... .......... .......... 73% 73.5M 0s
+ 23750K .......... .......... .......... .......... .......... 73% 75.2M 0s
+ 23800K .......... .......... .......... .......... .......... 73% 68.4M 0s
+ 23850K .......... .......... .......... .......... .......... 73% 75.3M 0s
+ 23900K .......... .......... .......... .......... .......... 73% 72.4M 0s
+ 23950K .......... .......... .......... .......... .......... 73% 77.0M 0s
+ 24000K .......... .......... .......... .......... .......... 74% 58.0M 0s
+ 24050K .......... .......... .......... .......... .......... 74% 71.9M 0s
+ 24100K .......... .......... .......... .......... .......... 74% 71.6M 0s
+ 24150K .......... .......... .......... .......... .......... 74% 70.0M 0s
+ 24200K .......... .......... .......... .......... .......... 74% 68.0M 0s
+ 24250K .......... .......... .......... .......... .......... 74% 75.6M 0s
+ 24300K .......... .......... .......... .......... .......... 75% 75.8M 0s
+ 24350K .......... .......... .......... .......... .......... 75% 72.4M 0s
+ 24400K .......... .......... .......... .......... .......... 75% 58.7M 0s
+ 24450K .......... .......... .......... .......... .......... 75% 92.8M 0s
+ 24500K .......... .......... .......... .......... .......... 75% 92.7M 0s
+ 24550K .......... .......... .......... .......... .......... 75% 92.6M 0s
+ 24600K .......... .......... .......... .......... .......... 75% 88.1M 0s
+ 24650K .......... .......... .......... .......... .......... 76% 93.6M 0s
+ 24700K .......... .......... .......... .......... .......... 76% 73.7M 0s
+ 24750K .......... .......... .......... .......... .......... 76% 70.0M 0s
+ 24800K .......... .......... .......... .......... .......... 76% 59.4M 0s
+ 24850K .......... .......... .......... .......... .......... 76% 71.2M 0s
+ 24900K .......... .......... .......... .......... .......... 76% 76.9M 0s
+ 24950K .......... .......... .......... .......... .......... 77% 74.7M 0s
+ 25000K .......... .......... .......... .......... .......... 77% 64.2M 0s
+ 25050K .......... .......... .......... .......... .......... 77% 72.3M 0s
+ 25100K .......... .......... .......... .......... .......... 77% 73.7M 0s
+ 25150K .......... .......... .......... .......... .......... 77% 75.5M 0s
+ 25200K .......... .......... .......... .......... .......... 77% 60.2M 0s
+ 25250K .......... .......... .......... .......... .......... 77% 74.9M 0s
+ 25300K .......... .......... .......... .......... .......... 78% 68.8M 0s
+ 25350K .......... .......... .......... .......... .......... 78% 71.0M 0s
+ 25400K .......... .......... .......... .......... .......... 78% 70.8M 0s
+ 25450K .......... .......... .......... .......... .......... 78% 92.2M 0s
+ 25500K .......... .......... .......... .......... .......... 78% 80.4M 0s
+ 25550K .......... .......... .......... .......... .......... 78% 76.7M 0s
+ 25600K .......... .......... .......... .......... .......... 79% 64.9M 0s
+ 25650K .......... .......... .......... .......... .......... 79% 79.5M 0s
+ 25700K .......... .......... .......... .......... .......... 79% 73.8M 0s
+ 25750K .......... .......... .......... .......... .......... 79% 74.0M 0s
+ 25800K .......... .......... .......... .......... .......... 79% 68.2M 0s
+ 25850K .......... .......... .......... .......... .......... 79% 67.1M 0s
+ 25900K .......... .......... .......... .......... .......... 79% 71.1M 0s
+ 25950K .......... .......... .......... .......... .......... 80% 71.7M 0s
+ 26000K .......... .......... .......... .......... .......... 80% 55.4M 0s
+ 26050K .......... .......... .......... .......... .......... 80% 71.3M 0s
+ 26100K .......... .......... .......... .......... .......... 80% 74.7M 0s
+ 26150K .......... .......... .......... .......... .......... 80% 82.4M 0s
+ 26200K .......... .......... .......... .......... .......... 80% 64.9M 0s
+ 26250K .......... .......... .......... .......... .......... 81% 68.3M 0s
+ 26300K .......... .......... .......... .......... .......... 81% 73.8M 0s
+ 26350K .......... .......... .......... .......... .......... 81% 69.5M 0s
+ 26400K .......... .......... .......... .......... .......... 81% 58.9M 0s
+ 26450K .......... .......... .......... .......... .......... 81% 71.2M 0s
+ 26500K .......... .......... .......... .......... .......... 81% 72.6M 0s
+ 26550K .......... .......... .......... .......... .......... 81% 84.6M 0s
+ 26600K .......... .......... .......... .......... .......... 82% 74.7M 0s
+ 26650K .......... .......... .......... .......... .......... 82% 68.8M 0s
+ 26700K .......... .......... .......... .......... .......... 82% 74.2M 0s
+ 26750K .......... .......... .......... .......... .......... 82% 73.5M 0s
+ 26800K .......... .......... .......... .......... .......... 82% 63.7M 0s
+ 26850K .......... .......... .......... .......... .......... 82% 70.2M 0s
+ 26900K .......... .......... .......... .......... .......... 83% 68.4M 0s
+ 26950K .......... .......... .......... .......... .......... 83% 92.0M 0s
+ 27000K .......... .......... .......... .......... .......... 83% 87.7M 0s
+ 27050K .......... .......... .......... .......... .......... 83% 93.0M 0s
+ 27100K .......... .......... .......... .......... .......... 83% 91.6M 0s
+ 27150K .......... .......... .......... .......... .......... 83% 93.2M 0s
+ 27200K .......... .......... .......... .......... .......... 83% 64.8M 0s
+ 27250K .......... .......... .......... .......... .......... 84% 73.3M 0s
+ 27300K .......... .......... .......... .......... .......... 84% 75.3M 0s
+ 27350K .......... .......... .......... .......... .......... 84% 72.4M 0s
+ 27400K .......... .......... .......... .......... .......... 84% 70.2M 0s
+ 27450K .......... .......... .......... .......... .......... 84% 71.8M 0s
+ 27500K .......... .......... .......... .......... .......... 84% 71.3M 0s
+ 27550K .......... .......... .......... .......... .......... 85% 73.2M 0s
+ 27600K .......... .......... .......... .......... .......... 85% 57.9M 0s
+ 27650K .......... .......... .......... .......... .......... 85% 74.8M 0s
+ 27700K .......... .......... .......... .......... .......... 85% 71.4M 0s
+ 27750K .......... .......... .......... .......... .......... 85% 72.4M 0s
+ 27800K .......... .......... .......... .......... .......... 85% 65.6M 0s
+ 27850K .......... .......... .......... .......... .......... 85% 68.5M 0s
+ 27900K .......... .......... .......... .......... .......... 86% 72.5M 0s
+ 27950K .......... .......... .......... .......... .......... 86% 93.4M 0s
+ 28000K .......... .......... .......... .......... .......... 86% 58.6M 0s
+ 28050K .......... .......... .......... .......... .......... 86% 72.6M 0s
+ 28100K .......... .......... .......... .......... .......... 86% 73.8M 0s
+ 28150K .......... .......... .......... .......... .......... 86% 71.6M 0s
+ 28200K .......... .......... .......... .......... .......... 87% 70.5M 0s
+ 28250K .......... .......... .......... .......... .......... 87% 71.7M 0s
+ 28300K .......... .......... .......... .......... .......... 87% 89.7M 0s
+ 28350K .......... .......... .......... .......... .......... 87% 71.9M 0s
+ 28400K .......... .......... .......... .......... .......... 87% 56.4M 0s
+ 28450K .......... .......... .......... .......... .......... 87% 69.6M 0s
+ 28500K .......... .......... .......... .......... .......... 87% 74.0M 0s
+ 28550K .......... .......... .......... .......... .......... 88% 68.6M 0s
+ 28600K .......... .......... .......... .......... .......... 88% 71.9M 0s
+ 28650K .......... .......... .......... .......... .......... 88% 80.0M 0s
+ 28700K .......... .......... .......... .......... .......... 88% 71.9M 0s
+ 28750K .......... .......... .......... .......... .......... 88% 71.4M 0s
+ 28800K .......... .......... .......... .......... .......... 88% 57.3M 0s
+ 28850K .......... .......... .......... .......... .......... 89% 70.4M 0s
+ 28900K .......... .......... .......... .......... .......... 89% 86.8M 0s
+ 28950K .......... .......... .......... .......... .......... 89% 82.4M 0s
+ 29000K .......... .......... .......... .......... .......... 89% 67.3M 0s
+ 29050K .......... .......... .......... .......... .......... 89% 77.4M 0s
+ 29100K .......... .......... .......... .......... .......... 89% 77.5M 0s
+ 29150K .......... .......... .......... .......... .......... 89% 71.8M 0s
+ 29200K .......... .......... .......... .......... .......... 90% 62.5M 0s
+ 29250K .......... .......... .......... .......... .......... 90% 79.5M 0s
+ 29300K .......... .......... .......... .......... .......... 90% 72.8M 0s
+ 29350K .......... .......... .......... .......... .......... 90% 72.3M 0s
+ 29400K .......... .......... .......... .......... .......... 90% 72.4M 0s
+ 29450K .......... .......... .......... .......... .......... 90% 72.6M 0s
+ 29500K .......... .......... .......... .......... .......... 91% 93.0M 0s
+ 29550K .......... .......... .......... .......... .......... 91% 92.7M 0s
+ 29600K .......... .......... .......... .......... .......... 91% 74.0M 0s
+ 29650K .......... .......... .......... .......... .......... 91% 90.6M 0s
+ 29700K .......... .......... .......... .......... .......... 91% 77.1M 0s
+ 29750K .......... .......... .......... .......... .......... 91% 67.5M 0s
+ 29800K .......... .......... .......... .......... .......... 91% 66.8M 0s
+ 29850K .......... .......... .......... .......... .......... 92% 75.4M 0s
+ 29900K .......... .......... .......... .......... .......... 92% 71.8M 0s
+ 29950K .......... .......... .......... .......... .......... 92% 72.3M 0s
+ 30000K .......... .......... .......... .......... .......... 92% 56.0M 0s
+ 30050K .......... .......... .......... .......... .......... 92% 72.0M 0s
+ 30100K .......... .......... .......... .......... .......... 92% 71.6M 0s
+ 30150K .......... .......... .......... .......... .......... 93% 73.0M 0s
+ 30200K .......... .......... .......... .......... .......... 93% 82.5M 0s
+ 30250K .......... .......... .......... .......... .......... 93% 79.8M 0s
+ 30300K .......... .......... .......... .......... .......... 93% 73.2M 0s
+ 30350K .......... .......... .......... .......... .......... 93% 75.6M 0s
+ 30400K .......... .......... .......... .......... .......... 93% 58.4M 0s
+ 30450K .......... .......... .......... .......... .......... 93% 76.7M 0s
+ 30500K .......... .......... .......... .......... .......... 94% 82.1M 0s
+ 30550K .......... .......... .......... .......... .......... 94% 79.7M 0s
+ 30600K .......... .......... .......... .......... .......... 94% 66.2M 0s
+ 30650K .......... .......... .......... .......... .......... 94% 67.0M 0s
+ 30700K .......... .......... .......... .......... .......... 94% 84.5M 0s
+ 30750K .......... .......... .......... .......... .......... 94% 81.4M 0s
+ 30800K .......... .......... .......... .......... .......... 95% 64.8M 0s
+ 30850K .......... .......... .......... .......... .......... 95% 78.8M 0s
+ 30900K .......... .......... .......... .......... .......... 95% 70.9M 0s
+ 30950K .......... .......... .......... .......... .......... 95% 74.1M 0s
+ 31000K .......... .......... .......... .......... .......... 95% 72.5M 0s
+ 31050K .......... .......... .......... .......... .......... 95% 78.9M 0s
+ 31100K .......... .......... .......... .......... .......... 95% 74.3M 0s
+ 31150K .......... .......... .......... .......... .......... 96% 69.3M 0s
+ 31200K .......... .......... .......... .......... .......... 96% 60.5M 0s
+ 31250K .......... .......... .......... .......... .......... 96% 70.5M 0s
+ 31300K .......... .......... .......... .......... .......... 96% 83.1M 0s
+ 31350K .......... .......... .......... .......... .......... 96% 70.8M 0s
+ 31400K .......... .......... .......... .......... .......... 96% 73.7M 0s
+ 31450K .......... .......... .......... .......... .......... 97% 89.0M 0s
+ 31500K .......... .......... .......... .......... .......... 97% 74.1M 0s
+ 31550K .......... .......... .......... .......... .......... 97% 68.7M 0s
+ 31600K .......... .......... .......... .......... .......... 97% 61.1M 0s
+ 31650K .......... .......... .......... .......... .......... 97% 79.7M 0s
+ 31700K .......... .......... .......... .......... .......... 97% 72.6M 0s
+ 31750K .......... .......... .......... .......... .......... 98% 86.0M 0s
+ 31800K .......... .......... .......... .......... .......... 98% 70.1M 0s
+ 31850K .......... .......... .......... .......... .......... 98% 91.6M 0s
+ 31900K .......... .......... .......... .......... .......... 98% 93.3M 0s
+ 31950K .......... .......... .......... .......... .......... 98% 93.3M 0s
+ 32000K .......... .......... .......... .......... .......... 98% 74.2M 0s
+ 32050K .......... .......... .......... .......... .......... 98% 93.4M 0s
+ 32100K .......... .......... .......... .......... .......... 99% 93.4M 0s
+ 32150K .......... .......... .......... .......... .......... 99% 93.6M 0s
+ 32200K .......... .......... .......... .......... .......... 99% 87.9M 0s
+ 32250K .......... .......... .......... .......... .......... 99% 91.4M 0s
+ 32300K .......... .......... .......... .......... .......... 99% 93.5M 0s
+ 32350K .......... .......... .......... .......... .......... 99% 93.1M 0s
+ 32400K .......... .......... .......... .......... ........  100% 84.1M=0.7s
+
+2021-05-17 16:14:59 (47.1 MB/s) - ‘./tmp.TJKIN4rBZ3/unverified’ saved [33227562/33227562]
+
+download: Fetched 'glibc-2.33.tar.gz' (ad7dbed6...) successfully.
+rm -f -r glibc-2.33
+tar -mxzf glibc-2.33.tar.gz
+cd glibc-2.33 && \
+for p in glibc-patches/glibc-2.33.patch glibc-patches/hp-timing-2.33.patch; do \
+	echo applying $p; \
+	patch -p1 -l < ../$p || exit 255; \
+done
+applying glibc-patches/glibc-2.33.patch
+patching file Makerules
+patching file elf/Makefile
+patching file elf/dl-load.c
+patching file sysdeps/unix/sysv/linux/x86_64/____longjmp_chk.S
+patching file sysdeps/unix/sysv/linux/x86_64/__start_context.S
+patching file sysdeps/unix/sysv/linux/x86_64/clone.S
+patching file sysdeps/unix/sysv/linux/x86_64/getcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/setcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/sigaction.c
+patching file sysdeps/unix/sysv/linux/x86_64/swapcontext.S
+patching file sysdeps/unix/sysv/linux/x86_64/syscall.S
+patching file sysdeps/unix/sysv/linux/x86_64/sysdep.h
+patching file sysdeps/unix/sysv/linux/x86_64/vfork.S
+patching file sysdeps/unix/sysv/linux/x86_64/x32/times.c
+patching file sysdeps/unix/x86_64/sysdep.h
+patching file sysdeps/x86_64/nptl/tls.h
+applying glibc-patches/hp-timing-2.33.patch
+patching file sysdeps/x86/hp-timing.h
+touch glibc-2.33/.configured
+mkdir -p glibc-build
+(cd glibc-build || exit 1; \
+CC=gcc CXX=g++ AS=gcc \
+CFLAGS=$GLIBC_CFLAGS CPPFLAGS=$GLIBC_CPPFLAGS \
+../glibc-2.33/configure --prefix=/home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime \
+	--with-tls \
+	--without-gd \
+	--without-selinux \
+	--disable-test \
+	--disable-nscd \
+)
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arc arm csky hppa i386 m68k microblaze checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+mips nios2 powerpc riscv s390 sh checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... (cached) /bin/grep -E
+sparc x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking whether the linker supports textrels along with ifunc... yes
+checking if compiler warns about alias for function with incompatible types... no
+checking sysdep dirs... sysdeps/unix/sysv/linux/x86_64/64 sysdeps/unix/sysv/linux/x86_64 sysdeps/unix/sysv/linux/x86 sysdeps/x86/nptl sysdeps/unix/sysv/linux/wordsize-64 sysdeps/x86_64/nptl sysdeps/unix/sysv/linux sysdeps/nptl sysdeps/pthread sysdeps/gnu sysdeps/unix/inet sysdeps/unix/sysv sysdeps/unix/x86_64 sysdeps/unix sysdeps/posix sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether as is GNU as... yes
+checking whether ld is GNU ld... yes
+checking for as... as
+checking version of as... 2.30, ok
+checking for ld... ld
+checking version of ld... 2.30, ok
+checking for gnumake... no
+checking for gmake... no
+checking for make... make
+checking version of make... 4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... msgfmt
+checking version of msgfmt... 0.19.8.1, ok
+checking for makeinfo... makeinfo
+checking version of makeinfo... 6.5, ok
+checking for sed... sed
+checking version of sed... 4.4, ok
+checking for gawk... gawk
+checking version of gawk... 4.1.4, ok
+checking for bison... bison
+checking version of bison... 3.0.4, ok
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+checking version of python3... 3.6.9, ok
+checking LD_LIBRARY_PATH variable... ok
+checking for bash... /bin/bash
+checking for perl... /usr/bin/perl
+checking for install-info... no
+checking for .set assembler directive... yes
+checking linker support for protected data symbol... yes
+checking linker support for INSERT in linker script... yes
+checking for broken __attribute__((alias()))... no
+checking whether to put _rtld_local into .sdata section... no
+checking for libunwind-support in compiler... no
+checking whether --noexecstack is desirable for .S files... yes
+checking for -z combreloc... yes
+checking for linker that supports -z execstack... yes
+checking for linker that supports --no-dynamic-linker... yes
+checking for -static-pie... no
+checking for -fpie... yes
+checking for --hash-style option... yes
+checking for sufficient default -shared layout... no
+checking for GLOB_DAT reloc... yes
+checking for -fno-toplevel-reorder -fno-section-anchors... yes
+checking for -mtls-dialect=gnu2... yes
+checking whether cc puts quotes around section names... no
+checking for __builtin_memset... yes
+checking for redirection of built-in functions... yes
+checking for compiler option to disable generation of FMA instructions... -ffp-contract=off
+checking if gcc accepts -fno-tree-loop-distribute-patterns with __attribute__ ((__optimize__))... yes
+checking for libgd... no
+checking for _FORTIFY_SOURCE predefine... yes
+checking whether the linker provides working __ehdr_start... yes
+checking for __builtin_trap with no external dependencies... yes
+checking whether the C++ compiler supports thread_local... yes
+running configure fragment for sysdeps/unix/sysv/linux/x86_64/64
+running configure fragment for sysdeps/unix/sysv/linux/x86_64
+running configure fragment for sysdeps/unix/sysv/linux
+checking installed Linux kernel header files... 3.2.0 or later
+checking for kernel header at least 3.2.0... ok
+checking for symlinks in /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/include... ok
+running configure fragment for sysdeps/gnu
+running configure fragment for sysdeps/x86_64
+checking for AVX512DQ support in assembler... yes
+checking for AVX512 support... yes
+checking -mprefer-vector-width=128... no
+checking for Intel MPX support... yes
+running configure fragment for sysdeps/x86
+checking for linker x86 ISA level support... no
+checking whether -fPIC is default... yes
+checking whether -fPIE is default... yes
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing default commands
+Building glibc, may take a while to finish. Warning messages may show up. If this process terminates with failures, see "glibc-build/build.log" for more information.
+(CC=gcc CXX=g++ AS=gcc make -C glibc-build 2>&1 > build.log) && touch glibc-build/Build.success
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/crt1.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/crti.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/crtn.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libdl.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libc.so ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libc.so.6 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libutil.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libm.so.6 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libmvec.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libpthread.so.0 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libnsl.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libthread_db.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libnss_compat.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libnss_db.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libanl.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libnss_dns.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libnss_files.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/libresolv.so.2 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/librt.so.1 ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/../Runtime/ld-linux-x86-64.so.2 ]
+make -C shim all
+make[2]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS/shim'
+make -C src
+make[3]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src'
+  [ shim_async.o ]
+  [ shim_checkpoint.o ]
+  [ shim_debug.o ]
+  [ shim_init.o ]
+  [ shim_malloc.o ]
+  [ shim_object.o ]
+  [ shim_parser.o ]
+  [ shim_rtld.o ]
+  [ shim_syscalls.o ]
+  [ shim_utils.o ]
+  [ bookkeep/shim_handle.o ]
+  [ bookkeep/shim_process.o ]
+  [ bookkeep/shim_signal.o ]
+  [ bookkeep/shim_thread.o ]
+  [ bookkeep/shim_vma.o ]
+  [ fs/shim_dcache.o ]
+  [ fs/shim_fs.o ]
+  [ fs/shim_fs_hash.o ]
+  [ fs/shim_fs_pseudo.o ]
+  [ fs/shim_namei.o ]
+  [ fs/chroot/fs.o ]
+  [ fs/dev/attestation.o ]
+  [ fs/dev/fs.o ]
+  [ fs/dev/null.o ]
+  [ fs/dev/random.o ]
+  [ fs/dev/std.o ]
+  [ fs/dev/zero.o ]
+  [ fs/eventfd/fs.o ]
+  [ fs/pipe/fs.o ]
+  [ fs/proc/fs.o ]
+  [ fs/proc/info.o ]
+  [ fs/proc/ipc-thread.o ]
+  [ fs/proc/thread.o ]
+  [ fs/socket/fs.o ]
+  [ fs/str/fs.o ]
+  [ fs/sys/cache_info.o ]
+  [ fs/sys/cpu_info.o ]
+  [ fs/sys/fs.o ]
+  [ fs/sys/node_info.o ]
+  [ fs/tmpfs/fs.o ]
+  [ ipc/shim_ipc.o ]
+  [ ipc/shim_ipc_child.o ]
+  [ ipc/shim_ipc_pid.o ]
+  [ ipc/shim_ipc_ranges.o ]
+  [ ipc/shim_ipc_sysv.o ]
+  [ ipc/shim_ipc_worker.o ]
+  [ sys/shim_access.o ]
+  [ sys/shim_alarm.o ]
+  [ sys/shim_brk.o ]
+  [ sys/shim_clone.o ]
+  [ sys/shim_dup.o ]
+  [ sys/shim_epoll.o ]
+  [ sys/shim_eventfd.o ]
+  [ sys/shim_exec.o ]
+  [ sys/shim_exit.o ]
+  [ sys/shim_fcntl.o ]
+  [ sys/shim_fork.o ]
+  [ sys/shim_fs.o ]
+  [ sys/shim_futex.o ]
+  [ sys/shim_getcwd.o ]
+  [ sys/shim_getpid.o ]
+  [ sys/shim_getrandom.o ]
+  [ sys/shim_getrlimit.o ]
+  [ sys/shim_getuid.o ]
+  [ sys/shim_ioctl.o ]
+  [ sys/shim_mmap.o ]
+  [ sys/shim_msgget.o ]
+  [ sys/shim_open.o ]
+  [ sys/shim_pipe.o ]
+  [ sys/shim_poll.o ]
+  [ sys/shim_sched.o ]
+  [ sys/shim_semget.o ]
+  [ sys/shim_sigaction.o ]
+  [ sys/shim_sleep.o ]
+  [ sys/shim_socket.o ]
+  [ sys/shim_stat.o ]
+  [ sys/shim_time.o ]
+  [ sys/shim_uname.o ]
+  [ sys/shim_wait.o ]
+  [ sys/shim_wrappers.o ]
+  [ utils/log.o ]
+  [ utils/strobjs.o ]
+  [ vdso/arch/x86_64/vdso.o ]
+  [ vdso/vdso-note.o ]
+  [ arch/x86_64/shim_arch_prctl.o ]
+  [ generated-offsets.s ]
+  [ arch/x86_64/shim_table.o ]
+make -C ../../../Pal/lib target=/home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/
+  [ arch/x86_64/start.o ]
+  [ vdso/.vdso-linked-for-reloc-check.so ]
+  [ asm-offsets.h ]
+make[4]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ check_no_reloc vdso/.vdso-linked-for-reloc-check.so ]
+  [ vdso/vdso.so.dbg ]
+ln -fs ../../asm-offsets.h arch/x86_64/asm-offsets.h
+  [ arch/x86_64/shim_context.o ]
+  [ arch/x86_64/syscallas.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/aes.o ]
+  [ vdso/vdso.so ]
+  [ vdso/vdso-data.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/bignum.o ]
+  [ libsysdb.a ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/../../../Runtime/libsysdb.a ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/mbedtls/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/debug_map.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/path.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/stack_protector.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/ctype.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/toml_utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/toml.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/.lib/graphene-lib.a ]
+make[4]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ libsysdb.so ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/../../../Runtime/libsysdb.so ]
+make[3]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src'
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS/shim'
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/LibOS'
+make -C Runtime all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Runtime'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Runtime'
+make -C Tools all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Tools'
+  [ argv_serializer ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Tools'
+
+NOTE: We are in the middle of a transition to the Meson buildsystem.
+You have successfully built Graphene, now please install Graphene using Meson.
+See https://graphene.readthedocs.io/en/latest/building.html for more details.
+(For now, please ignore "Build targets in project: 0" and "ninja: no work to do.")
+
++ make -j8 -C Pal/src PAL_HOST=Skeleton
+make: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+make -C ../lib target=/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/aes.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/base64.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/bignum.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/cipher.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/cipher_wrap.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/cmac.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ctr_drbg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/dhm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/entropy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/gcm.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/mbedtls/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/debug_map.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/path.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/stack_protector.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/ctype.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/toml_utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/toml.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton/.lib/graphene-lib.a ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ host/Skeleton/.obj/db_events.o ]
+  [ host/Skeleton/.obj/db_exception.o ]
+  [ host/Skeleton/.obj/db_main.o ]
+  [ host/Skeleton/.obj/db_memory.o ]
+  [ host/Skeleton/.obj/db_misc.o ]
+  [ host/Skeleton/.obj/db_object.o ]
+  [ host/Skeleton/.obj/db_process.o ]
+  [ host/Skeleton/.obj/db_rtld.o ]
+  [ host/Skeleton/.obj/db_streams.o ]
+  [ host/Skeleton/.obj/db_threading.o ]
+  [ host/Skeleton/.obj/pal_error.o ]
+  [ host/Skeleton/.obj/printf.o ]
+  [ host/Skeleton/.obj/slab.o ]
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton'
+  [ db_files.o ]
+  [ db_devices.o ]
+  [ db_pipes.o ]
+  [ db_eventfd.o ]
+  [ db_sockets.o ]
+  [ db_streams.o ]
+  [ db_memory.o ]
+  [ db_threading.o ]
+  [ db_events.o ]
+  [ db_process.o ]
+  [ db_object.o ]
+  [ db_main.o ]
+  [ db_rtld.o ]
+  [ db_misc.o ]
+  [ db_exception.o ]
+  [ pal.map ]
+  [ libpal-Skeleton.a ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src/host/Skeleton'
+  [ host/Skeleton/libpal.so ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/src/../../Runtime/libpal-Skeleton.so ]
+make: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/src'
+[Pipeline] sh
++ meson build --prefix=/home/jenkins/workspace/graphene-debug-18.04/usr -Ddirect=enabled -Dsgx=disabled
+The Meson build system
+Version: 0.45.1
+Source dir: /home/jenkins/workspace/graphene-debug-18.04
+Build dir: /home/jenkins/workspace/graphene-debug-18.04/build
+Build type: native build
+Project name: graphene
+Native C compiler: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Program get-python-platlib.py found: YES (/home/jenkins/workspace/graphene-debug-18.04/Scripts/get-python-platlib.py)
+Program meson-clang-format.sh found: YES (/home/jenkins/workspace/graphene-debug-18.04/Scripts/meson-clang-format.sh)
+Program /bin/sh found: YES (/bin/sh)
+Configuring graphene-direct using configuration
+Configuring __init__.py using configuration
+Build targets in project: 1
+Found ninja-1.8.2 at /usr/bin/ninja
++ ninja -C build
+ninja: Entering directory `build'
+ninja: no work to do.
++ ninja -C build install
+ninja: Entering directory `build'
+[0/1] Installing files.
+Installing subdir /home/jenkins/workspace/graphene-debug-18.04/Runtime/../Pal/src/host/Linux/gdb_integration to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/direct/gdb_integration
+Installing subdir /home/jenkins/workspace/graphene-debug-18.04/Runtime/../Pal/gdb_integration to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/direct/gdb_integration/common
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/src/libsysdb.so to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/csu/crt1.o to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/csu/crti.o to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/csu/crtn.o to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/dlfcn/libdl.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/libc.so to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/libc.so.6 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/login/libutil.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/math/libm.so.6 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/mathvec/libmvec.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nis/libnsl.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nptl/libpthread.so.0 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nptl_db/libthread_db.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nss/libnss_compat.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nss/libnss_db.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/nss/libnss_files.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/resolv/libanl.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/resolv/libnss_dns.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/resolv/libresolv.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/rt/librt.so.1 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/LibOS/glibc-build/elf/ld-linux-x86-64.so.2 to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/runtime/glibc
+Installing /home/jenkins/workspace/graphene-debug-18.04/Runtime/../Pal/src/host/Linux/libpal.so to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/direct
+Installing /home/jenkins/workspace/graphene-debug-18.04/build/Runtime/graphene-direct to /home/jenkins/workspace/graphene-debug-18.04/usr/bin
+Installing /home/jenkins/workspace/graphene-debug-18.04/build/python/graphenelibos/__init__.py to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/python3.6/site-packages/graphenelibos
+Installing /home/jenkins/workspace/graphene-debug-18.04/python/graphenelibos/manifest.py to /home/jenkins/workspace/graphene-debug-18.04/usr/lib/python3.6/site-packages/graphenelibos
+Installing /home/jenkins/workspace/graphene-debug-18.04/python/graphene-manifest to /home/jenkins/workspace/graphene-debug-18.04/usr/bin
+Running custom install script '/bin/sh -c ln -sf libpal.so "$MESON_INSTALL_DESTDIR_PREFIX"/lib/x86_64-linux-gnu/graphene/direct/loader'
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] sh
++ meson introspect build --buildoptions
++ jq -r (map(select(.name == "prefix")) + map(select(.name == "libdir"))) | map(.value) | join("/")
+[Pipeline] sh
++ rm -rf build
+[Pipeline] sh
++ make -j8 -C Runtime clean
+make: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Runtime'
+rm -f *.a *.o *.so *.so.* pal-*
+make: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Runtime'
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-test.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (test)
+[Pipeline] sh
++ test -n 
+[Pipeline] timeout
+Timeout set to expire in 15 min
+[Pipeline] {
+[Pipeline] sh
++ test -n 
++ graphene=direct
++ cd Pal/regression
++ make -j8 all pal_lib=/home/jenkins/workspace/graphene-debug-18.04/usr/lib/x86_64-linux-gnu/graphene/direct/libpal.so
+make -C crt_init all
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror -fno-stack-protector -fno-builtin -nostdlib -I. -I../include -I../include/pal -I../include/lib -I../include/arch/x86_64 -I../include/arch/x86_64/Linux -fPIC   -c -o abort.o abort.c
+make -C ../lib target=/home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/regression/crt_init'
+  [ user_start.o ]
+  [ user_shared_start.o ]
+  [ ..Bootstrap.manifest ]
+  [ AttestationReport.manifest ]
+  [ avl_tree_test.manifest ]
+  [ Bootstrap.manifest ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/regression/crt_init'
+  [ Directory.manifest ]
+  [ Event.manifest ]
+make[1]: Entering directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ Exit.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/aes.o ]
+  [ File2.manifest ]
+  [ HelloWorld.manifest ]
+  [ Hex.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/base64.o ]
+  [ Memory.manifest ]
+  [ Misc.manifest ]
+  [ Pie.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/bignum.o ]
+  [ Pipe.manifest ]
+  [ Process.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/cipher.o ]
+  [ Process2.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/cipher_wrap.o ]
+  [ Process4.manifest ]
+  [ Select.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/cmac.o ]
+  [ SendHandle.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ctr_drbg.o ]
+  [ Sleep.manifest ]
+  [ Socket.manifest ]
+  [ Symbols.manifest ]
+  [ Tcp.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/dhm.o ]
+  [ Udp.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/entropy.o ]
+  [ Wait.manifest ]
+  [ Yield.manifest ]
+  [ normalize_path.manifest ]
+  [ Exception.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/gcm.o ]
+  [ Exception2.manifest ]
+  [ Segment.manifest ]
+  [ Thread.manifest ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/md.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/oid.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/platform_util.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/rsa.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/rsa_internal.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/sha256.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ssl_ciphersuites.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ssl_cli.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ssl_msg.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ssl_srv.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/ssl_tls.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/mbedtls/library/aesni.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/avl_tree.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/debug_map.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/network/hton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/network/inet_pton.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/path.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/stack_protector.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/stdlib/printfmt.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/atoi.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/ctype.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/memcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/memcpy.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/memset.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/strchr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/strcmp.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/strlen.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/strspn.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/strstr.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/toml_utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/string/utils.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/toml.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/crypto/adapters/mbedtls_adapter.o ]
+  [ /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/.lib/graphene-lib.a ]
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-debug-18.04/Pal/lib'
+  [ Preload1.so ]
+  [ Preload2.so ]
+  [ ..Bootstrap ]
+  [ AttestationReport ]
+  [ avl_tree_test ]
+  [ Bootstrap ]
+  [ Bootstrap3 ]
+  [ Bootstrap7 ]
+  [ Directory ]
+  [ Event ]
+  [ Exit ]
+  [ File ]
+  [ File2 ]
+  [ HelloWorld ]
+  [ Hex ]
+  [ Memory ]
+  [ Misc ]
+  [ Pie ]
+  [ Pipe ]
+  [ Process ]
+  [ Process2 ]
+  [ Process3 ]
+  [ Process4 ]
+  [ Select ]
+  [ SendHandle ]
+  [ Sleep ]
+  [ Socket ]
+  [ Symbols ]
+  [ Tcp ]
+  [ Thread2 ]
+  [ Udp ]
+  [ Wait ]
+  [ Yield ]
+  [ normalize_path ]
+  [ Exception ]
+  [ Exception2 ]
+  [ Segment ]
+  [ Thread ]
++ test -n 
++ python3 -m pytest -v --junit-xml pal-regression.xml test_pal.py
+============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-3.3.2, py-1.5.2, pluggy-0.6.0 -- /usr/bin/python3
+cachedir: .cache
+rootdir: /home/jenkins/workspace/graphene-debug-18.04/Pal/regression, inifile:
+collecting ... collected 42 items
+
+test_pal.py::TC_00_Basic::test_001_path_normalization PASSED             [  2%]
+test_pal.py::TC_00_Basic::test_002_avl_tree PASSED                       [  4%]
+test_pal.py::TC_00_BasicSet2::test_Exception2 PASSED                     [  7%]
+test_pal.py::TC_00_BasicSet2::test_File2 PASSED                          [  9%]
+test_pal.py::TC_00_BasicSet2::test_HelloWorld PASSED                     [ 11%]
+test_pal.py::TC_00_BasicSet2::test_Pie PASSED                            [ 14%]
+test_pal.py::TC_00_BasicSet2::test_Process4 PASSED                       [ 16%]
+test_pal.py::TC_00_BasicSet2::test_Segment PASSED                        [ 19%]
+test_pal.py::TC_00_BasicSet2::test_Select PASSED                         [ 21%]
+test_pal.py::TC_00_BasicSet2::test_Sleep PASSED                          [ 23%]
+test_pal.py::TC_00_BasicSet2::test_Tcp PASSED                            [ 26%]
+test_pal.py::TC_00_BasicSet2::test_Udp PASSED                            [ 28%]
+test_pal.py::TC_00_BasicSet2::test_Wait PASSED                           [ 30%]
+test_pal.py::TC_00_BasicSet2::test_Yield PASSED                          [ 33%]
+test_pal.py::TC_01_Bootstrap::test_100_basic_boostrapping PASSED         [ 35%]
+test_pal.py::TC_01_Bootstrap::test_101_basic_boostrapping_five_arguments PASSED [ 38%]
+test_pal.py::TC_01_Bootstrap::test_102_cpuinfo PASSED                    [ 40%]
+test_pal.py::TC_01_Bootstrap::test_103_dotdot PASSED                     [ 42%]
+test_pal.py::TC_01_Bootstrap::test_110_preload_libraries PASSED          [ 45%]
+test_pal.py::TC_01_Bootstrap::test_120_8gb_enclave SKIPPED               [ 47%]
+test_pal.py::TC_01_Bootstrap::test_130_large_number_of_items_in_manifest PASSED [ 50%]
+test_pal.py::TC_01_Bootstrap::test_140_missing_executable_and_manifest PASSED [ 52%]
+test_pal.py::TC_02_Symbols::test_000_symbols PASSED                      [ 54%]
+test_pal.py::TC_10_Exception::test_000_exception PASSED                  [ 57%]
+test_pal.py::TC_20_SingleProcess::test_000_exit_code PASSED              [ 59%]
+test_pal.py::TC_20_SingleProcess::test_100_file PASSED                   [ 61%]
+test_pal.py::TC_20_SingleProcess::test_110_directory PASSED              [ 64%]
+test_pal.py::TC_20_SingleProcess::test_200_event PASSED                  [ 66%]
+test_pal.py::TC_20_SingleProcess::test_300_memory PASSED                 [ 69%]
+test_pal.py::TC_20_SingleProcess::test_301_memory_nosgx PASSED           [ 71%]
+test_pal.py::TC_20_SingleProcess::test_400_pipe PASSED                   [ 73%]
+test_pal.py::TC_20_SingleProcess::test_410_socket PASSED                 [ 76%]
+test_pal.py::TC_20_SingleProcess::test_500_thread PASSED                 [ 78%]
+test_pal.py::TC_20_SingleProcess::test_510_thread2 PASSED                [ 80%]
+test_pal.py::TC_20_SingleProcess::test_511_thread2_exitless SKIPPED      [ 83%]
+test_pal.py::TC_20_SingleProcess::test_900_misc PASSED                   [ 85%]
+test_pal.py::TC_20_SingleProcess::test_910_hex PASSED                    [ 88%]
+test_pal.py::TC_21_ProcessCreation::test_100_process PASSED              [ 90%]
+test_pal.py::TC_21_ProcessCreation::test_200_process2 SKIPPED            [ 92%]
+test_pal.py::TC_21_ProcessCreation::test_300_process3 PASSED             [ 95%]
+test_pal.py::TC_23_SendHandle::test_000_send_handle PASSED               [ 97%]
+test_pal.py::TC_50_Attestation::test_000_attestation_report SKIPPED      [100%]
+
+ generated xml file: /home/jenkins/workspace/graphene-debug-18.04/Pal/regression/pal-regression.xml 
+==================== 38 passed, 4 skipped in 19.53 seconds =====================
+[Pipeline] junit
+Recording test results
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 15 min
+[Pipeline] {
+[Pipeline] sh
++ cd LibOS/shim/test/regression
++ make -j8 RA_CLIENT_SPID= all
+  [ abort ]
+  [ abort_multithread ]
+  [ bootstrap ]
+  [ bootstrap_pie ]
+  [ bootstrap_static ]
+  [ debug ]
+  [ devfs ]
+  [ device ]
+  [ double_fork ]
+  [ epoll_epollet ]
+  [ epoll_wait_timeout ]
+  [ eventfd ]
+  [ exec ]
+  [ exec_fork ]
+  [ exec_invalid_args ]
+  [ exec_same ]
+  [ exec_victim ]
+  [ exit ]
+  [ exit_group ]
+  [ fdleak ]
+  [ file_check_policy ]
+  [ file_size ]
+  [ fopen_cornercases ]
+  [ fork_and_exec ]
+  [ fp_multithread ]
+  [ fstat_cwd ]
+  [ futex_bitset ]
+  [ futex_requeue ]
+  [ futex_timeout ]
+  [ futex_wake_op ]
+  [ getcwd ]
+  [ getdents ]
+  [ getsockname ]
+  [ getsockopt ]
+  [ gettimeofday ]
+  [ groups ]
+  [ helloworld ]
+  [ host_root_fs ]
+  [ init_fail ]
+  [ kill_all ]
+  [ large_mmap ]
+  [ large_dir_read ]
+  [ madvise ]
+  [ mkfifo ]
+  [ mmap_file ]
+  [ mprotect_file_fork ]
+  [ mprotect_prot_growsdown ]
+  [ multi_pthread ]
+  [ openmp ]
+  [ pipe ]
+  [ pipe_nonblocking ]
+  [ pipe_ocloexec ]
+  [ poll ]
+  [ poll_closed_fd ]
+  [ poll_many_types ]
+  [ ppoll ]
+  [ proc_common ]
+  [ proc_cpuinfo ]
+  [ proc_path ]
+  [ pselect ]
+  [ pthread_set_get_affinity ]
+  [ readdir ]
+  [ sched ]
+  [ sched_set_get_affinity ]
+  [ select ]
+  [ shared_object ]
+  [ sigaction_per_process ]
+  [ sigaltstack ]
+  [ sighandler_reset ]
+  [ sighandler_sigpipe ]
+  [ signal_multithread ]
+  [ sigprocmask_pending ]
+  [ spinlock ]
+  [ stat_invalid_args ]
+  [ syscall ]
+  [ sysfs_common ]
+  [ tcp_ipv6_v6only ]
+  [ tcp_msg_peek ]
+  [ udp ]
+  [ unix ]
+  [ vfork_and_exec ]
+  [ attestation ]
+  [ cpuid ]
+  [ debug_regs-x86_64 ]
+  [ rdtsc ]
+  [ sighandler_divbyzero ]
+  [ bootstrap_cpp ]
+  [ argv_from_file.manifest ]
+  [ debug_log_file.manifest ]
+  [ debug_log_inline.manifest ]
+  [ env_from_file.manifest ]
+  [ env_from_host.manifest ]
+  [ file_check_policy_allow_all_but_log.manifest ]
+  [ file_check_policy_strict.manifest ]
+  [ multi_pthread_exitless.manifest ]
+  [ abort.manifest ]
+  [ abort_multithread.manifest ]
+  [ bootstrap.manifest ]
+  [ bootstrap_pie.manifest ]
+  [ bootstrap_static.manifest ]
+  [ debug.manifest ]
+  [ devfs.manifest ]
+  [ device.manifest ]
+  [ double_fork.manifest ]
+  [ epoll_epollet.manifest ]
+  [ epoll_wait_timeout.manifest ]
+  [ eventfd.manifest ]
+  [ exec.manifest ]
+  [ exec_fork.manifest ]
+  [ exec_invalid_args.manifest ]
+  [ exec_same.manifest ]
+  [ exec_victim.manifest ]
+  [ exit.manifest ]
+  [ exit_group.manifest ]
+  [ fdleak.manifest ]
+  [ file_check_policy.manifest ]
+  [ file_size.manifest ]
+  [ fopen_cornercases.manifest ]
+  [ fork_and_exec.manifest ]
+  [ fp_multithread.manifest ]
+  [ fstat_cwd.manifest ]
+  [ futex_bitset.manifest ]
+  [ futex_requeue.manifest ]
+  [ futex_timeout.manifest ]
+  [ futex_wake_op.manifest ]
+  [ getcwd.manifest ]
+  [ getdents.manifest ]
+  [ getsockname.manifest ]
+  [ getsockopt.manifest ]
+  [ gettimeofday.manifest ]
+  [ groups.manifest ]
+  [ helloworld.manifest ]
+  [ host_root_fs.manifest ]
+  [ init_fail.manifest ]
+  [ kill_all.manifest ]
+  [ large_mmap.manifest ]
+  [ large_dir_read.manifest ]
+  [ madvise.manifest ]
+  [ mkfifo.manifest ]
+  [ mmap_file.manifest ]
+  [ mprotect_file_fork.manifest ]
+  [ mprotect_prot_growsdown.manifest ]
+  [ multi_pthread.manifest ]
+  [ openmp.manifest ]
+  [ pipe.manifest ]
+  [ pipe_nonblocking.manifest ]
+  [ pipe_ocloexec.manifest ]
+  [ poll.manifest ]
+  [ poll_closed_fd.manifest ]
+  [ poll_many_types.manifest ]
+  [ ppoll.manifest ]
+  [ proc_common.manifest ]
+  [ proc_cpuinfo.manifest ]
+  [ proc_path.manifest ]
+  [ pselect.manifest ]
+  [ pthread_set_get_affinity.manifest ]
+  [ readdir.manifest ]
+  [ sched.manifest ]
+  [ sched_set_get_affinity.manifest ]
+  [ select.manifest ]
+  [ shared_object.manifest ]
+  [ sigaction_per_process.manifest ]
+  [ sigaltstack.manifest ]
+  [ sighandler_reset.manifest ]
+  [ sighandler_sigpipe.manifest ]
+  [ signal_multithread.manifest ]
+  [ sigprocmask_pending.manifest ]
+  [ spinlock.manifest ]
+  [ stat_invalid_args.manifest ]
+  [ syscall.manifest ]
+  [ sysfs_common.manifest ]
+  [ tcp_ipv6_v6only.manifest ]
+  [ tcp_msg_peek.manifest ]
+  [ udp.manifest ]
+  [ unix.manifest ]
+  [ vfork_and_exec.manifest ]
+  [ attestation.manifest ]
+  [ cpuid.manifest ]
+  [ debug_regs-x86_64.manifest ]
+  [ rdtsc.manifest ]
+  [ sighandler_divbyzero.manifest ]
+  [ bootstrap_cpp.manifest ]
++ test -n 
++ python3 -m pytest -v --junit-xml libos-regression.xml test_libos.py
+============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-3.3.2, py-1.5.2, pluggy-0.6.0 -- /usr/bin/python3
+cachedir: .cache
+rootdir: /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/test/regression, inifile:
+collecting ... collected 99 items
+
+test_libos.py::TC_00_Unittests::test_000_spinlock PASSED                 [  1%]
+test_libos.py::TC_01_Bootstrap::test_001_helloworld PASSED               [  2%]
+test_libos.py::TC_01_Bootstrap::test_100_basic_bootstrapping PASSED      [  3%]
+test_libos.py::TC_01_Bootstrap::test_101_basic_bootstrapping_five_arguments PASSED [  4%]
+test_libos.py::TC_01_Bootstrap::test_102_argv_from_file PASSED           [  5%]
+test_libos.py::TC_01_Bootstrap::test_103_env_from_host PASSED            [  6%]
+test_libos.py::TC_01_Bootstrap::test_104_env_from_file PASSED            [  7%]
+test_libos.py::TC_01_Bootstrap::test_105_basic_bootstrapping_static SKIPPED [  8%]
+test_libos.py::TC_01_Bootstrap::test_106_basic_bootstrapping_pie PASSED  [  9%]
+test_libos.py::TC_01_Bootstrap::test_110_basic_bootstrapping_cpp PASSED  [ 10%]
+test_libos.py::TC_01_Bootstrap::test_200_exec PASSED                     [ 11%]
+test_libos.py::TC_01_Bootstrap::test_201_exec_same PASSED                [ 12%]
+test_libos.py::TC_01_Bootstrap::test_202_fork_and_exec PASSED            [ 13%]
+test_libos.py::TC_01_Bootstrap::test_203_vfork_and_exec PASSED           [ 14%]
+test_libos.py::TC_01_Bootstrap::test_204_exec_fork PASSED                [ 15%]
+test_libos.py::TC_01_Bootstrap::test_205_double_fork PASSED              [ 16%]
+test_libos.py::TC_01_Bootstrap::test_210_exec_invalid_args PASSED        [ 17%]
+test_libos.py::TC_01_Bootstrap::test_300_shared_object PASSED            [ 18%]
+test_libos.py::TC_01_Bootstrap::test_400_exit PASSED                     [ 19%]
+test_libos.py::TC_01_Bootstrap::test_401_exit_group PASSED               [ 20%]
+test_libos.py::TC_01_Bootstrap::test_402_signalexit PASSED               [ 21%]
+test_libos.py::TC_01_Bootstrap::test_403_signalexit_multithread PASSED   [ 22%]
+test_libos.py::TC_01_Bootstrap::test_404_sigprocmask_pending PASSED      [ 23%]
+test_libos.py::TC_01_Bootstrap::test_500_init_fail PASSED                [ 24%]
+test_libos.py::TC_01_Bootstrap::test_501_init_fail2 SKIPPED              [ 25%]
+test_libos.py::TC_01_Bootstrap::test_600_multi_pthread PASSED            [ 26%]
+test_libos.py::TC_01_Bootstrap::test_601_multi_pthread_exitless SKIPPED  [ 27%]
+test_libos.py::TC_01_Bootstrap::test_602_fp_multithread PASSED           [ 28%]
+test_libos.py::TC_01_Bootstrap::test_700_debug_log_inline PASSED         [ 29%]
+test_libos.py::TC_01_Bootstrap::test_701_debug_log_file PASSED           [ 30%]
+test_libos.py::TC_02_OpenMP::test_000_simple_for_loop SKIPPED            [ 31%]
+test_libos.py::TC_03_FileCheckPolicy::test_000_strict_success SKIPPED    [ 32%]
+test_libos.py::TC_03_FileCheckPolicy::test_001_strict_fail SKIPPED       [ 33%]
+test_libos.py::TC_03_FileCheckPolicy::test_002_allow_all_but_log_success SKIPPED [ 34%]
+test_libos.py::TC_03_FileCheckPolicy::test_003_allow_all_but_log_fail SKIPPED [ 35%]
+test_libos.py::TC_04_Attestation::test_000_attestation SKIPPED           [ 36%]
+test_libos.py::TC_04_Attestation::test_001_attestation_stdio SKIPPED     [ 37%]
+test_libos.py::TC_30_Syscall::test_000_getcwd PASSED                     [ 38%]
+test_libos.py::TC_30_Syscall::test_010_stat_invalid_args PASSED          [ 39%]
+test_libos.py::TC_30_Syscall::test_011_fstat_cwd PASSED                  [ 40%]
+test_libos.py::TC_30_Syscall::test_020_getdents PASSED                   [ 41%]
+test_libos.py::TC_30_Syscall::test_021_getdents_large_dir PASSED         [ 42%]
+test_libos.py::TC_30_Syscall::test_022_host_root_fs PASSED               [ 43%]
+test_libos.py::TC_30_Syscall::test_030_fopen PASSED                      [ 44%]
+test_libos.py::TC_30_Syscall::test_031_readdir PASSED                    [ 45%]
+test_libos.py::TC_30_Syscall::test_032_file_size PASSED                  [ 46%]
+test_libos.py::TC_30_Syscall::test_040_futex_bitset PASSED               [ 47%]
+test_libos.py::TC_30_Syscall::test_041_futex_timeout PASSED              [ 48%]
+test_libos.py::TC_30_Syscall::test_042_futex_requeue PASSED              [ 49%]
+test_libos.py::TC_30_Syscall::test_043_futex_wake_op PASSED              [ 50%]
+test_libos.py::TC_30_Syscall::test_050_mmap PASSED                       [ 51%]
+test_libos.py::TC_30_Syscall::test_051_mmap_sgx PASSED                   [ 52%]
+test_libos.py::TC_30_Syscall::test_052_large_mmap PASSED                 [ 53%]
+test_libos.py::TC_30_Syscall::test_053_mprotect_file_fork PASSED         [ 54%]
+test_libos.py::TC_30_Syscall::test_054_mprotect_prot_growsdown PASSED    [ 55%]
+test_libos.py::TC_30_Syscall::test_055_madvise PASSED                    [ 56%]
+test_libos.py::TC_30_Syscall::test_060_sigaltstack SKIPPED               [ 57%]
+test_libos.py::TC_30_Syscall::test_070_eventfd PASSED                    [ 58%]
+test_libos.py::TC_30_Syscall::test_080_sched PASSED                      [ 59%]
+test_libos.py::TC_30_Syscall::test_090_sighandler_reset PASSED           [ 60%]
+test_libos.py::TC_30_Syscall::test_091_sigaction_per_process PASSED      [ 61%]
+test_libos.py::TC_30_Syscall::test_092_sighandler_sigpipe PASSED         [ 62%]
+test_libos.py::TC_30_Syscall::test_093_sighandler_divbyzero PASSED       [ 63%]
+test_libos.py::TC_30_Syscall::test_094_signal_multithread PASSED         [ 64%]
+test_libos.py::TC_30_Syscall::test_095_kill_all PASSED                   [ 65%]
+test_libos.py::TC_30_Syscall::test_100_get_set_groups PASSED             [ 66%]
+test_libos.py::TC_30_Syscall::test_101_sched_set_get_cpuaffinity PASSED  [ 67%]
+test_libos.py::TC_30_Syscall::test_102_pthread_set_get_affinity PASSED   [ 68%]
+test_libos.py::TC_30_Syscall::test_103_gettimeofday PASSED               [ 69%]
+test_libos.py::TC_31_SyscallSGX::test_000_syscall_redirect SKIPPED       [ 70%]
+test_libos.py::TC_40_FileSystem::test_000_proc PASSED                    [ 71%]
+test_libos.py::TC_40_FileSystem::test_001_devfs PASSED                   [ 72%]
+test_libos.py::TC_40_FileSystem::test_002_device PASSED                  [ 73%]
+test_libos.py::TC_40_FileSystem::test_010_path PASSED                    [ 74%]
+test_libos.py::TC_40_FileSystem::test_020_cpuinfo PASSED                 [ 75%]
+test_libos.py::TC_40_FileSystem::test_030_fdleak PASSED                  [ 76%]
+test_libos.py::TC_40_FileSystem::test_040_sysfs PASSED                   [ 77%]
+test_libos.py::TC_50_GDB::test_000_gdb_backtrace PASSED                  [ 78%]
+test_libos.py::TC_50_GDB::test_010_regs_x86_64 PASSED                    [ 79%]
+test_libos.py::TC_80_Socket::test_000_getsockopt PASSED                  [ 80%]
+test_libos.py::TC_80_Socket::test_010_epoll_wait_timeout PASSED          [ 81%]
+test_libos.py::TC_80_Socket::test_011_epoll_epollet PASSED               [ 82%]
+test_libos.py::TC_80_Socket::test_020_poll PASSED                        [ 83%]
+test_libos.py::TC_80_Socket::test_021_poll_many_types PASSED             [ 84%]
+test_libos.py::TC_80_Socket::test_022_poll_closed_fd PASSED              [ 85%]
+test_libos.py::TC_80_Socket::test_030_ppoll PASSED                       [ 86%]
+test_libos.py::TC_80_Socket::test_040_select PASSED                      [ 87%]
+test_libos.py::TC_80_Socket::test_050_pselect PASSED                     [ 88%]
+test_libos.py::TC_80_Socket::test_060_getsockname PASSED                 [ 89%]
+test_libos.py::TC_80_Socket::test_090_pipe PASSED                        [ 90%]
+test_libos.py::TC_80_Socket::test_091_pipe_nonblocking PASSED            [ 91%]
+test_libos.py::TC_80_Socket::test_092_pipe_ocloexec PASSED               [ 92%]
+test_libos.py::TC_80_Socket::test_095_mkfifo PASSED                      [ 93%]
+test_libos.py::TC_80_Socket::test_100_socket_unix PASSED                 [ 94%]
+test_libos.py::TC_80_Socket::test_200_socket_udp PASSED                  [ 95%]
+test_libos.py::TC_80_Socket::test_300_socket_tcp_msg_peek PASSED         [ 96%]
+test_libos.py::TC_80_Socket::test_310_socket_tcp_ipv6_v6only PASSED      [ 97%]
+test_libos.py::TC_90_CpuidSGX::test_000_cpuid SKIPPED                    [ 98%]
+test_libos.py::TC_91_RdtscSGX::test_000_rdtsc SKIPPED                    [100%]
+
+ generated xml file: /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/test/regression/libos-regression.xml 
+==================== 85 passed, 14 skipped in 14.86 seconds ====================
+[Pipeline] junit
+Recording test results
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] timeout
+Timeout set to expire in 15 min
+[Pipeline] {
+[Pipeline] sh
++ cd LibOS/shim/test/fs
++ make -j8 all
+  [ common.o ]
+  [ common_copy.o ]
+  [ copy_mmap_rev.manifest ]
+  [ copy_mmap_seq.manifest ]
+  [ copy_mmap_whole.manifest ]
+  [ copy_rev.manifest ]
+  [ copy_sendfile.manifest ]
+  [ copy_seq.manifest ]
+  [ copy_whole.manifest ]
+  [ delete.manifest ]
+  [ multiple_writers.manifest ]
+  [ open_close.manifest ]
+  [ open_flags.manifest ]
+  [ read_write.manifest ]
+  [ seek_tell.manifest ]
+  [ stat.manifest ]
+  [ truncate.manifest ]
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_rev.c common.o common_copy.o   -o copy_mmap_rev
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_seq.c common.o common_copy.o   -o copy_mmap_seq
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror -DCOPY_MMAP    copy_mmap_whole.c common.o common_copy.o   -o copy_mmap_whole
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    copy_rev.c common.o common_copy.o   -o copy_rev
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    copy_sendfile.c common.o common_copy.o   -o copy_sendfile
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    copy_seq.c common.o common_copy.o   -o copy_seq
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    copy_whole.c common.o common_copy.o   -o copy_whole
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    delete.c common.o   -o delete
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    multiple_writers.c common.o  -lpthread -o multiple_writers
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    open_close.c common.o   -o open_close
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    open_flags.c common.o   -o open_flags
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    read_write.c common.o   -o read_write
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    seek_tell.c common.o   -o seek_tell
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    stat.c common.o   -o stat
+gcc -Wall -std=c11 -Wmissing-prototypes -gdwarf-2 -g3 -DDEBUG -Werror    truncate.c common.o   -o truncate
++ test -n 
++ python3 -m pytest -v --junit-xml fs.xml test_fs.py test_tmpfs.py test_pf.py
+============================= test session starts ==============================
+platform linux -- Python 3.6.9, pytest-3.3.2, py-1.5.2, pluggy-0.6.0 -- /usr/bin/python3
+cachedir: .cache
+rootdir: /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/test/fs, inifile:
+collecting ... collected 52 items
+
+test_fs.py::TC_00_FileSystem::test_100_open_close PASSED                 [  1%]
+test_fs.py::TC_00_FileSystem::test_101_open_flags PASSED                 [  3%]
+test_fs.py::TC_00_FileSystem::test_110_read_write PASSED                 [  5%]
+test_fs.py::TC_00_FileSystem::test_115_seek_tell PASSED                  [  7%]
+test_fs.py::TC_00_FileSystem::test_120_file_delete PASSED                [  9%]
+test_fs.py::TC_00_FileSystem::test_130_file_stat PASSED                  [ 11%]
+test_fs.py::TC_00_FileSystem::test_140_file_truncate PASSED              [ 13%]
+test_fs.py::TC_00_FileSystem::test_200_copy_dir_whole PASSED             [ 15%]
+test_fs.py::TC_00_FileSystem::test_201_copy_dir_seq PASSED               [ 17%]
+test_fs.py::TC_00_FileSystem::test_202_copy_dir_rev PASSED               [ 19%]
+test_fs.py::TC_00_FileSystem::test_203_copy_dir_sendfile PASSED          [ 21%]
+test_fs.py::TC_00_FileSystem::test_204_copy_dir_mmap_whole PASSED        [ 23%]
+test_fs.py::TC_00_FileSystem::test_205_copy_dir_mmap_seq PASSED          [ 25%]
+test_fs.py::TC_00_FileSystem::test_206_copy_dir_mmap_rev PASSED          [ 26%]
+test_fs.py::TC_00_FileSystem::test_210_copy_dir_mounted PASSED           [ 28%]
+test_fs.py::TC_01_Sync::test_001_multiple_writers_many_threads PASSED    [ 30%]
+test_fs.py::TC_01_Sync::test_002_multiple_writers_many_processes SKIPPED [ 32%]
+test_fs.py::TC_01_Sync::test_003_multiple_writers_many_processes_and_threads SKIPPED [ 34%]
+test_tmpfs.py::TC_10_Tmpfs::test_100_open_close FAILED                   [ 36%]
+test_tmpfs.py::TC_10_Tmpfs::test_101_open_flags <- test_fs.py FAILED     [ 38%]
+test_tmpfs.py::TC_10_Tmpfs::test_110_read_write FAILED                   [ 40%]
+test_tmpfs.py::TC_10_Tmpfs::test_115_seek_tell SKIPPED                   [ 42%]
+test_tmpfs.py::TC_10_Tmpfs::test_120_file_delete SKIPPED                 [ 44%]
+test_tmpfs.py::TC_10_Tmpfs::test_130_file_stat SKIPPED                   [ 46%]
+test_tmpfs.py::TC_10_Tmpfs::test_140_file_truncate SKIPPED               [ 48%]
+test_tmpfs.py::TC_10_Tmpfs::test_200_copy_dir_whole <- test_fs.py FAILED [ 50%]
+test_tmpfs.py::TC_10_Tmpfs::test_201_copy_dir_seq <- test_fs.py FAILED   [ 51%]
+test_tmpfs.py::TC_10_Tmpfs::test_202_copy_dir_rev <- test_fs.py FAILED   [ 53%]
+test_tmpfs.py::TC_10_Tmpfs::test_203_copy_dir_sendfile <- test_fs.py FAILED [ 55%]
+test_tmpfs.py::TC_10_Tmpfs::test_204_copy_dir_mmap_whole SKIPPED         [ 57%]
+test_tmpfs.py::TC_10_Tmpfs::test_205_copy_dir_mmap_seq SKIPPED           [ 59%]
+test_tmpfs.py::TC_10_Tmpfs::test_206_copy_dir_mmap_rev SKIPPED           [ 61%]
+test_tmpfs.py::TC_10_Tmpfs::test_210_copy_dir_mounted SKIPPED            [ 63%]
+test_pf.py::TC_50_ProtectedFiles::test_000_gen_key SKIPPED               [ 65%]
+test_pf.py::TC_50_ProtectedFiles::test_010_encrypt_decrypt SKIPPED       [ 67%]
+test_pf.py::TC_50_ProtectedFiles::test_100_open_close SKIPPED            [ 69%]
+test_pf.py::TC_50_ProtectedFiles::test_101_open_flags SKIPPED            [ 71%]
+test_pf.py::TC_50_ProtectedFiles::test_110_read_write <- test_fs.py SKIPPED [ 73%]
+test_pf.py::TC_50_ProtectedFiles::test_115_seek_tell SKIPPED             [ 75%]
+test_pf.py::TC_50_ProtectedFiles::test_120_file_delete <- test_fs.py SKIPPED [ 76%]
+test_pf.py::TC_50_ProtectedFiles::test_130_file_stat SKIPPED             [ 78%]
+test_pf.py::TC_50_ProtectedFiles::test_140_file_truncate SKIPPED         [ 80%]
+test_pf.py::TC_50_ProtectedFiles::test_150_file_rename SKIPPED           [ 82%]
+test_pf.py::TC_50_ProtectedFiles::test_200_copy_dir_whole <- test_fs.py SKIPPED [ 84%]
+test_pf.py::TC_50_ProtectedFiles::test_201_copy_dir_seq <- test_fs.py SKIPPED [ 86%]
+test_pf.py::TC_50_ProtectedFiles::test_202_copy_dir_rev <- test_fs.py SKIPPED [ 88%]
+test_pf.py::TC_50_ProtectedFiles::test_203_copy_dir_sendfile <- test_fs.py SKIPPED [ 90%]
+test_pf.py::TC_50_ProtectedFiles::test_204_copy_dir_mmap_whole SKIPPED   [ 92%]
+test_pf.py::TC_50_ProtectedFiles::test_205_copy_dir_mmap_seq SKIPPED     [ 94%]
+test_pf.py::TC_50_ProtectedFiles::test_206_copy_dir_mmap_rev SKIPPED     [ 96%]
+test_pf.py::TC_50_ProtectedFiles::test_210_copy_dir_mounted SKIPPED      [ 98%]
+test_pf.py::TC_50_ProtectedFiles::test_500_invalid SKIPPED               [100%]
+
+ generated xml file: /home/jenkins/workspace/graphene-debug-18.04/LibOS/shim/test/fs/fs.xml 
+=================================== FAILURES ===================================
+_______________________ TC_10_Tmpfs.test_100_open_close ________________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_100_open_close>
+
+    def test_100_open_close(self):
+        output_path = os.path.join(self.OUTPUT_DIR, 'test_100') # new file to be created
+>       stdout, stderr = self.run_binary(['open_close', 'W', output_path])
+
+test_tmpfs.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_100_open_close>
+args = ['open_close', 'W', '/mnt-tmpfs/test_100'], timeout = 10, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53ac0aa278>
+stdout = b'Random seed: 1621268299\nERROR: Failed to open output file /mnt-tmpfs/test_100: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['open_close', 'W', '/mnt-tmpfs/test_100']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+ERROR: Failed to open output file /mnt-tmpfs/test_100: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+_______________________ TC_10_Tmpfs.test_101_open_flags ________________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_101_open_flags>
+
+    def test_101_open_flags(self):
+        file_path = os.path.join(self.OUTPUT_DIR, 'test_101') # new file to be created
+>       stdout, stderr = self.run_binary(['open_flags', file_path])
+
+test_fs.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_101_open_flags>
+args = ['open_flags', '/mnt-tmpfs/test_101'], timeout = 10, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53abfc8b00>
+stdout = b"Random seed: 1621268299\nERROR: open(O_CREAT | O_EXCL | O_RDWR) [doesn't exist] failed!\n"
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['open_flags', '/mnt-tmpfs/test_101']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+ERROR: open(O_CREAT | O_EXCL | O_RDWR) [doesn't exist] failed!
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+_______________________ TC_10_Tmpfs.test_110_read_write ________________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_110_read_write>
+
+    def test_110_read_write(self):
+        file_path = os.path.join(self.OUTPUT_DIR, 'test_110') # new file to be created
+>       stdout, stderr = self.run_binary(['read_write', file_path])
+
+test_tmpfs.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_110_read_write>
+args = ['read_write', '/mnt-tmpfs/test_110'], timeout = 10, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53abfef278>
+stdout = b'Random seed: 1621268299\nERROR: Failed to open output file /mnt-tmpfs/test_110: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['read_write', '/mnt-tmpfs/test_110']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+ERROR: Failed to open output file /mnt-tmpfs/test_110: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+_____________________ TC_10_Tmpfs.test_200_copy_dir_whole ______________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_200_copy_dir_whole>
+
+    def test_200_copy_dir_whole(self):
+>       self.do_copy_test('copy_whole', 30)
+
+test_fs.py:287: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_fs.py:283: in do_copy_test
+    timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_200_copy_dir_whole>
+args = ['copy_whole', 'tmp/input', '/mnt-tmpfs'], timeout = 30, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53abfbef60>
+stdout = b'Random seed: 1621268299\nopendir(tmp/input) OK\nreaddir(.) OK\nreaddir(..) OK\nreaddir(256) OK\nopen(256) input OK\nfstat(256) input OK\nERROR: Failed to open output file /mnt-tmpfs/256: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['copy_whole', 'tmp/input', '/mnt-tmpfs']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+opendir(tmp/input) OK
+readdir(.) OK
+readdir(..) OK
+readdir(256) OK
+open(256) input OK
+fstat(256) input OK
+ERROR: Failed to open output file /mnt-tmpfs/256: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+______________________ TC_10_Tmpfs.test_201_copy_dir_seq _______________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_201_copy_dir_seq>
+
+    def test_201_copy_dir_seq(self):
+>       self.do_copy_test('copy_seq', 60)
+
+test_fs.py:290: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_fs.py:283: in do_copy_test
+    timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_201_copy_dir_seq>
+args = ['copy_seq', 'tmp/input', '/mnt-tmpfs'], timeout = 60, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53ac093f28>
+stdout = b'Random seed: 1621268299\nopendir(tmp/input) OK\nreaddir(.) OK\nreaddir(..) OK\nreaddir(256) OK\nopen(256) input OK\nfstat(256) input OK\nERROR: Failed to open output file /mnt-tmpfs/256: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['copy_seq', 'tmp/input', '/mnt-tmpfs']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+opendir(tmp/input) OK
+readdir(.) OK
+readdir(..) OK
+readdir(256) OK
+open(256) input OK
+fstat(256) input OK
+ERROR: Failed to open output file /mnt-tmpfs/256: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+______________________ TC_10_Tmpfs.test_202_copy_dir_rev _______________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_202_copy_dir_rev>
+
+    def test_202_copy_dir_rev(self):
+>       self.do_copy_test('copy_rev', 60)
+
+test_fs.py:293: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_fs.py:283: in do_copy_test
+    timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_202_copy_dir_rev>
+args = ['copy_rev', 'tmp/input', '/mnt-tmpfs'], timeout = 60, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53abfef7b8>
+stdout = b'Random seed: 1621268299\nopendir(tmp/input) OK\nreaddir(.) OK\nreaddir(..) OK\nreaddir(256) OK\nopen(256) input OK\nfstat(256) input OK\nERROR: Failed to open output file /mnt-tmpfs/256: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['copy_rev', 'tmp/input', '/mnt-tmpfs']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+opendir(tmp/input) OK
+readdir(.) OK
+readdir(..) OK
+readdir(256) OK
+open(256) input OK
+fstat(256) input OK
+ERROR: Failed to open output file /mnt-tmpfs/256: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+____________________ TC_10_Tmpfs.test_203_copy_dir_sendfile ____________________
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_203_copy_dir_sendfile>
+
+    def test_203_copy_dir_sendfile(self):
+>       self.do_copy_test('copy_sendfile', 60)
+
+test_fs.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+test_fs.py:283: in do_copy_test
+    timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_tmpfs.TC_10_Tmpfs testMethod=test_203_copy_dir_sendfile>
+args = ['copy_sendfile', 'tmp/input', '/mnt-tmpfs'], timeout = 60, prefix = []
+kwds = {}, process = <subprocess.Popen object at 0x7f53abf9eef0>
+stdout = b'Random seed: 1621268299\nopendir(tmp/input) OK\nreaddir(.) OK\nreaddir(..) OK\nreaddir(256) OK\nopen(256) input OK\nfstat(256) input OK\nERROR: Failed to open output file /mnt-tmpfs/256: Permission denied\n'
+stderr = b'error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!\n'
+
+    def run_binary(self, args, *, timeout=None, prefix=None, **kwds):
+        timeout = (max(self.DEFAULT_TIMEOUT, timeout) if timeout is not None
+            else self.DEFAULT_TIMEOUT)
+    
+        if not self.loader_path.exists():
+            self.fail('loader ({}) not found'.format(self.loader_path))
+        if not self.libpal_path.exists():
+            self.fail('libpal ({}) not found'.format(self.libpal_path))
+    
+        if prefix is None:
+            prefix = []
+    
+        with subprocess.Popen(
+                [*prefix, fspath(self.loader_path), fspath(self.libpal_path), 'init', *args],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                preexec_fn=os.setpgrp,
+                **kwds) as process:
+            try:
+                stdout, stderr = process.communicate(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                self.fail('timeout ({} s) expired'.format(timeout))
+    
+            self.print_output(stdout, stderr)
+    
+            if process.returncode:
+                raise subprocess.CalledProcessError(
+>                   process.returncode, args, stdout, stderr)
+E               subprocess.CalledProcessError: Command '['copy_sendfile', 'tmp/input', '/mnt-tmpfs']' returned non-zero exit status 255.
+
+../../../../Scripts/regression.py:98: CalledProcessError
+----------------------------- Captured stdout call -----------------------------
+Random seed: 1621268299
+opendir(tmp/input) OK
+readdir(.) OK
+readdir(..) OK
+readdir(256) OK
+open(256) input OK
+fstat(256) input OK
+ERROR: Failed to open output file /mnt-tmpfs/256: Permission denied
+----------------------------- Captured stderr call -----------------------------
+error: Using insecure argv source. Graphene will continue application execution, but this configuration must not be used in production!
+=============== 7 failed, 16 passed, 29 skipped in 2.34 seconds ================
+[Pipeline] junit
+Recording test results
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 70beb8c848aa999d7c845ccf922b3eb359677edd489c4cad7d8f16404e74266d
+$ docker rm -f 70beb8c848aa999d7c845ccf922b3eb359677edd489c4cad7d8f16404e74266d
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of cfe5d1a1701880f131a476acafda83864c9ba4fd to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/5474/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+ERROR: script returned exit code 1
+Finished: FAILURE

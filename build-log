@@ -1,0 +1,376 @@
+GitHub pull request #2453 of commit d4e4260fcf6202429e4ac865160fd1888f717a32, no merge conflicts.
+Setting status of d4e4260fcf6202429e4ac865160fd1888f717a32 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-18.04/5789 and message: 'Build started for merge commit.'
+Using context: Jenkins-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-release.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/2453/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 6aa0d285f052474ad6cddafe132f5db1d224d96a (refs/remotes/origin/pr/2453/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6aa0d285f052474ad6cddafe132f5db1d224d96a # timeout=10
+Commit message: "Merge d4e4260fcf6202429e4ac865160fd1888f717a32 into b37ac75efec0c1183fd42340ce2d3e04dcfb3388"
+ > git rev-list --no-walk 4ca4926379aa54a1d15318435e6aca2dbb853697 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Running on slave-bobothebear in /home/jenkins/workspace/graphene-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 6aa0d285f052474ad6cddafe132f5db1d224d96a (refs/remotes/origin/pr/2453/merge)
+Commit message: "Merge d4e4260fcf6202429e4ac865160fd1888f717a32 into b37ac75efec0c1183fd42340ce2d3e04dcfb3388"
+ > git rev-parse refs/remotes/origin/pr/2453/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6aa0d285f052474ad6cddafe132f5db1d224d96a # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-docker.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-18.04-5789 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  498.2MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 81bcf752ac3d
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> b1d9ffcfe741
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> ee7b6dcd1c45
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 894288bd61fe
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 1d156fb05ef0
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 303586f286a4
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> b0e7602c932b
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 4d4d8103e228
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 91a9f9038861
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> 06f9e9900558
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> defac0ec8a2e
+Successfully built defac0ec8a2e
+Successfully tagged local:jenkins-graphene-18.04-5789
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-18.04-5789
+.
+[Pipeline] withDockerContainer
+slave-bobothebear does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 --device=/dev/kmsg:/dev/kmsg --env=PATH=/home/jenkins/workspace/graphene-18.04/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin -w /home/jenkins/workspace/graphene-18.04 -v /home/jenkins/workspace/graphene-18.04:/home/jenkins/workspace/graphene-18.04:rw,z -v /home/jenkins/workspace/graphene-18.04@tmp:/home/jenkins/workspace/graphene-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-18.04-5789 cat
+$ docker top 1d45e84215edf7bb01c3c942b41c57ab0345bb687131e2efd3a4af9925e917a1 -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] sh
++ python3 Scripts/get-python-platlib.py /home/jenkins/workspace/graphene-18.04/usr
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-18.04/.pylintrc
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-nosgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -j8
+make -C Scripts all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/Scripts'
+make -C common all
+make[1]: Entering directory '/home/jenkins/workspace/graphene-18.04/common'
+make -C src
+make[2]: Entering directory '/home/jenkins/workspace/graphene-18.04/common/src'
+../../Scripts/download --output uthash.h --sha256 ba9af0e8c902108cc40be8e742ff4fcbb0e93062d91aefd6070b70d4e067c2ac --url https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h --url https://packages.grapheneproject.io/distfiles/uthash-2.1.0/src/uthash.h
+../../Scripts/download --output crypto/mbedtls-2.26.0.tar.gz --url https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz --url https://packages.grapheneproject.io/distfiles/mbedtls-2.26.0.tar.gz --sha256 35d8d87509cd0d002bddbd5508b9d2b931c5e83747d087234cc7ad551d53fe05
+../../Scripts/download --output toml.h --sha256 e79d6d272576561e1b46ee001b0dd6b554330843e6fc7c658a548c659f282ac5 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+../../Scripts/download --output toml.c --sha256 c21a546ab767a7e40d4f65df179d70357059c15e4439e1980d791625655fbbc6 --url https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c --url https://packages.grapheneproject.io/distfiles/tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+download: Trying to fetch https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz
+download: Trying to fetch https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+download: Trying to fetch https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-06-17 17:41:58--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.c
+--2021-06-17 17:41:58--  https://raw.githubusercontent.com/cktan/tomlc99/5be06807ad5f2230cad99e15380c4f4076c9dd83/toml.h
+--2021-06-17 17:41:58--  https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz
+--2021-06-17 17:41:58--  https://raw.githubusercontent.com/troydhanson/uthash/8b214aefcb81df86a7e5e0d4fa20e59a6c18bc02/src/uthash.h
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving github.com (github.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.26.0 [following]
+--2021-06-17 17:41:58--  https://codeload.github.com/ARMmbed/mbedtls/tar.gz/mbedtls-2.26.0
+Resolving codeload.github.com (codeload.github.com)... 140.82.114.9
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.9|:443... connected.
+200 OK
+Length: 78453 (77K) [text/plain]
+Saving to: ‘./tmp.n18ne4lmB4/unverified’
+
+     0K .......... .......... .......... ..........HTTP request sent, awaiting response...  .......... 65% 3.51M 0s
+    50K .......... .......... ......                          100% 8.03M=0.02s
+
+2021-06-17 17:41:58 (4.36 MB/s) - ‘./tmp.n18ne4lmB4/unverified’ saved [78453/78453]
+
+download: Fetched 'uthash.h' (ba9af0e8...) successfully.
+patch -p1 < uthash.patch || exit 255
+200 OK
+Length: 46537 (45K) [text/plain]
+Saving to: ‘./tmp.bOnRJT6UZa/unverified’
+
+     0K .......... .......... ......200 OK
+Length: 5348 (5.2K) [text/plain]
+Saving to: ‘./tmp.HAfdVCE3Ck/unverified’
+patching file uthash.h
+...
+     0K .. .......                                                 100% 21.2M=0s
+
+2021-06-17 17:41:58 (21.2 MB/s) - ‘./tmp.HAfdVCE3Ck/unverified’ saved [5348/5348]
+
+.......cp uthash.h ../include/uthash.h
+touch uthash.patched
+download: Fetched 'toml.h' (e79d6d27...) successfully.
+200 OK
+Length: 4080986 (3.9M) [application/x-gzip]
+Saving to: ‘./tmp.sCa3ZXpq5e/unverified’
+
+     0K .......... . .....     100% 4.27M=0.01s
+
+2021-06-17 17:41:58 (4.27 MB/s) - ‘./tmp.bOnRJT6UZa/unverified’ saved [46537/46537]
+
+download: Fetched 'toml.c' (c21a546a...) successfully.
+patch -p1 -l < toml.patch || exit 255
+......... .......... .....patching file toml.c
+patching file toml.h
+cp toml.h ../include/toml.h
+touch toml.patched
+  [ avl_tree.o ]
+  [ network/hton.o ]
+  [ network/inet_pton.o ]
+  [ path.o ]
+  [ stack_protector.o ]
+..... ........  [ stdlib/printfmt.o ]
+..  1% 1.70M 2s
+    50K .......... .......  [ string/atoi.o ]
+... .......... .......... ..........  2% 3.32M 2s
+   100K .......... .......... .......... .......... ..........  3% 33.7M 1s
+   150K .......... .......... .......... .......... ..........  5% 3.96M 1s
+   200K .......... .......... .......... .......... ..........  6% 55.4M 1s
+   250K .......... .......... .......... .......... ..........  7% 3.62M 1s
+   300K .......... .......... .......... .......... ..........  8% 50.7M 1s
+   350K .......... .......... .......... .......... .......... 10% 63.6M 1s
+   400K .......... .......... .......... .......... .......... 11% 84.3M 1s
+   450K .  [ string/ctype.o ]
+......... .......... .......... .......... ...  [ string/memcmp.o ]
+string/atoi.c: In function ‘str_to_ulong’:
+string/atoi.c:95:13: error: ‘digit’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+         if (__builtin_add_overflow(_value, digit, &_value))
+             ^~~~~~~~~~~~~~~~~~~~~~
+....... 12% 4.35M 1s
+   500K .......... .......... .......... .......... .......... 13%  131M 1s
+   550K .......... .......... .......... .......... .......... 15% 93.7M 0s
+   600K .......... .......... .......... .......... .......... 16%  118M 0s
+   650K .......... .......... .......... .......... .......... 17%  100M 0s
+   700K .......... .......... .......... .......... .......... 18%  126M 0s
+   750K .......... .......... .......... .......... .......... 20% 92.5M 0s
+   800K .......... .......... .......... .......... .......... 21%  114M 0s
+   850K .......... .......... .......... .......... .......... 22%  108M 0s
+   900K .......... .......... ......cc1: all warnings being treated as errors
+Makefile:121: recipe for target 'string/atoi.o' failed
+make[2]: *** [string/atoi.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+.... .......... .......... 23% 4.53M 0s
+   950K .......... .......... .......... .......... .......... 25%  100M 0s
+  1000K .......... .......... .......... .......... .......... 26%  115M 0s
+  1050K .......... .......... .......... .......... .......... 27%  114M 0s
+  1100K .......... .......... .......... .......... .......... 28%  105M 0s
+  1150K .......... .......... .......... .......... .......... 30% 84.1M 0s
+  1200K .......... .......... .......... .......... .......... 31%  115M 0s
+  1250K .......... .......... .......... .......... .......... 32%  119M 0s
+  1300K .......... .......... .......... .......... .......... 33%  104M 0s
+  1350K .......... .......... .......... .......... .......... 35%  107M 0s
+  1400K .......... .......... .......... .......... .......... 36%  115M 0s
+  1450K .......... .......... .......... .......... .......... 37%  116M 0s
+  1500K .......... .......... .......... .......... .......... 38%  106M 0s
+  1550K .......... .......... .......... .......... .......... 40% 5.32M 0s
+  1600K .......... .......... .......... .......... .......... 41% 93.4M 0s
+  1650K .......... .......... .......... .......... .......... 42% 87.6M 0s
+  1700K .......... .......... .......... .......... .......... 43%  113M 0s
+  1750K .......... .......... .......... .......... .......... 45%  133M 0s
+  1800K .......... .......... .......... .......... .......... 46%  129M 0s
+  1850K .......... .......... .......... .......... .......... 47%  122M 0s
+  1900K .......... .......... .......... .......... .......... 48%  121M 0s
+  1950K .......... .......... .......... .......... .......... 50%  118M 0s
+  2000K .......... .......... .......... .......... .......... 51%  119M 0s
+  2050K .......... .......... .......... .......... .......... 52% 88.4M 0s
+  2100K .......... .......... .......... .......... .......... 53% 43.2M 0s
+  2150K .......... .......... .......... .......... .......... 55% 50.9M 0s
+  2200K .......... .......... .......... .......... .......... 56% 56.7M 0s
+  2250K .......... .......... .......... .......... .......... 57%  125M 0s
+  2300K .......... .......... .......... .......... .......... 58%  119M 0s
+  2350K .......... .......... .......... .......... .......... 60%  121M 0s
+  2400K .......... .......... .......... .......... .......... 61% 87.4M 0s
+  2450K .......... .......... .......... .......... .......... 62%  140M 0s
+  2500K .......... .......... .......... .......... .......... 63%  113M 0s
+  2550K .......... .......... .......... .......... .......... 65%  121M 0s
+  2600K .......... .......... .......... .......... .......... 66%  126M 0s
+  2650K .......... .......... .......... .......... .......... 67%  100M 0s
+  2700K .......... .......... .......... .......... .......... 69% 56.6M 0s
+  2750K .......... .......... .......... .......... .......... 70% 61.3M 0s
+  2800K .......... .......... .......... .......... .......... 71% 80.9M 0s
+  2850K .......... .......... .......... .......... .......... 72% 96.3M 0s
+  2900K .......... .......... .......... .......... .......... 74%  290M 0s
+  2950K .......... .......... .......... .......... .......... 75%  336M 0s
+  3000K .......... .......... .......... .......... .......... 76%  339M 0s
+  3050K .......... .......... .......... .......... .......... 77%  236M 0s
+  3100K .......... .......... .......... .......... .......... 79% 72.8M 0s
+  3150K .......... .......... .......... .......... .......... 80%  131M 0s
+  3200K .......... .......... .......... .......... .......... 81%  150M 0s
+  3250K .......... .......... .......... .......... .......... 82%  140M 0s
+  3300K .......... .......... .......... .......... .......... 84%  109M 0s
+  3350K .......... .......... .......... .......... .......... 85%  121M 0s
+  3400K .......... .......... .......... .......... .......... 86%  122M 0s
+  3450K .......... .......... .......... .......... .......... 87%  126M 0s
+  3500K .......... .......... .......... .......... .......... 89%  106M 0s
+  3550K .......... .......... .......... .......... .......... 90%  129M 0s
+  3600K .......... .......... .......... .......... .......... 91%  136M 0s
+  3650K .......... .......... .......... .......... .......... 92%  127M 0s
+  3700K .......... .......... .......... .......... .......... 94%  134M 0s
+  3750K .......... .......... .......... .......... .......... 95%  132M 0s
+  3800K .......... .......... .......... .......... .......... 96% 82.9M 0s
+  3850K .......... .......... .......... .......... .......... 97%  109M 0s
+  3900K .......... .......... .......... .......... .......... 99%  115M 0s
+  3950K .......... .......... .......... .....                100%  175M=0.1s
+
+2021-06-17 17:41:58 (28.6 MB/s) - ‘./tmp.sCa3ZXpq5e/unverified’ saved [4080986/4080986]
+
+download: Fetched 'crypto/mbedtls-2.26.0.tar.gz' (35d8d875...) successfully.
+make[2]: Leaving directory '/home/jenkins/workspace/graphene-18.04/common/src'
+Makefile:7: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/jenkins/workspace/graphene-18.04/common'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 1d45e84215edf7bb01c3c942b41c57ab0345bb687131e2efd3a4af9925e917a1
+$ docker rm -f 1d45e84215edf7bb01c3c942b41c57ab0345bb687131e2efd3a4af9925e917a1
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of d4e4260fcf6202429e4ac865160fd1888f717a32 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-18.04/5789 and message: 'Build finished. '
+Using context: Jenkins-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

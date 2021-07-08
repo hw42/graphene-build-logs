@@ -1,0 +1,401 @@
+GitHub pull request #2466 of commit 58f0dfe2142c065b47b18bd6ce65d7d2d2801d68, no merge conflicts.
+Setting status of 58f0dfe2142c065b47b18bd6ce65d7d2d2801d68 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/5849/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read .ci/linux-sgx-ubuntu18.04-gcc-release.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2466/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 60e6b13ba7c56d2cb54ecb69de0f05e74f533b24 (refs/remotes/origin/pr/2466/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6b13ba7c56d2cb54ecb69de0f05e74f533b24 # timeout=20
+Commit message: "Merge 58f0dfe2142c065b47b18bd6ce65d7d2d2801d68 into f1a9c785128522ae4abc604a7ae10f4d4e7f0573"
+ > git rev-list --no-walk 7e338a3a38c109af482f3f3e1699472f10bb0e42 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-seymour in /home/jenkins/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 60e6b13ba7c56d2cb54ecb69de0f05e74f533b24 (refs/remotes/origin/pr/2466/merge)
+Commit message: "Merge 58f0dfe2142c065b47b18bd6ce65d7d2d2801d68 into f1a9c785128522ae4abc604a7ae10f4d4e7f0573"
+ > git rev-parse refs/remotes/origin/pr/2466/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6b13ba7c56d2cb54ecb69de0f05e74f533b24 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-docker.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-sgx-18.04-5849 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  545.6MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 7d0d8fa37224
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 5cd122379b5c
+Step 3/11 : RUN python3 -m pip install -U     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     'toml>=0.10'     'meson<0.56'
+ ---> Running in f552cbe10387
+Collecting asv
+  Downloading https://files.pythonhosted.org/packages/46/c7/a5144ca1409a4a1a8212ebdbe4a78df7ebb3758ff44dfe97c881fc08927e/asv-0.4.2.tar.gz (476kB)
+Collecting recommonmark
+  Downloading https://files.pythonhosted.org/packages/c6/77/ed589c75db5d02a77a1d5d2d9abc63f29676467d396c64277f98b50b79c2/recommonmark-0.7.1-py2.py3-none-any.whl
+Collecting Sphinx==1.8
+  Downloading https://files.pythonhosted.org/packages/2f/2a/c82e6ca945d05a540a70bd464fd043ea6d6b99168d949e2ad009380bf540/Sphinx-1.8.0-py2.py3-none-any.whl (3.1MB)
+Collecting sphinx_rtd_theme
+  Downloading https://files.pythonhosted.org/packages/ac/24/2475e8f83519b54b2148d4a56eb1111f9cec630d088c3ffc214492c12107/sphinx_rtd_theme-0.5.2-py2.py3-none-any.whl (9.1MB)
+Collecting toml>=0.10
+  Downloading https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl
+Collecting meson<0.56
+  Downloading https://files.pythonhosted.org/packages/5e/da/e6f22f0d3730635aa8504cc0d7ae16406b3794bbfea04c854e2c215c7acb/meson-0.55.3.tar.gz (1.7MB)
+Collecting six>=1.4 (from asv)
+  Downloading https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
+Collecting docutils>=0.11 (from recommonmark)
+  Downloading https://files.pythonhosted.org/packages/4c/5e/6003a0d1f37725ec2ebd4046b657abb9372202655f96e76795dca8c0063c/docutils-0.17.1-py2.py3-none-any.whl (575kB)
+Collecting commonmark>=0.8.1 (from recommonmark)
+  Downloading https://files.pythonhosted.org/packages/b1/92/dfd892312d822f36c55366118b95d914e5f16de11044a27cf10a7d71bbbf/commonmark-0.9.1-py2.py3-none-any.whl (51kB)
+Collecting packaging (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/3c/77/e2362b676dc5008d81be423070dd9577fa03be5da2ba1105811900fda546/packaging-21.0-py3-none-any.whl (40kB)
+Collecting snowballstemmer>=1.1 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/f6/6e/7e07970c90a57c21da92013c5ba47f8e9598c17e88cc35b008ca61225ed3/snowballstemmer-2.1.0-py2.py3-none-any.whl (93kB)
+Collecting requests>=2.0.0 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl (61kB)
+Collecting sphinxcontrib-websupport (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/e9/e5/2a547830845e6e6e5d97b3246fc1e3ec74cba879c9adc5a8e27f1291bca3/sphinxcontrib_websupport-1.2.4-py2.py3-none-any.whl
+Collecting Jinja2>=2.3 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/80/21/ae597efc7ed8caaa43fb35062288baaf99a7d43ff0cf66452ddf47604ee6/Jinja2-3.0.1-py3-none-any.whl (133kB)
+Collecting Pygments>=2.0 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/a6/c9/be11fce9810793676017f79ffab3c6cb18575844a6c7b8d4ed92f95de604/Pygments-2.9.0-py3-none-any.whl (1.0MB)
+Collecting setuptools (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/a2/e1/902fbc2f61ad6243cd3d57ffa195a9eb123021ec912ec5d811acf54a39f8/setuptools-57.1.0-py3-none-any.whl (818kB)
+Collecting alabaster<0.8,>=0.7 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
+Collecting imagesize (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/31/b2/b5522a0c8d11e4aff83f8342f3f0dea68c2fb25aa44403e420587f0ce204/imagesize-1.2.0-py2.py3-none-any.whl
+Collecting babel!=2.0,>=1.3 (from Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/aa/96/4ba93c5f40459dc850d25f9ba93f869a623e77aaecc7a9344e19c01942cf/Babel-2.9.1-py2.py3-none-any.whl (8.8MB)
+Collecting pyparsing>=2.0.2 (from packaging->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl (67kB)
+Collecting idna<3,>=2.5 (from requests>=2.0.0->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl (58kB)
+Collecting chardet<5,>=3.0.2 (from requests>=2.0.0->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl (178kB)
+Collecting urllib3<1.27,>=1.21.1 (from requests>=2.0.0->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/5f/64/43575537846896abac0b15c3e5ac678d787a4021e906703f1766bfb8ea11/urllib3-1.26.6-py2.py3-none-any.whl (138kB)
+Collecting certifi>=2017.4.17 (from requests>=2.0.0->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/05/1b/0a0dece0e8aa492a6ec9e4ad2fe366b511558cdc73fd3abc82ba7348e875/certifi-2021.5.30-py2.py3-none-any.whl (145kB)
+Collecting sphinxcontrib-serializinghtml (from sphinxcontrib-websupport->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/c6/77/5464ec50dd0f1c1037e3c93249b040c8fc8078fdda97530eeb02424b6eea/sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl (94kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=2.3->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/fc/d6/57f9a97e56447a1e340f8574836d3b636e2c14de304943836bd645fa9c7e/MarkupSafe-2.0.1-cp36-cp36m-manylinux1_x86_64.whl
+Collecting pytz>=2015.7 (from babel!=2.0,>=1.3->Sphinx==1.8)
+  Downloading https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl (510kB)
+Building wheels for collected packages: asv, meson
+  Running setup.py bdist_wheel for asv: started
+  Running setup.py bdist_wheel for asv: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/61/a0/e8/a847b1ef21d2cb3f7ade44b545592945e75beabd731b4f759d
+  Running setup.py bdist_wheel for meson: started
+  Running setup.py bdist_wheel for meson: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/04/20/8a/601ddd75225e50951f88a9edd77d8269b143bce1d4793384b5
+Successfully built asv meson
+Installing collected packages: six, asv, docutils, pyparsing, packaging, snowballstemmer, idna, chardet, urllib3, certifi, requests, sphinxcontrib-serializinghtml, sphinxcontrib-websupport, MarkupSafe, Jinja2, Pygments, setuptools, alabaster, imagesize, pytz, babel, Sphinx, commonmark, recommonmark, sphinx-rtd-theme, toml, meson
+  Found existing installation: six 1.11.0
+    Not uninstalling six at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: docutils 0.14
+    Not uninstalling docutils at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: idna 2.6
+    Not uninstalling idna at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: chardet 3.0.4
+    Not uninstalling chardet at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: urllib3 1.22
+    Not uninstalling urllib3 at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: certifi 2018.1.18
+    Not uninstalling certifi at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: requests 2.18.4
+    Not uninstalling requests at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: MarkupSafe 1.0
+    Not uninstalling markupsafe at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: Jinja2 2.10
+    Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: Pygments 2.2.0
+    Not uninstalling pygments at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: setuptools 39.0.1
+    Not uninstalling setuptools at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: alabaster 0.7.8
+    Not uninstalling alabaster at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: imagesize 0.7.1
+    Not uninstalling imagesize at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: pytz 2018.3
+    Not uninstalling pytz at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: Babel 2.4.0
+    Not uninstalling babel at /usr/lib/python3/dist-packages, outside environment /usr
+  Found existing installation: Sphinx 1.6.7
+    Not uninstalling sphinx at /usr/lib/python3/dist-packages, outside environment /usr
+Successfully installed Jinja2-3.0.1 MarkupSafe-2.0.1 Pygments-2.9.0 Sphinx-1.8.0 alabaster-0.7.12 asv-0.4.2 babel-2.9.1 certifi-2021.5.30 chardet-4.0.0 commonmark-0.9.1 docutils-0.17.1 idna-2.10 imagesize-1.2.0 meson-0.55.3 packaging-21.0 pyparsing-2.4.7 pytz-2021.1 recommonmark-0.7.1 requests-2.25.1 setuptools-57.1.0 six-1.16.0 snowballstemmer-2.1.0 sphinx-rtd-theme-0.5.2 sphinxcontrib-serializinghtml-1.1.5 sphinxcontrib-websupport-1.2.4 toml-0.10.2 urllib3-1.26.6
+Removing intermediate container f552cbe10387
+ ---> 5843d68556b5
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Running in 2d9dbc3612fd
+Removing intermediate container 2d9dbc3612fd
+ ---> ed2e63531928
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Running in 60c6dd19a632
+Removing intermediate container 60c6dd19a632
+ ---> a11b18faa322
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Running in aa406a975c5a
+Removing intermediate container aa406a975c5a
+ ---> be9d79ad45b0
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Running in fc095d0ebe00
+Removing intermediate container fc095d0ebe00
+ ---> c32bbb1325af
+Step 8/11 : WORKDIR /leeroy
+ ---> Running in 659138aae5d7
+Removing intermediate container 659138aae5d7
+ ---> 5510552d6d2d
+Step 9/11 : USER leeroy
+ ---> Running in 7538f326c432
+Removing intermediate container 7538f326c432
+ ---> 1eb588e65f9e
+Step 10/11 : ENV HOME /leeroy
+ ---> Running in c1c2f1ff03ba
+Removing intermediate container c1c2f1ff03ba
+ ---> ad80bff3ae41
+Step 11/11 : CMD ["bash"]
+ ---> Running in 25d6dd125377
+Removing intermediate container 25d6dd125377
+ ---> f48d5fea5e96
+Successfully built f48d5fea5e96
+Successfully tagged local:jenkins-graphene-sgx-18.04-5849
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-sgx-18.04-5849
+.
+[Pipeline] withDockerContainer
+slave-seymour does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 --env=PATH=/home/jenkins/workspace/graphene-sgx-18.04/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin --volume=/lib/modules:/lib/modules:ro --volume=/usr/src:/usr/src:ro --device=/dev/isgx:/dev/isgx --device=/dev/gsgx:/dev/gsgx --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket -w /home/jenkins/workspace/graphene-sgx-18.04 -v /home/jenkins/workspace/graphene-sgx-18.04:/home/jenkins/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04@tmp:/home/jenkins/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-sgx-18.04-5849 cat
+$ docker top dadd7ac3a5071d047aacefefb286bd068f3014e9f73bcb6255d4ca6cabb8e9a1 -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] sh
++ python3 Scripts/get-python-platlib.py /home/jenkins/workspace/graphene-sgx-18.04/usr
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-sgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ openssl genrsa -3 -out Pal/src/host/Linux-SGX/signer/enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus (2 primes)
+.......................++++
+......................................................................................++++
+e is 3 (0x03)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/intel/SGXDataCenterAttestationPrimitives.git
+Cloning into 'SGXDataCenterAttestationPrimitives'...
++ git -C SGXDataCenterAttestationPrimitives checkout DCAP_1.6
+Note: checking out 'DCAP_1.6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 4605fae Intel(R) SGX DCAP 1.6 Release
+[Pipeline] sh
++ meson setup build-dcap --prefix=/home/jenkins/workspace/graphene-sgx-18.04/usr --buildtype=release -Ddirect=disabled -Dsgx=enabled -Dsgx_driver=dcap1.6
+The Meson build system
+Version: 0.55.3
+Source dir: /home/jenkins/workspace/graphene-sgx-18.04
+Build dir: /home/jenkins/workspace/graphene-sgx-18.04/build-dcap
+Build type: native build
+Project name: graphene
+Project version: 1.0
+C compiler for the host machine: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+C linker for the host machine: cc ld.bfd 2.30
+C++ compiler for the host machine: c++ (gcc 7.5.0 "c++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+C++ linker for the host machine: c++ ld.bfd 2.30
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program check-no-reloc.sh found: YES
+Program gen-offsets.py found: YES
+Program gen-pal-map.py found: YES
+Program get-python-platlib.py found: YES
+Program meson-clang-format.sh found: YES
+Program objcopy found: YES
+Program protoc-c found: YES
+Compiler for C supports arguments -Wtrampolines: YES 
+Compiler for C supports arguments -Wnull-dereference: YES 
+Compiler for C supports arguments -Wno-gnu-alignof-expression -Wgnu-alignof-expression: NO 
+meson.build:75: WARNING: Consider using the built-in warning_level option instead of using "-Wall".
+meson.build:75: WARNING: Consider using the built-in warning_level option instead of using "-Wextra".
+Compiler for C supports arguments -fstack-protector-strong -mstack-protector-guard=tls -mstack-protector-guard-reg=%gs -mstack-protector-guard-offset=8: NO 
+Run-time dependency threads found: YES
+Downloading tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83 source from https://github.com/cktan/tomlc99/archive/5be06807ad5f2230cad99e15380c4f4076c9dd83.tar.gz
+Downloading file of unknown size.
+Using tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83 patch from cache.
+
+|Executing subproject tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83 method meson 
+|
+|Project name: tomlc99
+|Project version: undefined
+|C compiler for the host machine: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+|C linker for the host machine: cc ld.bfd 2.30
+|Program patch found: YES
+|Build targets in project: 2
+|Subproject tomlc99-5be06807ad5f2230cad99e15380c4f4076c9dd83 finished.
+
+Downloading uthash-2.1.0 source from https://github.com/troydhanson/uthash/archive/v2.1.0.tar.gz
+Downloading file of unknown size.
+Using uthash-2.1.0 patch from cache.
+
+|Executing subproject uthash-2.1.0 method meson 
+|
+|Project name: uthash
+|Project version: undefined
+|C compiler for the host machine: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+|C linker for the host machine: cc ld.bfd 2.30
+|Program patch found: YES
+|Build targets in project: 3
+|Subproject uthash-2.1.0 finished.
+
+Downloading mbedtls-mbedtls-2.26.0 source from https://github.com/ARMmbed/mbedtls/archive/mbedtls-2.26.0.tar.gz
+Download size: 4080986
+Downloading: ..........
+WARNING: Project targeting '>=0.45' but tried to use feature introduced in '0.55.0': patch_directory.
+
+|Executing subproject mbedtls-mbedtls-2.26.0 method meson 
+|
+|Project name: mbedtls
+|Project version: undefined
+|C compiler for the host machine: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+|C linker for the host machine: cc ld.bfd 2.30
+|Program compile.sh found: YES
+|Program compile-pal.sh found: YES
+|Build targets in project: 5
+|Subproject mbedtls-mbedtls-2.26.0 finished.
+
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Dependency libcurl found: NO found 7.58.0 but need: '>7.58.0'
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency libcurl found: NO 
+
+meson.build:166:4: ERROR: Invalid version of dependency, need 'libcurl' ['>7.58.0'] found '7.58.0'.
+
+A full log can be found at /home/jenkins/workspace/graphene-sgx-18.04/build-dcap/meson-logs/meson-log.txt
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] sh
++ rm -rf build-dcap
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 dadd7ac3a5071d047aacefefb286bd068f3014e9f73bcb6255d4ca6cabb8e9a1
+$ docker rm -f dadd7ac3a5071d047aacefefb286bd068f3014e9f73bcb6255d4ca6cabb8e9a1
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 58f0dfe2142c065b47b18bd6ce65d7d2d2801d68 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/5849/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 1
+Finished: FAILURE

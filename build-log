@@ -1,0 +1,272 @@
+GitHub pull request #2466 of commit 2d09dfbf3f3516d0971f6e80abfdb526b77aec66, no merge conflicts.
+Setting status of 2d09dfbf3f3516d0971f6e80abfdb526b77aec66 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/5848/ and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04
+Checking out git git@github.com:oscarlab/graphene.git into /var/lib/jenkins/workspace/graphene-sgx-18.04@script to read .ci/linux-sgx-ubuntu18.04-gcc-release.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/2466/merge^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 7e338a3a38c109af482f3f3e1699472f10bb0e42 (refs/remotes/origin/pr/2466/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7e338a3a38c109af482f3f3e1699472f10bb0e42 # timeout=20
+Commit message: "Merge 2d09dfbf3f3516d0971f6e80abfdb526b77aec66 into f1a9c785128522ae4abc604a7ae10f4d4e7f0573"
+ > git rev-list --no-walk f21ab24633e179c6203126eeb92c5f065bc247cb # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-seymour in /home/jenkins/workspace/graphene-sgx-18.04
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:oscarlab/graphene.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04 # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:oscarlab/graphene.git # timeout=10
+Fetching upstream changes from git@github.com:oscarlab/graphene.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:oscarlab/graphene.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://wiki.jenkins.io/display/JENKINS/Remove+Git+Plugin+BuildsByBranch+BuildData
+Checking out Revision 7e338a3a38c109af482f3f3e1699472f10bb0e42 (refs/remotes/origin/pr/2466/merge)
+Commit message: "Merge 2d09dfbf3f3516d0971f6e80abfdb526b77aec66 into f1a9c785128522ae4abc604a7ae10f4d4e7f0573"
+ > git rev-parse refs/remotes/origin/pr/2466/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7e338a3a38c109af482f3f3e1699472f10bb0e42 # timeout=20
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-docker.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-sgx-18.04-5848 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  545.6MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 7d0d8fa37224
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     r-base-core     shellcheck     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 5cd122379b5c
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> 1b529b847373
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 4d205217de6f
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 117468ce8673
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 40a456075b99
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> 762f3713059e
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> a92ecbce5c0b
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 0d776b220ba3
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> af858fee3f04
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 6953bfe9a827
+Successfully built 6953bfe9a827
+Successfully tagged local:jenkins-graphene-sgx-18.04-5848
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-sgx-18.04-5848
+.
+[Pipeline] withDockerContainer
+slave-seymour does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 --env=PATH=/home/jenkins/workspace/graphene-sgx-18.04/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin --volume=/lib/modules:/lib/modules:ro --volume=/usr/src:/usr/src:ro --device=/dev/isgx:/dev/isgx --device=/dev/gsgx:/dev/gsgx --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket -w /home/jenkins/workspace/graphene-sgx-18.04 -v /home/jenkins/workspace/graphene-sgx-18.04:/home/jenkins/workspace/graphene-sgx-18.04:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04@tmp:/home/jenkins/workspace/graphene-sgx-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-sgx-18.04-5848 cat
+$ docker top a83ed0a2e370048aaaf9863c3aec2fc58156bcec402995b03df3ee8141f39859 -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] sh
++ python3 Scripts/get-python-platlib.py /home/jenkins/workspace/graphene-sgx-18.04/usr
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04/.pylintrc
++ ./.ci/run-shellcheck
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-clean-check-prepare.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (clean-check-prepare)
+[Pipeline] sh
++ ./Scripts/clean-check-prepare
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-build-sgx.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ openssl genrsa -3 -out Pal/src/host/Linux-SGX/signer/enclave-key.pem 3072
+Generating RSA private key, 3072 bit long modulus (2 primes)
+.........................................................................................................................................................................................++++
+...........................................++++
+e is 3 (0x03)
+[Pipeline] sh
++ cd /opt/intel
++ git clone https://github.com/intel/SGXDataCenterAttestationPrimitives.git
+Cloning into 'SGXDataCenterAttestationPrimitives'...
++ git -C SGXDataCenterAttestationPrimitives checkout DCAP_1.6
+Note: checking out 'DCAP_1.6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 4605fae Intel(R) SGX DCAP 1.6 Release
+[Pipeline] sh
++ meson setup build-dcap --prefix=/home/jenkins/workspace/graphene-sgx-18.04/usr --buildtype=release -Ddirect=disabled -Dsgx=enabled -Dsgx_driver=dcap1.6
+Traceback (most recent call last):
+  File "/usr/share/meson/mesonbuild/mesonmain.py", line 361, in run
+    app.generate()
+  File "/usr/share/meson/mesonbuild/mesonmain.py", line 150, in generate
+    self._generate(env)
+  File "/usr/share/meson/mesonbuild/mesonmain.py", line 197, in _generate
+    intr.run()
+  File "/usr/share/meson/mesonbuild/interpreter.py", line 2991, in run
+    super().run()
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 173, in run
+    self.evaluate_codeblock(self.ast, start=1)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 195, in evaluate_codeblock
+    raise e
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 189, in evaluate_codeblock
+    self.evaluate_statement(cur)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 202, in evaluate_statement
+    return self.assignment(cur)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 674, in assignment
+    value = self.evaluate_statement(node.value)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 200, in evaluate_statement
+    return self.function_call(cur)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 456, in function_call
+    return self.funcs[func_name](node, self.flatten(posargs), kwargs)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 79, in wrapped
+    return f(s, node_or_state, args, kwargs)
+  File "/usr/share/meson/mesonbuild/interpreterbase.py", line 55, in wrapped
+    return f(self, node, args, kwargs)
+  File "/usr/share/meson/mesonbuild/interpreter.py", line 1742, in func_subproject
+    return self.do_subproject(dirname, kwargs)
+  File "/usr/share/meson/mesonbuild/interpreter.py", line 1764, in do_subproject
+    resolved = r.resolve(dirname)
+  File "/usr/share/meson/mesonbuild/wrap/wrap.py", line 141, in resolve
+    p = PackageDefinition(fname)
+  File "/usr/share/meson/mesonbuild/wrap/wrap.py", line 90, in __init__
+    (k, v) = line.split('=', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+The Meson build system
+Version: 0.45.1
+Source dir: /home/jenkins/workspace/graphene-sgx-18.04
+Build dir: /home/jenkins/workspace/graphene-sgx-18.04/build-dcap
+Build type: native build
+Project name: graphene
+Native C compiler: cc (gcc 7.5.0 "cc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+Native C++ compiler: c++ (gcc 7.5.0 "c++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0")
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Program check-no-reloc.sh found: YES (/home/jenkins/workspace/graphene-sgx-18.04/Scripts/check-no-reloc.sh)
+Program gen-offsets.py found: YES (/home/jenkins/workspace/graphene-sgx-18.04/Scripts/gen-offsets.py)
+Program gen-pal-map.py found: YES (/home/jenkins/workspace/graphene-sgx-18.04/Scripts/gen-pal-map.py)
+Program get-python-platlib.py found: YES (/home/jenkins/workspace/graphene-sgx-18.04/Scripts/get-python-platlib.py)
+Program meson-clang-format.sh found: YES (/home/jenkins/workspace/graphene-sgx-18.04/Scripts/meson-clang-format.sh)
+Program objcopy found: YES (/usr/bin/objcopy)
+Program protoc-c found: YES (/usr/bin/protoc-c)
+Compiler for C supports arguments -Wtrampolines -Wnull-dereference -Wno-gnu-alignof-expression: YES
+Compiler for C supports arguments -fstack-protector-strong -mstack-protector-guard=tls -mstack-protector-guard-reg=%gs -mstack-protector-guard-offset=8: NO
+Dependency threads found: YES
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] sh
++ rm -rf build-dcap
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 a83ed0a2e370048aaaf9863c3aec2fc58156bcec402995b03df3ee8141f39859
+$ docker rm -f a83ed0a2e370048aaaf9863c3aec2fc58156bcec402995b03df3ee8141f39859
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 2d09dfbf3f3516d0971f6e80abfdb526b77aec66 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04/5848/ and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

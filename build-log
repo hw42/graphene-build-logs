@@ -1,0 +1,165 @@
+GitHub pull request #4 of commit e1086769d57ee00953bce35e11a0dd1bde7d6a31, no merge conflicts.
+Setting status of e1086769d57ee00953bce35e11a0dd1bde7d6a31 to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/5288 and message: 'Build started for merge commit.'
+Using context: Docs-18.04
+Checking out git git@github.com:gramineproject/gramine.git into /var/lib/jenkins/workspace/docs-18.04@script to read .ci/docs.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/4/merge^{commit} # timeout=10
+Checking out Revision 09386db76401f496268e59f2b04dedb68c727a77 (refs/remotes/origin/pr/4/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 09386db76401f496268e59f2b04dedb68c727a77 # timeout=10
+Commit message: "Merge e1086769d57ee00953bce35e11a0dd1bde7d6a31 into 3c3b522974a974e80f84bac2cd1797e151474146"
+ > git rev-list --no-walk 5e2904906d3c9e0b4a437711937a6194e5da00c4 # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor
+Running on slave-seymour in /home/jenkins/workspace/docs-18.04
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /home/jenkins/workspace/docs-18.04 # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 09386db76401f496268e59f2b04dedb68c727a77 (refs/remotes/origin/pr/4/merge)
+ > git rev-parse refs/remotes/origin/pr/4/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 09386db76401f496268e59f2b04dedb68c727a77 # timeout=10
+Commit message: "Merge e1086769d57ee00953bce35e11a0dd1bde7d6a31 into 3c3b522974a974e80f84bac2cd1797e151474146"
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Agent Setup)
+[Pipeline] isUnix
+[Pipeline] readFile
+[Pipeline] sh
++ docker build -t 9b135f107dcbe2757475857840f6eaef709a7637 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  110.4MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 54919e10a95d
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     meson     net-tools     netcat-openbsd     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     shellcheck     sqlite3     texinfo     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> e64763c0f60b
+Step 3/11 : RUN python3 -m pip install     asv     recommonmark     'Sphinx==1.8'     sphinx_rtd_theme     toml>=0.10
+ ---> Using cache
+ ---> 996ec35a0c67
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> d4983680082b
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 339cbc84811d
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> c48ac16c7527
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> dc56ec110382
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> 152697df997c
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> 4700a179cbbb
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> a7c36830e93d
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> 1cf23dbd49a4
+Successfully built 1cf23dbd49a4
+Successfully tagged 9b135f107dcbe2757475857840f6eaef709a7637:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . 9b135f107dcbe2757475857840f6eaef709a7637
+.
+[Pipeline] withDockerContainer
+slave-seymour does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 -w /home/jenkins/workspace/docs-18.04 -v /home/jenkins/workspace/docs-18.04:/home/jenkins/workspace/docs-18.04:rw,z -v /home/jenkins/workspace/docs-18.04@tmp:/home/jenkins/workspace/docs-18.04@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** 9b135f107dcbe2757475857840f6eaef709a7637 cat
+$ docker top 5fbda1236133ad69f946fb59b95ef736c80798133e6ca750b7fac41c58a9f10b -eo pid,comm
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ make -C Documentation html SPHINXOPTS=-W
+make: Entering directory '/home/jenkins/workspace/docs-18.04/Documentation'
+Running Sphinx v1.8.0
+
+Warning, treated as error:
+Sphinx 1.x is deprecated with sphinx_rtd_theme, update to Sphinx 2.x or greater
+Makefile:22: recipe for target 'html' failed
+make: *** [html] Error 2
+make: Leaving directory '/home/jenkins/workspace/docs-18.04/Documentation'
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+$ docker stop --time=1 5fbda1236133ad69f946fb59b95ef736c80798133e6ca750b7fac41c58a9f10b
+$ docker rm -f 5fbda1236133ad69f946fb59b95ef736c80798133e6ca750b7fac41c58a9f10b
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of e1086769d57ee00953bce35e11a0dd1bde7d6a31 to FAILURE with url https://leeroy.cs.unc.edu/job/docs-18.04/5288 and message: 'Build finished. '
+Using context: Docs-18.04
+ERROR: script returned exit code 2
+Finished: FAILURE

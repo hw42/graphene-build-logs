@@ -1,0 +1,47 @@
+GitHub pull request #68 of commit 69744163cc10b020261cf93a533580fed125fbc9, no merge conflicts.
+Setting status of 69744163cc10b020261cf93a533580fed125fbc9 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/6355/ and message: 'Build started for merge commit.'
+Using context: Jenkins-Debug-18.04
+Checking out git git@github.com:gramineproject/gramine.git into /var/lib/jenkins/workspace/graphene-debug-18.04@script to read .ci/linux-direct-ubuntu18.04-gcc-debug.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/graphene-debug-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=20
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=20
+ > git rev-parse refs/remotes/origin/pr/68/merge^{commit} # timeout=10
+Checking out Revision 4b14c6e5a0abaf2861c76e3b8bbdbc64f21d3fcf (refs/remotes/origin/pr/68/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4b14c6e5a0abaf2861c76e3b8bbdbc64f21d3fcf # timeout=20
+Commit message: "Merge 69744163cc10b020261cf93a533580fed125fbc9 into d1fd49a686a62f9ec564469bc013d86160617dd5"
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘nonsgx_slave’
+Aborted by Wojtek Porczyk
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of 69744163cc10b020261cf93a533580fed125fbc9 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-debug-18.04/6355/ and message: 'Build finished. '
+Using context: Jenkins-Debug-18.04
+Finished: ABORTED

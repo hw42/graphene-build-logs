@@ -1,0 +1,105 @@
+GitHub pull request #64 of commit a324c28fa746c43dc77037dd7746e1089194bbac, has merge conflicts.
+!!! PR mergeability status has changed !!!  
+PR now has NO merge conflicts
+Setting status of a324c28fa746c43dc77037dd7746e1089194bbac to PENDING with url https://leeroy.cs.unc.edu/job/docs-18.04/5347 and message: 'Build started for original commit.'
+Using context: Docs-18.04
+Checking out git git@github.com:gramineproject/gramine.git into /var/lib/jenkins/workspace/docs-18.04@script to read .ci/docs.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse origin/a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Retrying after 10 seconds
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse origin/a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Retrying after 10 seconds
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse origin/a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Retrying after 10 seconds
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/docs-18.04@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse origin/a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ > git rev-parse a324c28fa746c43dc77037dd7746e1089194bbac^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Setting status of a324c28fa746c43dc77037dd7746e1089194bbac to FAILURE with url https://leeroy.cs.unc.edu/job/docs-18.04/5347 and message: 'Build finished. '
+Using context: Docs-18.04
+ERROR: Maximum checkout retry attempts reached, aborting
+Finished: FAILURE

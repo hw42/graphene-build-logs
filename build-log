@@ -1,0 +1,172 @@
+GitHub pull request #72 of commit abc4869797d5e851732a2a91b2672f7b8db5a297, no merge conflicts.
+Setting status of abc4869797d5e851732a2a91b2672f7b8db5a297 to PENDING with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04-apps/4734 and message: 'Build started for merge commit.'
+Using context: Jenkins-SGX-18.04-apps
+Checking out git git@github.com:gramineproject/gramine.git into /var/lib/jenkins/workspace/graphene-sgx-18.04-apps@script to read .ci/linux-sgx-ubuntu18.04-gcc-release-apps.jenkinsfile
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /var/lib/jenkins/workspace/graphene-sgx-18.04-apps@script # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Using shallow fetch with depth 1
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+ > git rev-parse refs/remotes/origin/pr/72/merge^{commit} # timeout=10
+Checking out Revision 6a4080fe8fb0e1847483522e12d2e57b8b93e504 (refs/remotes/origin/pr/72/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6a4080fe8fb0e1847483522e12d2e57b8b93e504 # timeout=10
+Commit message: "Merge abc4869797d5e851732a2a91b2672f7b8db5a297 into c0181a072419be893b3f3f3debc194b08564b2cf"
+ > git rev-list --no-walk 6f08177dfe4593eaa634bbd07b38e93792c22e5b # timeout=10
+First time build. Skipping changelog.
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on slave-astoria in /home/jenkins/workspace/graphene-sgx-18.04-apps
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential 6274217d-d432-408f-8a45-6e61881906ad
+Wiping out workspace first.
+Cloning the remote Git repository
+Using shallow clone with depth 1
+Cloning repository git@github.com:gramineproject/gramine.git
+ > git init /home/jenkins/workspace/graphene-sgx-18.04-apps # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Using shallow fetch with depth 1
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:gramineproject/gramine.git # timeout=10
+Fetching upstream changes from git@github.com:gramineproject/gramine.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress --depth=1 -- git@github.com:gramineproject/gramine.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Checking out Revision 6a4080fe8fb0e1847483522e12d2e57b8b93e504 (refs/remotes/origin/pr/72/merge)
+Commit message: "Merge abc4869797d5e851732a2a91b2672f7b8db5a297 into c0181a072419be893b3f3f3debc194b08564b2cf"
+ > git rev-parse refs/remotes/origin/pr/72/merge^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6a4080fe8fb0e1847483522e12d2e57b8b93e504 # timeout=10
+ > git remote # timeout=10
+ > git submodule init # timeout=10
+ > git submodule sync # timeout=10
+ > git config --get remote.origin.url # timeout=10
+ > git submodule init # timeout=10
+ > git config -f .gitmodules --get-regexp ^submodule\.(.+)\.url # timeout=10
+ > git config --get submodule.LibOS/shim/test/ltp/src.url # timeout=10
+ > git config -f .gitmodules --get submodule.LibOS/shim/test/ltp/src.path # timeout=10
+ > git submodule update --init --recursive LibOS/shim/test/ltp/src # timeout=10
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-docker.jenkinsfile)
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] fileExists
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] isUnix
+[Pipeline] sh
++ docker build -t local:jenkins-graphene-sgx-18.04-apps-4734 -f .ci/ubuntu18.04.dockerfile .
+Sending build context to Docker daemon  110.6MB
+Step 1/11 : FROM ubuntu:18.04
+ ---> 54919e10a95d
+Step 2/11 : RUN apt-get update && env DEBIAN_FRONTEND=noninteractive apt-get install -y     apache2-utils     autoconf     bison     build-essential     curl     flex     gawk     gdb     gettext     git     jq     libapr1-dev     libaprutil1-dev     libcurl4-openssl-dev     libelf-dev     libevent-dev     libexpat1     libexpat1-dev     libmemcached-tools     libnss-mdns     libnuma1     libomp-dev     libpcre2-dev     libpcre3-dev     libprotobuf-c-dev     libssl-dev     libunwind8     libxfixes3     libxi6     libxml2-dev     libxrender1     libxxf86vm1     linux-headers-4.15.0-20-generic     net-tools     netcat-openbsd     ninja-build     pkg-config     protobuf-c-compiler     pylint3     python     python3-apport     python3-apt     python3-breathe     python3-click     python3-jinja2     python3-lxml     python3-numpy     python3-pip     python3-protobuf     python3-pyelftools     python3-pytest     python3-scipy     shellcheck     sqlite3     texinfo     uthash-dev     wget     zlib1g     zlib1g-dev
+ ---> Using cache
+ ---> 448f54e77ec5
+Step 3/11 : RUN python3 -m pip install -U     asv     recommonmark     'Sphinx==1.8'     'sphinx_rtd_theme<1'     'toml>=0.10'     'meson>=0.55,<0.56'
+ ---> Using cache
+ ---> 711ca48940f5
+Step 4/11 : RUN groupadd -r leeroy -g 1001 && useradd -u 1001 -r -g leeroy -m -d /leeroy -c "Leeroy Jenkins" leeroy &&     chmod 755 /leeroy
+ ---> Using cache
+ ---> 03df6fef1d84
+Step 5/11 : RUN chown 1001 /leeroy
+ ---> Using cache
+ ---> 9bf8e7926f12
+Step 6/11 : RUN rm -f /leeroy/.rnd
+ ---> Using cache
+ ---> 8727fb747d2e
+Step 7/11 : RUN mkdir -p /opt/intel && chown 1001 /opt/intel
+ ---> Using cache
+ ---> e530be02121c
+Step 8/11 : WORKDIR /leeroy
+ ---> Using cache
+ ---> a642e976c416
+Step 9/11 : USER leeroy
+ ---> Using cache
+ ---> f2a4bb632c93
+Step 10/11 : ENV HOME /leeroy
+ ---> Using cache
+ ---> cce85a515d3f
+Step 11/11 : CMD ["bash"]
+ ---> Using cache
+ ---> cfeca26b3ea8
+Successfully built cfeca26b3ea8
+Successfully tagged local:jenkins-graphene-sgx-18.04-apps-4734
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . local:jenkins-graphene-sgx-18.04-apps-4734
+.
+[Pipeline] withDockerContainer
+slave-astoria does not seem to be running inside a container
+$ docker run -t -d -u 1001:1001 --env=PATH=/home/jenkins/workspace/graphene-sgx-18.04-apps/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin --volume=/lib/modules:/lib/modules:ro --volume=/usr/src:/usr/src:ro --device=/dev/isgx:/dev/isgx --device=/dev/gsgx:/dev/gsgx --volume=/var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket -w /home/jenkins/workspace/graphene-sgx-18.04-apps -v /home/jenkins/workspace/graphene-sgx-18.04-apps:/home/jenkins/workspace/graphene-sgx-18.04-apps:rw,z -v /home/jenkins/workspace/graphene-sgx-18.04-apps@tmp:/home/jenkins/workspace/graphene-sgx-18.04-apps@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** local:jenkins-graphene-sgx-18.04-apps-4734 cat
+$ docker top 9d6242ef6726e78b3e26eca8f255a3968d8b4b85ab9c5781cdb97e16ad6a633d -eo pid,comm
+[Pipeline] {
+[Pipeline] load
+[Pipeline] { (.ci/lib/config.jenkinsfile)
+[Pipeline] sh
++ python3 Scripts/get-python-platlib.py /home/jenkins/workspace/graphene-sgx-18.04-apps/usr
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-ubuntu18.04.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/config-release.jenkinsfile)
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] load
+[Pipeline] { (.ci/lib/stage-lint.jenkinsfile)
+[Pipeline] stage
+[Pipeline] { (lint)
+[Pipeline] sh
++ .ci/isdistro bionic
++ ./.ci/run-pylint -f text
+Using config file /home/jenkins/workspace/graphene-sgx-18.04-apps/.pylintrc
+************* Module graphenelibos.sgx_sign
+C:448,38: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // load
+[Pipeline] }
+$ docker stop --time=1 9d6242ef6726e78b3e26eca8f255a3968d8b4b85ab9c5781cdb97e16ad6a633d
+$ docker rm -f 9d6242ef6726e78b3e26eca8f255a3968d8b4b85ab9c5781cdb97e16ad6a633d
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Setting status of abc4869797d5e851732a2a91b2672f7b8db5a297 to FAILURE with url https://leeroy.cs.unc.edu/job/graphene-sgx-18.04-apps/4734 and message: 'Build finished. '
+Using context: Jenkins-SGX-18.04-apps
+ERROR: script returned exit code 123
+Finished: FAILURE
